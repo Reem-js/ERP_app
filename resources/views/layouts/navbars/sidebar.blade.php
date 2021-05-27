@@ -41,6 +41,30 @@
           </ul>
         </div>
       </li>
+      <li class="nav-item {{ ($activePage == 'allUser' || $activePage == 'createUser') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#User" aria-expanded="false">
+          <i><i class="fa fa-users" aria-hidden="true"></i></i>
+          <p>{{ __('User') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse" id="User">
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'allUser' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('users.index') }}">
+                <span class="sidebar-mini"> UP </span>
+                <span class="sidebar-normal">{{ __('allUser') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'createUser' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('users.create') }}">
+                <span class="sidebar-mini"> UM </span>
+                <span class="sidebar-normal"> {{ __('createUser') }} </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
       <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('table') }}">
           <i class="material-icons">content_paste</i>

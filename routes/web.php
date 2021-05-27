@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\users\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -22,13 +23,10 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],
     function () { //...
+
         Route::get('/', function () {
             return view('welcome');
         });
-
-        Auth::routes(); // ['register' => false]
-        Route::get('/home', [HomeController::class, 'index'])->name('home');
-
         Route::group(['middleware' => 'auth'], function () {
             Route::get('table-list', function () { return view('pages.table_list'); })->name('table');
             Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
@@ -37,13 +35,13 @@ Route::group(
             Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
         });
 
-        /* New Routes */
+        Auth::routes(); // ['register' => false]
+        Route::get('/home', [HomeController::class, 'index'])->name('home');
         Route::group([],function () {
-
+            /* New Routes */
+            Route::resource('users',UserController::class);
         });
     }
 );
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
