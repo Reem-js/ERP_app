@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],
+    function () { //...
+        Route::get('/', function () {
+            return view('welcome');
+        });
+
+        Auth::routes(); // ['register' => false]
+        Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+        Route::group(['middleware' => 'auth'], function () {
+            Route::get('table-list', function () { return view('pages.table_list'); })->name('table');
+            Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+            Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+            Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
+            Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+        });
+
+        /* New Routes */
+        Route::group([],function () {
+
+        });
+    }
+);
