@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\backend\users;
+namespace App\Http\Controllers\backend\ClientWalletTransactions;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class ClientWalletTransactionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        // return view('backend.users.wallet');
-        // return view('backend.users.edit');
-        return view('backend.users.index');
+        //
+        return view('backend.clientWalletTransaction.indexwalletTransaction');
     }
 
     /**
@@ -27,8 +26,7 @@ class UserController extends Controller
     public function create()
     {
         //
-        return view('backend.users.create');
-
+        return view('backend.clientWalletTransaction.createwalletTransaction');
     }
 
     /**
@@ -62,7 +60,7 @@ class UserController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.users.edit');
+        return view('backend.clientWalletTransaction.editwalletTransaction');
     }
 
     /**
@@ -86,7 +84,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-        return "delete";
+        return "client destroy transaction";
     }
-
 }

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'createUser', 'titlePage' => __('Create Users')])
+@extends('layouts.app', ['activePage' => 'createclient', 'titlePage' => __('Create Client')])
 
 @section('content')
     <div class="content">
@@ -8,42 +8,42 @@
                     <div class="card">
                         <div class="card-header card-header-text card-header-success">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.users.create.Add New User') }}</h4>
+                                
+                                <h4 class="card-title">{{ __('translation.clients.common.Add New Client') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.users.common.Name') }}</label>
+                                    <p class="font-weight-bold"   style="color:black;" for="inputAddress">{{ __('translation.clients.common.Name') }}</p>
                                     <input type="text" name="name" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.users.common.Email') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.common.Nickname') }}</label>
                                     <input type="email" name="email" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.users.common.Phone') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.common.Phone') }}</label>
                                     <input type="text" name="phone" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.users.common.Password') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.common.Email') }}</label>
                                     <input type="password" name="password" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.users.edit.Confirm Password') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.common.Address') }}</label>
                                     <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
                                         required placeholder="1234 Main St">
                                 </div>
