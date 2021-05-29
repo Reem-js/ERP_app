@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'createclient', 'titlePage' => __('Create Client')])
+@extends('layouts.app', ['activePage' => 'createclient', 'titlePage' => __('translation.clients.common.Add New Client')])
 
 @section('content')
     <div class="content">
@@ -6,9 +6,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-text card-header-success">
+                        <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                
                                 <h4 class="card-title">{{ __('translation.clients.common.Add New Client') }}</h4>
                             </div>
                         </div>
@@ -48,7 +47,7 @@
                                         required placeholder="1234 Main St">
                                 </div>
 
-                                <button type="submit" class="btn btn-success" style="margin: 20px;">Add</button>
+                                <button type="submit" class="btn btn-success" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>
                             </form>
                         </div>
                     </div>

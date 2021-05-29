@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'edit-suppliers', 'titlePage' => __('Edit Supplier')])
+@extends('layouts.app', ['activePage' => 'edit-suppliers', 'titlePage' => __('translation.suppliers.common.Edit Supplier')])
 
 @section('content')
     <div class="content">
@@ -14,22 +14,22 @@
                             <div class="card-body">
                                  <form>
                         <div class="form-group" style="margin: 20px;">
-                          <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __("translation.suppliers.common.Name") }}</label>
+                          <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __("translation.suppliers.common.Name") }}</p>
                           <input type="text" name="name" class="form-control" id="inputAddress" required placeholder="1234 Main Sv">
                         </div>
 
                         <div class="form-group"style="margin: 20px;" >
-                            <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __("translation.suppliers.common.Nickname") }}</label>
+                            <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __("translation.suppliers.common.Nickname") }}</p>
                             <input type="text" name="nickname" class="form-control" id="inputAddress" required placeholder="1234 Main St">
                         </div>
 
                         <div class="form-group" style="margin: 20px;">
-                            <p class="font-weight-bold" style="color:black;"  for="inputAddress">{{ __("translation.suppliers.common.Phone") }}</label>
+                            <p class="font-weight-bold" style="color:black;"  for="inputAddress">{{ __("translation.suppliers.common.Phone") }}</p>
                             <input type="text" name="phone" class="form-control" id="inputAddress" required placeholder="1234 Main St">
                         </div>
 
                         <div class="form-group" style="margin: 20px;">
-                            <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __("translation.suppliers.common.Address") }}</label>
+                            <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __("translation.suppliers.common.Address") }}</p>
                             <input type="text" name="address" class="form-control" id="inputAddress" required placeholder="1234 Main St">
                         </div>
 
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="form-group" style="margin: 20px;">
-                           <button type="submit" class="btn btn-warning" style="margin: 20px;">Edit</button>
+                           <button type="submit" class="btn btn-warning" style="margin: 20px;">{{__('translation.website.crud.update')}}</button>
                         </div>
 
                     </form>

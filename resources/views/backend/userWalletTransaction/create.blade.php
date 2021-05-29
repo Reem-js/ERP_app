@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'walletTransaction', 'titlePage' => __('Create Wallet Transaction')])
+@extends('layouts.app', ['activePage' => 'createUserwalletTransaction', 'titlePage' => __('Create Wallet Transaction')])
 @section('content')
     <div class="content">
         <div class="container-fluid">
@@ -63,7 +63,7 @@
                                             placeholder="please enter transaction amount ">
                                     </div>
 
-                                    <button type="submit" class="btn btn-success" style="margin: 20px;">Add Transaction</button>
+                                    <button type="submit" class="btn btn-success" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>
                                 </form>
                             </div>
                         </div>

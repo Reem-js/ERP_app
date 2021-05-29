@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'createUser', 'titlePage' => __('Create Users')])
+@extends('layouts.app', ['activePage' => 'createUser', 'titlePage' => __('translation.users.create.Add New User')])
 
 @section('content')
     <div class="content">
@@ -48,7 +48,7 @@
                                         required placeholder="1234 Main St">
                                 </div>
 
-                                <button type="submit" class="btn btn-success" style="margin: 20px;">Add</button>
+                                <button type="submit" class="btn btn-success" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>
                             </form>
                         </div>
                     </div>

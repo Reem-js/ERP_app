@@ -2,8 +2,42 @@
 return [
     'website'=>
     [
-        'create'=>'',
-        'update'=>'',
+        'nav'=>[
+
+        ],
+        'sidebar'=>[
+            'ELRAYAN'=>'ELRAYAN',
+            'Clients'=>'Clients',
+            'all Clients'=>'All Clients',
+            'create client'=>'Create Client',
+            'Client Wallet'=>'Client Wallet',
+            'Client Wallet Trans'=>'Client Wallet Trans',
+            'All Transactions'=>'All Transactions',
+            'Create Transaction'=>'Create Transaction',
+            'Suppliers'=>'Suppliers',
+            'all Suppliers'=>'All Suppliers',
+            'create suppliers'=>'Create Suppliers',
+            'Supplier Wallet'=>'Supplier Wallet',
+            'Supplier Wallet Trans'=>'Supplier Wallet Trans',
+            'Users'=>'Users',
+            'All Users'=>'All Users',
+            'Create User'=>'Create User',
+            'My Wallet'=>'My Wallet',
+            'My Wallet Trans'=>'My Wallet Trans',
+            'Dashboard'=>'Dashboard',
+            ''=>'',
+
+        ],
+        'crud'=>[
+            'create'=>'Create',
+            'update'=>'Update',
+            'delete'=>'Delete',
+            'all'=>'All',
+            'Create & New'=>'Create & New',
+            'Update & Return'=>'Update & Return',
+            'Cancel'=>'Cancel',
+            'Actions'=>'Actions'
+        ]
     ],
     'wallet'=>[
         'My Wallet' => 'My Wallet',
@@ -48,10 +82,11 @@ return [
             'Installment'=>'Installment',
         ]
     ],
-    'supplier'=>[
+    'suppliers'=>[
         'common'=>[
+            'Edit Supplier-Transaction'=>'Edit Supplier Transaction',
             'Add New Supplier-Transaction'=>'Add New Supplier-Transaction',
-
+            'All Supplier Wallet Transaction'=>'All Supplier Wallet Transaction',
             'Edit Supplier'=>'Edit Supplier',
             'Add New Supplier'=>'Add New Supplier',
             'All Suppliers'=>'All Suppliers',
@@ -67,7 +102,6 @@ return [
 
     ],
     'supplierWallet'=>[
-
     ],
     'clients'=>[
         'common'=>[
@@ -83,7 +117,7 @@ return [
             'All Client Transaction'=>'All Client Transaction',
             'Add New Client-Transaction'=>'Add New Client-Transaction',
             'Edit Client-Transaction'=>'Edit Client-Transaction',
-
+            'All clients'=>'All Clients',
         ],
     ],
 ];

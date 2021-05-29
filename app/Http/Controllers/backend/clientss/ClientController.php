@@ -15,7 +15,7 @@ class ClientController extends Controller
     public function index()
     {
         //
-        return view('backend.clientss.index');
+        return view('backend.clients.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class ClientController extends Controller
     public function create()
     {
         //
-        return view('backend.clientss.create');
+        return view('backend.clients.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class ClientController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.clientss.edit');
+        return view('backend.clients.edit');
     }
 
     /**

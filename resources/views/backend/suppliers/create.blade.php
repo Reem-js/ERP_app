@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'createsupplier', 'titlePage' => __('Create supplier')])
+@extends('layouts.app', ['activePage' => 'createsupplier', 'titlePage' => __('translation.suppliers.common.Add New Supplie')])
 
 @section('content')
     <div class="content">
@@ -69,7 +69,7 @@
 
 
                                 <div class="form-group" style="margin: 20px;">
-                                    <button type="submit" class="btn btn-success" style="margin: 20px;"> Add</button>
+                                    <button type="submit" class="btn btn-success" style="margin: 20px;"> {{__('translation.website.crud.create')}}</button>
                                 </div>
                             </form>
                         </div>
