@@ -1211,6 +1211,11 @@ html[dir="rtl"] .card .card-body, html[dir="rtl"] .card .card-footer {
   html[dir="rtl"] [class*="navbar-expand-"] > .container-fluid {
     flex-direction: row-reverse;
   }
- 
+
 }
 /*# sourceMappingURL=material-dashboard-rtl.css.map */
+html[dir="rtl"] .sidebar .nav .caret {
+    right: unset !important;
+    left: 6px
+}
+

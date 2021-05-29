@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'wallet-suppliers', 'titlePage' => __('Supplier Wallet')])
+@extends('layouts.app', ['activePage' => 'wallet-suppliers', 'titlePage' => __('translation.wallet.Supplier Wallet')])
 
 
 

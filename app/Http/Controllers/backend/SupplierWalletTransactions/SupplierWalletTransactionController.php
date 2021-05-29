@@ -15,7 +15,7 @@ class SupplierWalletTransactionController extends Controller
     public function index()
     {
         //
-        return view('backend.supplierWalletTransaction.indexwalletTransaction');
+        return view('backend.supplierWalletTransaction.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class SupplierWalletTransactionController extends Controller
     public function create()
     {
         //
-        return view('backend.supplierWalletTransaction.createwalletTransaction');
+        return view('backend.supplierWalletTransaction.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class SupplierWalletTransactionController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.supplierWalletTransaction.editwalletTransaction');
+        return view('backend.supplierWalletTransaction.edit');
     }
 
     /**

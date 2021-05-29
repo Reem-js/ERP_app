@@ -2,12 +2,47 @@
 return [
     'website'=>
     [
-        'create'=>'',
-        'update'=>'',
+        'nav'=>[
+
+        ],
+        'sidebar'=>[
+            'ELRAYAN'=>'الريان',
+            'Clients'=>'العملاء',
+            'all Clients'=>'كل العملاء',
+            'create client'=>'اضافة عميل',
+            'Client Wallet'=>'محفظة العميل',
+            'Client Wallet Trans'=>'عمليات محفظة العميل',
+            'All Transactions'=>'كل العمليات',
+            'Create Transaction'=>'أضافة عملية',
+            'Suppliers'=>'الموردين',
+            'all Suppliers'=>'كل الموردين',
+            'create suppliers'=>'أضافة مورد',
+            'Supplier Wallet'=>'محفظة الموردين',
+            'Supplier Wallet Trans'=>'عمليات محفظة المورد',
+            'Users'=>'المستخدمين',
+            'All Users'=>'كل المستخدمين',
+            'Create User'=>'أضافة مستخدم',
+            'My Wallet'=>'محفظتي',
+            'My Wallet Trans'=>'عمليات محفظتي',
+            'Dashboard'=>'الصفحة الرئيسية',
+            ''=>'',
+
+        ],
+        'crud'=>[
+            'create'=>'أضافة',
+            'update'=>'تعديل',
+            'delete'=>'حذف',
+            'all'=>'كل',
+            'Create & New'=>'أضافة و جديد',
+            'Update & Return'=>' تعديل و عودة',
+            'Cancel'=>'الفاء',
+            'Actions'=>'اجراءات',
+        ]
+
     ],
     'wallet'=>[
         'My Wallet' => 'محفظتي',
-        'Client Wallet'=>'محفظة الزبون',
+        'Client Wallet'=>'محفظة المحل',
         'Supplier Wallet'=>'محفظة المورد',
         'Reason'=>'السبب',
         'Date'=>'التاريخ',
@@ -15,7 +50,7 @@ return [
         'Transaction Type'=>'نوع العملية',
         'Amount'=>'القيمة',
         'Total Balance'=>'الكيمة الكلية',
-        'Number Of Transactions'=>'عدد العمليات',
+        'Number Of +'=>'عدد العمليات',
         'Total Paied'=>'المدفوع',
         'Pending'=>'المتبقي',
     ],
@@ -58,9 +93,11 @@ return [
             'Amount'=>'القيمة',
             'Installment'=>'الاقساط',
         ]
-    ],'suppliers'=>[
+    ],
+    'suppliers'=>[
             'Edit Supplier-Transaction'=>'تعديل عمليات الوردين',
             'Add New Supplier-Transaction'=>'اضافة عمليات للمورد',
+            'All Supplier Wallet Transaction'=>'كل عمليات محافظ الموردين',
             'Edit Supplier'=>'تعديل المورديين',
             'Add New Supplier'=>'اضافة مورد جديد',
             'All Suppliers'=>'كل الموردين',
@@ -73,7 +110,7 @@ return [
             'PDF'=>'ملف',
             'Actions'=>'العمليات',
     ],
-    'clients'=>[
+    'clients'=> [
             'ID'=>'الرقم',
             'Name'=>'الاسم',
             'Nickname'=>'الاسم المستعار',
@@ -82,9 +119,11 @@ return [
             'Address'=>'العنوان',
             'Actions'=>'العمليات',
             'Add New Client'=>'اضافة زبون جديد',
-            'Edit Client'=>'تعديل الزبون',
-            'All Client Transaction'=>'كل عمليات الزبائن',
-            'Add New Client-Transaction'=>'اضافة عمليات للزباءن',
-            'Edit Client-Transaction'=>'تعديل عمليات الزبائن',
-    ],
+            'Edit Client'=>'تعديل العميل',
+            'All Client Transaction'=>'كل عمليات العملاء',
+            'Add New Client-Transaction'=>'اضافة عمليات العملاء',
+            'Edit Client-Transaction'=>'تعديل عمليات العملاء',
+            'All clients'=>'كل العملاء',
+        ],
+
 ];

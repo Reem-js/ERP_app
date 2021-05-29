@@ -15,7 +15,7 @@ class UserWalletTransactionController extends Controller
     public function index()
     {
         //
-        return view('backend.userWalletTransaction.indexwalletTransaction');
+        return view('backend.userWalletTransaction.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class UserWalletTransactionController extends Controller
     public function create()
     {
         //
-        return view('backend.userWalletTransaction.createwalletTransaction');
+        return view('backend.userWalletTransaction.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class UserWalletTransactionController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.userWalletTransaction.editwalletTransaction');
+        return view('backend.userWalletTransaction.edit');
     }
 
     /**

@@ -21,6 +21,7 @@
     @endif
     <!-- CSS Just for demo purpose, dont include it in your project -->
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
+    @stack('css')
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()

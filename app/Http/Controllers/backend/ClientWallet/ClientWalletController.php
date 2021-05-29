@@ -11,6 +11,6 @@ class ClientWalletController extends Controller
     public function getClientWallet()
     {
         # code...
-        return view('backend.clientWallet.wallet');
+        return view('backend.clientWallet.index');
     }
 }

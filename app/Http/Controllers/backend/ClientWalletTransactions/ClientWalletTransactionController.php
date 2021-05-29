@@ -15,7 +15,7 @@ class ClientWalletTransactionController extends Controller
     public function index()
     {
         //
-        return view('backend.clientWalletTransaction.indexwalletTransaction');
+        return view('backend.clientWalletTransaction.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class ClientWalletTransactionController extends Controller
     public function create()
     {
         //
-        return view('backend.clientWalletTransaction.createwalletTransaction');
+        return view('backend.clientWalletTransaction.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class ClientWalletTransactionController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.clientWalletTransaction.editwalletTransaction');
+        return view('backend.clientWalletTransaction.edit');
     }
 
     /**
