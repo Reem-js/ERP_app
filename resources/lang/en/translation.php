@@ -19,6 +19,14 @@ return [
         'Total Paied'=>'Total Paied',
         'Pending'=>'Pending',
     ],
+    'walletTransaction'=>[
+        'Reason'=>'Reason',
+        'Date'=>'Date',
+        'Transaction'=>'Transaction',
+        'Transaction Type'=>'Transaction Type',
+        'Amount'=>'Amount',
+        'Installment'=>'Installment',
+    ],
     'users'=>[
         'common'=>[
             'All Users'=>'All Users',
@@ -51,7 +59,6 @@ return [
     'supplier'=>[
         'common'=>[
             'Add New Supplier-Transaction'=>'Add New Supplier-Transaction',
-
             'Edit Supplier'=>'Edit Supplier',
             'Add New Supplier'=>'Add New Supplier',
             'All Suppliers'=>'All Suppliers',
@@ -64,9 +71,15 @@ return [
             'PDF'=>'PDF',
             'Actions'=>'Actions',
         ],
+        'index'=>[
 
-    ],
-    'supplierWallet'=>[
+        ],
+        'create'=>[
+
+        ],
+        'edit'=>[
+
+        ],
 
     ],
     'clients'=>[
@@ -83,6 +96,14 @@ return [
             'All Client Transaction'=>'All Client Transaction',
             'Add New Client-Transaction'=>'Add New Client-Transaction',
             'Edit Client-Transaction'=>'Edit Client-Transaction',
+        ],
+        'index'=>[
+
+        ],
+        'create'=>[
+
+        ],
+        'edit'=>[
 
         ],
     ],

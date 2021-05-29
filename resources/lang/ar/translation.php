@@ -19,8 +19,16 @@ return [
         'Total Paied'=>'المدفوع',
         'Pending'=>'المتبقي',
     ],
+    'walletTransaction'=>[
+           'Reason'=>'السبب',
+            'Date'=>'التاريخ',
+            'Transaction'=>'العملية',
+            'Transaction Type'=>'نوع العملية',
+            'Amount'=>'القيمة',
+            'Installment'=>'الاقساط',
+    ],
     'users'=>[
-        'common'=>[
+
             'All Users'=>'كل المستخدميين',
             'Edit User'=>'تعديل المستخدميين ',
             'Name'=>'الاسم',
@@ -29,16 +37,20 @@ return [
             'Email'=>'البريد الالكتروني',
             'ID'=>'الرقم',
             'Actions'=>'العملياات',
-        ],
+
+
         'create'=>[
             'Add New User'=>'اضافة مستخدم',
             'Confirm Password'=>'تاكيد كلمة السر',
-        ],'edit'=>[
+        ],
+        'edit'=>[
             'Confirm Password'=>'تاكيد كلمة السر',
 
-        ],'index'=>[
+        ],
+        'index'=>[
 
-        ],'transaction'=>[
+        ],
+        'transaction'=>[
             'Reason'=>'السبب',
             'Date'=>'التاريخ',
             'Transaction'=>'العملية',
@@ -47,7 +59,6 @@ return [
             'Installment'=>'الاقساط',
         ]
     ],'suppliers'=>[
-        'common'=>[
             'Edit Supplier-Transaction'=>'تعديل عمليات الوردين',
             'Add New Supplier-Transaction'=>'اضافة عمليات للمورد',
             'Edit Supplier'=>'تعديل المورديين',
@@ -61,15 +72,8 @@ return [
             'Address'=>'العنوان',
             'PDF'=>'ملف',
             'Actions'=>'العمليات',
-        ],
-
-    ],'supplierWallet'=>[
-
-    ],'userWallet'=>[
-
     ],
     'clients'=>[
-        'common'=>[
             'ID'=>'الرقم',
             'Name'=>'الاسم',
             'Nickname'=>'الاسم المستعار',
@@ -82,9 +86,5 @@ return [
             'All Client Transaction'=>'كل عمليات الزبائن',
             'Add New Client-Transaction'=>'اضافة عمليات للزباءن',
             'Edit Client-Transaction'=>'تعديل عمليات الزبائن',
-
-
-
-        ],
     ],
 ];
