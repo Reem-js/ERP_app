@@ -25,4 +25,15 @@ return [
     ],'userWallet'=>[
 
     ]
+    ,'expenses'=>[
+        'addExpense'=>'اضافة مصروف',
+        'allExpenses'=>'المصروفات',
+        'Expenses'=>'مصروفات',
+        'Add Expense'=>'اضافة مصروف',
+        'date'=>'التاريخ',
+        'value'=>'القيمة ',
+        'type'=>' النوع',
+    
+
+        ]
 ];

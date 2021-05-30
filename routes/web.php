@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\backend\users\UserController;
+use App\Http\Controllers\backend\expenses\ExpenseController;
+use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -17,6 +19,26 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],
+    function () {
+Route::get('createexp', function () {
+    return view('createexp');
+});
+
+Route::get('indexexp', function () {
+    return view('indexexp');
+});
+Route::get('editeexp', function () {
+    return view('editeexp');
+});
+Route::get('indexexpty', function () {
+    return view('indexexpty');
+});
+    });
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -40,8 +62,31 @@ Route::group(
         Route::group([],function () {
             /* New Routes */
             Route::resource('users',UserController::class);
+
+            /* expenses route */
+            Route::resource('expenses',ExpenseController::class);
+            /**************** 
+             * name: * all = expenses.index * ADD = expenses.create* edite = expenses.edit*/
+
+              /* expenses types route */
+            Route::resource('expensesTypes',ExpenseTypeController::class);
+            /**************** 
+             * * name: * all = expensesTypes.index * ADD = expensesTypes.create* edite = expensesTypes.edit*/
+
         });
     }
 );
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

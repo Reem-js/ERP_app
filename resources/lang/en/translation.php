@@ -25,4 +25,15 @@ return [
     ],'userWallet'=>[
 
     ]
+    ,'expenses'=>[
+        'addExpense'=>'Add Expense',
+        'allExpenses'=>'All Expenses',
+        'Expenses'=>'Expenses',
+        'Add Expense'=>'Add Expense',
+        'date'=>'date',
+        'value'=>'value ',
+        'type'=>' type',
+    
+
+        ]
 ];

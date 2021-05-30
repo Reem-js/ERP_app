@@ -65,12 +65,100 @@
           </ul>
         </div>
       </li>
+
+      <!--  Start expenses PART  -------->
+      <li class="nav-item {{ ($activePage == 'addExpense' || $activePage == 'allExpense') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#Expense" aria-expanded="false">
+        <i><i class="fa fa-money" aria-hidden="true"></i></i>
+          <p>{{ __('Expenses') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse" id="Expense">
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'addExpense' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('expenses.create') }}">
+              <i class="fa fa-plus-square" aria-hidden="true"></i>
+                <span class="sidebar-normal">{{ __('Add Expense') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'allExpenses' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('expenses.index') }}">
+              <i class="fa fa-usd" aria-hidden="true"></i>
+                <span class="sidebar-normal"> {{ __('All Expenses') }} </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+       <!--  End expenses PART  ------------>
+       
+        <!--  Start expenses types PART  -------->
+        <li class="nav-item {{ ($activePage == 'addExpenseType' || $activePage == 'allExpenseType') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#ExpenseType" aria-expanded="false">
+        <i><i class="fa fa-money" aria-hidden="true"></i></i>
+          <p>{{ __('Expenses Types') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse" id="ExpenseType">
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'addExpenseType' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('expenses.create') }}">
+              <i class="fa fa-plus-square" aria-hidden="true"></i>
+                <span class="sidebar-normal">{{ __('Add Expense Type') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'allExpensesType' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('expenses.index') }}">
+              <i class="fa fa-usd" aria-hidden="true"></i>
+                <span class="sidebar-normal"> {{ __('All Expenses Types') }} </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+       <!--  End expenses  types PART  ------------>
+
+       
+        <!--  Start price list PART  -------->
+        <li class="nav-item {{ ($activePage == 'addPriceList' || $activePage == 'allPriceList') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#PriceList" aria-expanded="false">
+        <i><i class="fa fa-list-alt" aria-hidden="true"></i></i>
+          <p>{{ __('Price Lists') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse" id="PriceList">
+          <ul class="nav">
+            <li class="nav-item{{ $activePage == 'addPriceList' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('expenses.create') }}">
+              <i class="fa fa-plus-square" aria-hidden="true"></i>
+                <span class="sidebar-normal">{{ __('Add Price List') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'allPriceList' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('expenses.index') }}">
+              <i class="fa fa-usd" aria-hidden="true"></i>
+                <span class="sidebar-normal"> {{ __('All Price List') }} </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+       <!--  End price list PART  ------------>
+
+
       <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('table') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Table List') }}</p>
         </a>
       </li>
+     
+
+
     </ul>
   </div>
 </div>
