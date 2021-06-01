@@ -12,7 +12,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="m-5">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <table class="table">
@@ -40,7 +39,6 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -50,7 +48,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="m-5">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <table class="table">
@@ -89,7 +86,6 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>

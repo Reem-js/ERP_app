@@ -11,10 +11,10 @@
                                 <h4 class="card-title ">{{__('translation.website.sidebar.Brands')}}</h4>
                             </div>
                         </div>
-                        <div class="card-body p-5">
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-12 text-right">
-                                    <a href="{{ route('brands.create') }}" class="btn btn-round btn-primary mb-3" style="color:white;"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.sidebar.Create Brand')}}</a>
+                                    <a href="{{ route('brands.create') }}" class="btn btn-round btn-primary mb-3" style="color:white;"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
                                 </div>
                             </div>
                             <div class="table-responsive">
@@ -34,7 +34,7 @@
                                             <td>صورةُُ ما</td>
                                             <td class="td-actions">
                                                 <div class="d-flex justify-content-space-between">
-                                                    <a class="btn btn-info" title="{{__('translation.website.crud.Update')}}" rel="tooltip" href="{{ route('brands.edit',2) }}" style="color:white; margin: 0 2px 0 0;"><i class="material-icons">edit</i></a>
+                                                    <a class="btn btn-info" title="{{__('translation.website.crud.update')}}" rel="tooltip" href="{{ route('brands.edit',2) }}" style="color:white; margin: 0 2px 0 0;"><i class="material-icons">edit</i></a>
                                                     <form style="margin: 0 0 0 2px;" action="{{ route('brands.destroy',2) }}" method="POST">
                                                         @csrf
                                                         @method('delete')

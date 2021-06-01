@@ -36,7 +36,7 @@
                                       </div>
                                       <div class="row mt-5">
                                         <div class="col-lg-4">
-                                            <button type="submit" class="btn btn-info">{{__('translation.website.crud.Update')}}</button>
+                                            <button type="submit" class="btn btn-info">{{__('translation.website.crud.update')}}</button>
                                         <button type="submit" class="btn btn-info">{{__('translation.website.crud.Update & Return')}}</button>
                                         </div>
                                         <div class="col-lg-2 offset-6">
