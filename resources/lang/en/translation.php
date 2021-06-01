@@ -87,18 +87,6 @@ return [
             'All Products' => 'All Products',
             'Stock' => 'Stock',
         ],
-        'crud'=>[
-            'Create'=>'Create',
-            'Update'=>'Update',
-            'Delete'=>'Delete',
-            'All'=>'All',
-            'Create & New'=>'Create & New',
-            'Update & Return'=>'Update & Return',
-            'Cancel'=>'Cancel',
-            'Actions'=>'Actions',
-            'Number' => 'Number',
-            'Show' => 'Show',
-        ]
     ],
     'brands' => [
         'Brand Name' => 'Brand name',
