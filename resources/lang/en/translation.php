@@ -2,27 +2,97 @@
 return [
     'website'=>
     [
-        'create'=>'',
-        'update'=>'',
-    ],
-    'users'=>[
-        'common'=>[
-            'name'=>'',
-            'phone','',
-            'password'=>''
+        'nav'=>[
+
         ],
-        'create'=>[
-            'createUser'=>''
-        ],'edit'=>[
-
-        ],'index'=>[
-
+        'sidebar'=>[
+            'ELRAYAN'=>'ELRAYAN',
+            'Clients'=>'Clients',
+            'all Clients'=>'All Clients',
+            'create client'=>'Create Client',
+            'Client Wallet'=>'Client Wallet',
+            'Client Wallet Trans'=>'Client Wallet Trans',
+            'All Transactions'=>'All Transactions',
+            'Create Transaction'=>'Create Transaction',
+            'Suppliers'=>'Suppliers',
+            'all Suppliers'=>'All Suppliers',
+            'create suppliers'=>'Create Suppliers',
+            'Supplier Wallet'=>'Supplier Wallet',
+            'Supplier Wallet Trans'=>'Supplier Wallet Trans',
+            'Users'=>'Users',
+            'All Users'=>'All Users',
+            'Create User'=>'Create User',
+            'My Wallet'=>'My Wallet',
+            'My Wallet Trans'=>'My Wallet Trans',
+            'Dashboard'=>'Dashboard',
+            'Brands' => 'Brands',
+            'All Brands' => 'All Brands',
+            'Create Brand' => 'Create Brand',
+            'Categories' => 'Categories',
+            'All Categories' => 'All Categories',
+            'Create Category' => 'Create Category',
+            'All Products' => 'All Products',
+            'Stock' => 'Stock',
+        ],
+        'crud'=>[
+            'Create'=>'Create',
+            'Update'=>'Update',
+            'Delete'=>'Delete',
+            'All'=>'All',
+            'Create & New'=>'Create & New',
+            'Update & Return'=>'Update & Return',
+            'Cancel'=>'Cancel',
+            'Actions'=>'Actions',
+            'Number' => 'Number',
+            'Show' => 'Show',
         ]
-    ],'supplier'=>[
-
-    ],'supplierWallet'=>[
-
-    ],'userWallet'=>[
-
-    ]
+    ],
+    'brands' => [
+        'Brand Name' => 'Brand name',
+        'Brand Image' => 'Brand Image',
+        'Select Image' => 'Select Image',
+        'Change' => 'Change',
+        'Remove' => 'Remove',
+        'Edit Brand' => 'Edit Brand',
+    ],
+    'categories' => [
+        'Category Name' => 'Category name',
+        'Category Image' => 'Category Image',
+        'Select Image' => 'Select Image',
+        'Change' => 'Change',
+        'Remove' => 'Remove',
+        'Edit Category' => 'Edit Category',
+    ],
+    'products' => [
+        'Product Name' => 'Product Name',
+        'Show Product' =>'Show Product',
+        'Product History' => 'Product History',
+        'Here you can manage your products' => 'Here you can manage your products',
+        'Description' => 'Description',
+        'Edit Product' => 'Edit Product',
+        'Here you can edit your Product' => 'Here you can edit your Product',
+        'Product Photo(s)' => 'Product Photo(s)',
+        'Description' => 'Description',
+        'Write a description for this product' => 'Write a description for this product',
+        'Purchase Price' => 'Purchase Price',
+        'Brand' => 'Brand',
+        'Category' => 'Category',
+        'Primary Purchase Price' => 'Primary Purchase Price',
+        'Primary Sale Price' => 'Primary Sale Price',
+        'Total Stock' => 'Total Stock',
+        'Purchase price' => 'Purchase price',
+        'Sales Price' => 'Sales Price',
+        'Made In' => 'Made In',
+        'Code' => 'Code',
+        'Supplier' => 'Supplier',
+        'Suppliers' => 'Suppliers',
+        'Stock' => 'Stock',
+        'Statement' => 'Statement',
+        'Incoming' => 'Incoming',
+        'Outgoing' => 'Outgoing',
+        'Supplier Number' => 'Supplier Number',
+        'Stock Before Transaction' => 'Stock Before Transaction',
+        'Stock After Transaction' => 'Stock After Transaction',
+        'id' => 'ID',
+        ]
 ];

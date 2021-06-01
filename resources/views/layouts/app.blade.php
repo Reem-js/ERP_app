@@ -19,8 +19,8 @@
     <link href="{{ asset('material') }}/css/material-dashboard-rtl.css?v=1.1" rel="stylesheet" />
     @endif
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
-    </head>
+    <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" /></head>
+    @stack('css')
     <body class="{{ $class ?? '' }}">
         @auth()
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -38,7 +38,7 @@
               <i class="fa fa-cog fa-2x"> </i>
             </a>
             <ul class="dropdown-menu">
-              <li class="header-title"> Sidebar Filters</li>
+              <li class="header-title"> {{__('translation.website.sidebar.Sidebar Filters')}}</li>
               <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
                   <div class="badge-colors ml-auto mr-auto">

@@ -14,62 +14,69 @@
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons">dashboard</i>
-            <p>{{ __('Dashboard') }}</p>
+            <p>{{ __('translation.website.sidebar.Dashboard') }}</p>
         </a>
       </li>
-      <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
-        <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
-          <p>{{ __('Laravel Examples') }}
-            <b class="caret"></b>
+      <li class="nav-item {{ ($activePage == 'allBrands' || $activePage == 'createBrand' || $activePage == 'editBrand') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#Brand" aria-expanded="false">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <p>{{ __('translation.website.sidebar.Brands') }}
+            <b class="caret" style="{{app()->getLocale() == 'ar' ? 'margin-right: 180px;' : ''}}"></b>
           </p>
         </a>
-        <div class="collapse show" id="laravelExample">
+        <div class="collapse {{ ($activePage == 'allBrands' || $activePage == 'createBrand' || $activePage == 'editBrand') ? 'show' : '' }}" id="Brand">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('profile.edit') }}">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+            <li class="nav-item {{ $activePage == 'allBrands' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('brands.index') }}">
+                <span style="padding-left: 30px" class="sidebar-normal">{{ __('translation.website.sidebar.All Brands') }} </span>
               </a>
             </li>
-            <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('user.index') }}">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+            <li class="nav-item {{ $activePage == 'createBrand' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('brands.create') }}">
+                <span style="padding-left: 30px" class="sidebar-normal"> {{ __('translation.website.sidebar.Create Brand') }} </span>
               </a>
             </li>
           </ul>
         </div>
       </li>
-      <li class="nav-item {{ ($activePage == 'allUser' || $activePage == 'createUser') ? ' active' : '' }}">
-        <a class="nav-link" data-toggle="collapse" href="#User" aria-expanded="false">
-          <i><i class="fa fa-users" aria-hidden="true"></i></i>
-          <p>{{ __('User') }}
-            <b class="caret"></b>
+      <li class="nav-item {{ ($activePage == 'allCategories' || $activePage == 'createCategory' || $activePage == 'editCategory') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#Category" aria-expanded="false">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <p>{{ __('translation.website.sidebar.Categories') }}
+            <b class="caret" style="{{app()->getLocale() == 'ar' ? 'margin-right: 180px;' : ''}}"></b>
           </p>
         </a>
-        <div class="collapse" id="User">
+        <div class="collapse {{ ($activePage == 'allCategories' || $activePage == 'createCategory' || $activePage == 'editCategory') ? ' show' : '' }}" id="Category">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'allUser' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('users.index') }}">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('allUser') }} </span>
+            <li class="nav-item {{ $activePage == 'allCategories' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('categories.index') }}">
+                <span style="padding-left: 30px" class="sidebar-normal">{{ __('translation.website.sidebar.All Categories') }} </span>
               </a>
             </li>
-            <li class="nav-item{{ $activePage == 'createUser' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('users.create') }}">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('createUser') }} </span>
+            <li class="nav-item {{ $activePage == 'createCategory' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('categories.create') }}">
+                <span style="padding-left: 30px" class="sidebar-normal"> {{ __('translation.website.sidebar.Create Category') }} </span>
               </a>
             </li>
           </ul>
         </div>
       </li>
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('table') }}">
-          <i class="material-icons">content_paste</i>
-            <p>{{ __('Table List') }}</p>
+      <li class="nav-item {{ ($activePage == 'allProducts' || $activePage == 'showProduct' || $activePage == 'editProduct' || $activePage == 'productHistory') ? ' active' : '' }}">
+        <a class="nav-link" data-toggle="collapse" href="#Product" aria-expanded="false">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <p>{{ __('translation.website.sidebar.Stock') }}
+            <b class="caret" style="{{app()->getLocale() == 'ar' ? 'margin-right: 180px;' : ''}}"></b>
+          </p>
         </a>
+        <div class="collapse {{ ($activePage == 'allProducts' || $activePage == 'showProduct' || $activePage == 'editProduct' || $activePage == 'productHistory') ? ' show' : '' }}" id="Product">
+          <ul class="nav">
+            <li class="nav-item {{ $activePage == 'allProducts' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('products.index') }}">
+                <span style="padding-left: 30px" class="sidebar-normal">{{ __('translation.website.sidebar.All Products') }} </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </li>
     </ul>
   </div>

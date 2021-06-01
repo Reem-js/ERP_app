@@ -2,27 +2,97 @@
 return [
     'website'=>
     [
-        'create'=>'',
-        'update'=>'',
-    ],
-    'users'=>[
-        'common'=>[
-            'name'=>'',
-            'phone','',
-            'password'=>''
+        'nav'=>[
+
         ],
-        'create'=>[
-            'createUser'=>''
-        ],'edit'=>[
-
-        ],'index'=>[
-
+        'sidebar'=>[
+            'ELRAYAN'=>'الريان',
+            'Clients'=>'العملاء',
+            'All Clients'=>'كل العملاء',
+            'Create client'=>'اضافة عميل',
+            'Client Wallet'=>'محفظة العميل',
+            'Client Wallet Trans'=>'عمليات محفظة العميل',
+            'All Transactions'=>'كل العمليات',
+            'Create Transaction'=>'أضافة عملية',
+            'Suppliers'=>'الموردين',
+            'All Suppliers'=>'كل الموردين',
+            'Create Suppliers'=>'أضافة مورد',
+            'Supplier Wallet'=>'محفظة الموردين',
+            'Supplier Wallet Trans'=>'عمليات محفظة المورد',
+            'Users'=>'المستخدمين',
+            'All Users'=>'كل المستخدمين',
+            'Create User'=>'أضافة مستخدم',
+            'My Wallet'=>'محفظتي',
+            'My Wallet Trans'=>'عمليات محفظتي',
+            'Dashboard'=>'الصفحة الرئيسية',
+            'Brands' => 'الماركات',
+            'All Brands' => 'كل الماركات',
+            'Create Brand' => 'إضافة ماركة',
+            'Categories' => 'الفئات',
+            'All Categories' => 'كل الفئات',
+            'Create Category' => 'إضافة فئة',
+            'All Products' => 'كل المنتجات',
+            'Stock' => 'المخزون',
+        ],
+        'crud'=>[
+            'Create'=>'أضافة',
+            'Update'=>'تعديل',
+            'Delete'=>'حذف',
+            'All'=>'كل',
+            'Create & New'=>'أضافة و جديد',
+            'Update & Return'=>' تعديل و عودة',
+            'Cancel'=>'الفاء',
+            'Actions'=>'اجراءات',
+            'Number' => 'الرقم',
+            'Show' => 'عرض',
         ]
-    ],'supplier'=>[
-
-    ],'supplierWallet'=>[
-
-    ],'userWallet'=>[
-
+    ],
+    'brands' => [
+        'Brand Name' => 'اسم الماركة',
+        'Brand Image' => 'صورة الماركة',
+        'Select Image' => 'اختر صورة',
+        'Change' => 'تغيير',
+        'Remove' => 'مسح',
+        'Edit Brand' => 'تعديل ماركة',
+    ],
+    'categories' => [
+        'Category Name' => 'اسم الفئة',
+        'Category Image' => 'صورة الفئة',
+        'Select Image' => 'اختر صورة',
+        'Change' => 'تغيير',
+        'Remove' => 'مسح',
+        'Edit Category' => 'تعديل فئة',
+    ],
+    'products' => [
+        'Product Name' => 'اسم المنتج',
+        'Show Product' => 'عرض المنتج',
+        'Product History' => 'سجل المنتج',
+        'Here you can manage your products' => 'هنا يمكنك إدارة المنتجات الخاصة بك',
+        'Description' => 'وصف المنتج',
+        'Edit Product' => 'تعديل منتج',
+        'Here you can edit your Product' => 'هنا يمكنك تعديل المنتج الخاص بك',
+        'Product Photo(s)' => 'صورة\صور المنتج',
+        'Description' => 'وصف',
+        'Write a description for this product' => 'أضف وصف لهذا المنتج',
+        'Purchase Price' => 'سعر الشراء',
+        'Brand' => 'الماركة',
+        'Category' => 'الفئة',
+        'Primary Purchase Price' => 'سعر البيع المبدئى',
+        'Primary Sale Price' => 'سعر الشراء المبدئى',
+        'Total Stock' => 'عدد المنتج فى المخزون',
+        'Purchase Price' => 'سعر الشراء',
+        'Sales Price' => 'سعر البيع',
+        'Made In' => 'صنع فى',
+        'Code' => 'الكود',
+        'Supplier' => 'المورد',
+        'Suppliers' => 'الموردين',
+        'Stock' => 'المخزون',
+        'Statement' => 'بيان',
+        'Incoming' => 'الوارد',
+        'Outgoing' => 'المنصرف',
+        'Supplier Number' => 'رقم المورد',
+        'Stock Before Transaction' => 'المخزون قبل المعاملة',
+        'Stock After Transaction' => 'المخزون بعد المعاملة',
+        'id' => 'الرقم المسلسل',
     ]
 ];
