@@ -14,6 +14,7 @@ return [
             'Client Wallet Trans'=>'Client Wallet Trans',
             'All Transactions'=>'All Transactions',
             'Create Transaction'=>'Create Transaction',
+            'Edit Transaction'=>'Edit Transaction',
             'Suppliers'=>'Suppliers',
             'all Suppliers'=>'All Suppliers',
             'create suppliers'=>'Create Suppliers',
@@ -25,6 +26,18 @@ return [
             'My Wallet'=>'My Wallet',
             'My Wallet Trans'=>'My Wallet Trans',
             'Dashboard'=>'Dashboard',
+            'Add New User'=>'Add New User',
+            'Edit User'=>'Edit User',
+            'Edit Supplier'=>'Edit Supplier',
+            'Edit Client'=>'Edit Client',
+            'Purchases'=>'Purchases',
+            'All Purchases'=>'All Purchases',
+            'Create Purchase'=>'Create Purchases',
+            'Edit Purchase'=>'Edit Purchases',
+
+
+
+
             ''=>'',
 
         ],
@@ -36,8 +49,32 @@ return [
             'Create & New'=>'Create & New',
             'Update & Return'=>'Update & Return',
             'Cancel'=>'Cancel',
-            'Actions'=>'Actions'
+            'Actions'=>'Actions',
+            'Create initial wallet value'=>'Create initial wallet value',
+
         ]
+    ],
+    'title'=>[
+        'create client'=>'create client',
+        'Edit Client'=>'Edit Client',
+        'Delete Client'=>'Delete Client',
+        'create Supplier'=>'create Supplier',
+        'Edit Supplier'=>'Edit Supplier',
+        'Delete Supplier'=>'Delete Supplier',
+        'create User'=>'create User',
+        'Edit User'=>'Edit User',
+        'Delete User'=>'Delete User',
+        'Create Transaction'=>'Create Transaction',
+        'Edit Transaction'=>'Edit Transaction',
+        'Delete Transaction'=>'Delete Transaction',
+        'show Transactions'=>'show Transactions',
+        'Add Transaction'=>'Add Transaction',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
     ],
     'wallet'=>[
         'My Wallet' => 'My Wallet',
@@ -50,71 +87,55 @@ return [
         'Amount'=>'Amount',
         'Total Balance'=>'Total Balance',
         'Number Of Transactions'=>'Number Of Transactions',
+        'Number Of +'=>'Number Of +',
+
         'Total Paied'=>'Total Paied',
         'Pending'=>'Pending',
     ],
     'walletTransaction'=>[
+        'ID'=>'ID',
         'Reason'=>'Reason',
         'Date'=>'Date',
         'Transaction'=>'Transaction',
         'Transaction Type'=>'Transaction Type',
         'Amount'=>'Amount',
         'Installment'=>'Installment',
+        'Actions'=>'Actions',
     ],
     'users'=>[
-        'common'=>[
-            'All Users'=>'All Users',
-            'Edit User'=>'Edit User',
             'Name'=>'Name',
             'Phone'=>'Phone',
             'Password'=>'Password',
             'Email'=>'Email',
             'ID'=>'ID',
             'Actions'=>'Actions',
-        ],
-        'create'=>[
-            'Add New User'=>'Add New User',
             'Confirm Password'=>'Confirm Password',
-        ],
-        'edit'=>[
-            'Confirm Password'=>'Confirm Password',
-
-        ],'index'=>[
-
-        ],'transaction'=>[
-            'Reason'=>'Reason',
-            'Date'=>'Date',
-            'Transaction'=>'Transaction',
-            'Transaction Type'=>'Transaction Type',
-            'Amount'=>'Amount',
-            'Installment'=>'Installment',
-        ]
+            'Role'=>'Role',
+            'Super Admin'=>'Super Admin',
+            'Data Admin'=>'Data Admin',
     ],
     'suppliers'=>[
-        'common'=>[
-            'Edit Supplier-Transaction'=>'Edit Supplier Transaction',
-            'Add New Supplier-Transaction'=>'Add New Supplier-Transaction',
-            'All Supplier Wallet Transaction'=>'All Supplier Wallet Transaction',
-            'Edit Supplier'=>'Edit Supplier',
-            'Add New Supplier'=>'Add New Supplier',
-            'All Suppliers'=>'All Suppliers',
+        'Supplier'=>'Supplier',
+
+            'Supplier Name'=>'Supplier Name',
+            'Supplier Phone'=>'Supplier Phone',
             'ID'=>'ID',
             'Name'=>'Name',
             'Nickname'=>'Nickname',
             'Phone'=>'Phone',
             'Email'=>'Email',
             'Address'=>'Address',
-            'PDF'=>'PDF',
+            'Price Lists'=>'Price Lists',
             'Actions'=>'Actions',
-        ],
-      
+     
 
     ],
-    'supplierWallet'=>[
-    ],
+  
     'clients'=>[
             'ID'=>'ID',
             'Name'=>'Name',
+            'Client Name'=>'Client Name',
+            'Client Phone'=>'Client Phone',
             'Nickname'=>'Nickname',
             'Phone'=>'Phone',
             'Email'=>'Email',
@@ -127,4 +148,5 @@ return [
             'Edit Client-Transaction'=>'Edit Client-Transaction',
             'All clients'=>'All Clients',
     ],
+    
 ];

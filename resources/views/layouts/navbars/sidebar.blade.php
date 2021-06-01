@@ -153,7 +153,35 @@
 
                 </div>
             </li>
+             {{-- liveware purchases --}}
+             <li
+             class="nav-item {{ $activePage == 'all-Purchases' || $activePage == 'createPurchase' || $activePage == 'edit-all-Purchases' ? ' active' : '' }}">
+             <a class="nav-link" data-toggle="collapse" href="#Purchases" aria-expanded="false">
+                 <i><i class="fa fa-users" aria-hidden="true"></i></i>
+                 <p>{{ __('translation.website.sidebar.Purchases') }}
+                     <b class="caret"></b>
+                 </p>
+             </a>
+             <div class="collapse {{ $activePage == 'all-Purchases' || $activePage == 'createPurchase' || $activePage == 'edit-users' ? ' show' : '' }}"
+                 id="Purchases">
+                 <ul class="nav">
+                     <li class="nav-item{{ $activePage == 'all-Purchases' ? ' active' : '' }}">
+                         <a class="nav-link" href="{{ route('purchases.index') }}">
+                             <span class="sidebar-mini"> UP </span>
+                             <span class="sidebar-normal">{{ __('translation.website.sidebar.All Purchases') }} </span>
+                         </a>
+                     </li>
+                     <li class="nav-item{{ $activePage == 'createPurchase' ? ' active' : '' }}">
+                         <a class="nav-link" href="{{ route('users.create') }}">
+                             <span class="sidebar-mini"> UM </span>
+                             <span class="sidebar-normal"> {{ __('translation.website.sidebar.Create Purchase') }} </span>
+                         </a>
+                     </li>
 
+                 </ul>
+
+             </div>
+         </li>
             {{-- users --}}
             <li
                 class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' active' : '' }}">
@@ -219,6 +247,7 @@
 
                 </div>
             </li>
+           
 
 
         </ul>

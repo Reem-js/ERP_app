@@ -14,6 +14,8 @@ return [
             'Client Wallet Trans'=>'عمليات محفظة العميل',
             'All Transactions'=>'كل العمليات',
             'Create Transaction'=>'أضافة عملية',
+            'Edit Transaction'=>'تعديل عملية',
+
             'Suppliers'=>'الموردين',
             'all Suppliers'=>'كل الموردين',
             'create suppliers'=>'أضافة مورد',
@@ -25,6 +27,14 @@ return [
             'My Wallet'=>'محفظتي',
             'My Wallet Trans'=>'عمليات محفظتي',
             'Dashboard'=>'الصفحة الرئيسية',
+            'Add New User'=>'اضافة مستخدم جديد',
+            'Edit User'=>'تعديل المستخدم',
+            'Edit Supplier'=>'تعديل المورد',
+            'Edit Client'=>'تعديل العميل',
+            'Purchases'=>'المشتريات',
+            'All Purchases'=>'كل المشتريات',
+            'Create Purchase'=>'اضافة المشتريات',
+            'Edit Purchase'=>'تعديل المشتريات',
             ''=>'',
 
         ],
@@ -37,8 +47,30 @@ return [
             'Update & Return'=>' تعديل و عودة',
             'Cancel'=>'الفاء',
             'Actions'=>'اجراءات',
+            'Create initial wallet value'=>'انشاء قيمة بدائية للمحفظة'
+
         ]
 
+    ],
+    'title'=>[
+        'create client'=>'اضافة عميل',
+        'Edit Client'=>'تعديل العميل',
+        'Delete Client'=>'مسح العميل',
+        'create Supplier'=>'اضافة مورد',
+        'Edit Supplier'=>'تعديل مورد',
+        'Delete Supplier'=>'مسح مورد',
+        'create User'=>'اضافة مستخدم',
+        'Edit User'=>'تعديل مستخدم',
+        'Delete User'=>'مسح مستخدم',
+        'Create Transaction'=>'أضافة عملية',
+        'Edit Transaction'=>'تعديل عملية',
+        'Delete Transaction'=>'مسح عملية',
+        'show Transactions'=>'اظهار العمليات',
+        'Add Transaction'=>'اضافة عملية',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
     ],
     'wallet'=>[
         'My Wallet' => 'محفظتي',
@@ -55,64 +87,47 @@ return [
         'Pending'=>'المتبقي',
     ],
     'walletTransaction'=>[
+            'ID'=>'ID',
            'Reason'=>'السبب',
             'Date'=>'التاريخ',
             'Transaction'=>'العملية',
             'Transaction Type'=>'نوع العملية',
             'Amount'=>'القيمة',
             'Installment'=>'الاقساط',
+            'Actions'=>'العمليات',
     ],
     'users'=>[
-
-            'All Users'=>'كل المستخدميين',
-            'Edit User'=>'تعديل المستخدميين ',
             'Name'=>'الاسم',
             'Phone'=>'التليفون',
             'Password'=>'كلمة السر',
             'Email'=>'البريد الالكتروني',
             'ID'=>'الرقم',
             'Actions'=>'العملياات',
-
-
-        'create'=>[
-            'Add New User'=>'اضافة مستخدم',
             'Confirm Password'=>'تاكيد كلمة السر',
-        ],
-        'edit'=>[
             'Confirm Password'=>'تاكيد كلمة السر',
-
-        ],
-        'index'=>[
-
-        ],
-        'transaction'=>[
-            'Reason'=>'السبب',
-            'Date'=>'التاريخ',
-            'Transaction'=>'العملية',
-            'Transaction Type'=>'نوع العملية',
-            'Amount'=>'القيمة',
-            'Installment'=>'الاقساط',
-        ]
+            'Role'=>'الوظيفة',
+            'Super Admin'=>'مشرف فائق',
+            'Data Admin'=>'إدارة البيانات',
     ],
     'suppliers'=>[
-            'Edit Supplier-Transaction'=>'تعديل عمليات الوردين',
-            'Add New Supplier-Transaction'=>'اضافة عمليات للمورد',
-            'All Supplier Wallet Transaction'=>'كل عمليات محافظ الموردين',
-            'Edit Supplier'=>'تعديل المورديين',
-            'Add New Supplier'=>'اضافة مورد جديد',
-            'All Suppliers'=>'كل الموردين',
+            'Supplier'=>'المورد',
+            'Supplier Name'=>'اسم المورد',
+            'Supplier Phone'=>'تليفون المورد',
             'ID'=>'الرقم',
             'Name'=>'الاسم',
             'Nickname'=>'الاسم المستعار',
             'Phone'=>'التليفون',
             'Email'=>'البريد الالكتروني',
             'Address'=>'العنوان',
-            'PDF'=>'ملف',
+            'Price Lists'=>'قوائم الاسعار',
+
             'Actions'=>'العمليات',
     ],
     'clients'=> [
             'ID'=>'الرقم',
             'Name'=>'الاسم',
+            'Client Name'=>'اسم العميل',
+            'Client Phone'=>'تليفون العميل',
             'Nickname'=>'الاسم المستعار',
             'Phone'=>'التليفون',
             'Email'=>'البريد الالكتروني',
