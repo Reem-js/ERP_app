@@ -1218,4 +1218,7 @@ html[dir="rtl"] .sidebar .nav .caret {
     right: unset !important;
     left: 6px
 }
-
+/*# sourceMappingURL=material-dashboard-rtl.css.map */
+html[dir="rtl"] .text-right > a {
+    float: left;
+}
