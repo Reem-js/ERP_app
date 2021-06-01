@@ -55,9 +55,8 @@
                                     <button type="submit" class="btn btn-danger"  style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{__('translation.website.crud.Cancel')}}</button> 
                                 </div>
                          
-                                                  </form>
-
-                            </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

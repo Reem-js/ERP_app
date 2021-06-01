@@ -23,6 +23,7 @@
                                         <th>{{ __('translation.users.Name') }}</th>
                                         <th>{{ __('translation.users.Email') }}</th>
                                         <th>{{ __('translation.users.Phone') }}</th>
+                                        <th>{{ __('translation.users.Role') }}</th>
                                         <th>{{ __('translation.users.Actions') }}</th>
                                     </tr>
                                 </thead>
@@ -31,6 +32,8 @@
                                         <td class="text-center">2</td>
                                         <td>Andrew Mike</td>
                                         <td>2013</td>
+                                        <td>2013</td>
+
                                         <td >&euro; 99,225</td>
                                         <td class="td-actions">
 

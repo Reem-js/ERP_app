@@ -58,7 +58,7 @@
             </li>
             {{-- client Wallet Trans --}}
             <li
-                class="nav-item {{ $activePage == 'createclientWalletTransaction' || $activePage == 'walletclientTransaction' || $activePage == 'editwalletTransaction' ? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'createclientWalletTransaction' || $activePage == 'walletclientTransaction' || $activePage == 'editclientwalletTransaction' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#clientWallet" aria-expanded="false">
                     <i class="material-icons">credit_card</i>
                     <p>{{ __('translation.website.sidebar.Client Wallet Trans') }}
@@ -66,7 +66,7 @@
                     </p>
 
                 </a>
-                <div class="collapse{{ $activePage == 'createclientWalletTransaction' || $activePage == 'walletclientTransaction' || $activePage == 'editwalletTransaction' ? ' show' : '' }} "
+                <div class="collapse{{ $activePage == 'createclientWalletTransaction' || $activePage == 'walletclientTransaction' || $activePage == 'editclientwalletTransaction' ? ' show' : '' }} "
                     id="clientWallet">
                     <ul class="nav">
 
@@ -166,7 +166,7 @@
                  id="Purchases">
                  <ul class="nav">
                      <li class="nav-item{{ $activePage == 'all-Purchases' ? ' active' : '' }}">
-                         <a class="nav-link" href="{{ route('purchases.index') }}">
+                         {{-- <a class="nav-link" href="{{ route('purchases.index') }}"> --}}
                              <span class="sidebar-mini"> UP </span>
                              <span class="sidebar-normal">{{ __('translation.website.sidebar.All Purchases') }} </span>
                          </a>
@@ -220,14 +220,14 @@
             </li>
             {{-- user wallet Trans --}}
             <li
-                class="nav-item {{ ($activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'editwalletTransaction') ? ' active' : '' }}">
+                class="nav-item {{ ($activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'edituserwalletTransaction') ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#userWallettrans" aria-expanded="false">
                     <i class="material-icons">credit_card</i>
                     <p>{{ __('translation.website.sidebar.My Wallet Trans') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ ($activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'editwalletTransaction') ? ' show' : '' }} "
+                <div class="collapse {{ ($activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'edituserwalletTransaction') ? ' show' : '' }} "
                     id="userWallettrans">
                     <ul class="nav">
                         <li class="nav-item{{ $activePage == 'allUserTransactions' ? ' active' : '' }}">

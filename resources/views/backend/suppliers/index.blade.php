@@ -23,7 +23,6 @@
                                         <th>{{ __('translation.suppliers.Nickname') }}</th>
                                         <th>{{ __('translation.suppliers.Phone') }}</th>
                                         <th>{{ __('translation.suppliers.Address') }}</th>
-                                        <th>{{ __('translation.suppliers.PDF') }}</th>
                                         <th>{{ __('translation.suppliers.Actions') }}</th>
                                     </tr>
                                 </thead>
@@ -32,7 +31,6 @@
                                         <td class="text-center">2</td>
                                         <td>Andrew Mike</td>
                                         <td>Develop</td>
-                                        <td>2013</td>
                                         <td>2013</td>
                                         <td>&euro; 99,225</td>
                                         <td class="td-actions">

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'editwalletTransaction', 'titlePage' => __('translation.website.sidebar.Edit
+@extends('layouts.app', ['activePage' => 'editclientwalletTransaction', 'titlePage' => __('translation.website.sidebar.Edit
 Transaction')])
 @section('content')
     <div class="content">

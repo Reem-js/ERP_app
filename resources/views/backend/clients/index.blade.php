@@ -12,6 +12,7 @@
                               </div>
                             </div>
                             <div class="card-body">
+                                
                                 <a href="{{ route('clients.create') }}" rel="tooltip" title="{{ __('translation.title.create client') }}" class="btn btn-primary btn-round"  style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"> <i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
                                 <table class="table">
                                     <thead>
