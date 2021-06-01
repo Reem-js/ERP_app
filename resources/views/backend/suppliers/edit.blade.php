@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'edit-users', 'titlePage' => __('translation.website.sidebar.Edit User')])
+@extends('layouts.app', ['activePage' => 'edit-suppliers', 'titlePage' => __('translation.website.sidebar.Edit
+Supplier')])
 
 @section('content')
     <div class="content">
@@ -8,53 +9,53 @@
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.Edit User') }}</h4>
+                                <h4 class="card-title">{{ __('translation.website.sidebar.Edit Supplier') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Name') }}</p>
+                                        {{ __('translation.suppliers.Name') }}</p>
                                     <input type="text" name="name" class="form-control" id="inputAddress" required
+                                        placeholder="1234 Main Sv">
+                                </div>
+
+                                <div class="form-group" style="margin: 20px;">
+                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                        {{ __('translation.suppliers.Nickname') }}</p>
+                                    <input type="text" name="nickname" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Email') }}</p>
-                                    <input type="email" name="email" class="form-control" id="inputAddress" required
-                                        placeholder="1234 Main St">
-                                </div>
-
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Phone') }}</p>
+                                        {{ __('translation.suppliers.Phone') }}</p>
                                     <input type="text" name="phone" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Password') }}</p>
-                                    <input type="password" name="password" class="form-control" id="inputAddress" required
+                                        {{ __('translation.suppliers.Address') }}</p>
+                                    <input type="text" name="address" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
-                                <div class="form-group" style="margin: 20px;">
+                                
+                                <div class="form-group form-file-upload form-file-multiple" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Confirm Password') }}</p>
-                                    <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
-                                        required placeholder="1234 Main St">
-                                </div>
-
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Role') }}</label>
-                                        <select class="form-group form-control" name="role" id="role">
-                                            <option value="0">{{ __('translation.users.Super Admin') }}</option>
-                                            <option value="1">{{ __('translation.users.Data Admin') }}</option>
-                                        </select>
+                                        {{ __('translation.suppliers.Price Lists') }}</p>
+                                    <input type="file" multiple="" class="inputFileHidden">
+                                    <div class="input-group">
+                                        <input type="text" name="media" class="form-control inputFileVisible"
+                                            placeholder="Multiple Files" multiple>
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-fab btn-round btn-info">
+                                                <i class="material-icons">layers</i>
+                                            </button>
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
@@ -70,8 +71,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
     </div>

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <a class="navbar-brand" href="#">{{ $titlePage }}</a>
+      {{-- <a class="navbar-brand" href="#">{{ $titlePage }}</a> --}}
       @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
         @if(app()->getLocale() == $localeCode)
             @continue

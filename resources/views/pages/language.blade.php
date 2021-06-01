@@ -159,7 +159,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#pablo">
-                  <i class="material-icons">person</i>
+                  <i class="fa fa-eye"></i>
                   <p class="d-lg-none d-md-block">
                     حساب کاربری
                   </p>

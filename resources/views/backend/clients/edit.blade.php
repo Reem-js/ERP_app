@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'edit-users', 'titlePage' => __('translation.website.sidebar.Edit User')])
+@extends('layouts.app', ['activePage' => 'edit-clients', 'titlePage' => __('translation.website.sidebar.Edit Client')])
 
 @section('content')
     <div class="content">
@@ -8,53 +8,44 @@
                     <div class="card">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.Edit User') }}</h4>
+                                <h4 class="card-title">{{ __('translation.website.sidebar.Edit Client') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Name') }}</p>
+                                        {{ __('translation.clients.Name') }}</p>
                                     <input type="text" name="name" class="form-control" id="inputAddress" required
-                                        placeholder="1234 Main St">
+                                        placeholder="1234 Main Sv">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Email') }}</p>
+                                        {{ __('translation.clients.Nickname') }}</p>
                                     <input type="email" name="email" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Phone') }}</p>
+                                        {{ __('translation.clients.Email') }}</p>
+                                    <input type="email" name="email" class="form-control" id="inputAddress" required
+                                        placeholder="1234 Main St">
+                                </div>
+
+                                <div class="form-group" style="margin: 20px;">
+                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                        {{ __('translation.clients.Phone') }}</p>
                                     <input type="text" name="phone" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Password') }}</p>
-                                    <input type="password" name="password" class="form-control" id="inputAddress" required
+                                        {{ __('translation.clients.Address') }}</p>
+                                    <input type="text" name="address" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
-                                </div>
-
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Confirm Password') }}</p>
-                                    <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
-                                        required placeholder="1234 Main St">
-                                </div>
-
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.users.Role') }}</label>
-                                        <select class="form-group form-control" name="role" id="role">
-                                            <option value="0">{{ __('translation.users.Super Admin') }}</option>
-                                            <option value="1">{{ __('translation.users.Data Admin') }}</option>
-                                        </select>
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
@@ -66,12 +57,14 @@
                                         style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{ __('translation.website.crud.Cancel') }}</button>
                                 </div>
 
+
+
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
     </div>

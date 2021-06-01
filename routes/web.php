@@ -8,6 +8,14 @@ use App\Http\Controllers\backend\brands\BrandController;
 use App\Http\Controllers\backend\products\ProductController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\backend\categories\CategoryController;
+use App\Http\Controllers\backend\clientss\ClientController;
+use App\Http\Controllers\backend\suppliers\SupplierController;
+use App\Http\Controllers\backend\UserWallet\UserWalletController;
+use App\Http\Controllers\backend\ClientWallet\ClientWalletController;
+use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
+use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
+use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
+use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +27,8 @@ use App\Http\Controllers\backend\categories\CategoryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+    // Route::livewire('livewire/purchases','Purchases');
+
 
 Route::group(
     [
@@ -40,15 +50,25 @@ Route::group(
 
         Auth::routes(); // ['register' => false]
         Route::get('/home', [HomeController::class, 'index'])->name('home');
-        Route::group([],function () {
+        Route::group(['middleware' => 'auth'],function () {
             /* New Routes */
             Route::resource('users',UserController::class);
             Route::resource('brands', BrandController::class);
             Route::resource('categories', CategoryController::class);
             Route::resource('products', ProductController::class);
             Route::get('products/history/{id}', [ProductController::class, 'history'])->name('products.history');
+            Route::get('user-wallet',[UserWalletController::class,'getWallet'])->name('get.user.wallet');
+            Route::resource('user-wallet-transactions',UserWalletTransactionController::class);
+            Route::resource('suppliers',SupplierController::class);
+            Route::get('supplier-wallet',[SupplierWalletController::class,'getSupplierWallet'])->name('get.supplier.wallet');
+            Route::get('supplier-wallet-trans/{suppplier}',[SupplierWalletController::class,'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
+            Route::resource('supplier-wallet-transactions',SupplierWalletTransactionController::class);
+            Route::resource('clients',ClientController::class);
+            Route::get('client-wallet',[ClientWalletController::class,'getClientWallet'])->name('get.client.wallet');
+            Route::get('client-wallet-trans/{client}',[ClientWalletController::class,'getClientWalletTrans'])->name('get.client.wallet.trans');
+            Route::resource('client-wallet-transactions',ClientWalletTransactionController::class);
         });
+
     }
 );
-
 

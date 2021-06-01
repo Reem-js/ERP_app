@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $titlePage }}</title>
+    <!-- for selectbox with search -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('material') }}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -18,9 +21,10 @@
     @if(app()->getLocale() == 'ar')
     <link href="{{ asset('material') }}/css/material-dashboard-rtl.css?v=1.1" rel="stylesheet" />
     @endif
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" /></head>
+    <!-- CSS Just for demo purpose, dont include it in your project -->
+    <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
     @stack('css')
+    </head>
     <body class="{{ $class ?? '' }}">
         @auth()
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -127,8 +131,10 @@
         <script src="{{ asset('material') }}/js/plugins/jquery.dataTables.min.js"></script>
         <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
         <script src="{{ asset('material') }}/js/plugins/bootstrap-tagsinput.js"></script>
-        <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-        <script src="{{ asset('material') }}/js/plugins/jasny-bootstrap.min.js"></script>
+        {{-- <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput --> --}}
+         <script src="{{ asset('material') }}/js/plugins/jasny-bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
+
         <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
         <script src="{{ asset('material') }}/js/plugins/fullcalendar.min.js"></script>
         <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
@@ -147,9 +153,52 @@
         <script src="{{ asset('material') }}/js/plugins/bootstrap-notify.js"></script>
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="{{ asset('material') }}/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-        <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+        <!-- Material Dashboard DEMO methods, dont include it in your project! -->
         <script src="{{ asset('material') }}/demo/demo.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
+
+        <!-- Select2 JS -->   <!-- for selectbox with search -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+
+        <!-- Upload muliple files -->
+        <script>
+          // FileInput
+        $('.form-file-simple .inputFileVisible').click(function() {
+          $(this).siblings('.inputFileHidden').trigger('click');
+        });
+
+        $('.form-file-simple .inputFileHidden').change(function() {
+          var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
+          $(this).siblings('.inputFileVisible').val(filename);
+        });
+
+        $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function() {
+          $(this).parent().parent().find('.inputFileHidden').trigger('click');
+          $(this).parent().parent().addClass('is-focused');
+        });
+
+        $('.form-file-multiple .inputFileHidden').change(function() {
+          var names = '';
+          for (var i = 0; i < $(this).get(0).files.length; ++i) {
+            if (i < $(this).get(0).files.length - 1) {
+              names += $(this).get(0).files.item(i).name + ',';
+            } else {
+              names += $(this).get(0).files.item(i).name;
+            }
+          }
+          $(this).siblings('.input-group').find('.inputFileVisible').val(names);
+        });
+
+        $('.form-file-multiple .btn').on('focus', function() {
+          $(this).parent().siblings().trigger('focus');
+        });
+
+        $('.form-file-multiple .btn').on('focusout', function() {
+          $(this).parent().siblings().trigger('focusout');
+        });
+      </script>
         @stack('js')
     </body>
 </html>
