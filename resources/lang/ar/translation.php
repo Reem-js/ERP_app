@@ -15,7 +15,6 @@ return [
             'All Transactions'=>'كل العمليات',
             'Create Transaction'=>'أضافة عملية',
             'Edit Transaction'=>'تعديل عملية',
-
             'Suppliers'=>'الموردين',
             'all Suppliers'=>'كل الموردين',
             'create suppliers'=>'أضافة مورد',
