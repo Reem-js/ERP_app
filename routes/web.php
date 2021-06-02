@@ -1,5 +1,10 @@
 <?php
 
+
+use App\Http\Controllers\backend\expenses\ExpenseController;
+use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
+use App\Http\Controllers\backend\priceLists\priceListController;
+use App\Http\Controllers\backend\website\WebsiteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -30,6 +35,7 @@ use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransa
     // Route::livewire('livewire/purchases','Purchases');
 
 
+
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -53,6 +59,10 @@ Route::group(
         Route::group(['middleware' => 'auth'],function () {
             /* New Routes */
             Route::resource('users',UserController::class);
+            Route::resource('expenses',ExpenseController::class);
+            Route::resource('expensesTypes',ExpenseTypeController::class);
+            Route::resource('priceLists',priceListController::class);
+            Route::get('website',[WebsiteController::class,'getWebsite'])->name('get.website');
             Route::resource('brands', BrandController::class);
             Route::resource('categories', CategoryController::class);
             Route::resource('products', ProductController::class);
@@ -71,4 +81,6 @@ Route::group(
 
     }
 );
+
+
 

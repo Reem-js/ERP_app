@@ -1,5 +1,4 @@
-<div class="sidebar" data-color="orange" data-background-color="white"
-    data-image="{{ asset('material') }}/img/sidebar-1.jpg">
+<div class="sidebar" data-color="orange" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -98,16 +97,14 @@
                 </div>
             </li>
             {{-- clients --}}
-            <li
-                class="nav-item {{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Clients') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse{{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' ? ' show' : '' }} "
-                    id="clients">
+                <div class="collapse{{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' ? ' show' : '' }} " id="clients">
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-clients' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('clients.index') }}">
@@ -164,16 +161,14 @@
                 </div>
             </li>
             {{-- supplier --}}
-            <li
-                class="nav-item {{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#suppliers" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Suppliers') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' ? ' show' : '' }} "
-                    id="suppliers">
+                <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' ? ' show' : '' }} " id="suppliers">
                     <ul class="nav">
                         <li class="nav-item ml-3{{ $activePage == 'all-suppliers' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('suppliers.index') }}">
@@ -192,6 +187,108 @@
 
                 </div>
             </li>
+            <!--  Start expenses PART  -------->
+            {{-- expenses --}}
+            <li class="nav-item {{ ($activePage == 'addExpense' || $activePage == 'allExpense' || $activePage == 'editexpense') ? ' active' : '' }}">
+                <a class="nav-link" data-toggle="collapse" href="#expenses" aria-expanded="false">
+                    <i><i class="fa fa-money  text-primary" aria-hidden="true"></i></i>
+                    <p>{{ __('translation.website.sidebar.Expenses') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse {{ $activePage == 'addExpense' || $activePage == 'allExpense' || $activePage == 'editexpense' ? ' show' : '' }} "  id="expenses">
+                    <ul class="nav">
+                    <li class="nav-item ml-3 {{ $activePage == 'allExpense' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('expenses.index') }}">
+                                <i class="fa fa-th-list {{$activePage == 'allExpense' ? 'text-light' : 'text-dark'}}" aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.ALL Expenses') }} 
+                            </a>
+                        </li>
+                        <li class="nav-item ml-3 {{ $activePage == 'addExpense' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('expenses.create') }}">
+                                <i class="fa fa-plus-square {{$activePage == 'addExpense' ? 'text-light' : 'text-dark'}}" aria-hidden="true"></i>
+                               {{ __('translation.website.sidebar.Create New Expense') }} 
+                            </a>
+                        </li>
+                     
+                    </ul>
+                </div>
+            </li>
+
+            <!--  End expenses PART  ------------>
+
+            <!--  Start expenses types PART  -------->
+            {{-- expenses types --}}
+            <li class="nav-item {{ $activePage == 'createexpensetype' || $activePage == 'allexpensestypes' || $activePage == 'editexpensetype' ? ' active' : '' }}">
+                <a class="nav-link" data-toggle="collapse" href="#expensestypes" aria-expanded="false">
+                    <i><i class="fa fa-money text-primary" aria-hidden="true"></i></i>
+                    <p>{{ __('translation.website.sidebar.Expenses Types') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse {{ $activePage == 'createexpensetype' || $activePage == 'allexpensestypes' || $activePage == 'editexpensetype' ? ' show' : '' }} "  id="expensestypes">
+                    <ul class="nav">
+
+                    <li class="nav-item ml-3 {{ $activePage == 'allexpensestypes' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('expensesTypes.index') }}">
+                            <i class="fa fa-th-list {{$activePage == 'allexpensestypes' ? 'text-light' : 'text-dark'}}" aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Expenses Types') }} 
+                            </a>
+                        </li>
+
+                        <li class="nav-item ml-3 {{ $activePage == 'createexpensetype' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('expensesTypes.create') }}">
+                            <i class="fa fa-plus-square {{$activePage == 'createexpensetype' ? 'text-light' : 'text-dark'}}" aria-hidden="true"></i>
+                              {{ __('translation.website.sidebar.Create New Expense Type') }} 
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </li>
+            <!--  End expenses  types PART  ------------>
+
+
+            <!--  Start price list PART  -------->
+            {{-- price list--}}
+            <li class="nav-item  {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' active' : '' }}">
+                <a class="nav-link" data-toggle="collapse" href="#pricelists" aria-expanded="false">
+                    <i><i class="fa fa-list-alt text-primary" aria-hidden="true"></i></i>
+                    <p>{{ __('translation.website.sidebar.Price Lists') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' show' : '' }} "  id="pricelists">
+                    <ul class="nav">
+                    <li class="nav-item ml-3 {{ $activePage == 'allpricelists' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('priceLists.index') }}">
+                            <i class="fa fa-th-list {{$activePage == 'allpricelists' ? 'text-light' : 'text-dark'}}" aria-hidden="true"></i>
+                               {{ __('translation.website.sidebar.All Price Lists') }} 
+                            </a>
+                        </li>
+
+                        <li class="nav-item ml-3{{ $activePage == 'createpricelist' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('priceLists.create') }}">
+                            <i class="fa fa-plus-square {{$activePage == 'createpricelist' ? 'text-light' : 'text-dark'}}" aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.Create New Price List') }} 
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <!--  End price list PART  ------------>
+
+            <!--  start website info PART  ------------>
+            {{-- website info--}}
+            <li class="nav-item{{ $activePage == 'website' ? ' active' : '' }}">
+                <a class="nav-link " href="{{ route('get.website') }}">
+                <i class="fa fa-globe text-primary" aria-hidden="true"></i>
+                    <span class="sidebar-normal" style="font-size: 15px;"> {{ __('translation.website.sidebar.Website Info') }} </span>
+                </a>
+            </li>
+            <!--  End website info PART  ------------>
+
             {{-- supplier Wallet --}}
             <li class="nav-item{{ $activePage == 'wallet-suppliers' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('get.supplier.wallet') }}">
@@ -200,8 +297,7 @@
                 </a>
             </li>
             {{-- supplier wallet trans --}}
-            <li
-                class="nav-item {{ $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#supplierWallet" aria-expanded="false">
                     <i class="fa fa-credit-card-alt text-primary" aria-hidden="true"></i>
                     <p>{{ __('translation.website.sidebar.Supplier Wallet Trans') }}
@@ -259,16 +355,14 @@
                 </div>
             </li> --}}
             {{-- users --}}
-            <li
-                class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#User" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Users') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' show' : '' }}"
-                    id="User">
+                <div class="collapse {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' show' : '' }}" id="User">
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-users' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('users.index') }}">
