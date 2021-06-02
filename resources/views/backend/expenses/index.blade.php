@@ -9,7 +9,7 @@
                     <div class="card">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title " style="font-weight: bold;">{{ __('translation.website.sidebar.ALL Expenses') }}</h4>
+                                <h4 class="card-title " >{{ __('translation.website.sidebar.ALL Expenses') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
