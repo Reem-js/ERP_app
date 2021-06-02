@@ -27,8 +27,8 @@
                                             <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                             <div class="col-lg-4 align-self-center p-5">
                                                 <span class="btn btn-raised btn-round btn-default btn-file">
-                                                    <span class="fileinput-new">{{__('translation.brands.Select Image')}}</span>&nbsp/
-                                                    <span class="fileinput-exists">{{__('translation.brands.Change')}}</span>
+                                                    <span class="fileinput-new">{{__('translation.brands.Select Image')}}</span>
+                                                    <span class="fileinput-exists">&nbsp/{{__('translation.brands.Change')}}</span>
                                                     <input type="file" name="photo"/>
                                                 </span>
                                                 <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> {{__('translation.brands.Remove')}}</a>
@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
-                                            <button type="submit" class="btn btn-primary">{{__('translation.website.crud.Create')}}</button>
+                                            <button type="submit" class="btn btn-primary">{{__('translation.website.crud.create')}}</button>
                                         <button type="submit" class="btn btn-primary">{{__('translation.website.crud.Create & New')}}</button>
                                         </div>
                                         <div class="col-lg-2 offset-6">

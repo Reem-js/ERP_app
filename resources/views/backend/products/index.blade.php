@@ -37,7 +37,7 @@
                                             <td>1000 قطعة</td>
                                             <td class="td-actions">
                                                 <div class="d-flex justify-content-space-between">
-                                                    <a title="{{__('translation.website.crud.Update')}}"  rel="tooltip" class="btn btn-info" style="margin: 0 2px 0 0;" href="{{route('products.edit',2)}}">
+                                                    <a title="{{__('translation.website.crud.update')}}"  rel="tooltip" class="btn btn-info" style="margin: 0 2px 0 0;" href="{{route('products.edit',2)}}">
                                                         <i class="material-icons">edit</i>
                                                     </a>
                                                     <a title="{{__('translation.website.crud.Show')}}"  rel="tooltip" class="btn btn-info" style="margin: 0 2px 0 0;" href="{{route('products.show',2)}}">

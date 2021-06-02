@@ -92,11 +92,11 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="font-weight: 900;">{{__('translation.pricelist.ID')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.pricelist.Name')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.pricelist.Price')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.pricelist.Made In')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.pricelist.Action')}}</th>
+                                        <th style="font-weight: 900;">{{__('translation.pricelists.ID')}}</th>
+                                        <th style="font-weight: 900;">{{__('translation.pricelists.Name')}}</th>
+                                        <th style="font-weight: 900;">{{__('translation.pricelists.Price')}}</th>
+                                        <th style="font-weight: 900;">{{__('translation.pricelists.Made in')}}</th>
+                                        <th style="font-weight: 900;">{{__('translation.website.crud.Actions')}}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

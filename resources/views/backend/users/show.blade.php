@@ -56,9 +56,9 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th class="text-center font-weight-bold " >{{ __('translation.history.Date') }}</th>
-                                        <th class="text-center font-weight-bold " >{{ __('translation.history.User Name') }}</th>
-                                        <th colspan="5" class="text-center font-weight-bold">{{ __('translation.history.Action') }}</th>
+                                        <th class="text-center font-weight-bold " >{{ __('translation.adminhistory.Date') }}</th>
+                                        <th class="text-center font-weight-bold " >{{ __('translation.adminhistory.User Name') }}</th>
+                                        <th colspan="5" class="text-center font-weight-bold">{{ __('translation.adminhistory.Action') }}</th>
                                        
                                     </tr>
                                 </thead>

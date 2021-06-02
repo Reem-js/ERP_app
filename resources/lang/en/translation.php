@@ -1,10 +1,12 @@
 <?php
 return [
-    'website'=>
+    'website' =>
     [
-        'nav'=>[
+        
+        'nav' => [
 
         ],
+       
         'sidebar'=>[
             'ELRAYAN'=>'ELRAYAN',
             'Clients'=>'Clients',
@@ -51,6 +53,19 @@ return [
             'Installment'=>'Installment',
             'User History'=>'User History',
           
+            'Expenses' => 'Expenses',
+            'ALL Expenses' => 'ALL Expenses',
+            'Edit Expense'=>'Edit Expense',
+            'Edit Expense Type'=>'Edit Expense Type',
+            'Create New Expense' => 'Create Expense',
+            'Expenses Types' => 'Expenses Types',
+            'All Expenses Types' => 'All Expenses Types',
+            'Create New Expense Type' => 'Create Expense Type',
+            'Price Lists' => 'Price Lists',
+            'Create New Price List' => 'Create Price List',
+            'All Price Lists' => 'All Price Lists',
+            'Edit Price List'=>'Edit Price List',
+            'Website Info' => 'Website Info',
         ],
         'crud'=>[
             'create'=>'Create',
@@ -64,6 +79,8 @@ return [
             'Create initial wallet value'=>'Create initial wallet value',
             'Number' => 'Number',
             'Show' => 'Show',
+            'Yes'=>'Yes',
+            'No'=>'No',
 
         ],
    
@@ -140,7 +157,7 @@ return [
         ''=>'',
         ''=>'',
     ],
-    'wallet'=>[
+    'wallet' => [
         'My Wallet' => 'My Wallet',
         'Client Wallet'=>'Client Wallet',
         'Supplier Wallet'=>'Supplier Wallet',
@@ -193,7 +210,8 @@ return [
             'Actions'=>'Actions',
 
 
-    ],
+    ], 
+   
 
     'clients'=>[
             'ID'=>'ID',
@@ -212,13 +230,7 @@ return [
             'Edit Client-Transaction'=>'Edit Client-Transaction',
             'All clients'=>'All Clients',
     ],
-    'pricelist'=>[
-        'ID'=>'ID',
-        'Name'=>'Name',
-        'Price'=>'Price',
-        'Made In'=>'Made In',
-        'Action'=>'Action',
-    ],
+
     'purchase'=>[
         'ID'=>'ID',
         'Type'=>'Type',
@@ -236,10 +248,60 @@ return [
         'Discount'=>'Discount',
         'Status'=>'Status',
     ],
-    'history'=>[
+    'adminhistory'=>[
         'Date'=>'Date',
         'User Name'=>'User Name',
         'Action'=>'Action',
+    ],   
+    'expenses' => [    
+        'Actions' => 'Actions',
+        'Show' => 'Show',
+        'Edit' => 'Edit',
+        'Delete'=>'Delete',
+        'select expense type' => 'select expense type',
+        'Edit Expense Type' => 'Edit Expense Type',
+        'Add Expense Type' => 'Add Expense Type',
+        'Expense Type' => 'Expense Type',
+        'id' => 'ID',
+        'Date' => 'Date',
+        'Value' => 'Value ',
+        'Expense Type' => 'Expense Type',
+    ],
+
+    'expenses types' => [
+            'Actions' => 'Actions',
+            'Show' => 'Show',
+            'Edit' => 'Edit',
+            'Delete' => 'Delete',
+            'Expense Type' => 'Expense Type',
+            'id' => 'ID',
+            'Expense Type Name' => 'Expense Type Name',
+    ],
+
+    'pricelists' => [  
+        'select supplier' => 'Select Supplier',
+        'Name' => 'Name',
+        'ID' => 'ID',
+        'Price' => 'Price',
+        'Made in' => 'Made in',
+        'Supplier' => 'Supplier',
+        'Actions' => 'Actions',
+        'Show'=>'Show',
+        'Edit'=>'edit',
+        'Delete'=>'Delete',
+        'Supplier Name'=>'Supplier Name',
+        'Show Price List'=>'Show Price List',
+    ],
+
+    'website info' => [
+        'AL-RAYAN' => 'AL-RAYAN',
+        'tel' => '011222222',
+        'Website Name' => 'Website Name',
+        'Website Logo' => 'Website Logo',
+        'Website Phone' => 'Website Phone',
+        'Product translation'=>'Product translation',
+        'Teams'=>'Teams',
+        'Preffered Langauge'=>'Preffered Langauge',
     ],
 
 ];
