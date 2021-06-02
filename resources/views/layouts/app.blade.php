@@ -37,13 +37,13 @@
         @endguest
         @if (auth()->check())
 
-            <!-- modal start -->
+            {{-- <!-- modal start -->
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
+              <div class="modal-dialog  @yield('modal-size')" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">@yield('modal-title')</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <div class="modal-header @yield('modal-title-color')">
+                    <h5 class="modal-title " id="exampleModalLongTitle">@yield('modal-title')</h5>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
@@ -51,13 +51,13 @@
                     @yield('modal-body')
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    @yield('modal-actions')
                   </div>
                 </div>
               </div>
             </div>
-            <!-- modal end -->
+            <!-- modal end --> --}}
 
         <div class="fixed-plugin">
           <div class="dropdown show-dropdown">

@@ -43,7 +43,7 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-primary" href="#" style="color:white;"><i
+                                            <a class="btn btn-info" href="#" style="color:white;"><i
                                                     class="fa fa-eye"></i></a>
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
                                                 href="{{ route('client-wallet-transactions.edit', 5) }}"

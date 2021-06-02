@@ -14,44 +14,6 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            {{--  <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>{{ __('translation.walletTransaction.ID') }}</th>
-                                        <th>{{ __('translation.suppliers.Supplier Name') }}</th>
-                                        <th>{{ __('translation.walletTransaction.Reason') }}</th>
-                                        <th>{{ __('translation.walletTransaction.Date') }}</th>
-                                        <th>{{ __('translation.walletTransaction.Transaction') }}</th>
-                                        <th>{{ __('translation.walletTransaction.Transaction Type') }}</th>
-                                        <th>{{ __('translation.walletTransaction.Amount') }}</th>
-                                        <th>{{ __('translation.walletTransaction.Actions') }}</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td>Andrew Mike</td>
-                                        <td><a href="{{ route('suppliers.edit',5) }}">ay klam</a></td>
-                                        <td>Develop</td>
-                                        <td>2013</td>
-                                        <td>&euro; 99,225</td>
-                                        <td>&euro; 99,225</td>
-
-                                        <td class="td-actions">
-
-                                            <a class="btn btn-primary" title="show transaction" href="{{ route('get.client.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-primary" title="add transaction" href="{{ route('client-wallet-transactions.create', 5) }}"
-                                                style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                    
-                                        
-                                        </td>
-                                    </tr>
-
-
-
-                                </tbody>
-                            </table>  --}}
 
                             <table class="table">
                                 <thead>
@@ -67,7 +29,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-            
+
                                     <tr>
                                         <td class="text-center">3</td>
                                         <td><a href="{{ route('suppliers.edit',5) }}">ay klam</a></td>
@@ -76,19 +38,19 @@
                                         <td>2013</td>
                                         <td>&euro; 99,225</td>
                                         <td>&euro; 99,225</td>
-            
+
                                         <td class="td-actions">
-        
-                                            <a class="btn btn-primary" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
+
+                                            <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-primary" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('supplier-wallet-transactions.create', 5) }}"
                                                 style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                    
-                                        
+
+
                                         </td>
                                     </tr>
-            
-            
-            
+
+
+
                                 </tbody>
                             </table>
 

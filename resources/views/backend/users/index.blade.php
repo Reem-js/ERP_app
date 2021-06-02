@@ -37,7 +37,7 @@
                                         <td >&euro; 99,225</td>
                                         <td class="td-actions">
 
-                                            <a class="btn btn-primary" rel="tooltip"  title="{{ __('translation.title.History') }}" href="{{ route('users.show',5) }}" 
+                                            <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.History') }}" href="{{ route('users.show',5) }}"
                                             style="color:white;"><i class="fa fa-history" aria-hidden="true"></i>
                                             </a>
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit User') }}"  href="{{ route('users.edit', 5) }}"

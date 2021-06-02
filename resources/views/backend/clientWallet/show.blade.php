@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'walletclientTransaction', 'titlePage' => __('translation.website.sidebar.All Transactions')])
+@extends('layouts.app', ['activePage' => 'showwalletclientTransaction', 'titlePage' => __('translation.website.sidebar.All Transactions')])
 
 @section('content')
     <div class="content">
@@ -7,13 +7,13 @@
 
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-text card-header-primary">
+                        <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.All Transactions') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('client-wallet-transactions.create') }}" class="btn btn-primary btn-round"
+                            <a href="{{ route('client-wallet-transactions.create') }}" class="btn btn-info btn-round"
                                 style="color:white; float: right;"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 {{ __('translation.website.crud.create') }}</a>
                             <table class="table">
@@ -40,8 +40,7 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-primary" href="#" style="color:white;"><i
-                                                    class="fa fa-eye"></i></a>
+
                                             <a class="btn btn-info"
                                                 href="{{ route('client-wallet-transactions.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>

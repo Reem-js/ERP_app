@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'walletsupplierTransaction', 'titlePage' => __('translation.website.sidebar.Supplier Wallet Trans')])
+@extends('layouts.app', ['activePage' => 'showwalletsupplierTransaction', 'titlePage' => __('translation.website.sidebar.Supplier Wallet Trans')])
 
 @section('content')
     <div class="content">
@@ -6,13 +6,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-text card-header-primary">
+                        <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Supplier Wallet Trans') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('supplier-wallet-transactions.create') }}" class="btn btn-primary btn-round"
+                            <a href="{{ route('supplier-wallet-transactions.create') }}" class="btn btn-info btn-round"
                                 style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right ' }};"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 {{ __('translation.website.crud.create') }}</a>
                             <table class="table">
@@ -41,7 +41,7 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-primary"href="#" style="color:white;"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-info"href="#" style="color:white;"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-info" href="{{ route('supplier-wallet-transactions.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>
                                             <a class="btn btn-danger"
