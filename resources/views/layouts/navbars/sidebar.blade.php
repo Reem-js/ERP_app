@@ -97,14 +97,14 @@
                 </div>
             </li>
             {{-- clients --}}
-            <li class="nav-item {{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' || $activePage == 'show-clients' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Clients') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse{{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' ? ' show' : '' }} " id="clients">
+                <div class="collapse{{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' || $activePage == 'show-clients' ? ' show' : '' }} " id="clients">
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-clients' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('clients.index') }}">
@@ -126,8 +126,8 @@
             {{-- client Wallet --}}
             <li class="nav-item{{ $activePage == 'wallet-clients' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('get.client.wallet') }}">
-                    <i class="fa fa-credit-card-alt {{$activePage == 'wallet-clients' ? 'text-light' : 'text-primary'}}  aria-hidden="true"></i>
-                    <span class="sidebar-normal"> {{ __('translation.website.sidebar.Client Wallet') }} </span>
+                    <i class="fa fa-credit-card-alt {{$activePage == 'wallet-clients' ? 'text-light' : 'text-primary'}} " aria-hidden="true"></i>
+                     {{ __('translation.website.sidebar.Client Wallet') }} 
                 </a>
             </li>
             {{-- client Wallet Trans --}}
@@ -161,14 +161,14 @@
                 </div>
             </li>
             {{-- supplier --}}
-            <li class="nav-item {{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#suppliers" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Suppliers') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' ? ' show' : '' }} " id="suppliers">
+                <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' ? ' show' : '' }} " id="suppliers">
                     <ul class="nav">
                         <li class="nav-item ml-3{{ $activePage == 'all-suppliers' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('suppliers.index') }}">
@@ -355,14 +355,14 @@
                 </div>
             </li> --}}
             {{-- users --}}
-            <li class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' active' : '' }}">
+            <li class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' || $activePage == 'show-users' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#User" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Users') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' ? ' show' : '' }}" id="User">
+                <div class="collapse {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' || $activePage == 'show-users' ? ' show' : '' }}" id="User">
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-users' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('users.index') }}">

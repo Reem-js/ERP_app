@@ -41,7 +41,6 @@ return [
             'Create Category' => 'إضافة فئة',
             'All Products' => 'كل المنتجات',
             'Stock' => 'المخزون',
-            'Show Supplier Details'=>'اظهار تفاصيل المورد',
             'Basic Information'=>'المعلومات الاساسية',
             'Supplier Products'=>'منتجات المورد',
             'Price List'=>'قائمة الاسعار',
@@ -62,6 +61,11 @@ return [
             'All Price Lists' => 'كل قوائم الأسعار',
             'Edit Price List' => 'تعديل قائمة سعر',
             'Website Info' => 'معلومات الموقع الإلكتروني',
+            'Show clients Details'=>'اظهار تفاصيل العميل',
+            'Show User Details'=>'اظهار تفاصيل المستخدم',
+            'Show Supplier Details'=>'اظهار تفاصيل المورد',
+
+
 
         ],
         'crud' => [
@@ -148,7 +152,7 @@ return [
         'add in price list'=>'زود في قائمة الاسعار',
         'show details'=>'اظهر التفاصيل',
         'History'=>'الماضي',
-        ''=>'',
+        'Show Client'=>'اظهار العميل',
     ],
     'wallet' => [
         'My Wallet' => 'محفظتي',

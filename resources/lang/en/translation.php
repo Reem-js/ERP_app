@@ -44,7 +44,6 @@ return [
             'Create Category' => 'Create Category',
             'All Products' => 'All Products',
             'Stock' => 'Stock',
-            'Show Supplier Details'=>'Show Supplier Details',
             'Basic Information'=>'Basic Information',
             'Supplier Products'=>'Supplier Products',
             'Price List'=>'Price List',
@@ -66,6 +65,11 @@ return [
             'All Price Lists' => 'All Price Lists',
             'Edit Price List'=>'Edit Price List',
             'Website Info' => 'Website Info',
+            'Show clients Details'=>'Show clients Details',
+            'Show User Details'=>'Show User Details',
+            'Show Supplier Details'=>'Show Supplier Details',
+
+
         ],
         'crud'=>[
             'create'=>'Create',
@@ -151,7 +155,7 @@ return [
         'add in price list'=>'add in price list',
         'show details'=>'show details',
         'History'=>'History',
-        ''=>'',
+        'Show Client'=>'Show Client',
         ''=>'',
         ''=>'',
         ''=>'',

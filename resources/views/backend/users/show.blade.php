@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'show-suppliers', 'titlePage' => __('translation.website.sidebar.Show Supplier Details')])
+@extends('layouts.app', ['activePage' => 'show-users', 'titlePage' => __('translation.website.sidebar.Show User Details')])
 @section('content')
     <div class="content">
         <div class="container-fluid">
