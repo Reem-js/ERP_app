@@ -24,7 +24,7 @@
                                         <th>{{ __('translation.expenses.Date') }}</th>
                                         <th>{{ __('translation.expenses.Expense Type') }}</th>
                                         <th>{{ __('translation.expenses.Actions') }}</th>
-                               
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -34,12 +34,12 @@
                                         <td>Andrew Mike</td>
                                         <td>Develop</td>
                                         <td>2013</td>
-                                        
+
 
                                         <td class="td-actions">
-                                            <a class="btn btn-primary" rel="tooltip" href="#" title="{{__('translation.expenses.Show')}}"
+                                            <a class="btn btn-info" rel="tooltip" href="#" title="{{__('translation.expenses.Show')}}"
                                              style="color:white;"><i  class='fa fa-eye'></i></a>
-                                                    
+
                                             <a class="btn btn-info" rel="tooltip" title="{{__('translation.expenses.Edit')}}"
                                                 href="{{ route('expenses.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>

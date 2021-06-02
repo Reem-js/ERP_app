@@ -52,9 +52,9 @@
                                         <td>&euro; 99,225</td>
 
                                         <td class="td-actions">
-                                           
+
                                             <br>
-                                            <a  class="btn btn-primary"href="{{ route('suppliers.edit',5) }}"rel="tooltip"  title="5ara" style="color:white;"><i class="fa fa-eye"></i></a>
+                                            <a  class="btn btn-info"href="#"rel="tooltip"  title="5ara" style="color:white;"><i class="fa fa-eye"></i></a>
                                             <a class="btn btn-info" href="{{ route('supplier-wallet-transactions.edit', 5) }}" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>
                                             <a class="btn btn-danger" rel="tooltip"  title="{{ __('translation.title.Delete Transaction') }}"

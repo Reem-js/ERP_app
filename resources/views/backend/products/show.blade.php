@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-text card-header-primary">
+                        <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title ">مرآة</h4>
                             </div>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header card-header-text card-header-primary">
+                        <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title ">{{ __('translation.products.Suppliers') }}</h4>
                             </div>

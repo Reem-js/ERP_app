@@ -39,10 +39,10 @@
                                 <td>&euro; 99,225</td>
                                 <td class="td-actions">
 
-                                    <a class="btn btn-primary" href="#" style="color:white;"><i
+                                    <a class="btn btn-info" href="#" style="color:white;"><i
                                             class="fa fa-eye"></i></a>
                                         <a class="btn btn-info" href="{{ route('user-wallet-transactions.edit', 5) }}" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
-                                            style="color:white;"> <i class="material-icons">edit</i> </a> 
+                                            style="color:white;"> <i class="material-icons">edit</i> </a>
                                         <a class="btn btn-danger" rel="tooltip"  title="{{ __('translation.title.Delete Transaction') }}"
                                             onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
                                             href="javascript:void(0)"><i class="material-icons">close</i></a>

@@ -14,7 +14,7 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-           
+
                 <table class="table">
                     <thead>
                         <tr>
@@ -41,11 +41,11 @@
 
                             <td class="td-actions">
 
-                                <a class="btn btn-primary"  rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-info"  rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-primary"  rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('client-wallet-transactions.create') }}"
                                     style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-        
-                            
+
+
                             </td>
                         </tr>
 

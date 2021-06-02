@@ -48,7 +48,8 @@ class SupplierController extends Controller
      */
     public function show($id)
     {
-        //
+        // show details
+        return view('backend.suppliers.show');
     }
 
     /**

@@ -5,6 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+
                         <div class="card">
                             <div class="card-header card-header-text card-header-primary">
                               <div class="card-text">
@@ -12,7 +13,7 @@
                               </div>
                             </div>
                             <div class="card-body">
-                                
+
                                 <a href="{{ route('clients.create') }}" rel="tooltip" title="{{ __('translation.title.create client') }}" class="btn btn-primary btn-round"  style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"> <i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
                                 <table class="table">
                                     <thead>
@@ -34,7 +35,7 @@
                                             <td >&euro; 99,225</td>
                                             <td class="td-actions">
 
-                                                <a class="btn btn-primary" rel="tooltip"   href="#" style="color:white;" ><i class="fa fa-eye"></i></a>
+                                                <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Show Client') }}"  href="{{ route('clients.show',5) }}" style="color:white;" ><i class="fa fa-eye"></i></a>
                                                 <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Edit Client') }}" href="{{ route('clients.edit',5) }}"  style="color:white;" >  <i class="material-icons">edit</i> </a>
                                                 <a class="btn btn-danger"rel="tooltip"  title="{{ __('translation.title.Delete Client') }}" onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}" href="javascript:void(0)"><i class="material-icons">close</i></a>
                                                 <form  method="post" action="{{ route('clients.destroy',5) }}" style="display:none;" id="delete-1">

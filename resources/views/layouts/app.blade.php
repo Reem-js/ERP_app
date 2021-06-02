@@ -36,6 +36,29 @@
             @include('layouts.page_templates.guest')
         @endguest
         @if (auth()->check())
+
+            {{-- <!-- modal start -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog  @yield('modal-size')" role="document">
+                <div class="modal-content">
+                  <div class="modal-header @yield('modal-title-color')">
+                    <h5 class="modal-title " id="exampleModalLongTitle">@yield('modal-title')</h5>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    @yield('modal-body')
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    @yield('modal-actions')
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- modal end --> --}}
+
         <div class="fixed-plugin">
           <div class="dropdown show-dropdown">
             <a href="#" data-toggle="dropdown">

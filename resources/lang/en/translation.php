@@ -2,11 +2,11 @@
 return [
     'website' =>
     [
-        
+
         'nav' => [
 
         ],
-       
+
         'sidebar'=>[
             'ELRAYAN'=>'ELRAYAN',
             'Clients'=>'Clients',
@@ -36,7 +36,6 @@ return [
             'All Purchases'=>'All Purchases',
             'Create Purchase'=>'Create Purchases',
             'Edit Purchase'=>'Edit Purchases',
-            ''=>'',
             'Brands' => 'Brands',
             'All Brands' => 'All Brands',
             'Create Brand' => 'Create Brand',
@@ -45,6 +44,14 @@ return [
             'Create Category' => 'Create Category',
             'All Products' => 'All Products',
             'Stock' => 'Stock',
+            'Basic Information'=>'Basic Information',
+            'Supplier Products'=>'Supplier Products',
+            'Price List'=>'Price List',
+            'Purchases'=>'Purchases',
+            'Sales'=>'Sales',
+            'Installment'=>'Installment',
+            'User History'=>'User History',
+
             'Expenses' => 'Expenses',
             'ALL Expenses' => 'ALL Expenses',
             'Edit Expense'=>'Edit Expense',
@@ -57,7 +64,12 @@ return [
             'Create New Price List' => 'Create Price List',
             'All Price Lists' => 'All Price Lists',
             'Edit Price List'=>'Edit Price List',
-            'Website Info' => 'Website Info',
+            'Website Info' => 'Settings',
+            'Show clients Details'=>'Show clients Details',
+            'Show User Details'=>'Show User Details',
+            'Show Supplier Details'=>'Show Supplier Details',
+
+
         ],
         'crud'=>[
             'create'=>'Create',
@@ -73,8 +85,10 @@ return [
             'Show' => 'Show',
             'Yes'=>'Yes',
             'No'=>'No',
+            'EGP'=>'EGP',
 
         ],
+
     ],
     'brands' => [
         'Brand Name' => 'Brand name',
@@ -123,6 +137,9 @@ return [
         'Stock Before Transaction' => 'Stock Before Transaction',
         'Stock After Transaction' => 'Stock After Transaction',
         'id' => 'ID',
+        'totalSaleStock'=>'Total Sale Price',
+        'totalPurchaseStock'=>'Total Purchase Price',
+
     ],
     'title'=>[
         'create client'=>'create client',
@@ -139,8 +156,10 @@ return [
         'Delete Transaction'=>'Delete Transaction',
         'show Transactions'=>'show Transactions',
         'Add Transaction'=>'Add Transaction',
-        ''=>'',
-        ''=>'',
+        'add in price list'=>'add in price list',
+        'show details'=>'show details',
+        'History'=>'History',
+        'Show Client'=>'Show Client',
         ''=>'',
         ''=>'',
         ''=>'',
@@ -199,8 +218,8 @@ return [
             'Actions'=>'Actions',
 
 
-    ], 
-   
+    ],
+
 
     'clients'=>[
             'ID'=>'ID',
@@ -219,7 +238,30 @@ return [
             'Edit Client-Transaction'=>'Edit Client-Transaction',
             'All clients'=>'All Clients',
     ],
-    'expenses' => [    
+
+    'purchase'=>[
+        'ID'=>'ID',
+        'Type'=>'Type',
+        'Total'=>'Total',
+        'Purchase Date'=>'Purchase Date',
+        'Recieve Date'=>'Recieve Date',
+        'Status'=>'Status',
+    ],
+    'sales'=>[
+        'ID'=>'ID',
+        'Type'=>'Type',
+        'Total'=>'Total',
+        'Order Date'=>'Purchase Date',
+        'Recieve Date'=>'Recieve Date',
+        'Discount'=>'Discount',
+        'Status'=>'Status',
+    ],
+    'adminhistory'=>[
+        'Date'=>'Date',
+        'User Name'=>'User Name',
+        'Action'=>'Action',
+    ],
+    'expenses' => [
         'Actions' => 'Actions',
         'Show' => 'Show',
         'Edit' => 'Edit',
@@ -244,7 +286,7 @@ return [
             'Expense Type Name' => 'Expense Type Name',
     ],
 
-    'pricelists' => [  
+    'pricelists' => [
         'select supplier' => 'Select Supplier',
         'Name' => 'Name',
         'ID' => 'ID',
