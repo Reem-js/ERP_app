@@ -85,6 +85,7 @@ return [
             'Show' => 'Show',
             'Yes'=>'Yes',
             'No'=>'No',
+            'EGP'=>'EGP',
 
         ],
 
@@ -136,6 +137,9 @@ return [
         'Stock Before Transaction' => 'Stock Before Transaction',
         'Stock After Transaction' => 'Stock After Transaction',
         'id' => 'ID',
+        'totalSaleStock'=>'Total Sale Price',
+        'totalPurchaseStock'=>'Total Purchase Price',
+
     ],
     'title'=>[
         'create client'=>'create client',

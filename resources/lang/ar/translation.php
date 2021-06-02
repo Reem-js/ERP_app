@@ -82,6 +82,7 @@ return [
             'Show' => 'عرض',
             'Yes' => 'نعم',
             'No' => 'لا',
+            'EGP'=>'جنبية',
 
         ],
     ],
@@ -132,6 +133,8 @@ return [
         'Stock Before Transaction' => 'المخزون قبل المعاملة',
         'Stock After Transaction' => 'المخزون بعد المعاملة',
         'id' => 'الرقم المسلسل',
+        'totalSaleStock'=>'سعر البيع الكلي',
+        'totalPurchaseStock'=>'سعر الشراء الكلي',
 
     ],
     'title'=>[

@@ -6,11 +6,47 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header card-header-text card-header-info">
-                            <div class="card-text">
-                                <h4 class="card-title ">{{__('translation.website.sidebar.Stock')}}</h4>
+                        <div class="row">
+                            <div class="col-xl-2">
+                                <div class="card-header card-header-text card-header-info">
+                                    <div class="card-text">
+                                        <h4 class="card-title ">{{__('translation.website.sidebar.Stock')}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-10">
+                                <div class="row">
+                                    <div class="col-xl-5 offset-xl-2 col-md-6 col-12 {{app()->getLocale() == 'ar' ? 'text-left':'text-right'}}">
+                                        <div class="card-header card-header-text card-header-info ml-auto">
+                                            <div class="card-text">
+                                                <h4 class="card-title ">{{__('translation.products.totalSaleStock')}}</h4>
+                                            </div>
+                                            <div class="card-header card-header-text card-header-warning ml-auto">
+                                                <div class="card-text">
+                                                    <h4 class="card-title ">13515 <span class="font-weight-bold">{{__('translation.website.crud.EGP')}}</span> </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-5 col-md-6 col-12 {{app()->getLocale() == 'ar' ? 'text-left':'text-right'}}">
+                                        <div class="card-header card-header-text card-header-info ml-auto ">
+                                            <div class="card-text">
+                                                <h4 class="card-title ">{{__('translation.products.totalPurchaseStock')}}</h4>
+                                            </div>
+                                            <div class="card-header card-header-text card-header-warning ml-auto">
+                                                <div class="card-text">
+                                                    <h4 class="card-title ">13515 <span class="font-weight-bold">{{__('translation.website.crud.EGP')}}</span> </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
                         <div class="card-body p-5">
                             <div class="table-responsive">
                                 <table class="table">
