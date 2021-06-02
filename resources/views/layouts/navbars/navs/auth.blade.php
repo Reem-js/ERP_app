@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <a class="navbar-brand" href="#">{{ $titlePage }}</a>
+      {{-- <a class="navbar-brand" href="#">{{ $titlePage }}</a> --}}
       @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
         @if(app()->getLocale() == $localeCode)
             @continue
@@ -55,7 +55,8 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons">person</i>
+          <i class="material-icons">person</i>
+          
             <p class="d-lg-none d-md-block">
               {{ __('Account') }}
             </p>

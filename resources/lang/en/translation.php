@@ -1,39 +1,190 @@
 <?php
 return [
-    'website'=>
+    'website' =>
     [
-        'create'=>'',
-        'update'=>'',
-    ],
-    'users'=>[
-        'common'=>[
-            'name'=>'',
-            'phone','',
-            'password'=>''
+        'dir' => 'right',
+        'nav' => [],
+        'sidebar' => [
+            'ELRAYAN' => 'ELRAYAN',
+            'Clients' => 'Clients',
+            'all Clients' => 'All Clients',
+            'create client' => 'Create Client',
+            'Client Wallet' => 'Client Wallet',
+            'Client Wallet Trans' => 'Client Wallet Trans',
+            'All Transactions' => 'All Transactions',
+            'Create Transaction' => 'Create Transaction',
+            'Suppliers' => 'Suppliers',
+            'all Suppliers' => 'All Suppliers',
+            'create suppliers' => 'Create Suppliers',
+            'Supplier Wallet' => 'Supplier Wallet',
+            'Supplier Wallet Trans' => 'Supplier Wallet Trans',
+            'Users' => 'Users',
+            'All Users' => 'All Users',
+            'Create User' => 'Create User',
+            'My Wallet' => 'My Wallet',
+            'My Wallet Trans' => 'My Wallet Trans',
+            'Expenses' => 'Expenses',
+            'ALL Expenses' => 'ALL Expenses',
+            'Edit Expense'=>'Edit Expense',
+            'Edit Expense Type'=>'Edit Expense Type',
+            'Create New Expense' => 'Create New Expense',
+            'Expenses Types' => 'Expenses Types',
+            'All Expenses Types' => 'All Expenses Types',
+            'Create New Expense Type' => 'Create New Expense Type',
+            'Price Lists' => 'Price Lists',
+            'Create New Price List' => 'Create New Price List',
+            'All Price Lists' => 'All Price Lists',
+            'Edit Price List'=>'Edit Price List',
+            'Dashboard' => 'Dashboard',
+            'Website Info' => 'Website Info',
+            '' => '',
+
         ],
-        'create'=>[
-            'createUser'=>''
-        ],'edit'=>[
-
-        ],'index'=>[
-
+        'crud' => [
+         
+            'create' => 'Create',
+            'update' => 'Update',
+            'delete' => 'Delete',
+            'all' => 'All',
+            'Create & New' => 'Create & New',
+            'Update & Return' => 'Update & Return',
+            'Cancel' => 'Cancel',
+            'Actions' => 'Actions',
+            'Yes'=>'Yes',
+            'No'=>'No',
         ]
-    ],'supplier'=>[
+    ],
+    'wallet' => [
+        'My Wallet' => 'My Wallet',
+        'Client Wallet' => 'Client Wallet',
+        'Supplier Wallet' => 'Supplier Wallet',
+        'Reason' => 'Reason',
+        'Date' => 'Date',
+        'Transaction' => 'Transaction',
+        'Transaction Type' => 'Transaction Type',
+        'Amount' => 'Amount',
+        'Total Balance' => 'Total Balance',
+        'Number Of Transactions' => 'Number Of Transactions',
+        'Total Paied' => 'Total Paied',
+        'Pending' => 'Pending',
+    ],
+    'users' => [
+        'common' => [
+            'All Users' => 'All Users',
+            'Edit User' => 'Edit User',
+            'Name' => 'Name',
+            'Phone' => 'Phone',
+            'Password' => 'Password',
+            'Email' => 'Email',
+            'ID' => 'ID',
+            'Actions' => 'Actions',
+        ],
+        'create' => [
+            'Add New User' => 'Add New User',
+            'Confirm Password' => 'Confirm Password',
+        ],
+        'edit' => [
+            'Confirm Password' => 'Confirm Password',
 
-    ],'supplierWallet'=>[
-
-    ],'userWallet'=>[
-
-    ]
-    ,'expenses'=>[
-        'addExpense'=>'Add Expense',
-        'allExpenses'=>'All Expenses',
-        'Expenses'=>'Expenses',
-        'Add Expense'=>'Add Expense',
-        'date'=>'date',
-        'value'=>'value ',
-        'type'=>' type',
-    
-
+        ], 'index' => [], 'transaction' => [
+            'Reason' => 'Reason',
+            'Date' => 'Date',
+            'Transaction' => 'Transaction',
+            'Transaction Type' => 'Transaction Type',
+            'Amount' => 'Amount',
+            'Installment' => 'Installment',
         ]
+    ],
+    'suppliers' => [
+        'common' => [
+            'Edit Supplier-Transaction' => 'Edit Supplier Transaction',
+            'Add New Supplier-Transaction' => 'Add New Supplier-Transaction',
+            'All Supplier Wallet Transaction' => 'All Supplier Wallet Transaction',
+            'Edit Supplier' => 'Edit Supplier',
+            'Add New Supplier' => 'Add New Supplier',
+            'All Suppliers' => 'All Suppliers',
+            'ID' => 'ID',
+            'Name' => 'Name',
+            'Nickname' => 'Nickname',
+            'Phone' => 'Phone',
+            'Email' => 'Email',
+            'Address' => 'Address',
+            'PDF' => 'PDF',
+            'Actions' => 'Actions',
+        ],
+
+    ], 
+    'expenses' => [    
+        'Actions' => 'Actions',
+        'Show' => 'Show',
+        'Edit' => 'Edit',
+        'Delete'=>'Delete',
+        'select expense type' => 'select expense type',
+        'Edit Expense Type' => 'Edit Expense Type',
+        'Add Expense Type' => 'Add Expense Type',
+        'Expense Type' => 'Expense Type',
+        'id' => 'ID',
+        'Date' => 'Date',
+        'Value' => 'Value ',
+        'Expense Type' => 'Expense Type',
+    ],
+
+    'expenses types' => [
+            'Actions' => 'Actions',
+            'Show' => 'Show',
+            'Edit' => 'Edit',
+            'Delete' => 'Delete',
+            'Expense Type' => 'Expense Type',
+            'id' => 'ID',
+            'Expense Type Name' => 'Expense Type Name',
+    ],
+
+    'pricelists' => [  
+        'select supplier' => 'Select Supplier',
+        'Name' => 'Name',
+        'ID' => 'ID',
+        'Price' => 'Price',
+        'Made in' => 'Made in',
+        'Supplier' => 'Supplier',
+        'Actions' => 'Actions',
+        'Show'=>'Show',
+        'Edit'=>'edit',
+        'Delete'=>'Delete',
+        'Supplier Name'=>'Supplier Name',
+        'Show Price List'=>'Show Price List',
+    ],
+
+    'website info' => [
+        'AL-RAYAN' => 'AL-RAYAN',
+        'tel' => '011222222',
+        'Website Name' => 'Website Name',
+        'Website Logo' => 'Website Logo',
+        'Website Phone' => 'Website Phone',
+        'Product translation'=>'Product translation',
+        'Teams'=>'Teams',
+        'Preffered Langauge'=>'Preffered Langauge',
+    ],
+
+
+
+
+
+    'supplierWallet' => [],
+    'clients' => [
+        'common' => [
+            'ID' => 'ID',
+            'Name' => 'Name',
+            'Nickname' => 'Nickname',
+            'Phone' => 'Phone',
+            'Email' => 'Email',
+            'Address' => 'Address',
+            'Actions' => 'Actions',
+            'Add New Client' => 'Add New Client',
+            'Edit Client' => 'Edit Client',
+            'All Client Transaction' => 'All Client Transaction',
+            'Add New Client-Transaction' => 'Add New Client-Transaction',
+            'Edit Client-Transaction' => 'Edit Client-Transaction',
+            'All clients' => 'All Clients',
+        ],
+    ],
 ];

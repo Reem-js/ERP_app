@@ -15,6 +15,7 @@ class ExpenseTypeController extends Controller
     public function index()
     {
         //
+        return view('backend.expensesTypes.index');
     }
 
     /**
@@ -25,6 +26,7 @@ class ExpenseTypeController extends Controller
     public function create()
     {
         //
+        return view('backend.expensesTypes.create');
     }
 
     /**
@@ -58,6 +60,7 @@ class ExpenseTypeController extends Controller
     public function edit($id)
     {
         //
+        return view('backend.expensesTypes.edit');
     }
 
     /**
@@ -81,5 +84,6 @@ class ExpenseTypeController extends Controller
     public function destroy($id)
     {
         //
+        return "client destroy expense Type ";
     }
 }

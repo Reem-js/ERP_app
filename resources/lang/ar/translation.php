@@ -1,39 +1,192 @@
 <?php
 return [
-    'website'=>
+    'website' =>
     [
-        'create'=>'',
-        'update'=>'',
-    ],
-    'users'=>[
-        'common'=>[
-            'name'=>'',
-            'phone','',
-            'password'=>''
+        'dir'=>'left',
+        'nav' => [],
+        'sidebar' => [
+            'ELRAYAN' => 'الريان',
+            'Clients' => 'العملاء',
+            'all Clients' => 'كل العملاء',
+            'create client' => 'اضافة عميل',
+            'Client Wallet' => 'محفظة العميل',
+            'Client Wallet Trans' => 'عمليات محفظة العميل',
+            'All Transactions' => 'كل العمليات',
+            'Create Transaction' => 'أضافة عملية',
+            'Suppliers' => 'الموردين',
+            'all Suppliers' => 'كل الموردين',
+            'create suppliers' => 'أضافة مورد',
+            'Supplier Wallet' => 'محفظة الموردين',
+            'Supplier Wallet Trans' => 'عمليات محفظة المورد',
+            'Users' => 'المستخدمين',
+            'All Users' => 'كل المستخدمين',
+            'Create User' => 'أضافة مستخدم',
+            'My Wallet' => 'محفظتي',
+            'My Wallet Trans' => 'عمليات محفظتي',
+            'Expenses' => 'المصروفات',
+            'ALL Expenses' => 'كل المصروفات',
+            'Edit Expense'=>'تعديل مصروف',
+            'Edit Expense Type'=>'تعديل نوع مصروف',
+            'Create New Expense' => 'اضافة مصروف جديد',
+            'Expenses Types' => 'أنواع المصروفات',
+            'All Expenses Types' => 'كل أنواع المصروفات',
+            'Create New Expense Type' => 'إضافة نوع مصروف جديد',
+            'Price Lists' => 'قوائم الأسعار',
+            'Create New Price List' => 'إضافة قائمة سعر جديدة ',
+            'All Price Lists' => 'كل قوائم الأسعار',
+            'Edit Price List'=>'تعديل قائمة سعر',
+            'Dashboard' => 'Dashboard',
+            'Website Info' => 'معلومات الموقع الإلكتروني',
+            '' => '',
+      
+
+            '' => '',
+
         ],
-        'create'=>[
-            'createUser'=>''
-        ],'edit'=>[
-
-        ],'index'=>[
-
+        'crud' => [
+            'create&new'=>'اضافة و جديد ',
+            'create' => 'أضافة',
+            'update' => 'تعديل',
+            'delete' => 'حذف',
+            'all' => 'كل',
+            'Create & New' => 'أضافة و جديد',
+            'Update & Return' => ' تعديل و عودة',
+            'Cancel' => 'الفاء',
+            'Actions' => 'اجراءات',
+            'Yes'=>'نعم',
+            'No'=>'لا',
         ]
-    ],'supplier'=>[
 
-    ],'supplierWallet'=>[
+    ],
+    'wallet' => [
+        'My Wallet' => 'محفظتي',
+        'Client Wallet' => 'محفظة المحل',
+        'Supplier Wallet' => 'محفظة المورد',
+        'Reason' => 'السبب',
+        'Date' => 'التاريخ',
+        'Transaction' => 'العملية',
+        'Transaction Type' => 'نوع العملية',
+        'Amount' => 'القيمة',
+        'Total Balance' => 'الكيمة الكلية',
+        'Number Of +' => 'عدد العمليات',
+        'Total Paied' => 'المدفوع',
+        'Pending' => 'المتبقي',
+    ],
+    'walletTransactions' => [],
+    'users' => [
+        'common' => [
+            'All Users' => 'كل المستخدميين',
+            'Edit User' => 'تعديل المستخدميين ',
+            'Name' => 'الاسم',
+            'Phone' => 'التليفون',
+            'Password' => 'كلمة السر',
+            'Email' => 'البريد الالكتروني',
+            'ID' => 'الرقم',
+            'Actions' => 'العملياات',
+        ],
+        'create' => [
+            'Add New User' => 'اضافة مستخدم',
+            'Confirm Password' => 'تاكيد كلمة السر',
+        ], 'edit' => [
+            'Confirm Password' => 'تاكيد كلمة السر',
 
-    ],'userWallet'=>[
+        ], 'index' => [], 'transaction' => [
+            'Reason' => 'السبب',
+            'Date' => 'التاريخ',
+            'Transaction' => 'العملية',
+            'Transaction Type' => 'نوع العملية',
+            'Amount' => 'القيمة',
+            'Installment' => 'الاقساط',
+        ]
+    ], 'suppliers' => [
+        'common' => [
+            'Edit Supplier-Transaction' => 'تعديل عمليات الوردين',
+            'Add New Supplier-Transaction' => 'اضافة عمليات للمورد',
+            'All Supplier Wallet Transaction' => 'كل عمليات محافظ الموردين',
+            'Edit Supplier' => 'تعديل المورديين',
+            'Add New Supplier' => 'اضافة مورد جديد',
+            'All Suppliers' => 'كل الموردين',
+            'ID' => 'الرقم',
+            'Name' => 'الاسم',
+            'Nickname' => 'الاسم المستعار',
+            'Phone' => 'التليفون',
+            'Email' => 'البريد الالكتروني',
+            'Address' => 'العنوان',
+            'PDF' => 'ملف',
+            'Actions' => 'العمليات',
+        ],
 
-    ]
-    ,'expenses'=>[
-        'addExpense'=>'اضافة مصروف',
-        'allExpenses'=>'المصروفات',
-        'Expenses'=>'مصروفات',
-        'Add Expense'=>'اضافة مصروف',
-        'date'=>'التاريخ',
-        'value'=>'القيمة ',
-        'type'=>' النوع',
+    ], 
+    'supplierWallet' => [], 
     
+    'userWallet' => [],
 
-        ]
+    'expenses' => [    
+        'Actions' => 'العمليات',
+        'Show' => 'عرض',
+        'Edit' => 'تعديل',
+        'Delete'=>'حذف ',
+        'select expense type' => 'اختار نوع المصروف',
+        'Edit Expense Type' => 'تعديل نوع المصروف',
+        'Add Expense Type' => 'إضافة نوع مصروف',
+        'Expense Type' => 'نوع مصروف',
+        'id' => 'الرقم',
+        'Date' => 'التاريخ',
+        'Value' => 'القيمة ',
+    
+    ],
+
+    'expenses types' => [
+            'Actions' => 'العلميات',
+            'Show' => 'عرض',
+            'Edit' => 'تعديل',
+            'Delete' => 'حذف',
+            'Expense Type' => 'نوع المصروف',
+            'id' => 'الرقم',
+            'Expense Type Name' => 'اسم نوع المصروف',
+    ],
+
+    'pricelists' => [  
+        'select supplier' => 'اختار مورد',
+        'Name' => 'الإسم',
+        'ID' => 'الرقم',
+        'Price' => 'السعر',
+        'Made in' => 'بلد الصنع ',
+        'Supplier' => 'المورد',
+        'Actions' => 'العمليات',
+        'Show'=>'عرض',
+        'Edit'=>'تعديل',
+        'Delete'=>'حذف',
+        'Supplier Name'=>'اسم المورد',
+        'Show Price List'=>'عرض قائمة السعر',
+    ],
+
+    'website info' => [
+        'AL-RAYAN' => 'الريان',
+        'tel' => '011222222',
+        'Website Name' => ' اسم الموقع الإلكتروني',
+        'Website Logo' => 'الصورة التعريفية للموقع الإلكتروني ',
+        'Website Phone' => 'رقم الهاتف ',
+        'Product translation'=>'ترجمة المنتجات',
+        'Teams'=>'فريق عمل',
+        'Preffered Langauge'=>'اللغة المفضلة',
+   
+    ],
+       'clients' => [
+        'common' => [
+            'ID' => 'الرقم',
+            'Name' => 'الاسم',
+            'Nickname' => 'الاسم المستعار',
+            'Phone' => 'التليفون',
+            'Email' => 'البريد الالكتروني',
+            'Address' => 'العنوان',
+            'Actions' => 'العمليات',
+            'Add New Client' => 'اضافة زبون جديد',
+            'Edit Client' => 'تعديل العميل',
+            'All Client Transaction' => 'كل عمليات العملاء',
+            'Add New Client-Transaction' => 'اضافة عمليات العملاء',
+            'Edit Client-Transaction' => 'تعديل عمليات العملاء',
+            'All clients' => 'كل العملاء',
+        ],
+    ]
 ];

@@ -14,7 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        // return view('backend.users.wallet');
+        // return view('backend.users.edit');
+        return view('backend.users.index');
     }
 
     /**
@@ -25,6 +27,8 @@ class UserController extends Controller
     public function create()
     {
         //
+        return view('backend.users.create');
+
     }
 
     /**
@@ -58,6 +62,7 @@ class UserController extends Controller
     public function edit($id)
     {
         //
+        return view('backend.users.edit');
     }
 
     /**
@@ -81,5 +86,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+        return "delete";
     }
+
 }

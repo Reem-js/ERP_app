@@ -1,12 +1,23 @@
 <?php
 
-use App\Http\Controllers\backend\users\UserController;
+
 use App\Http\Controllers\backend\expenses\ExpenseController;
 use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
+use App\Http\Controllers\backend\priceLists\priceListController;
+use App\Http\Controllers\backend\website\WebsiteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\backend\users\UserController;
+use App\Http\Controllers\backend\clientss\ClientController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers\backend\suppliers\SupplierController;
+use App\Http\Controllers\backend\UserWallet\UserWalletController;
+use App\Http\Controllers\backend\ClientWallet\ClientWalletController;
+use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
+use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
+use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
+use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,26 +30,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
-    ],
-    function () {
-Route::get('createexp', function () {
-    return view('createexp');
-});
 
-Route::get('indexexp', function () {
-    return view('indexexp');
-});
-Route::get('editeexp', function () {
-    return view('editeexp');
-});
-Route::get('indexexpty', function () {
-    return view('indexexpty');
-});
-    });
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -62,16 +54,20 @@ Route::group(
         Route::group([],function () {
             /* New Routes */
             Route::resource('users',UserController::class);
-
-            /* expenses route */
             Route::resource('expenses',ExpenseController::class);
-            /**************** 
-             * name: * all = expenses.index * ADD = expenses.create* edite = expenses.edit*/
-
-              /* expenses types route */
             Route::resource('expensesTypes',ExpenseTypeController::class);
-            /**************** 
-             * * name: * all = expensesTypes.index * ADD = expensesTypes.create* edite = expensesTypes.edit*/
+            Route::resource('priceLists',priceListController::class);
+            Route::get('website',[WebsiteController::class,'getWebsite'])->name('get.website');
+            Route::get('user-wallet',[UserWalletController::class,'getWallet'])->name('get.user.wallet');
+            Route::resource('user-wallet-transactions',UserWalletTransactionController::class);
+            Route::resource('suppliers',SupplierController::class);
+            Route::get('supplier-wallet',[SupplierWalletController::class,'getSupplierWallet'])->name('get.supplier.wallet');
+            Route::resource('supplier-wallet-transactions',SupplierWalletTransactionController::class);
+            Route::resource('clients',ClientController::class);
+            Route::get('client-wallet',[ClientWalletController::class,'getClientWallet'])->name('get.client.wallet');
+            Route::resource('client-wallet-transactions',ClientWalletTransactionController::class);
+
+
 
         });
     }
@@ -79,14 +75,3 @@ Route::group(
 
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

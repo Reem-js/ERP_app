@@ -15,6 +15,7 @@ class PriceListController extends Controller
     public function index()
     {
         //
+        return view('backend.priceLists.index');
     }
 
     /**
@@ -25,6 +26,7 @@ class PriceListController extends Controller
     public function create()
     {
         //
+        return view('backend.priceLists.create');
     }
 
     /**
@@ -58,6 +60,7 @@ class PriceListController extends Controller
     public function edit($id)
     {
         //
+        return view('backend.priceLists.edit');
     }
 
     /**
@@ -81,5 +84,6 @@ class PriceListController extends Controller
     public function destroy($id)
     {
         //
+        return "clients destory price list";
     }
 }

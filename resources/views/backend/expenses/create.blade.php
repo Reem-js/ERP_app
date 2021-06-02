@@ -1,69 +1,63 @@
-@extends('layouts.app', ['activePage' => 'profile', 'titlePage' => __('Add Expense')])
+@extends('layouts.app', ['activePage' => 'addExpense', 'titlePage' => __('translation.website.sidebar.Create New Expense')])
 
 @section('content')
-  <div class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <form method="get" action="{{ route('profile.update') }}" autocomplete="off" class="form-horizontal">
-            
-
-            <div class="card ">
-              <div class="card-header card-header-primary">
-                <h4 class="card-title">{{ __('Add Expense') }}</h4>
-               
-              </div>
-              <div class="card-body ">
-                
-                <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('translation.expenses.value') }}</label>
-                  <div class="col-sm-7">
-                    <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="value" id="input-email" type="number" placeholder="$" value="{{ old('email', auth()->user()->email) }}" required />
-                      
-                        
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('Date') }}</label>
-                  <div class="col-sm-7">
-                    <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="date" id="date" type="date" placeholder="{{ __('$') }}" value="{{ old('email', auth()->user()->email) }}" required />
-                      
-                        
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('Type of Expense') }}</label>
-                  <div class="col-sm-7">
-                    
-                    <div class="form-group">
-                      <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
-                         <option>1</option>
-                         <option>2</option>
-                         <option>3</option>
-                         <option>4</option>
-                         <option>5</option>
-                       </select>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ml-auto mr-auto">
-                <button type="submit" class="btn btn-primary">{{ __('ADD') }}</button>
-                <button type="" class="btn btn-primary btn-link">{{ __('cancel') }}</button>
-              </div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-text card-header-primary">
+            <div class="card-text">
+              <h4 class="card-title">{{ __('translation.website.sidebar.Create New Expense') }}</h4>
             </div>
-          </form>
+          </div>
+          <div class="m-5">
+            <div class="card-body">
+              <form>
+                <div class="form-group" style="margin: 20px;">
+                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.expenses.Value') }}</p>
+                  <input type="number" name="expensevalue" class="form-control" id="expensevalue" required>
+                </div>
+
+                <div class="form-group" style="margin: 20px;">
+                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.expenses.Date') }}</label>
+                    <input type="date" name="expensedate" class="form-control" id="expensedate" required>
+                </div>
+
+                <div class="form-group" style="margin: 20px;">
+                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.expenses.Expense Type') }}</label>
+                    <br>
+                    <select class="form-group form-control " style="width: 100%;">
+                      <option value="0">{{ __('translation.expenses.select expense type') }}</option>
+                      <option value="1">Audi</option>
+                      <option value="2">BMW</option>
+                      <option value="3">Citroen</option>
+                      <option value="4">Ford</option>
+                      <option value="5">Honda</option>
+                      <option value="6">Jaguar</option>
+
+                    </select>
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col-lg-4">
+                    <button type="submit" class="btn btn-primary">{{__('translation.website.crud.create')}}</button>
+                    <button type="submit" class="btn btn-primary">{{__('translation.website.crud.Create & New')}}</button>
+                  </div>
+                  <div class="col-lg-2 offset-6">
+                    <button type="submit" class="btn btn-danger">{{__('translation.website.crud.Cancel')}}</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      
+
     </div>
   </div>
-@endsection
+</div>
 
+@endsection
