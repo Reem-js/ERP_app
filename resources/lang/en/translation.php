@@ -2,11 +2,11 @@
 return [
     'website' =>
     [
-        
+
         'nav' => [
 
         ],
-       
+
         'sidebar'=>[
             'ELRAYAN'=>'ELRAYAN',
             'Clients'=>'Clients',
@@ -51,7 +51,7 @@ return [
             'Sales'=>'Sales',
             'Installment'=>'Installment',
             'User History'=>'User History',
-          
+
             'Expenses' => 'Expenses',
             'ALL Expenses' => 'ALL Expenses',
             'Edit Expense'=>'Edit Expense',
@@ -64,7 +64,7 @@ return [
             'Create New Price List' => 'Create Price List',
             'All Price Lists' => 'All Price Lists',
             'Edit Price List'=>'Edit Price List',
-            'Website Info' => 'Website Info',
+            'Website Info' => 'Settings',
             'Show clients Details'=>'Show clients Details',
             'Show User Details'=>'Show User Details',
             'Show Supplier Details'=>'Show Supplier Details',
@@ -87,7 +87,7 @@ return [
             'No'=>'No',
 
         ],
-   
+
     ],
     'brands' => [
         'Brand Name' => 'Brand name',
@@ -214,8 +214,8 @@ return [
             'Actions'=>'Actions',
 
 
-    ], 
-   
+    ],
+
 
     'clients'=>[
             'ID'=>'ID',
@@ -256,8 +256,8 @@ return [
         'Date'=>'Date',
         'User Name'=>'User Name',
         'Action'=>'Action',
-    ],   
-    'expenses' => [    
+    ],
+    'expenses' => [
         'Actions' => 'Actions',
         'Show' => 'Show',
         'Edit' => 'Edit',
@@ -282,7 +282,7 @@ return [
             'Expense Type Name' => 'Expense Type Name',
     ],
 
-    'pricelists' => [  
+    'pricelists' => [
         'select supplier' => 'Select Supplier',
         'Name' => 'Name',
         'ID' => 'ID',

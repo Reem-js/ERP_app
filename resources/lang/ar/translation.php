@@ -1,7 +1,7 @@
 <?php
 return [
 
-   
+
     'website' => [
         'sidebar' => [
             'ELRAYAN'=>'الريان',
@@ -60,7 +60,7 @@ return [
             'Create New Price List' => 'إضافة قائمة سعر  ',
             'All Price Lists' => 'كل قوائم الأسعار',
             'Edit Price List' => 'تعديل قائمة سعر',
-            'Website Info' => 'معلومات الموقع الإلكتروني',
+            'Website Info' => 'الأعدادات',
             'Show clients Details'=>'اظهار تفاصيل العميل',
             'Show User Details'=>'اظهار تفاصيل المستخدم',
             'Show Supplier Details'=>'اظهار تفاصيل المورد',

@@ -363,7 +363,7 @@
             {{-- website info --}}
             <li class="nav-item{{ $activePage == 'website' ? ' active' : '' }}">
                 <a class="nav-link " href="{{ route('get.website') }}">
-                    <i class="fa fa-globe text-primary" aria-hidden="true"></i>
+                    <i class="fa fa-cog text-primary" aria-hidden="true"></i>
                     <span class="sidebar-normal" style="font-size: 15px;">
                         {{ __('translation.website.sidebar.Website Info') }} </span>
                 </a>
