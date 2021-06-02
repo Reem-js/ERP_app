@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'createclient', 'titlePage' => __('translation.clients.common.Add New Client')])
+@extends('layouts.app', ['activePage' => 'createclient', 'titlePage' => __('translation.website.sidebar.create client')])
 
 @section('content')
     <div class="content">
@@ -8,46 +8,53 @@
                     <div class="card">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.clients.common.Add New Client') }}</h4>
+                                <h4 class="card-title">{{ __('translation.website.sidebar.create client') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold"   style="color:black;" for="inputAddress">{{ __('translation.clients.common.Name') }}</p>
+                                    <p class="font-weight-bold"   style="color:black;" for="inputAddress">{{ __('translation.clients.Name') }}</p>
                                     <input type="text" name="name" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.clients.common.Nickname') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.Nickname') }}</label>
                                     <input type="email" name="email" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.clients.common.Phone') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.Phone') }}</label>
                                     <input type="text" name="phone" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.clients.common.Email') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.Email') }}</label>
                                     <input type="password" name="password" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group" style="margin: 20px;">
                                     <p class="font-weight-bold" style="color:black;"
-                                        for="inputAddress">{{ __('translation.clients.common.Address') }}</label>
+                                        for="inputAddress">{{ __('translation.clients.Address') }}</label>
                                     <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
                                         required placeholder="1234 Main St">
                                 </div>
 
-                                <button type="submit" class="btn btn-success" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>
+
+
+                                <div class="form-group" style="margin: 20px;">
+                                    <button type="submit" class="btn btn-primary" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>
+                                    <button type="submit" class="btn btn-primary" style="margin: 20px;">{{__('translation.website.crud.Create & New')}}</button>                            </form>
+                                    <button type="submit" class="btn btn-danger"  style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{__('translation.website.crud.Cancel')}}</button> 
+                                </div>
+                         
                             </form>
                         </div>
                     </div>

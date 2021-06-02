@@ -12,4 +12,9 @@ class SupplierWalletController extends Controller
     {
         return view('backend.supplierWallet.wallet');
     }
+    public function getSupplierWalletTrans($id)
+    {
+        # code...
+        return view('backend.supplierWallet.show');
+    }
 }

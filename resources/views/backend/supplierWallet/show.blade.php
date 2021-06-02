@@ -1,17 +1,5 @@
 @extends('layouts.app', ['activePage' => 'walletsupplierTransaction', 'titlePage' => __('translation.website.sidebar.Supplier Wallet Trans')])
-@push('css')
-    <style>
-        a[title]:hover::after {
-            content: attr(title);
-            position: absolute;
-            top: -100%;
-            left: 0;
-            color:black;
-            background-color: green;
-            background-size: 50px 50px 50px 50px;
-        }
-    </style>
-@endpush
+
 @section('content')
     <div class="content">
         <div class="container-fluid">
@@ -24,8 +12,8 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('supplier-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}" class="btn btn-primary btn-round"
-                                style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right ' }}" ><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            <a href="{{ route('supplier-wallet-transactions.create') }}" class="btn btn-primary btn-round"
+                                style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right ' }};"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 {{ __('translation.website.crud.create') }}</a>
                             <table class="table">
                                 <thead>
@@ -44,20 +32,19 @@
 
                                     <tr>
                                         <td class="text-center">3</td>
+                                        <td>Andrew Mike</td>
                                         <td><a href="{{ route('suppliers.edit',5) }}">ay klam</a></td>
-                                         <td>Andrew Mike</td>
                                         <td>Develop</td>
                                         <td>2013</td>
                                         <td>&euro; 99,225</td>
                                         <td>&euro; 99,225</td>
 
                                         <td class="td-actions">
-                                           
-                                            <br>
-                                            <a  class="btn btn-primary"href="{{ route('suppliers.edit',5) }}"rel="tooltip"  title="5ara" style="color:white;"><i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-info" href="{{ route('supplier-wallet-transactions.edit', 5) }}" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
+
+                                            <a class="btn btn-primary"href="#" style="color:white;"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-info" href="{{ route('supplier-wallet-transactions.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>
-                                            <a class="btn btn-danger" rel="tooltip"  title="{{ __('translation.title.Delete Transaction') }}"
+                                            <a class="btn btn-danger"
                                                 onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
                                                 href="javascript:void(0)"><i class="material-icons">close</i></a>
                                             <form method="post"

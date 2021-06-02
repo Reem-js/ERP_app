@@ -14,100 +14,45 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-header card-header-warning card-header-icon">
-                            <div class="card-icon">
+           
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>{{ __('translation.walletTransaction.ID') }}</th>
+                            <th>{{ __('translation.clients.Client Name') }}</th>
+                            <th>{{ __('translation.clients.Client Phone') }}</th>
+                            <th>{{ __('translation.wallet.Total Balance') }}</th>
+                            <th>{{ __('translation.wallet.Number Of +') }}</th>
+                            <th>{{ __('translation.wallet.Total Paied') }}</th>
+                            <th>{{ __('translation.wallet.Pending') }}</th>
+                            <th>{{ __('translation.walletTransaction.Actions') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                                <i class="material-icons">
-                                    account_balance_wallet
-                                </i>
-                            </div>
-                            <p class="card-category">{{__('translation.wallet.Total Balance')}}</p>
-                            <h3 class="card-title">49/50
-                                <small>EGP</small>
-                            </h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <span class="material-icons">
-                                    account_balance_wallet
-                                </span>
-                                <a href="#pablo">Get More Space...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <tr>
+                            <td class="text-center">3</td>
+                            <td><a href="{{ route('clients.edit',5) }}">ay klam</a></td>
+                            <td>012457896</td>
+                            <td>Develop</td>
+                            <td>2013</td>
+                            <td>&euro; 99,225</td>
+                            <td>&euro; 99,225</td>
 
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-header card-header-warning card-header-icon">
-                            <div class="card-icon">
-                                <i class="material-icons">store</i>
-                            </div>
-                            <p class="card-category">{{__('translation.wallet.Number Of Transactions')}}</p>
-                            <h3 class="card-title">49/50
+                            <td class="td-actions">
 
-                            </h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                {{-- <i class="material-icons text-danger">warning</i> --}}
-                                <span class="material-icons">
-                                    account_balance_wallet
-                                </span>
-                                <a href="#pablo">Get More Space...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <a class="btn btn-primary"  rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-primary"  rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('client-wallet-transactions.create') }}"
+                                    style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        
+                            
+                            </td>
+                        </tr>
 
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-header card-header-warning card-header-icon">
-                            <div class="card-icon">
-                                <i class="material-icons">paid</i>
-                            </div>
-                            <p class="card-category">{{__('translation.wallet.Total Paied')}}</p>
-                            <h3 class="card-title">49/50
-                                <small>EGP</small>
-                            </h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                {{-- <i class="material-icons text-danger">warning</i> --}}
-                                <span class="material-icons">
-                                    account_balance_wallet
-                                </span>
-                                <a href="#pablo">Get More Space...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-header card-header-warning card-header-icon">
-                            <div class="card-icon">
-                                <i class="material-icons">info_outline</i>
-                            </div>
-                            <p class="card-category">{{__('translation.wallet.Pending')}}</p>
-                            <h3 class="card-title">49/50
-                                <small>EGP</small>
-                            </h3>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                {{-- <i class="material-icons text-danger">warning</i> --}}
-                                <span class="material-icons">
-                                    account_balance_wallet
-                                </span>
-                                <a href="#pablo">Get More Space...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+                    </tbody>
+                </table>
 
 
 

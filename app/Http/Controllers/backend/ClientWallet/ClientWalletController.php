@@ -13,4 +13,9 @@ class ClientWalletController extends Controller
         # code...
         return view('backend.clientWallet.index');
     }
+    public function getClientWalletTrans($id)
+    {
+        # code...
+        return view('backend.clientWallet.show');
+    }
 }
