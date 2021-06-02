@@ -15,7 +15,6 @@ return [
             'All Transactions'=>'كل العمليات',
             'Create Transaction'=>'أضافة عملية',
             'Edit Transaction'=>'تعديل عملية',
-
             'Suppliers'=>'الموردين',
             'all Suppliers'=>'كل الموردين',
             'create suppliers'=>'أضافة مورد',
@@ -44,7 +43,14 @@ return [
             'Create Category' => 'إضافة فئة',
             'All Products' => 'كل المنتجات',
             'Stock' => 'المخزون',
-
+            'Show Supplier Details'=>'اظهار تفاصيل المورد',
+            'Basic Information'=>'المعلومات الاساسية',
+            'Supplier Products'=>'منتجات المورد',
+            'Price List'=>'قائمة الاسعار',
+            'Purchases'=>'عمليات الشراء',
+            'Sales'=>'المبيعات',
+            'Installment'=>'الاقساط',
+            'User History'=>'ماضي المستخدم',
         ],
         'crud'=>[
             'create'=>'أضافة',
@@ -58,7 +64,6 @@ return [
             'Create initial wallet value'=>'انشاء قيمة بدائية للمحفظة',
             'Number' => 'الرقم',
             'Show' => 'عرض',
-
         ],
     ],
     'brands' => [
@@ -125,9 +130,9 @@ return [
         'Delete Transaction'=>'مسح عملية',
         'show Transactions'=>'اظهار العمليات',
         'Add Transaction'=>'اضافة عملية',
-        ''=>'',
-        ''=>'',
-        ''=>'',
+        'add in price list'=>'زود في قائمة الاسعار',
+        'show details'=>'اظهر التفاصيل',
+        'History'=>'الماضي',
         ''=>'',
     ],
     'wallet'=>[
@@ -197,6 +202,35 @@ return [
             'Add New Client-Transaction'=>'اضافة عمليات العملاء',
             'Edit Client-Transaction'=>'تعديل عمليات العملاء',
             'All clients'=>'كل العملاء',
+        ],
+        'pricelist'=>[
+            'ID'=>'الرقم',
+            'Name'=>'الاسم',
+            'Price'=>'السعر',
+            'Made In'=>'صنع في',
+            'Action'=>'العمليات',
+        ],
+        'purchase'=>[
+            'ID'=>'الرقم',
+            'Type'=>'النوع',
+            'Total'=>'المجموع',
+            'Purchase Date'=>'تاريخ الشراء',
+            'Recieve Date'=>'تاريخ الاستلام',
+            'Status'=>'الحالة',
+        ],
+        'sales'=>[
+            'ID'=>'الرقم',
+            'Type'=>'النوع',
+            'Total'=>'المجموع',
+            'Order Date'=>'تاريخ الشراء',
+            'Recieve Date'=>'تاريخ الاستلام',
+            'Discount'=>'الخصم',
+            'Status'=>'الحالة',
+        ],
+        'history'=>[
+            'Date'=>'تاريخ',
+            'User Name'=>'اسم المستخدم',
+            'Action'=>'الحدث',
         ],
 
 ];

@@ -5,6 +5,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                    @section('modal-title')
+                        <h4>Client Index</h4>
+                    @endsection
+                    @section('modal-body')
+                        <h6>Modal Body From Client Index</h6>
+                    @endsection
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Dynamic Modal
+                    </button>
                         <div class="card">
                             <div class="card-header card-header-text card-header-primary">
                               <div class="card-text">

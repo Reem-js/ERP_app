@@ -34,8 +34,10 @@
                                         <td>2013</td>
                                         <td>&euro; 99,225</td>
                                         <td class="td-actions">
-
-                                            <a class="btn btn-primary" href="#" style="color:white;"><i
+                                            <a href="#" rel="tooltip" title="{{ __('translation.title.add in price list') }}"  class="btn btn-primary"
+                                            style="color:white;"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                            </a>
+                                            <a class="btn btn-primary" rel="tooltip" title="{{ __('translation.title.show details') }}" href="{{ route('suppliers.show',5) }}" style="color:white;"><i
                                                     class="fa fa-eye"></i></a>
                                             <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Edit Supplier') }}"  href="{{ route('suppliers.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>
