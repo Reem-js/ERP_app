@@ -35,7 +35,7 @@
                                             <td >&euro; 99,225</td>
                                             <td class="td-actions">
 
-                                                <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Show Client') }}"  href="{{ route('clients.show',5) }}" style="color:white;" ><i class="fa fa-eye"></i></a>
+                                                <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Show Client') }}"  href="{{ route('clients.show',5) }}" style="color:white;" ><i class="material-icons">visibility</i></a>
                                                 <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Edit Client') }}" href="{{ route('clients.edit',5) }}"  style="color:white;" >  <i class="material-icons">edit</i> </a>
                                                 <a class="btn btn-danger"rel="tooltip"  title="{{ __('translation.title.Delete Client') }}" onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}" href="javascript:void(0)"><i class="material-icons">close</i></a>
                                                 <form  method="post" action="{{ route('clients.destroy',5) }}" style="display:none;" id="delete-1">

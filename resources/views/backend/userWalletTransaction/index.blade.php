@@ -40,7 +40,7 @@
                                 <td class="td-actions">
 
                                     <a class="btn btn-info" href="#" style="color:white;"><i
-                                            class="fa fa-eye"></i></a>
+                                            class="material-icons">visibility</i></a>
                                         <a class="btn btn-info" href="{{ route('user-wallet-transactions.edit', 5) }}" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
                                             style="color:white;"> <i class="material-icons">edit</i> </a>
                                         <a class="btn btn-danger" rel="tooltip"  title="{{ __('translation.title.Delete Transaction') }}"

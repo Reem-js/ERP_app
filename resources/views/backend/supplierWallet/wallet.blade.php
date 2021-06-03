@@ -41,7 +41,7 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="material-icons">visibility</i></a>
                                             <a class="btn btn-primary" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('supplier-wallet-transactions.create', 5) }}"
                                                 style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 

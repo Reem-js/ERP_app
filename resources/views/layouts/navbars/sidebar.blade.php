@@ -83,7 +83,7 @@
             </li>
             {{-- Products --}}
             <li
-                class="nav-item {{ $activePage == 'allProducts' || $activePage == 'showProduct' || $activePage == 'editProduct' || $activePage == 'productHistory' ? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'allProducts' || $activePage == 'showProduct' || $activePage == 'editProduct' || $activePage == 'productHistory'  ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#Product" aria-expanded="false">
                     <i class="fa fa-shopping-cart text-primary" aria-hidden="true"></i>
                     <p>{{ __('translation.website.sidebar.Stock') }}
@@ -100,12 +100,12 @@
                                 {{ __('translation.website.sidebar.All Products') }}
                             </a>
                         </li>
+
                     </ul>
                 </div>
             </li>
             <!--  Start price list PART  -------->
-            {{-- price list --}}
-            <li
+            {{-- <li
                 class="nav-item  {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#pricelists" aria-expanded="false">
                     <i><i class="fa fa-list-alt text-primary" aria-hidden="true"></i></i>
@@ -134,7 +134,7 @@
 
                     </ul>
                 </div>
-            </li>
+            </li> --}}
             <!--  End price list PART  ------------>
             {{-- clients --}}
             <li
@@ -155,17 +155,17 @@
                                 {{ __('translation.website.sidebar.all Clients') }}
                             </a>
                         </li>
-                        <li class="nav-item ml-3 {{ $activePage == 'createclient' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3 {{ $activePage == 'createclient' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('clients.create') }}">
                                 <i class="fa fa-plus-square  {{ $activePage == 'createclient' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.create client') }}
                             </a>
-                        </li>
+                        </li> --}}
                         {{-- client Wallet --}}
                         <li class="nav-item ml-3 {{ $activePage == 'wallet-clients' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('get.client.wallet') }}">
-                                <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-clients' ? 'text-light' : 'text-primary' }} "
+                                <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-clients' ? 'text-light' : 'text-dark' }} "
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Client Wallet') }}
                             </a>
@@ -179,14 +179,14 @@
                                 {{ __('translation.website.sidebar.All Transactions') }}
                             </a>
                         </li>
-                        <li
+                        {{-- <li
                             class="nav-item ml-3 {{ $activePage == 'createclientWalletTransaction' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('client-wallet-transactions.create') }}">
                                 <i class="fa fa-plus-square  {{ $activePage == 'createclientWalletTransaction' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Create Transaction') }}
                             </a>
-                        </li>
+                        </li> --}}
 
                     </ul>
 
@@ -195,14 +195,14 @@
 
             {{-- supplier --}}
             <li
-                class="nav-item {{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' || $activePage == 'wallet-suppliers' || $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' || $activePage == 'showwalletsupplierTransaction' ? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' || $activePage == 'wallet-suppliers' || $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' || $activePage == 'showwalletsupplierTransaction' || $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#suppliers" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Suppliers') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' || $activePage == 'wallet-suppliers' || $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' || $activePage == 'showwalletsupplierTransaction' ? ' show' : '' }} "
+                <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' || $activePage == 'wallet-suppliers' || $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' || $activePage == 'showwalletsupplierTransaction' || $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' show' : '' }} "
                     id="suppliers">
                     <ul class="nav">
                         <li class="nav-item ml-3{{ $activePage == 'all-suppliers' ? ' active' : '' }}">
@@ -212,17 +212,27 @@
                                 {{ __('translation.website.sidebar.all Suppliers') }}
                             </a>
                         </li>
-                        <li class="nav-item ml-3{{ $activePage == 'createsupplier' ? ' active' : '' }}">
+
+                        {{-- <li class="nav-item ml-3{{ $activePage == 'createsupplier' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('suppliers.create') }}">
                                 <i class="fa fa-plus-square  {{ $activePage == 'createsupplier' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.create suppliers') }}
                             </a>
+                        </li> --}}
+
+                         {{-- price list --}}
+                         <li class="nav-item ml-3 {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('priceLists.index') }}">
+                                <i class="fa fa-th-list {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Price Lists') }}
+                            </a>
                         </li>
                         {{-- supplier Wallet --}}
                         <li class="nav-item ml-3{{ $activePage == 'wallet-suppliers' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('get.supplier.wallet') }}">
-                                <i class="fa fa-credit-card-alt  {{ $activePage == 'wallet-suppliers' ? 'text-light' : 'text-primary' }}"
+                                <i class="fa fa-credit-card-alt  {{ $activePage == 'wallet-suppliers' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 <span class="sidebar-normal"> {{ __('translation.website.sidebar.Supplier Wallet') }}
                                 </span>
@@ -236,14 +246,14 @@
                                 {{ __('translation.website.sidebar.All Transactions') }}
                             </a>
                         </li>
-                        <li
+                        {{-- <li
                             class="nav-item ml-3 {{ $activePage == 'createSupplierWalletTransaction' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('supplier-wallet-transactions.create') }}">
                                 <i class="fa fa-plus-square  {{ $activePage == 'createSupplierWalletTransaction' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Create Transaction') }}
                             </a>
-                        </li>
+                        </li> --}}
 
                     </ul>
 
@@ -252,14 +262,14 @@
 
             {{-- users --}}
             <li
-                class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' || $activePage == 'show-users' || $activePage == 'wallet-users' ||  $activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'edituserwalletTransaction'? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' || $activePage == 'show-users' || $activePage == 'wallet-users' || $activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'edituserwalletTransaction' || $activePage == 'allPermissions' || $activePage == 'createPermission' || $activePage == 'editPermission' || $activePage == 'allRoles' || $activePage == 'createRole' || $activePage == 'editRole' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#User" aria-expanded="false">
                     <i><i class="fa fa-users text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Users') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' || $activePage == 'show-users' || $activePage == 'wallet-users' ||  $activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'edituserwalletTransaction'? ' show' : '' }}"
+                <div class="collapse {{ $activePage == 'all-users' || $activePage == 'createUser' || $activePage == 'edit-users' || $activePage == 'show-users' || $activePage == 'wallet-users' || $activePage == 'createUserwalletTransaction' || $activePage == 'allUserTransactions' || $activePage == 'edituserwalletTransaction' || $activePage == 'allPermissions' || $activePage == 'createPermission' || $activePage == 'editPermission' || $activePage == 'allRoles' || $activePage == 'createRole' || $activePage == 'editRole' ? ' show' : '' }}"
                     id="User">
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-users' ? ' active' : '' }}">
@@ -269,17 +279,36 @@
                                 {{ __('translation.website.sidebar.All Users') }}
                             </a>
                         </li>
-                        <li class="nav-item ml-3 {{ $activePage == 'createUser' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3 {{ $activePage == 'createUser' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('users.create') }}">
                                 <i class="fa fa-plus-square  {{ $activePage == 'createUser' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Create User') }}
                             </a>
+                        </li> --}}
+                        {{-- Roles --}}
+                        <li
+                            class="nav-item ml-3 {{ $activePage == 'allRoles' || $activePage == 'createRole' || $activePage == 'editRole' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('roles.index') }}">
+                                <i class="fa fa-briefcase  {{ $activePage == 'allRoles' || $activePage == 'createRole' || $activePage == 'editRole' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Roles') }}
+                            </a>
                         </li>
+                        {{-- Permissions --}}
+                        <li
+                            class="nav-item ml-3 {{ $activePage == 'allPermissions' || $activePage == 'createPermission' || $activePage == 'editPermission' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('permissions.index') }}">
+                                <i class="fa fa-exclamation-triangle  {{ $activePage == 'allPermissions' || $activePage == 'createPermission' || $activePage == 'editPermission' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Permissions') }}
+                            </a>
+                        </li>
+
                         {{-- user wallet --}}
                         <li class="nav-item ml-3 {{ $activePage == 'wallet-users' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('get.user.wallet') }}">
-                                <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-users' ? 'text-light' : 'text-primary' }}"
+                                <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-users' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 <span class="sidebar-normal"> {{ __('translation.website.sidebar.My Wallet') }}
                                 </span>
@@ -295,7 +324,7 @@
                                 {{ __('translation.website.sidebar.All Transactions') }}
                             </a>
                         </li>
-                        <li
+                        {{-- <li
                             class="nav-item ml-3 {{ $activePage == 'createUserwalletTransaction' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('user-wallet-transactions.create') }}">
                                 <i class="fa fa-plus-square  {{ $activePage == 'createUserwalletTransaction' ? 'text-light' : 'text-dark' }}"
@@ -303,7 +332,7 @@
 
                                 {{ __('translation.website.sidebar.Create Transaction') }}
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
 
                 </div>
@@ -329,13 +358,13 @@
                                 {{ __('translation.website.sidebar.ALL Expenses') }}
                             </a>
                         </li>
-                        <li class="nav-item ml-3 {{ $activePage == 'addExpense' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3 {{ $activePage == 'addExpense' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('expenses.create') }}">
                                 <i class="fa fa-plus-square {{ $activePage == 'addExpense' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Create New Expense') }}
                             </a>
-                        </li>
+                        </li> --}}
                         {{-- expenses types --}}
 
                         <li class="nav-item ml-3 {{ $activePage == 'allexpensestypes' ? ' active' : '' }}">
@@ -346,13 +375,13 @@
                             </a>
                         </li>
 
-                        <li class="nav-item ml-3 {{ $activePage == 'createexpensetype' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3 {{ $activePage == 'createexpensetype' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('expensesTypes.create') }}">
                                 <i class="fa fa-plus-square {{ $activePage == 'createexpensetype' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Create New Expense Type') }}
                             </a>
-                        </li>
+                        </li> --}}
 
                     </ul>
                 </div>
