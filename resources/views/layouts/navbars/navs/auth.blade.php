@@ -7,7 +7,7 @@
         @if(app()->getLocale() == $localeCode)
             @continue
         @endif
-        <a class="navbar-brand text-danger" rel="alternate" class="d-lg-none d-md-block" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+        <a class="navbar-brand text-success btn btn-outline-success p-2 " rel="alternate" class="d-lg-none d-md-block" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
             {{-- <i class="fa fa-language text-danger" aria-hidden="true"></i> --}}
             <i class="fa fa-globe" aria-hidden="true"></i>
 
@@ -34,7 +34,8 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="{{ route('home') }}">
-            <i class="fa fa-tachometer text-primary"aria-hidden="true"></i>
+            {{-- <i class="fa fa-tachometer text-primary"aria-hidden="true"></i> --}}
+            <i class="fas fa-tachometer-alt text-primary"></i>
             <p class="d-lg-none d-md-block">
               {{ __('Stats') }}
             </p>
@@ -42,7 +43,8 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons text-primary">notifications</i>
+            <i class="fa fa-bell text-primary" aria-hidden="true"></i>
+
             <span class="notification">5</span>
             <p class="d-lg-none d-md-block">
               {{ __('Some Actions') }}
@@ -58,7 +60,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="material-icons text-primary">person</i>
+            <i class="fa fa-user text-primary" aria-hidden="true"></i>
 
             <p class="d-lg-none d-md-block">
               {{ __('Account') }}

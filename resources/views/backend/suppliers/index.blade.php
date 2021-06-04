@@ -45,7 +45,7 @@ Suppliers')])
                                             <a class="btn btn-info" rel="tooltip"
                                                 title="{{ __('translation.title.show details') }}"
                                                 href="{{ route('suppliers.show', 5) }}" style="color:white;"><i
-                                                    class="fa fa-eye"></i></a>
+                                                    class="material-icons">visibility</i></a>
                                             <a href="{{ route('priceLists.create') }}" rel="tooltip"
                                                 title="{{ __('translation.title.add in price list') }}"
                                                 class="btn btn-primary" style="color:white;"><i class="fa fa-plus-circle"
