@@ -47,7 +47,8 @@ Route::group(
 
         Auth::routes(); // ['register' => false]
         Route::get('/home', [HomeController::class, 'index'])->name('home');
-        Route::get('/',[IndexController::class ,'index']);
+        Route::get('/',[IndexController::class ,'index'])->middleware('guest');
+        // authentication routes
         Route::group(['middleware' => 'auth'],function () {
             /* New Routes */
             // users
@@ -56,7 +57,7 @@ Route::group(
             Route::get('profile',[UserController::class,'profileEdit'])->name('profile.edit');
             Route::put('profile',[UserController::class,'profileUpdate'])->name('profile.update');
             Route::put('profile-password',[UserController::class,'profilePassword'])->name('profile.password');
-            
+
             // expenses
             Route::resource('expenses',ExpenseController::class);
             // expenses types
@@ -73,10 +74,6 @@ Route::group(
             Route::resource('products', ProductController::class);
             Route::get('products/history/{id}', [ProductController::class, 'history'])->name('products.history');
 
-           
-
-
-
             // user wallet
             Route::get('user-wallet',[UserWalletController::class,'getWallet'])->name('get.user.wallet');
             Route::resource('user-wallet-transactions',UserWalletTransactionController::class);
@@ -90,7 +87,7 @@ Route::group(
             Route::get('client-wallet',[ClientWalletController::class,'getClientWallet'])->name('get.client.wallet');
             Route::get('client-wallet-trans/{client}',[ClientWalletController::class,'getClientWalletTrans'])->name('get.client.wallet.trans');
             Route::resource('client-wallet-transactions',ClientWalletTransactionController::class);
-            
+
             // roles
             Route::resource('roles', RoleController::class);
             // permissions
@@ -108,7 +105,7 @@ Route::group(
             Route::get('installments-and-purchases',[ReportController::class,'getInstallmentsAndPurchases'])->name('installments-and-purchases');
             Route::get('receivables-and-payments',[ReportController::class,'getReceivablesAndPayments'])->name('receivables-and-payments');
 
-       
+
         });
 
     }
