@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\backend\expenses\ExpenseController;
+use App\Http\Controllers\backend\reports\ReportController;
 use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
 use App\Http\Controllers\backend\priceLists\priceListController;
 use App\Http\Controllers\backend\website\WebsiteController;
@@ -77,6 +78,17 @@ Route::group(
             Route::get('client-wallet',[ClientWalletController::class,'getClientWallet'])->name('get.client.wallet');
             Route::get('client-wallet-trans/{client}',[ClientWalletController::class,'getClientWalletTrans'])->name('get.client.wallet.trans');
             Route::resource('client-wallet-transactions',ClientWalletTransactionController::class);
+            Route::get('most-sale-product',[ReportController::class,'getMostSaleProduct'])->name('most-sold-products');
+            Route::get('total-capital',[ReportController::class,'getTotalCapital'])->name('total-capital');
+            Route::get('month-profit',[ReportController::class,'getMonthProfit'])->name('monthly-profits');
+            Route::get('best-customers',[ReportController::class,'getBestCustomers'])->name('best-customers');
+            Route::get('best-suppliers',[ReportController::class,'getBestSuppliers'])->name('best-suppliers');
+            Route::get('frequent-customers',[ReportController::class,'getFrequentCustomers'])->name('frequent-customers');
+            Route::get('frequent-suppliers',[ReportController::class,'getFrequentSuppliers'])->name('frequent-suppliers');
+            Route::get('installments-and-sales',[ReportController::class,'getInstallmentAndSales'])->name('Installments-and-sales');
+            Route::get('installments-and-purchases',[ReportController::class,'getInstallmentsAndPurchases'])->name('installments-and-purchases');
+            Route::get('receivables-and-payments',[ReportController::class,'getReceivablesAndPayments'])->name('receivables-and-payments');
+
         });
 
     }
