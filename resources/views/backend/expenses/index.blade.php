@@ -9,7 +9,7 @@
                     <div class="card">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title " style="font-weight: bold;">{{ __('translation.website.sidebar.ALL Expenses') }}</h4>
+                                <h4 class="card-title " >{{ __('translation.website.sidebar.ALL Expenses') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
@@ -38,7 +38,7 @@
 
                                         <td class="td-actions">
                                             <a class="btn btn-info" rel="tooltip" href="#" title="{{__('translation.expenses.Show')}}"
-                                             style="color:white;"><i  class='fa fa-eye'></i></a>
+                                             style="color:white;"><i  class="material-icons">visibility</i></a>
 
                                             <a class="btn btn-info" rel="tooltip" title="{{__('translation.expenses.Edit')}}"
                                                 href="{{ route('expenses.edit', 5) }}"

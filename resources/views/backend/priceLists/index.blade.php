@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header card-header-text card-header-primary">
                         <div class="card-text">
-                            <h4 class="card-title " style="font-weight: bold;">{{ __('translation.website.sidebar.All Price Lists') }}</h4>
+                            <h4 class="card-title " >{{ __('translation.website.sidebar.All Price Lists') }}</h4>
                         </div>
                     </div>
                     <div class="card-body">
@@ -52,7 +52,7 @@
 
 
 
-                                            <a class="btn btn-info" rel="tooltip" href="#" title="{{__('translation.pricelists.Show Price List')}}" style="color:white;"><i class='fa fa-eye'></i></a>
+                                            <a class="btn btn-info" rel="tooltip" href="#" title="{{__('translation.pricelists.Show Price List')}}" style="color:white;"><i class="material-icons">visibility</i></a>
 
                                             <a class="btn btn-info" rel="tooltip" title="{{__('translation.pricelists.Edit')}}" href="{{ route('priceLists.edit', 5) }}" style="color:white;"> <i class="material-icons">edit</i> </a>
                                             <a class="btn btn-danger" rel="tooltip" title="{{__('translation.pricelists.Delete')}}" onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}" href="javascript:void(0)"><i class="material-icons">close</i></a>

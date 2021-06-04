@@ -44,7 +44,7 @@
                                         <td class="td-actions">
 
                                             <a class="btn btn-info" href="#" style="color:white;"><i
-                                                    class="fa fa-eye"></i></a>
+                                                    class="material-icons">visibility</i></a>
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
                                                 href="{{ route('client-wallet-transactions.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>

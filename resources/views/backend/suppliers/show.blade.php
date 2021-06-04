@@ -249,7 +249,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 text-right">
-                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="material-icons">visibility</i></a>
                                     <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('supplier-wallet-transactions.create', 5) }}"
                                         style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 </div>
@@ -257,7 +257,7 @@
                                     <div class="card card-stats">
                                         <div class="card-header card-header-warning card-header-icon">
                                             <div class="card-icon">
-    
+
                                                 <i class="material-icons">
                                                     account_balance_wallet
                                                 </i>
@@ -277,7 +277,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card card-stats">
                                         <div class="card-header card-header-warning card-header-icon">
@@ -286,7 +286,7 @@
                                             </div>
                                             <p class="card-category">{{ __('translation.wallet.Number Of Transactions') }}</p>
                                             <h3 class="card-title">49/50
-    
+
                                             </h3>
                                         </div>
                                         <div class="card-footer">
@@ -300,7 +300,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card card-stats">
                                         <div class="card-header card-header-warning card-header-icon">
@@ -323,7 +323,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card card-stats">
                                         <div class="card-header card-header-warning card-header-icon">
@@ -351,7 +351,7 @@
 
                     </div>
                 </div>
-               
+
 
             </div>
         </div>

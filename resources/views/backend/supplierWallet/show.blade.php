@@ -41,7 +41,7 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-info"href="#" style="color:white;"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-info"href="#" style="color:white;"><i class="material-icons">visibility</i></a>
                                             <a class="btn btn-info" href="{{ route('supplier-wallet-transactions.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>
                                             <a class="btn btn-danger"
