@@ -5,6 +5,11 @@ namespace App\Http\Controllers\backend\users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\ProfileRequest;
+use App\Http\Requests\PasswordRequest;
+use Illuminate\Support\Facades\Hash;
+
+
 class UserController extends Controller
 {
     /**
@@ -14,8 +19,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        // return view('backend.users.wallet');
-        // return view('backend.users.edit');
         return view('backend.users.index');
     }
 
@@ -90,4 +93,41 @@ class UserController extends Controller
         return "delete";
     }
 
+       /**
+     * Show the form for editing the profile.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function profileEdit()
+    {
+        
+            return view('backend.users.profile.edit');
+    }
+
+
+    /* Update the profile
+    *
+    * @param  \App\Http\Requests\ProfileRequest  $request
+    * @return \Illuminate\Http\RedirectResponse
+    */
+    public function profileUpdate(ProfileRequest $request)
+    {
+        auth()->user()->update($request->all());
+
+        return back()->withStatus(__('Profile successfully updated.'));
+    }
+
+
+        /**
+     * Change the password
+     *
+     * @param  \App\Http\Requests\PasswordRequest  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function profilePassword(PasswordRequest $request)
+    {
+        auth()->user()->update(['password' => Hash::make($request->get('password'))]);
+
+        return back()->withStatusPassword(__('Password successfully updated.'));
+    }
 }

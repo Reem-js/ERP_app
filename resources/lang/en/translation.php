@@ -311,5 +311,22 @@ return [
         'Teams'=>'Teams',
         'Preffered Langauge'=>'Preffered Langauge',
     ],
+    'profile'=>[
+        'User Profile'=>'User Profile',
+        'Profile'=>'Profile',
+        'Settings'=>'Settings',
+        'Log out'=>'Log out',
+        'Edit Profile'=>'Edit Profile',
+        'User information'=>'User information',
+        'Name'=>'Name',
+        'Email'=>'Email',
+        'Phone'=>'Phone',
+        'Save'=>'Save',
+        'Change password'=>'Change password',
+        'Password'=>'Password',
+        'Current Password'=>'Current Password',
+        'New Password'=>'New Password',
+        'Confirm New Password'=>'Confirm New Password',
+    ],
 
 ];
