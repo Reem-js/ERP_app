@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -34,7 +35,7 @@ use App\Http\Controllers\backend\reports\ReportController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-    // Route::livewire('livewire/purchases','Purchases');
+// Route::livewire('livewire/purchases','Purchases');
 
 
 
@@ -47,25 +48,25 @@ Route::group(
 
         Auth::routes(); // ['register' => false]
         Route::get('/home', [HomeController::class, 'index'])->name('home');
-        Route::get('/',[IndexController::class ,'index'])->middleware('guest');
+        Route::get('/', [IndexController::class, 'index'])->middleware('guest');
         // authentication routes
-        Route::group(['middleware' => 'auth'],function () {
+        Route::group(['middleware' => 'auth'], function () {
             /* New Routes */
             // users
-            Route::resource('users',UserController::class);
-            Route::resource('users',UserController::class);
-            Route::get('profile',[UserController::class,'profileEdit'])->name('profile.edit');
-            Route::put('profile',[UserController::class,'profileUpdate'])->name('profile.update');
-            Route::put('profile-password',[UserController::class,'profilePassword'])->name('profile.password');
+            Route::resource('users', UserController::class);
+            Route::resource('users', UserController::class);
+            Route::get('profile', [UserController::class, 'profileEdit'])->name('profile.edit');
+            Route::put('profile', [UserController::class, 'profileUpdate'])->name('profile.update');
+            Route::put('profile-password', [UserController::class, 'profilePassword'])->name('profile.password');
 
             // expenses
-            Route::resource('expenses',ExpenseController::class);
+            Route::resource('expenses', ExpenseController::class);
             // expenses types
-            Route::resource('expensesTypes',ExpenseTypeController::class);
+            Route::resource('expensesTypes', ExpenseTypeController::class);
             // priceList
-            Route::resource('priceLists',priceListController::class);
+            Route::resource('priceLists', priceListController::class);
             // setting
-            Route::get('settings',[WebsiteController::class,'getWebsite'])->name('get.website');
+            Route::get('settings', [WebsiteController::class, 'getWebsite'])->name('get.website');
             // brands
             Route::resource('brands', BrandController::class);
             // categories
@@ -75,41 +76,35 @@ Route::group(
             Route::get('products/history/{id}', [ProductController::class, 'history'])->name('products.history');
 
             // user wallet
-            Route::get('user-wallet',[UserWalletController::class,'getWallet'])->name('get.user.wallet');
-            Route::resource('user-wallet-transactions',UserWalletTransactionController::class);
+            Route::get('user-wallet', [UserWalletController::class, 'getWallet'])->name('get.user.wallet');
+            Route::resource('user-wallet-transactions', UserWalletTransactionController::class);
             // supplier wallet
-            Route::resource('suppliers',SupplierController::class);
-            Route::get('supplier-wallet',[SupplierWalletController::class,'getSupplierWallet'])->name('get.supplier.wallet');
-            Route::get('supplier-wallet-trans/{suppplier}',[SupplierWalletController::class,'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
-            Route::resource('supplier-wallet-transactions',SupplierWalletTransactionController::class);
+            Route::resource('suppliers', SupplierController::class);
+            Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
+            Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
+            Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
             // client wallet
-            Route::resource('clients',ClientController::class);
-            Route::get('client-wallet',[ClientWalletController::class,'getClientWallet'])->name('get.client.wallet');
-            Route::get('client-wallet-trans/{client}',[ClientWalletController::class,'getClientWalletTrans'])->name('get.client.wallet.trans');
-            Route::resource('client-wallet-transactions',ClientWalletTransactionController::class);
+            Route::resource('clients', ClientController::class);
+            Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
+            Route::get('client-wallet-trans/{client}', [ClientWalletController::class, 'getClientWalletTrans'])->name('get.client.wallet.trans');
+            Route::resource('client-wallet-transactions', ClientWalletTransactionController::class);
 
             // roles
             Route::resource('roles', RoleController::class);
             // permissions
-            Route::resource('permissions',PermissionController::class);
-            Route::delete('destroy-all',[PermissionController::class,'destroyAll'])->name('permissions.destroy.all');
-           // Reports
-            Route::get('most-sale-product',[ReportController::class,'getMostSaleProduct'])->name('most-sold-products');
-            Route::get('total-capital',[ReportController::class,'getTotalCapital'])->name('total-capital');
-            Route::get('month-profit',[ReportController::class,'getMonthProfit'])->name('monthly-profits');
-            Route::get('best-customers',[ReportController::class,'getBestCustomers'])->name('best-customers');
-            Route::get('best-suppliers',[ReportController::class,'getBestSuppliers'])->name('best-suppliers');
-            Route::get('frequent-customers',[ReportController::class,'getFrequentCustomers'])->name('frequent-customers');
-            Route::get('frequent-suppliers',[ReportController::class,'getFrequentSuppliers'])->name('frequent-suppliers');
-            Route::get('installments-and-sales',[ReportController::class,'getInstallmentAndSales'])->name('Installments-and-sales');
-            Route::get('installments-and-purchases',[ReportController::class,'getInstallmentsAndPurchases'])->name('installments-and-purchases');
-            Route::get('receivables-and-payments',[ReportController::class,'getReceivablesAndPayments'])->name('receivables-and-payments');
-
-
+            Route::resource('permissions', PermissionController::class);
+            Route::delete('destroy-all', [PermissionController::class, 'destroyAll'])->name('permissions.destroy.all');
+            // Reports
+            Route::get('most-sale-product', [ReportController::class, 'getMostSaleProduct'])->name('most-sold-products');
+            Route::get('total-capital', [ReportController::class, 'getTotalCapital'])->name('total-capital');
+            Route::get('month-profit', [ReportController::class, 'getMonthProfit'])->name('monthly-profits');
+            Route::get('best-customers', [ReportController::class, 'getBestCustomers'])->name('best-customers');
+            Route::get('best-suppliers', [ReportController::class, 'getBestSuppliers'])->name('best-suppliers');
+            Route::get('frequent-customers', [ReportController::class, 'getFrequentCustomers'])->name('frequent-customers');
+            Route::get('frequent-suppliers', [ReportController::class, 'getFrequentSuppliers'])->name('frequent-suppliers');
+            Route::get('installments-and-sales', [ReportController::class, 'getInstallmentAndSales'])->name('Installments-and-sales');
+            Route::get('installments-and-purchases', [ReportController::class, 'getInstallmentsAndPurchases'])->name('installments-and-purchases');
+            Route::get('receivables-and-payments', [ReportController::class, 'getReceivablesAndPayments'])->name('receivables-and-payments');
         });
-
     }
 );
-
-
-
