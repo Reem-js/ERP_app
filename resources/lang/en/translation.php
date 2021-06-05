@@ -45,11 +45,8 @@ return [
             'Basic Information' => 'Basic Information',
             'Supplier Products' => 'Supplier Products',
             'Price List' => 'Price List',
-            'Purchases' => 'Purchases',
-            'Sales' => 'Sales',
             'Installment' => 'Installment',
             'User History' => 'User History',
-
             'Expenses' => 'Expenses',
             'ALL Expenses' => 'ALL Expenses',
             'Edit Expense' => 'Edit Expense',
@@ -77,15 +74,24 @@ return [
             'installment and sales' => 'Installments & Sales',
             'installment and purchases' => 'Installment & Purchases',
             'receivables and payments' => 'Receivables & Payments',
-            '' => '',
-
-
             'All Permissions' => 'All Permissions',
             'Create Permission' => 'Create Permissions',
             'Edit Permission' => 'Edit Permissions',
             'All Roles' => 'All Roles',
             'Create Role' => 'Create Roles',
             'Edit Role' => 'Edit Roles',
+            'Dividend Income'=>'Dividend Income',
+            'Purchases' => 'Purchases',
+            'All Purchases'=>'All Purchases',
+            'Create Purchases'=>'Create Purchases',
+            'Edit Purchases'=>'Edit Purchases',
+            'All Purchase Orders'=>'All Purchase Orders',
+            'Sales' => 'Sales',
+            'All Sales'=>'All Sales',
+            'Create Sale'=>'Create Sale',
+            'Edit Sale'=>'Edit Sale',
+            'All Sale Orders'=>'All Sale Orders',
+            'All Installments'=>'All Installments',
 
         ],
         'crud' => [
@@ -103,6 +109,7 @@ return [
             'Yes' => 'Yes',
             'No' => 'No',
             'EGP' => 'EGP',
+            'Product Count'=>'Product Count'
 
         ],
 

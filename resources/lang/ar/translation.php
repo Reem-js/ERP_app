@@ -32,7 +32,6 @@ return [
             'All Purchases' => 'كل المشتريات',
             'Create Purchase' => 'اضافة المشتريات',
             'Edit Purchase' => 'تعديل المشتريات',
-            '' => '',
             'Brands' => 'الماركات',
             'All Brands' => 'كل الماركات',
             'Create Brand' => 'إضافة ماركة',
@@ -44,8 +43,6 @@ return [
             'Basic Information' => 'المعلومات الاساسية',
             'Supplier Products' => 'منتجات المورد',
             'Price List' => 'قائمة الاسعار',
-            'Purchases' => 'عمليات الشراء',
-            'Sales' => 'المبيعات',
             'Installment' => 'الاقساط',
             'User History' => 'ماضي المستخدم',
             'Expenses' => 'المصروفات',
@@ -75,15 +72,24 @@ return [
             'installment and sales' => 'الأقساط والمبيعات',
             'installment and purchases' => 'الأقساط والمشتريات',
             'receivables and payments' => 'المستحقات والمدفوعات ',
-            '' => '',
-
-
             'All Permissions' => 'كل التصاريح',
             'Create Permission' => 'أضافة تصريح',
             'Edit Permission' => 'تعديل تصريح',
             'All Roles' => 'كل الوظائف',
             'Create Role' => 'أضافة وظيفة',
             'Edit Role' => 'تعديل وظيفة',
+            'Dividend Income'=>'توزيع الأرباح',
+            'Purchases' => 'المشتريات',
+            'All Purchases'=>'كل المشتريات',
+            'Create Purchases'=>'أضافة مشترى',
+            'Edit Purchases'=>'تعديل مشترى',
+            'All Purchase Orders'=>'كل تحضيرات المشريات',
+            'Sales' => 'المبيعات',
+            'All Sales'=>'كل المبيعات',
+            'Create Sale'=>'أضافة مبيع',
+            'Edit Sale'=>'تعديل مبيع',
+            'All Sale Orders'=>'كل تحضيرات المبيعات',
+            'All Installments'=>'كل الأقساط',
 
         ],
         'crud' => [
@@ -101,6 +107,7 @@ return [
             'Yes' => 'نعم',
             'No' => 'لا',
             'EGP' => 'جنبية',
+            'Product Count'=>'عدد الأصناف'
 
         ],
     ],

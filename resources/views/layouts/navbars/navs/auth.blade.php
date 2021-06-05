@@ -7,7 +7,7 @@
         @if(app()->getLocale() == $localeCode)
             @continue
         @endif
-        <a class="navbar-brand text-success btn btn-outline-success p-2 " rel="alternate" class="d-lg-none d-md-block" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+        <a class="navbar-brand text-success p-2 " rel="alternate" class="d-lg-none d-md-block" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
             {{-- <i class="fa fa-language text-danger" aria-hidden="true"></i> --}}
             <i class="fa fa-globe" aria-hidden="true"></i>
 
@@ -25,7 +25,7 @@
       <form class="navbar-form">
         <div class="input-group no-border">
         <input type="text" value="" class="form-control" placeholder="Search..">
-        <button type="submit" class="btn btn-white btn-round btn-just-icon text-info">
+        <button type="submit" class="btn btn-white btn-round btn-just-icon text-primary">
           <i class="material-icons">search</i>
           <div class="ripple-container"></div>
         </button>

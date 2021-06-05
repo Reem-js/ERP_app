@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="orange" data-background-color="white"
+<div class="sidebar" data-color="orange" data-background-color="black" {{-- black --}}
     data-image="{{ asset('material') }}/img/sidebar-1.jpg">
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -42,7 +42,8 @@
                             </a>
                         </li>
                         {{-- Categories --}}
-                        <li class="nav-item ml-3 {{ $activePage == 'allCategories' || $activePage == 'createCategory' || $activePage == 'editCategory' ? ' active' : '' }}">
+                        <li
+                            class="nav-item ml-3 {{ $activePage == 'allCategories' || $activePage == 'createCategory' || $activePage == 'editCategory' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('categories.index') }}">
                                 <i
                                     class="material-icons  {{ $activePage == 'allCategories' || $activePage == 'createCategory' || $activePage == 'editCategory' ? 'text-light' : 'text-dark' }}">dashboard</i>
@@ -50,7 +51,8 @@
                             </a>
                         </li>
                         {{-- Brands --}}
-                        <li class="nav-item ml-3{{ $activePage == 'allBrands' || $activePage == 'createBrand' || $activePage == 'editBrand' ? ' active' : '' }}">
+                        <li
+                            class="nav-item ml-3{{ $activePage == 'allBrands' || $activePage == 'createBrand' || $activePage == 'editBrand' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('brands.index') }}">
                                 <i class="fa fa-car  {{ $activePage == 'allBrands' || $activePage == 'createBrand' || $activePage == 'editBrand' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
@@ -215,13 +217,76 @@
 
                 </div>
             </li>
+            {{-- Sales --}}
+            <li
+                class="nav-item {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' || $activePage == 'SaleOrder' ? ' active' : '' }}">
+                <a class="nav-link" data-toggle="collapse" href="#sales" aria-expanded="false">
+                    <i><i class="fa fa-money  text-primary" aria-hidden="true"></i></i>
+                    <p>{{ __('translation.website.sidebar.Sales') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' || $activePage == 'SaleOrder' ? ' show' : '' }} "
+                    id="sales">
+                    <ul class="nav">
+                        <li
+                            class="nav-item ml-3 {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' ? ' active' : '' }}">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-th-list {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Sales') }}
+                            </a>
+                        </li>
+                        {{-- Sale Order --}}
 
+                        <li class="nav-item ml-3 {{ $activePage == 'SaleOrder' ? ' active' : '' }}">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-th-list {{ $activePage == 'SaleOrder' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Sale Orders') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            {{-- Purchases --}}
+            <li
+                class="nav-item {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' active' : '' }}">
+                <a class="nav-link" data-toggle="collapse" href="#Purchases" aria-expanded="false">
+                    <i><i class="fa fa-cart-plus  text-primary" aria-hidden="true"></i></i>
+                    <p>{{ __('translation.website.sidebar.Purchases') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' show' : '' }} "
+                    id="Purchases">
+                    <ul class="nav">
+                        <li
+                            class="nav-item ml-3 {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' ? ' active' : '' }}">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-th-list {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Purchases') }}
+                            </a>
+                        </li>
+                        {{-- purchase Order --}}
+
+                        <li class="nav-item ml-3 {{ $activePage == 'purchaseOrder' ? ' active' : '' }}">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-th-list {{ $activePage == 'purchaseOrder' ? 'text-light' : 'text-dark' }}"
+                                    aria-hidden="true"></i>
+                                {{ __('translation.website.sidebar.All Purchase Orders') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <!--  Start expenses PART  -------->
             {{-- expenses --}}
             <li
                 class="nav-item {{ $activePage == 'addExpense' || $activePage == 'allExpense' || $activePage == 'editexpense' || $activePage == 'createexpensetype' || $activePage == 'allexpensestypes' || $activePage == 'editexpensetype' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#expenses" aria-expanded="false">
-                    <i><i class="fa fa-money  text-primary" aria-hidden="true"></i></i>
+                    <i><i class="fa fa-minus-circle  text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Expenses') }}
                         <b class="caret"></b>
                     </p>
@@ -247,6 +312,14 @@
                         </li>
                     </ul>
                 </div>
+            </li>
+            {{-- Installlments --}}
+            <li class="nav-item  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? ' active' : '' }}">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-th-list text-primary {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? 'text-light' : 'text-dark' }}"
+                        aria-hidden="true"></i>
+                    {{ __('translation.website.sidebar.All Installments') }}
+                </a>
             </li>
 
             <!--  Start Reports PART  -------->
@@ -334,6 +407,15 @@
                         </li>
                     </ul>
                 </div>
+            </li>
+
+            {{-- dividend income --}}
+            <li class="nav-item{{ $activePage == 'dividendIncome' ? ' active' : '' }}">
+                <a class="nav-link " href="#">
+                    <i class="fa fa-percent text-primary" aria-hidden="true"></i>
+                    <span class="sidebar-normal" style="font-size: 15px;">
+                        {{ __('translation.website.sidebar.Dividend Income') }} </span>
+                </a>
             </li>
 
             <!--  start website info PART  ------------>

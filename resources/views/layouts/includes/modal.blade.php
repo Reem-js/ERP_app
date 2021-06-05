@@ -21,12 +21,12 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
   <!-- modal end -->
   {{-- Include For Test  --}}
    {{-- @include('layouts.includes.modal',
         ['modalSize'=>"modal-lg",
-        'modalTitleColor'=>"text-primary",
+        'modalTitleColor'=>"",
         'modalTitle'=>"first modal",
         'modalBody'=>"<h1>Your First Modal Body Is Here</h1>",
         'modalActions'=>"<button class='btn btn-primary'>Save Changes</button>"

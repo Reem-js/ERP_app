@@ -27,6 +27,7 @@
                                             <th class="text-center">{{ __('translation.website.crud.Number') }}</th>
                                             <th>{{__('translation.categories.Category Name')}}</th>
                                             <th>{{__('translation.categories.Category Image')}}</th>
+                                            <th>{{__('translation.website.crud.Product Count')}}</th>
                                             <th>{{__('translation.website.crud.Actions')}}</th>
                                         </tr>
                                     </thead>
@@ -35,6 +36,7 @@
                                             <td class="text-center">1</td>
                                             <td>فيرنا</td>
                                             <td>صورةُُ ما</td>
+                                            <td>5</td>
                                             <td class="td-actions">
                                                 <div class="d-flex justify-content-space-between">
                                                     <a class="btn btn-info" title="{{__('translation.website.crud.update')}}" rel="tooltip" href="{{ route('categories.edit',2) }}" style="margin: 0 2px 0 0; color:white;">

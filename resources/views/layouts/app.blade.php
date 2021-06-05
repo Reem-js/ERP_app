@@ -17,37 +17,19 @@
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    @php
-        $color = 'light';
-    @endphp
-    @if ($color == 'light')
-
-        <!-- CSS Files -->
-        <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-        @if (app()->getLocale() == 'ar')
-            <link href="{{ asset('material') }}/css/material-dashboard-rtl.css?v=1.1" rel="stylesheet" />
-        @endif
-    @elseif($color == 'dark')
-        <!--     Fonts and icons     -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-        <link href="{{ asset('black') }}/css/nucleo-icons.css" rel="stylesheet" />
-        <!-- CSS Files -->
-        <link href="{{ asset('black') }}/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-        <link href="{{ asset('black') }}/css/theme.css" rel="stylesheet" />
-
-        @if (app()->getLocale() == 'ar')
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css"
-                rel="stylesheet" />
-            <link href="{{ asset('black') }}/css/black-dashboard-rtl.css?v=1.1" rel="stylesheet" />
-        @endif
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <!-- CSS Files -->
+    <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    @if (app()->getLocale() == 'ar')
+        <link href="{{ asset('material') }}/css/material-dashboard-rtl.css?v=1.1" rel="stylesheet" />
     @endif
+
     <!-- for selectbox with search -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     @stack('css')
 </head>
 
-<body class="  {{app()->getLocale() == 'ar' ? ' rtl  rtl menu-on-right ' : ''}} {{ $class ?? '' }}">
+<body class="  {{ app()->getLocale() == 'ar' ? ' rtl  rtl menu-on-right ' : '' }} {{ $class ?? '' }}">
     @auth()
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
@@ -142,180 +124,50 @@
             </div>
         </div>
     @endif
-    @if ($color == 'light')
-        <!--   Core JS Files   -->
-        <script src="{{ asset('material') }}/js/core/jquery.min.js"></script>
-        <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
-        <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
-        <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-        <!-- Plugin for the momentJs  -->
-        <script src="{{ asset('material') }}/js/plugins/moment.min.js"></script>
-        <!--  Plugin for Sweet Alert -->
-        <script src="{{ asset('material') }}/js/plugins/sweetalert2.js"></script>
-        <!-- Forms Validations Plugin -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.validate.min.js"></script>
-        <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.bootstrap-wizard.js"></script>
-        <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-selectpicker.js"></script>
-        <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-datetimepicker.min.js"></script>
-        <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables.min.js"></script>
-        <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-tagsinput.js"></script>
-        {{-- <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput --> --}}
-        <script src="{{ asset('material') }}/js/plugins/jasny-bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
+    <!--   Core JS Files   -->
+    <script src="{{ asset('material') }}/js/core/jquery.min.js"></script>
+    <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
+    <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
+    <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Plugin for the momentJs  -->
+    <script src="{{ asset('material') }}/js/plugins/moment.min.js"></script>
+    <!--  Plugin for Sweet Alert -->
+    <script src="{{ asset('material') }}/js/plugins/sweetalert2.js"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="{{ asset('material') }}/js/plugins/jquery.validate.min.js"></script>
+    <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+    <script src="{{ asset('material') }}/js/plugins/jquery.bootstrap-wizard.js"></script>
+    <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="{{ asset('material') }}/js/plugins/bootstrap-selectpicker.js"></script>
+    <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+    <script src="{{ asset('material') }}/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+    <script src="{{ asset('material') }}/js/plugins/jquery.dataTables.min.js"></script>
+    <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+    <script src="{{ asset('material') }}/js/plugins/bootstrap-tagsinput.js"></script>
+    {{-- <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput --> --}}
+    <script src="{{ asset('material') }}/js/plugins/jasny-bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
 
-        <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-        <script src="{{ asset('material') }}/js/plugins/fullcalendar.min.js"></script>
-        <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
-        <script src="{{ asset('material') }}/js/plugins/jquery-jvectormap.js"></script>
-        <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-        <script src="{{ asset('material') }}/js/plugins/nouislider.min.js"></script>
-        <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
-        <!-- Library for adding dinamically elements -->
-        <script src="{{ asset('material') }}/js/plugins/arrive.min.js"></script>
+    <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+    <script src="{{ asset('material') }}/js/plugins/fullcalendar.min.js"></script>
+    <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+    <script src="{{ asset('material') }}/js/plugins/jquery-jvectormap.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="{{ asset('material') }}/js/plugins/nouislider.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <!-- Library for adding dinamically elements -->
+    <script src="{{ asset('material') }}/js/plugins/arrive.min.js"></script>
 
-        <!-- Chartist JS -->
-        <script src="{{ asset('material') }}/js/plugins/chartist.min.js"></script>
-        <!--  Notifications Plugin    -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-notify.js"></script>
-        <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="{{ asset('material') }}/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-        <!-- Material Dashboard DEMO methods, dont include it in your project! -->
-        <script src="{{ asset('material') }}/js/settings.js"></script>
-
-    @elseif($color == 'dark')
-        <!--   Core JS Files   -->
-        <script src="{{ asset('black') }}/js/core/jquery.min.js"></script>
-        <script src="{{ asset('black') }}/js/core/popper.min.js"></script>
-        <script src="{{ asset('black') }}/js/core/bootstrap.min.js"></script>
-        <script src="{{ asset('black') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-
-        <!-- Chart JS -->
-        <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script>
-        <!--  Notifications Plugin    -->
-        <script src="{{ asset('black') }}/js/plugins/bootstrap-notify.js"></script>
-        <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="{{ asset('black') }}/js/black-dashboard.min.js?v=1.0.0"></script>
-        <!-- Black Dashboard DEMO methods, don't include it in your project! -->
-        <script>
-            $(document).ready(function() {
-                $().ready(function() {
-                    $sidebar = $('.sidebar');
-                    $navbar = $('.navbar');
-                    $main_panel = $('.main-panel');
-
-                    $full_page = $('.full-page');
-
-                    $sidebar_responsive = $('body > .navbar-collapse');
-                    sidebar_mini_active = true;
-                    white_color = false;
-
-                    window_width = $(window).width();
-
-                    fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-
-
-
-                    $('.fixed-plugin a').click(function(event) {
-                        if ($(this).hasClass('switch-trigger')) {
-                            if (event.stopPropagation) {
-                                event.stopPropagation();
-                            } else if (window.event) {
-                                window.event.cancelBubble = true;
-                            }
-                        }
-                    });
-
-                    $('.fixed-plugin .background-color span').click(function() {
-                        $(this).siblings().removeClass('active');
-                        $(this).addClass('active');
-
-                        var new_color = $(this).data('color');
-
-                        if ($sidebar.length != 0) {
-                            $sidebar.attr('data', new_color);
-                        }
-
-                        if ($main_panel.length != 0) {
-                            $main_panel.attr('data', new_color);
-                        }
-
-                        if ($full_page.length != 0) {
-                            $full_page.attr('filter-color', new_color);
-                        }
-
-                        if ($sidebar_responsive.length != 0) {
-                            $sidebar_responsive.attr('data', new_color);
-                        }
-                    });
-
-                    $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
-                        var $btn = $(this);
-
-                        if (sidebar_mini_active == true) {
-                            $('body').removeClass('sidebar-mini');
-                            sidebar_mini_active = false;
-                            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
-                        } else {
-                            $('body').addClass('sidebar-mini');
-                            sidebar_mini_active = true;
-                            blackDashboard.showSidebarMessage('Sidebar mini activated...');
-                        }
-
-                        // we simulate the window Resize so the charts will get updated in realtime.
-                        var simulateWindowResize = setInterval(function() {
-                            window.dispatchEvent(new Event('resize'));
-                        }, 180);
-
-                        // we stop the simulation of Window Resize after the animations are completed
-                        setTimeout(function() {
-                            clearInterval(simulateWindowResize);
-                        }, 1000);
-                    });
-
-                    $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
-                        var $btn = $(this);
-
-                        if (white_color == true) {
-
-                            $('body').addClass('change-background');
-                            setTimeout(function() {
-                                $('body').removeClass('change-background');
-                                $('body').removeClass('white-content');
-                            }, 900);
-                            white_color = false;
-                        } else {
-
-                            $('body').addClass('change-background');
-                            setTimeout(function() {
-                                $('body').removeClass('change-background');
-                                $('body').addClass('white-content');
-                            }, 900);
-
-                            white_color = true;
-                        }
-
-
-                    });
-
-                    $('.light-badge').click(function() {
-                        $('body').addClass('white-content');
-                    });
-
-                    $('.dark-badge').click(function() {
-                        $('body').removeClass('white-content');
-                    });
-                });
-            });
-
-        </script>
-    @endif
-
+    <!-- Chartist JS -->
+    <script src="{{ asset('material') }}/js/plugins/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="{{ asset('material') }}/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="{{ asset('material') }}/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+    <!-- Material Dashboard DEMO methods, dont include it in your project! -->
+    <script src="{{ asset('material') }}/js/settings.js"></script>
     <!-- Select2 JS -->
     <!-- for selectbox with search -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
