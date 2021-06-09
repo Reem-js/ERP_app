@@ -1,10 +1,36 @@
 @extends('layouts.app', ['activePage' => 'addSale', 'titlePage' => __('translation.website.sidebar.Add Sale')])
 
 @section('content')
+@livewireStyles
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        add client
+                    </button>
+                      <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                            @livewire('modals.modal-add-client')
+                            {{-- <livewire:modal-add-client/> --}}
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
@@ -21,35 +47,35 @@
                                             <input type="text" name="name" class="form-control" id="inputAddress" required
                                                 placeholder="1234 Main St">
                                         </div>
-                            
+
                                         <div class="form-group" style="margin: 20px;">
                                             <p class="font-weight-bold" style="color:black;"
                                                 for="inputAddress">{{ __("translation.clients.Nickname") }}</label>
                                             <input type="email" name="email" class="form-control" id="inputAddress" required
                                                 placeholder="1234 Main St">
                                         </div>
-                            
+
                                         <div class="form-group" style="margin: 20px;">
                                             <p class="font-weight-bold" style="color:black;"
                                                 for="inputAddress">{{ __("translation.clients.Phone") }}</label>
                                             <input type="text" name="phone" class="form-control" id="inputAddress" required
                                                 placeholder="1234 Main St">
                                         </div>
-                            
+
                                         <div class="form-group" style="margin: 20px;">
                                             <p class="font-weight-bold" style="color:black;"
                                                 for="inputAddress">{{ __("translation.clients.Email") }}</label>
                                             <input type="password" name="password" class="form-control" id="inputAddress" required
                                                 placeholder="1234 Main St">
                                         </div>
-                            
+
                                         <div class="form-group" style="margin: 20px;">
                                             <p class="font-weight-bold" style="color:black;"
                                                 for="inputAddress">{{ __("translation.clients.Address") }}</label>
                                             <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
                                                 required placeholder="1234 Main St">
                                         </div>
-                                 
+
                                     </form>';
                                 @endphp
                                    @include('layouts.includes.modal',
@@ -93,7 +119,7 @@
 
                                     </div>
                                 </div>
-                                    
+
                                 <table class="table table-striped table-bordered" id="table_field">
                                     <thead>
                                         <tr>
@@ -109,7 +135,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-center">2</td>
-                                            
+
                                             <td >
                                                 <select id='selItem' style='width:100%'>
                                                     <option value='0'>Select Item</option>
@@ -127,7 +153,7 @@
                                                 <select id='selSupplier' style='width:100%'>
                                                     <option value='7'>Rakesh sahu</option>
                                                     <option value='8'>Madonna Mikhail</option>
-                                                    <option value='9'>Glal Husseiny</option> 
+                                                    <option value='9'>Glal Husseiny</option>
                                                 </select>
 
                                             </td>
@@ -135,7 +161,7 @@
                                             <td>
                                                 <input type="number" name="" id="">
                                             </td>
-                                            
+
                                             <td>
                                                 <input type="text" name="" id="">
                                             </td>
@@ -195,6 +221,7 @@
     </div>
     </div>
     </div>
+    @livewireScripts
 @endsection
 @push('js')
     <script>

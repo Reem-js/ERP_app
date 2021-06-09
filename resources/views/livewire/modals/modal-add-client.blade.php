@@ -1,3 +1,4 @@
-<div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
-</div>
+<form action="" method="post">
+    <input type="email" name="email" id="">
+    <button type="submit">yyy</button>
+</form>
