@@ -90,6 +90,7 @@ return [
             'Edit Sale'=>'تعديل مبيع',
             'All Sale Orders'=>'كل تحضيرات المبيعات',
             'All Installments'=>'كل الأقساط',
+            'all Purchases'=>'كل المشتريات',
 
         ],
         'crud' => [
@@ -407,6 +408,20 @@ return [
         'Purchase Date' => 'تاريخ الشراء',
         'Recieve Date' => 'تاريخ الاستلام',
         'Status' => 'الحالة',
+        'cash'=>'كاش',
+        'Credit'=>'قسط',
+        'id'=>'الرقم',
+        'date'=>'التاريخ',
+        'supplier'=>'المورد',
+        'product'=>'المنتج',
+        'quantity'=>'الكمية',
+        'total cost'=>'التكلفة الإجمالية',
+        'Actions'=>'الإجراءات',
+        'type'=>'نوع الدفع',
+        'paid'=>'المبلغ المدفوع',
+        'residual'=>'المبلغ المتبقي',
+        'num'=>'الرقم',
+        'add row'=>'إضافة صف',
     ],
     'sales' => [
         'ID' => 'الرقم',

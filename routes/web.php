@@ -24,6 +24,7 @@ use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionCon
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
 use App\Http\Controllers\backend\reports\ReportController;
+use App\Http\Controllers\backend\purchases\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +106,11 @@ Route::group(
             Route::get('installments-and-sales', [ReportController::class, 'getInstallmentAndSales'])->name('Installments-and-sales');
             Route::get('installments-and-purchases', [ReportController::class, 'getInstallmentsAndPurchases'])->name('installments-and-purchases');
             Route::get('receivables-and-payments', [ReportController::class, 'getReceivablesAndPayments'])->name('receivables-and-payments');
+
+           // Purchases
+           Route::resource('purchases', PurchaseController::class);
+
+
         });
     }
 );
