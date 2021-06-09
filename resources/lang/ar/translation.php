@@ -90,6 +90,10 @@ return [
             'Edit Sale'=>'تعديل مبيع',
             'All Sale Orders'=>'كل تحضيرات المبيعات',
             'All Installments'=>'كل الأقساط',
+            'Show Sale Details'=>'عرض تفاصيل الفاتورة',
+            'Client Information'=>'معلومات العميل',
+            'Products'=>'المنتجات',
+            'Add Sale'=>'اضافة فاتورة بيع',
 
         ],
         'crud' => [
@@ -180,7 +184,10 @@ return [
         'add in price list' => 'زود في قائمة الاسعار',
         'show details' => 'اظهر التفاصيل',
         'History' => 'الماضي',
-        'Show Client' => 'اظهار العميل',
+        'Show Client' => 'عرض العميل',
+        'Show Sales'=>'عرض التافصيل',
+        'Edit Sales'=>'تعديل',
+
     ],
     'wallet' => [
         'My Wallet' => 'محفظتي',
@@ -431,5 +438,27 @@ return [
         'ID' => 'الرقم',
         'Name' => 'أسم الوظيفة',
     ]
+    ,
+    'sales'=>[
+        'ID'=>'الرقم',
+        'Order Date'=>'تاريخ المعاملة',
+        'Total'=>'السعر الكلي',
+        'Type'=>'النوع',
+        'Note'=>'معلومات',
+        'Discount'=>'الخصم',
+        'Create Status'=>'حالة الفاتورة',
+        'Recive Date'=>'تاريخ الوصل',
+        'Status'=>'نوع المعاملة',
+        'Actions'=>'العمليات',
+        'Sale Price'=>'سعر البيع',
+        'Sale After Price'=>'سعر البيع الفعلي',
+        'Invoice Number'=>'رقم الفاتورة',
+        'Item'=>'المنتج',
+        'Supplier'=>'المورد',
+        'QTY'=>'الكمية',
+        'Price/item'=>'السعر/منتج',
+        'Amount'=>'القيمة',
+        'Payment Type'=>'طريقة الدفع',
+    ],
 
 ];
