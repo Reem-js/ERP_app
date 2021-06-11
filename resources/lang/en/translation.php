@@ -96,6 +96,7 @@ return [
             'Client Information'=>'Client Information',
             'Products'=>'Products',
             'Add Sale'=>'Add Sale',
+            'all Purchases'=>'All Purchases',
 
         ],
         'crud' => [
@@ -278,6 +279,22 @@ return [
         'Purchase Date' => 'Purchase Date',
         'Recieve Date' => 'Recieve Date',
         'Status' => 'Status',
+        'cash'=>'Cash',
+        'Credit'=>'Credit',
+        'id'=>'Id',
+        'date'=>'Date',
+        'supplier'=>'Supplier',
+        'product'=>'Product',
+        'quantity'=>'Quantity',
+        'total cost'=>'Total Cost',
+        'Actions'=>'Actions',
+        'type'=>'Type',
+        'paid'=>'Paid',
+        'residual'=>'Residual',
+        'num'=>'Num',
+        'add row'=>'Add Row',
+
+
     ],
     'sales' => [
         'ID' => 'ID',

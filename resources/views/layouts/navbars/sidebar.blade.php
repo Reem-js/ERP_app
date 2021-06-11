@@ -261,9 +261,8 @@
                 <div class="collapse {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' show' : '' }} "
                     id="Purchases">
                     <ul class="nav">
-                        <li
-                            class="nav-item ml-3 {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' ? ' active' : '' }}">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item ml-3 {{  $activePage == 'allPurchases' || $activePage == 'addPurchase' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('purchases.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Purchases') }}

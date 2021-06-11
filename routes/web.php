@@ -8,7 +8,6 @@ use App\Http\Controllers\backend\sales\SaleController;
 use App\Http\Controllers\backend\users\UserController;
 use App\Http\Controllers\backend\index\IndexController;
 use App\Http\Controllers\backend\brands\BrandController;
-use App\Http\Controllers\backend\reports\ReportController;
 use App\Http\Controllers\backend\clientss\ClientController;
 use App\Http\Controllers\backend\website\WebsiteController;
 use App\Http\Controllers\backend\expenses\ExpenseController;
@@ -25,6 +24,8 @@ use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
 use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
+use App\Http\Controllers\backend\reports\ReportController;
+use App\Http\Controllers\backend\purchases\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,6 +114,9 @@ Route::group(
             //livewire sales
             // Route::livewire('livewire/sales','sales');
             // Route::get('livewire/sales' , App\Http\Livewire\Sales::class);
+
+           // Purchases
+           Route::resource('purchases', PurchaseController::class);
 
 
         });
