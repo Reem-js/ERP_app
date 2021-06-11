@@ -6,7 +6,6 @@ use Livewire\Component;
 
 class AllPurchases extends Component
 {
-
     // public $name;
         public $tr = [
             '<tr class="text-center">

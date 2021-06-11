@@ -219,7 +219,7 @@
             </li>
             {{-- Sales --}}
             <li
-                class="nav-item {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' || $activePage == 'SaleOrder' ? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'addSale' || $activePage == 'allSales'  || $activePage == 'showSales' ||$activePage == 'editSale' || $activePage == 'SaleOrder' ? ' active' : '' }}">
                 <a class="nav-link" data-toggle="collapse" href="#sales" aria-expanded="false">
                     <i><i class="fa fa-money  text-primary" aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Sales') }}
@@ -231,7 +231,7 @@
                     <ul class="nav">
                         <li
                             class="nav-item ml-3 {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' ? ' active' : '' }}">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('sales.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' ? 'text-light' : 'text-dark' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Sales') }}

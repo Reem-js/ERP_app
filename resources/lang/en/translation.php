@@ -92,6 +92,10 @@ return [
             'Edit Sale'=>'Edit Sale',
             'All Sale Orders'=>'All Sale Orders',
             'All Installments'=>'All Installments',
+            'Show Sale Details'=>'Show Sale Details',
+            'Client Information'=>'Client Information',
+            'Products'=>'Products',
+            'Add Sale'=>'Add Sale',
             'all Purchases'=>'All Purchases',
 
         ],
@@ -164,6 +168,7 @@ return [
         'id' => 'ID',
         'totalSaleStock' => 'Total Sale Price',
         'totalPurchaseStock' => 'Total Purchase Price',
+      
 
     ],
     'title' => [
@@ -185,6 +190,9 @@ return [
         'show details' => 'show details',
         'History' => 'History',
         'Show Client' => 'Show Client',
+        'Show Sales'=>'Show Sales',
+        'Edit Sales'=>'Edit Sales',
+       
         '' => '',
         '' => '',
         '' => '',
@@ -439,9 +447,29 @@ return [
         'Total number of expenses' => 'Total Number of Expenses',
         'Total cost of expenses' => 'Total Cost of Expenses',
         'Total purchases amount' => 'Total Amount',
-
-
-
     ]
-
+    ,
+    'sales'=>[
+        'ID'=>'ID',
+        'Order Date'=>'Order Date',
+        'Total'=>'Total',
+        'Type'=>'Type',
+        'Note'=>'Note',
+        'Discount'=>'Discount',
+        'Create Status'=>'Create Status',
+        'Recive Date'=>'Recive Date',
+        'Status'=>'Status',
+        'Actions'=>'Actions',
+        'Sale Price'=>'Sale Price',
+        'Sale After Price'=>'Sale After Price',
+        'Invoice Number'=>'Invoice Number',
+        'Invoice Date'=>'Invoice Date',
+        'Item'=>'Item',
+        'Supplier'=>'Supplier',
+        'QTY'=>'QTY',
+        'Price/item'=>'Price/item',
+        'Amount'=>'Amount',
+        'Payment Type'=>'Payment Type',
+        'add row'=>'add row,'
+    ], 
 ];
