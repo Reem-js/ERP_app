@@ -13,16 +13,16 @@ class AllPurchases extends Component
                 <td class="text-center"> <span style="cursor:pointer;" wire:click="removeTr(0)"  class=" text-danger material-icons">
                     delete
                     </span></td>
-                <td class="text-center"><input type="text"  class="form-control" id="pricelistname"
+                <td class="text-center"><input type="text"
                         required></td>
-                <td class="text-center"><input type="text"  name="quantity" class="form-control" id="pricelistname"
+                <td class="text-center"><input type="text"  name=""
                         required></td>
-                <td class="text-center"><input type="text" name="t" class="form-control" id="pricelistname"
+                <td class="text-center"><input type="text" name=""
                         required></td>
-                <td class="text-center"><input type="text" name="pricelistname" class="form-control"
-                        id="pricelistname" required></td>
-                <td class="text-center"><input type="text" name="pricelistname" class="form-control"
-                        id="pricelistname" required></td>
+                <td class="text-center"><input type="text" name=""
+                        required></td>
+                <td class="text-center"><input type="text" name=""
+                        required></td>
             </tr>',
         ];
 
@@ -34,16 +34,16 @@ public function addTr($newId)
         <td> <span style="cursor:pointer;" wire:click="removeTr('.$newId.')" class=" text-danger material-icons">
             delete
             </span></td>
-        <td><input type="text" name="date" class="form-control" id="pricelistname"
+        <td><input type="text" name=""
                 required></td>
-        <td><input type="text" name="quantity" class="form-control" id="pricelistname"
+        <td><input type="text" name=""
                 required></td>
-        <td><input type="text" name="t" class="form-control" id="pricelistname"
+        <td><input type="text" name=""
                 required></td>
-        <td><input type="text" name="pricelistname" class="form-control"
-                id="pricelistname" required></td>
-        <td><input type="text" name="pricelistname" class="form-control"
-                id="pricelistname" required></td>
+        <td><input type="text" name=""
+                 required></td>
+        <td><input type="text" name="" 
+                 required></td>
     </tr>';
     array_push($this->tr ,$newTr);
 }
