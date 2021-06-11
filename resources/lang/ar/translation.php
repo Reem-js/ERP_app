@@ -474,6 +474,7 @@ return [
         'Price/item'=>'السعر/منتج',
         'Amount'=>'القيمة',
         'Payment Type'=>'طريقة الدفع',
+        'add row'=>'اضافة صف',
     ],
 
 ];

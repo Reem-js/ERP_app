@@ -470,5 +470,6 @@ return [
         'Price/item'=>'Price/item',
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
+        'add row'=>'add row,'
     ], 
 ];

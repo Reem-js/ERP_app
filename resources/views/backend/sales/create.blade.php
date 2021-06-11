@@ -201,7 +201,7 @@
                                         border: #ccc solid 1px;" type="date" name="" id="">
                                     </div>
                                 </div>
-                                <table class="table table-striped table-bordered" id="table_field">
+                                {{--  <table class="table table-striped table-bordered" id="table_field">
                                     <thead>
                                         <tr>
                                             <th class="text-center">{{ __('translation.sales.ID') }}</th>
@@ -251,7 +251,8 @@
                                             </th>
                                         </tr>
                                     </tbody>
-                                </table>
+                                </table>  --}}
+                                <livewire:all-sales/>
                                 <div class="d-flex justify-content-between" style="margin-top: 100px;">
                                     <div class="form-group col-4" style="margin: 20px;">
                                         <p class="font-weight-bold form-group" style="color:black;" for="inputAddress">
@@ -295,22 +296,21 @@
     <script>
         $(document).ready(function() {
             // Initialize select2
-            $("#selClient").select2();
+            $(".selClient").select2();
         });
 
     </script>
     <script>
         $(document).ready(function() {
             // Initialize select2
-            $("#selItem").select2();
+            $(".selItem").select2();
         });
 
     </script>
     <script>
         $(document).ready(function() {
             // Initialize select2
-            $("#selSupplier").select2();
+            $(".selSupplier").select2();
         });
-
     </script>
 @endpush
