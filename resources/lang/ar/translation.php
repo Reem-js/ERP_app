@@ -95,6 +95,9 @@ return [
             'Products'=>'المنتجات',
             'Add Sale'=>'اضافة فاتورة بيع',
             'all Purchases'=>'كل المشتريات',
+            'add Purchase'=>'إضافة مشترى',
+            'unit cost'=>'سعر الوحدة',
+            'add new supplier'=>'إضافة مورد جديد',
 
         ],
         'crud' => [
@@ -429,6 +432,7 @@ return [
         'residual'=>'المبلغ المتبقي',
         'num'=>'الرقم',
         'add row'=>'إضافة صف',
+        'add product'=>'إضافة منتج',
     ],
     'sales' => [
         'ID' => 'الرقم',

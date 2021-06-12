@@ -97,6 +97,8 @@ return [
             'Products'=>'Products',
             'Add Sale'=>'Add Sale',
             'all Purchases'=>'All Purchases',
+            'add Purchase'=>'Add Purchase',
+            'add new supplier'=>'Add New Supplier',
 
         ],
         'crud' => [
@@ -168,7 +170,7 @@ return [
         'id' => 'ID',
         'totalSaleStock' => 'Total Sale Price',
         'totalPurchaseStock' => 'Total Purchase Price',
-      
+
 
     ],
     'title' => [
@@ -192,7 +194,7 @@ return [
         'Show Client' => 'Show Client',
         'Show Sales'=>'Show Sales',
         'Edit Sales'=>'Edit Sales',
-       
+
         '' => '',
         '' => '',
         '' => '',
@@ -293,6 +295,8 @@ return [
         'residual'=>'Residual',
         'num'=>'Num',
         'add row'=>'Add Row',
+        'unit cost'=>'Unit Cost',
+        'add product'=>'Add Product',
 
 
     ],
@@ -471,5 +475,5 @@ return [
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
         'add row'=>'add row,'
-    ], 
+    ],
 ];
