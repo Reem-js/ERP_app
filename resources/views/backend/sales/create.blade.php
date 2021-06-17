@@ -132,7 +132,7 @@
         <!-- Modal -->
         <div class="modal fade" style="z-index: 1000000" id="exampleModalLong" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
@@ -142,11 +142,56 @@
                     </div>
                     <div class="modal-body">
                         @livewire('modals.modal-add-client')
+                        <livewire:modals.modal-add-client />
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" style="z-index: 1000000" id="add_supplier" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{-- @livewire('modals.modal-add-client') --}}
+                        <livewire:modals.modal-show-supplier />
+                    </div>
+                    {{-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" style="z-index: 1000000" id="installment_form" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Installment Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{-- @livewire('modals.modal-add-client') --}}
+                        <livewire:modals.modal-installment-details />
+                    </div>
+                    {{-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -162,12 +207,11 @@
                         <div class="card-body">
                             <form>
                                 <div class="d-flex justify-content-between" style="margin-bottom:100px;">
-                                    <div class="form-group col-3" style="margin: 20px;">
+                                    <div class="form-group col-5" style="margin: 20px;">
                                         <p class="font-weight-bold" style="color:black; margin-bottom:0px" for="inputAddress">
                                             {{ __('translation.clients.Name') }}</p>
-                                            <div class="dropdown" style="border-radius: 4px;color: #616161;width: 150px;padding: 1px;margin-top: 0px;border: 1px solid #ccc;">
-                                                <span style="margin-left: 10px;
-                                                margin-top: 10px;" tabindex="0">{{ __('translation.clients.Client Name') }}<span style="margin-left: 40px;"><i class="fa fa-angle-down" aria-hidden="true"></i></span></span>
+                                            {{-- <div class="dropdown" style="border-radius: 4px;color: #616161;width: 150px;padding: 1px;margin-top: 0px;border: 1px solid #ccc;">
+                                                <span style="margin-left: 10px;margin-top: 10px;" tabindex="0">{{ __('translation.clients.Client Name') }}<span style="margin-left: 40px;"><i class="fa fa-angle-down" aria-hidden="true"></i></span></span>
                                                 <div class="less-sticky">
                                                     <ul>
                                                         <li class="cb-item"><a href="http://yes.net">home page</a></li>
@@ -185,7 +229,14 @@
                                                         <li class="cb-item"><a href="#">Stay on this page</a></li>
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            </div> --}}
+                                            <select style="width: 200px" class="client_dropdown" name="client_name">
+                                                <option value="0">{{ __('Select client') }}</option>
+                                                <option value="1">client 1</option>
+                                                <option value="2">client 2</option>
+                                            </select>
+
+                                            <a href="#" data-toggle="modal" data-target="#exampleModalLong" class="text-primary ml-3"><i class="fa fa-plus" aria-hidden="true"></i> Add Client</a>
                                     </div>
                                     <div class="form-group col-3" style="margin: 20px;">
                                         <p class="font-weight-bold" style="color:black; display:inline;" for="inputAddress">
@@ -257,14 +308,19 @@
                                     <div class="form-group col-4" style="margin: 20px;">
                                         <p class="font-weight-bold form-group" style="color:black;" for="inputAddress">
                                             {{ __('translation.sales.Payment Type') }}</p>
-                                        <select class="form-group form-control" name="payment">
+                                        {{-- <select class="form-group form-control" name="payment">
+                                            <option value='0'>Select payment Type</option>
+                                            <option value="cash">Cash</option>
+                                            <option value="install">Install</option>
+                                        </select> --}}
+                                        <select onclick="payment()" style="width: 200px" id="payment_drop" class="payment_dropdown" name="payment">
                                             <option value='0'>Select payment Type</option>
                                             <option value="cash">Cash</option>
                                             <option value="install">Install</option>
                                         </select>
                                         <p class="form-group" style="color:black;" for="inputAddress">
                                             {{ __('translation.sales.Note') }}</p>
-                                        <textarea name="note" rows="5" cols="35" style="border:#ccc solid 1px;"></textarea>
+                                        <textarea name="note" rows="5" cols="27" style="border:#ccc solid 1px;"></textarea>
                                     </div>
                                     <div class="form-group col-3" style="margin:20px;">
                                         <div>
@@ -311,6 +367,29 @@
         $(document).ready(function() {
             // Initialize select2
             $(".selSupplier").select2();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".js-example-basic-single").select2();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".client_dropdown").select2();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".payment_dropdown").select2();
+        });
+    </script>
+    <script>
+        $( "#payment_drop" ).change(function() {
+            var check = $(this).val();
+            if(check == 'install'){
+                $('#installment_form').modal('show');
+            }
         });
     </script>
 @endpush

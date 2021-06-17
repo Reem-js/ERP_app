@@ -111,7 +111,7 @@ return [
             'Show' => 'عرض',
             'Yes' => 'نعم',
             'No' => 'لا',
-            'EGP' => 'جنبية',
+            'EGP' => 'جنيه',
             'Product Count'=>'عدد الأصناف'
 
         ],
@@ -477,4 +477,12 @@ return [
         'add row'=>'اضافة صف',
     ],
 
+    'dashboard' => [
+        'cash' => 'السيولة النقدية',
+        'See your wallet' => 'انظر محفظتك',
+        'debts' => 'ديون',
+        'See all installments' => 'انظر الأقساط',
+        'installments' => 'الأقساط',
+        ''
+    ],
 ];

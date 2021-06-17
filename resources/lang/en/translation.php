@@ -168,7 +168,7 @@ return [
         'id' => 'ID',
         'totalSaleStock' => 'Total Sale Price',
         'totalPurchaseStock' => 'Total Purchase Price',
-      
+
 
     ],
     'title' => [
@@ -192,7 +192,7 @@ return [
         'Show Client' => 'Show Client',
         'Show Sales'=>'Show Sales',
         'Edit Sales'=>'Edit Sales',
-       
+
         '' => '',
         '' => '',
         '' => '',
@@ -471,5 +471,14 @@ return [
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
         'add row'=>'add row,'
-    ], 
+    ],
+
+    'dashboard' => [
+        'cash' => 'Cash',
+        'See your wallet' => 'See your wallet',
+        'debts' => 'Debts',
+        'See all installments' => 'See all installments',
+        'installments' => 'Installments',
+        ''
+    ],
 ];
