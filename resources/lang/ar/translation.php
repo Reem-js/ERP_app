@@ -95,6 +95,8 @@ return [
             'Products'=>'المنتجات',
             'Add Sale'=>'اضافة فاتورة بيع',
             'all Purchases'=>'كل المشتريات',
+            'All Notifications'=>'كل الاشعارات',
+
 
         ],
         'crud' => [
@@ -113,7 +115,8 @@ return [
             'No' => 'لا',
             'EGP' => 'جنبية',
             'Product Count'=>'عدد الأصناف'
-
+            
+            ,'see more'=>'اظهار المزيد',
         ],
     ],
     'brands' => [
@@ -188,6 +191,7 @@ return [
         'Show Client' => 'عرض العميل',
         'Show Sales'=>'عرض التافصيل',
         'Edit Sales'=>'تعديل',
+        'Delete Notification'=>' مسح الاشعار',
 
     ],
     'wallet' => [
@@ -475,6 +479,14 @@ return [
         'Amount'=>'القيمة',
         'Payment Type'=>'طريقة الدفع',
         'add row'=>'اضافة صف',
+    ],
+    'notifications'=>[
+        'ID'=>'الرقم',
+        'Title'=>'العنوان',
+        'Content'=>'المحتوي',
+        'Date'=>'التاريخ',
+        'Read'=>'قرات',
+
     ],
 
 ];

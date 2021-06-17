@@ -97,6 +97,7 @@ return [
             'Products'=>'Products',
             'Add Sale'=>'Add Sale',
             'all Purchases'=>'All Purchases',
+            'All Notifications'=>'All Notifications',
 
         ],
         'crud' => [
@@ -115,6 +116,7 @@ return [
             'No' => 'No',
             'EGP' => 'EGP',
             'Product Count'=>'Product Count'
+            ,'see more'=>'see more',
 
         ],
 
@@ -193,7 +195,7 @@ return [
         'Show Sales'=>'Show Sales',
         'Edit Sales'=>'Edit Sales',
        
-        '' => '',
+        'Delete Notification' => 'Delete Notification',
         '' => '',
         '' => '',
         '' => '',
@@ -472,4 +474,12 @@ return [
         'Payment Type'=>'Payment Type',
         'add row'=>'add row,'
     ], 
+    'notifications'=>[
+        'ID'=>'ID',
+        'Title'=>'Title',
+        'Content'=>'Content',
+        'Date'=>'Date',
+        'Read'=>'Read',
+
+    ],
 ];
