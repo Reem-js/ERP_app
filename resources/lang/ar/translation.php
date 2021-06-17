@@ -98,6 +98,7 @@ return [
             'add Purchase'=>'إضافة مشترى',
             'unit cost'=>'سعر الوحدة',
             'add new supplier'=>'إضافة مورد جديد',
+            'all Installments'=>'كل الأقساط',
 
         ],
         'crud' => [
@@ -479,6 +480,32 @@ return [
         'Amount'=>'القيمة',
         'Payment Type'=>'طريقة الدفع',
         'add row'=>'اضافة صف',
+    ],
+    'installments'=>[
+        'installments elly leya'=>'الأقساط الي ليا',
+        'installments elly 3laya'=>'الأقساط الي عليا',
+        'id'=>'الرقم',
+        'Client name'=>'اسم العميل',
+        'period'=>'المدة الكلية للأقساط',
+        'start date'=>'تاريخ البداية',
+        'Total invoice value'=>'القيمة الكلية للفاتورة',
+        'actions'=>'الإجراءات',
+        'show trans'=>'عرض المعاملات المالية',
+        'add trans'=>'إضافة معاملة مالية',
+        'Supplier name'=>'اسم المورد',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+
     ],
 
 ];

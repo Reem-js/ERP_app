@@ -314,13 +314,13 @@
             </li>
             {{-- Installlments --}}
             <li class="nav-item  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? ' active' : '' }}">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('get.installments') }}">
                     <i class="fa fa-th-list text-primary {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? 'text-light' : 'text-dark' }}"
                         aria-hidden="true"></i>
                     {{ __('translation.website.sidebar.All Installments') }}
                 </a>
             </li>
-
+          
             <!--  Start Reports PART  -------->
             {{-- reports --}}
             <li

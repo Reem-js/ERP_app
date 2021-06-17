@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all Purchases')])
+@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all
+Purchases')])
 
 @section('content')
     <div class="content">
@@ -22,6 +23,47 @@
                                     </a>
                                 </div>
                             </div>
+                            <br>
+                            <div class="text-danger" data-toggle="modal" data-target="#exampleModalLong">Open Modal</div>
+                            @include('layouts.includes.modal',
+                            ['modalSize'=>"modal-lg",
+                            'modalTitleColor'=>"",
+                            'modalTitle'=>"first modal",
+                            'modalBody'=>'<table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">First</th>
+                                                        <th scope="col">Last</th>
+                                                        <th scope="col">Handle</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>@twitter</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>',
+                            'modalActions'=>"<button class='btn btn-primary'>Save Changes</button>"
+                            ])
+                            <br>
+
+
 
                             <div class="">
                                 <ul class="nav nav-pills nav-pills-danger" role="tablist">
@@ -189,6 +231,10 @@
 
                                                 </tbody>
                                             </table>
+
+                                           
+
+
                                         </div>
                                     </div>
 

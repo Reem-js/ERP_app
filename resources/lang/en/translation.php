@@ -99,6 +99,7 @@ return [
             'all Purchases'=>'All Purchases',
             'add Purchase'=>'Add Purchase',
             'add new supplier'=>'Add New Supplier',
+            'all Installments'=>'All Installments',
 
         ],
         'crud' => [
@@ -475,5 +476,23 @@ return [
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
         'add row'=>'add row,'
+    ],
+
+    'installments'=>[
+        'installments elly leya'=>'  elly   leya',
+        'installments elly 3laya'=>' elly   3laya',
+        'id'=>'Id',
+        'Client name'=>'Client Name',
+        'period'=>'Period',
+        'start date'=>'Start Date',
+        'Total invoice value'=>'Total Invoice Value',
+        'actions'=>'Actions',
+        'show trans'=>'Show Trans',
+        'add trans'=>'Add Trans',
+        'Supplier name'=>'Supplier Name',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+
     ],
 ];

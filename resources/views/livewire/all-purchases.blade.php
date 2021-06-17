@@ -1,6 +1,6 @@
 <div>
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-    <table class="table text-center table-bordered border-primary" style="max-width:90%">
+    <table class="table text-center table-bordered border-primary" >
         <thead>
 
             <tr>

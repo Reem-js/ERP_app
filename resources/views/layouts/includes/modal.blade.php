@@ -3,7 +3,7 @@
     Open Modal
 </button> --}}
  <!-- modal start -->
- <div class="modal fade" id="exampleModalLong"
+ <div class="modal fade modal-dialog-scrollable" id="exampleModalLong"
   tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog  {{$modalSize}}" role="document">
       <div class="modal-content">
@@ -13,8 +13,8 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          {!! $modalBody !!}
+        <div class="modal-body" id="modal-body">
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
