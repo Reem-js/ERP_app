@@ -5,7 +5,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-
                         <div class="card">
                             <div class="card-header card-header-text card-header-primary">
                               <div class="card-text">
@@ -63,3 +62,11 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
+@endpush

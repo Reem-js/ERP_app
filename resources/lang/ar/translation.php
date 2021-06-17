@@ -113,7 +113,7 @@ return [
             'Show' => 'عرض',
             'Yes' => 'نعم',
             'No' => 'لا',
-            'EGP' => 'جنبية',
+            'EGP' => 'جنيه',
             'Product Count'=>'عدد الأصناف'
             
             ,'see more'=>'اظهار المزيد',
@@ -489,4 +489,12 @@ return [
 
     ],
 
+    'dashboard' => [
+        'cash' => 'السيولة النقدية',
+        'See your wallet' => 'انظر محفظتك',
+        'debts' => 'ديون',
+        'See all installments' => 'انظر الأقساط',
+        'installments' => 'الأقساط',
+        ''
+    ],
 ];

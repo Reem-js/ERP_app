@@ -170,7 +170,7 @@ return [
         'id' => 'ID',
         'totalSaleStock' => 'Total Sale Price',
         'totalPurchaseStock' => 'Total Purchase Price',
-      
+
 
     ],
     'title' => [
@@ -196,6 +196,8 @@ return [
         'Edit Sales'=>'Edit Sales',
        
         'Delete Notification' => 'Delete Notification',
+
+        '' => '',
         '' => '',
         '' => '',
         '' => '',
@@ -481,5 +483,14 @@ return [
         'Date'=>'Date',
         'Read'=>'Read',
 
+    ],
+
+    'dashboard' => [
+        'cash' => 'Cash',
+        'See your wallet' => 'See your wallet',
+        'debts' => 'Debts',
+        'See all installments' => 'See all installments',
+        'installments' => 'Installments',
+        ''
     ],
 ];
