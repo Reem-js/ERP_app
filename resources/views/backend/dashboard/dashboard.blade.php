@@ -5,46 +5,56 @@
     <div class="container-fluid">
       <div class="row">
         {{-- 1) cash card --}}
-        <div class="col-4">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">{{ __('translation.dashboard.cash') }}</h4>
-              {{-- <p class="category">Category subtitle</p> --}}
-            </div>
-            <div class="card-body pt-0">
+        <div class="col-4 h-25 m-0">
+          <div class="card m-0">
+            <div class="card-header d-flex justify-content-between">
+              <h3 class="card-title">{{ __('translation.dashboard.cash') }}</h3>
               <h3 class="card-title">880,000
                 <small>{{__('translation.website.crud.EGP')}}</small>
               </h3>
-            </div>
+            </div><hr class="m-0"/>
+            <div class="card-footer">
+                <div class="stats-dashboard">
+                  <i class="fa fa-credit-card-alt text-success mr-2"></i>
+                  <a class="text-success" href="#pablo">{{__('translation.dashboard.See your wallet')}}...</a>
+                </div>
+              </div>
           </div>
         </div>
         {{-- 2) debt card --}}
-        <div class="col-4">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">{{ __('translation.dashboard.debts') }}</h4>
+        <div class="col-4 h-25 m-0">
+            <div class="card m-0">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">{{ __('translation.dashboard.debts') }}</h3>
+                <h3 class="card-title">880,000
+                  <small>{{__('translation.website.crud.EGP')}}</small>
+                </h3>
+              </div><hr class="m-0"/>
+              <div class="card-footer">
+                  <div class="stats-dashboard">
+                    <i class="fa fa-credit-card-alt text-success mr-2"></i>
+                    <a class="text-success" href="#pablo">{{__('translation.dashboard.See all installments')}}...</a>
+                  </div>
+                </div>
             </div>
-            <div class="card-body pt-0">
-              <h3 class="card-title">880,000
-                <small>{{__('translation.website.crud.EGP')}}</small>
-              </h3>
-            </div>
-          </div>
         </div>
         {{-- 3) installments card --}}
-        <div class="col-4">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">{{ __('translation.dashboard.installments') }}</h4>
+        <div class="col-4 h-25 m-0">
+            <div class="card m-0">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">{{ __('translation.dashboard.installments') }}</h3>
+                <h3 class="card-title">880,000
+                  <small>{{__('translation.website.crud.EGP')}}</small>
+                </h3>
+              </div><hr class="m-0"/>
+              <div class="card-footer">
+                  <div class="stats-dashboard">
+                    <i class="fa fa-credit-card-alt text-success mr-2"></i>
+                    <a class="text-success" href="#pablo">{{__('translation.dashboard.See all installments')}}...</a>
+                  </div>
+                </div>
             </div>
-            <div class="card-body pt-0">
-              <h3 class="card-title">880,000
-                <small>{{__('translation.website.crud.EGP')}}</small>
-              </h3>
-            </div>
-          </div>
         </div>
-
         {{-- <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-header card-header-primary card-header-text">

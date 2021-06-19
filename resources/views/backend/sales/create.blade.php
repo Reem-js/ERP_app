@@ -1,131 +1,4 @@
 @extends('layouts.app', ['activePage' => 'addSale', 'titlePage' => __('translation.website.sidebar.Add Sale')])
-@push('css')
-    <style>
-        .less-sticky {
-            border-radius: 10px;
-            background-color: #ccc !important;
-
-            max-height: 200px;
-            margin-top: 7px;
-            background-color: rgb(255, 255, 255);
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
-            z-index: 10;
-            overflow-y: scroll !important;
-            overflow-x: hidden !important;
-            border-width: 0px 1px 1px;
-            border-style: solid solid solid;
-            border-color: rgb(220, 220, 220) rgb(220, 220, 220) rgb(220, 220, 220);
-        }
-
-        .dropdown {
-            /* "relative" and "inline-block" (or just "block") are needed
-                         here so that "absolute" works correctly in children */
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown>*:last-child {
-            /* Using `display:block` here has two desirable effects:
-                         (1) Accessibility: it lets input widgets in the dropdown to
-                             be selected with the tab key when the dropdown is closed.
-                         (2) It lets the opacity transition work.
-                         But it also makes the contents visible, which is undesirable
-                         before the list drops down. To compensate, use `opacity: 0`
-                         and disable mouse pointer events. Another side effect is that
-                         the user can select and copy the contents of the hidden list,
-                         but don't worry, the selected content is invisible. */
-            display: block;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.4s;
-            /* fade out */
-            position: absolute;
-            left: 0;
-            top: 100%;
-            border: 1px solid #888;
-            background-color: #fff;
-            box-shadow: 1px 2px 4px 1px #666;
-            box-shadow: 1px 2px 4px 1px #4448;
-            z-index: 9999;
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* List of situations in which to show the dropdown list.
-                       - Focus dropdown or non-last child of it => show last-child
-                       - Focus .downarrow of combobox => show last-child
-                       - Stay open for focus in last child, unless .less-sticky
-                       - .sticky last child stays open on hover
-                       - .less-sticky stays open on hover, ignores focus in last-child */
-        .dropdown:focus>*:last-child,
-        .dropdown>*:focus~*:last-child,
-        .dropdown>.less-sticky:last-child:hover {
-            display: block;
-            opacity: 1;
-            transition: 0.15s;
-            pointer-events: auto;
-        }
-
-        /* detect Edge/IE and behave if though less-sticky is on for all
-                       dropdowns (otherwise links won't be clickable) */
-        @supports (-ms-ime-align:auto) {
-            .dropdown>*:last-child:hover {
-                display: block;
-                opacity: 1;
-                pointer-events: auto;
-            }
-        }
-
-        /* detect IE and do the same thing. */
-        @media all and (-ms-high-contrast: none),
-        (-ms-high-contrast: active) {
-            .dropdown>*:last-child:hover {
-                display: block;
-                opacity: 1;
-                pointer-events: auto;
-            }
-        }
-
-        .dropdown:not(.sticky)>*:not(:last-child):focus,
-        .dropdown:focus {
-            pointer-events: none;
-            /* Causes second click to close */
-        }
-
-        .downarrow:focus {
-            outline: 2px solid #8BF;
-            /* Edge/IE can't do outline transparency */
-            outline: 2px solid #48F8;
-        }
-
-
-        /* ------------------------------------------ */
-        /* ----- Styling for examples                 */
-        /* ------------------------------------------ */
-
-        .cb-item {
-            display: block;
-            margin: 0px;
-            padding: 2px;
-            color: #000;
-        }
-
-        .cb-item:hover,
-        .cb-item:hover>a:visited {
-            color: #fff;
-            background-color: #88f;
-        }
-
-
-        ul {
-            width: max-content;
-            margin: 0;
-            padding: 0;
-        }
-
-    </style>
-@endpush
 @section('content')
     @livewireStyles
     <div class="content">
@@ -335,7 +208,7 @@
                                         <br>
                                         <p class="font-weight-bold" style=" display:inline; " for="inputAddress">
                                             {{ __('translation.sales.Total') }} :</p>
-                                        <input type="text" name="" style="border:#ccc solid 1px;">
+                                        <input type="text" name="" style="border:#ccc solid 1px;border-radius:20px;margin-left:20px;width:75%;">
                                     </div>
                                 </div>
                             </form>
@@ -352,39 +225,20 @@
     <script>
         $(document).ready(function() {
             // Initialize select2
-            $(".selClient").select2();
-        });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Initialize select2
             $(".selItem").select2();
         });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Initialize select2
-            $(".selSupplier").select2();
-        });
-    </script>
-    <script>
         $(document).ready(function() {
             $(".js-example-basic-single").select2();
         });
-    </script>
-    <script>
         $(document).ready(function() {
             $(".client_dropdown").select2();
         });
-    </script>
-    <script>
         $(document).ready(function() {
             $(".payment_dropdown").select2();
         });
-    </script>
-    <script>
+        $(document).ready(function() {
+            $(".item_dropdown").select2();
+        });
         $( "#payment_drop" ).change(function() {
             var check = $(this).val();
             if(check == 'install'){
