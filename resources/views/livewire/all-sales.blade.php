@@ -17,7 +17,7 @@
             {!!  $value !!}
             @endforeach
             <tr>
-                <td colspane=6>
+                <td colspane=7>
                     <div wire:click="addTr({{$x}})" class="btn btn-outline-warning">{{ __('translation.sales.add row') }}</div>
                 </td>
             </tr>

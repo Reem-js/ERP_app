@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all Purchases')])
+@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all
+Purchases')])
 
 @section('content')
     <div class="content">
@@ -22,7 +23,7 @@
                                     </a>
                                 </div>
                             </div>
-
+                            <br>
                             <div class="">
                                 <ul class="nav nav-pills nav-pills-danger" role="tablist">
                                     <li class="nav-item">
@@ -189,6 +190,10 @@
 
                                                 </tbody>
                                             </table>
+
+
+
+
                                         </div>
                                     </div>
 

@@ -95,6 +95,10 @@ return [
             'Products'=>'المنتجات',
             'Add Sale'=>'اضافة فاتورة بيع',
             'all Purchases'=>'كل المشتريات',
+            'add Purchase'=>'إضافة مشترى',
+            'unit cost'=>'سعر الوحدة',
+            'add new supplier'=>'إضافة مورد جديد',
+            'all Installments'=>'كل الأقساط',
             'All Notifications'=>'كل الاشعارات',
 
 
@@ -115,7 +119,7 @@ return [
             'No' => 'لا',
             'EGP' => 'جنيه',
             'Product Count'=>'عدد الأصناف'
-            
+
             ,'see more'=>'اظهار المزيد',
         ],
     ],
@@ -433,6 +437,11 @@ return [
         'residual'=>'المبلغ المتبقي',
         'num'=>'الرقم',
         'add row'=>'إضافة صف',
+        'add product'=>'إضافة منتج',
+        'new supplier'=>'اسم المورد',
+        'select supplier'=>'اختر مورد',
+        'Unit Purchase Price'=>'سعر شراء الوحدة',
+        'Unit Selling Price'=>'سعر بيع الوحدة',
     ],
     'sales' => [
         'ID' => 'الرقم',
@@ -480,6 +489,33 @@ return [
         'Payment Type'=>'طريقة الدفع',
         'add row'=>'اضافة صف',
     ],
+    'installments'=>[
+        'all Installments elly leya'=>'(الأقساط (الي ليا',
+        'all Installments elly 3laya'=>'الأقساط (الي عليا)',
+        'id'=>'الرقم',
+        'Client name'=>'اسم العميل',
+        'period'=>'المدة الكلية للأقساط',
+        'start date'=>'تاريخ البداية',
+        'Total invoice value'=>'القيمة الكلية للفاتورة',
+        'actions'=>'الإجراءات',
+        'show trans'=>'عرض المعاملات المالية',
+        'add trans'=>'إضافة معاملة مالية',
+        'Supplier name'=>'اسم المورد',
+        'transcation Type'=>'طريقة المعاملة المالية',
+        'in installments'=>'بالقسط',
+        'operation date'=>'تاريخ الدفع',
+        'transaction amount'=>'القيمة',
+        'show Transactions'=>'عرض المعاملات',
+        'Total number of installments'=>'عدد الأقساط الكلي',
+        'number of installments paid'=>'عدد الأقساط المدفوعة',
+        'Number of installments left'=>'عدد الأقساط المتبقية',
+        'installment Number'=>'رقم القسط',
+        'installment date'=>'تاريخ دفع القسط',
+        'real payment date'=>'تاريخ دفع القسط الفعلي',
+        'show Transactions'=>'عرض المعاملات',
+    ],
+
+
     'notifications'=>[
         'ID'=>'الرقم',
         'Title'=>'العنوان',

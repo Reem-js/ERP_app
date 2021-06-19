@@ -82,7 +82,7 @@
                                 <div class="d-flex justify-content-between" style="margin-bottom:100px;">
                                     <div class="form-group col-5" style="margin: 20px;">
                                         <p class="font-weight-bold" style="color:black; margin-bottom:0px" for="inputAddress">
-                                            {{ __('translation.clients.Name') }}</p>
+                                            <!-- {{ __('translation.clients.Name') }}</p>
                                             {{-- <div class="dropdown" style="border-radius: 4px;color: #616161;width: 150px;padding: 1px;margin-top: 0px;border: 1px solid #ccc;">
                                                 <span style="margin-left: 10px;margin-top: 10px;" tabindex="0">{{ __('translation.clients.Client Name') }}<span style="margin-left: 40px;"><i class="fa fa-angle-down" aria-hidden="true"></i></span></span>
                                                 <div class="less-sticky">
@@ -102,7 +102,7 @@
                                                         <li class="cb-item"><a href="#">Stay on this page</a></li>
                                                     </ul>
                                                 </div>
-                                            </div> --}}
+                                            </div> --}} -->
                                             <select style="width: 200px" class="client_dropdown" name="client_name">
                                                 <option value="0">{{ __('Select client') }}</option>
                                                 <option value="1">client 1</option>

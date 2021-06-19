@@ -97,6 +97,9 @@ return [
             'Products'=>'Products',
             'Add Sale'=>'Add Sale',
             'all Purchases'=>'All Purchases',
+            'add Purchase'=>'Add Purchase',
+            'add new supplier'=>'Add New Supplier',
+            'all Installments'=>'All Installments',
             'All Notifications'=>'All Notifications',
 
         ],
@@ -194,7 +197,7 @@ return [
         'Show Client' => 'Show Client',
         'Show Sales'=>'Show Sales',
         'Edit Sales'=>'Edit Sales',
-       
+
         'Delete Notification' => 'Delete Notification',
 
         '' => '',
@@ -253,6 +256,7 @@ return [
         'Address' => 'Address',
         'Price Lists' => 'Price Lists',
         'Actions' => 'Actions',
+        'Add Supplier'=>'Add Supplier',
 
 
     ],
@@ -297,6 +301,16 @@ return [
         'residual'=>'Residual',
         'num'=>'Num',
         'add row'=>'Add Row',
+        'Unit Purchase Price'=>'Unit Purchase Price',
+        'Unit Selling Price'=>'Unit Selling Price',
+        'add product'=>'Add Product',
+        'new supplier'=>'New Supplier',
+        'select supplier'=>'Select Supplier',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+
 
 
     ],
@@ -475,7 +489,37 @@ return [
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
         'add row'=>'add row,'
-    ], 
+    ],
+
+    'installments'=>[
+        'all Installments elly leya'=>'  All Installments ( leya)',
+        'all Installments elly 3laya'=>' All Installments   (3laya)',
+        'id'=>'Id',
+        'Client name'=>'Client Name',
+        'period'=>'Period',
+        'start date'=>'Start Date',
+        'Total invoice value'=>'Total Invoice Value',
+        'actions'=>'Actions',
+        'show trans'=>'Show Trans',
+        'add trans'=>'Add Trans',
+        'Supplier name'=>'Supplier Name',
+        'transcation Type'=>'Transcation Type',
+        'in installments'=>'in installments',
+        'operation date'=>'Operation Date',
+        'transaction amount'=>'Transaction Amount',
+        'show Transactions'=>'Show Transactions',
+        'Total number of installments'=>'Total Installments',
+        'number of installments paid'=>'Installments Paid ',
+        'Number of installments left'=>'Installments Left',
+        'installment Number'=>'Installment Number',
+        'installment date'=>'Installment Date',
+        'real payment date'=>'Real Payment Date',
+        'show Transactions'=>'Show Transactions',
+
+
+
+
+    ],
     'notifications'=>[
         'ID'=>'ID',
         'Title'=>'Title',
