@@ -1,6 +1,7 @@
 {{-- <div> --}}
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-    <table style="" class="table-responsive text-center table-bordered">
+    <table style="" class="table table-bordered text-center overflow-auto" >
+        {{--  table-responsive   --}}
         <thead>
             <tr>
                 <th>#</th>
