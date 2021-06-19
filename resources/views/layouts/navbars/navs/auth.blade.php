@@ -56,6 +56,8 @@
             <a class="dropdown-item" href="#">{{ __('You\'re now friend with Andrew') }}</a>
             <a class="dropdown-item" href="#">{{ __('Another Notification') }}</a>
             <a class="dropdown-item" href="#">{{ __('Another One') }}</a>
+            <a class="dropdown-item" style="padding-left:100px; text-decoration-line: underline; " href="{{ route('notifications.index')}}">{{ __('translation.website.crud.see more') }}</a>
+
           </div>
         </li>
         <li class="nav-item dropdown">

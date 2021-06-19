@@ -99,6 +99,8 @@ return [
             'unit cost'=>'سعر الوحدة',
             'add new supplier'=>'إضافة مورد جديد',
             'all Installments'=>'كل الأقساط',
+            'All Notifications'=>'كل الاشعارات',
+
 
         ],
         'crud' => [
@@ -115,9 +117,10 @@ return [
             'Show' => 'عرض',
             'Yes' => 'نعم',
             'No' => 'لا',
-            'EGP' => 'جنبية',
+            'EGP' => 'جنيه',
             'Product Count'=>'عدد الأصناف'
 
+            ,'see more'=>'اظهار المزيد',
         ],
     ],
     'brands' => [
@@ -192,6 +195,7 @@ return [
         'Show Client' => 'عرض العميل',
         'Show Sales'=>'عرض التافصيل',
         'Edit Sales'=>'تعديل',
+        'Delete Notification'=>' مسح الاشعار',
 
     ],
     'wallet' => [
@@ -434,6 +438,10 @@ return [
         'num'=>'الرقم',
         'add row'=>'إضافة صف',
         'add product'=>'إضافة منتج',
+        'new supplier'=>'اسم المورد',
+        'select supplier'=>'اختر مورد',
+        'Unit Purchase Price'=>'سعر شراء الوحدة',
+        'Unit Selling Price'=>'سعر بيع الوحدة',
     ],
     'sales' => [
         'ID' => 'الرقم',
@@ -482,8 +490,8 @@ return [
         'add row'=>'اضافة صف',
     ],
     'installments'=>[
-        'installments elly leya'=>'الأقساط الي ليا',
-        'installments elly 3laya'=>'الأقساط الي عليا',
+        'all Installments elly leya'=>'(الأقساط (الي ليا',
+        'all Installments elly 3laya'=>'الأقساط (الي عليا)',
         'id'=>'الرقم',
         'Client name'=>'اسم العميل',
         'period'=>'المدة الكلية للأقساط',
@@ -493,19 +501,36 @@ return [
         'show trans'=>'عرض المعاملات المالية',
         'add trans'=>'إضافة معاملة مالية',
         'Supplier name'=>'اسم المورد',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
+        'transcation Type'=>'طريقة المعاملة المالية',
+        'in installments'=>'بالقسط',
+        'operation date'=>'تاريخ الدفع',
+        'transaction amount'=>'القيمة',
+        'show Transactions'=>'عرض المعاملات',
+        'Total number of installments'=>'عدد الأقساط الكلي',
+        'number of installments paid'=>'عدد الأقساط المدفوعة',
+        'Number of installments left'=>'عدد الأقساط المتبقية',
+        'installment Number'=>'رقم القسط',
+        'installment date'=>'تاريخ دفع القسط',
+        'real payment date'=>'تاريخ دفع القسط الفعلي',
+        'show Transactions'=>'عرض المعاملات',
+    ],
+
+
+    'notifications'=>[
+        'ID'=>'الرقم',
+        'Title'=>'العنوان',
+        'Content'=>'المحتوي',
+        'Date'=>'التاريخ',
+        'Read'=>'قرات',
 
     ],
 
+    'dashboard' => [
+        'cash' => 'السيولة النقدية',
+        'See your wallet' => 'انظر محفظتك',
+        'debts' => 'ديون',
+        'See all installments' => 'انظر الأقساط',
+        'installments' => 'الأقساط',
+        ''
+    ],
 ];

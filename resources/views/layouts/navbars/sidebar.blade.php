@@ -320,7 +320,17 @@
                     {{ __('translation.website.sidebar.All Installments') }}
                 </a>
             </li>
-          
+
+             {{-- Notfications --}}
+                         {{-- Installlments --}}
+            <li class="nav-item  {{ $activePage == 'allnotifications'  ? ' active' : '' }}">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-bell text-primary {{ $activePage == 'allnotifications'  ? 'text-light' : 'text-dark' }}"
+                        aria-hidden="true"></i>
+                    {{ __('translation.website.sidebar.All Notifications') }}
+                </a>
+            </li>
+
             <!--  Start Reports PART  -------->
             {{-- reports --}}
             <li

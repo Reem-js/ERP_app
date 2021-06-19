@@ -20,15 +20,21 @@ class InstallmentsTable extends Component
                 <td>6 months</td>
                 <td>may 2021</td>
                 <td>50,000 EG</td>
+                <td>6 installs</td>
+                <td>2 installs</td>
+                <td>4 installs</td>
                 <td class='td-actions'>
-                <div class='btn btn-info' rel='tooltip' href='#'
-                title='{{ __('.translation.installments.show trans.') }}'
+                <div onclick='getShowBodyModalLivewire()' data-toggle='modal'
+                data-target='#exampleModalLong' class='btn btn-info' rel='tooltip'
+                title='{{ __('translation.installments.show trans') }}'
                 style='color:white;'><i class='material-icons'>visibility</i></div>
+            &nbsp;&nbsp;
 
-                <div href='{{ route('.priceLists.create.') }}' rel='tooltip'
+            <div onclick='getCreatBodyModalLivewire()' data-toggle='modal'
+                data-target='#exampleModalLong' rel='tooltip'
                 title='{{ __('translation.installments.add trans') }}'
                 class='btn btn-primary' style='color:white;'><i
-                class='fa fa-plus-circle' aria-hidden='true'></i></div>
+                    class='fa fa-plus-circle' aria-hidden='true'></i></div>
                 </td>
             </tr>";
     }
