@@ -15,7 +15,7 @@ class AllSales extends Component
                 </td>
                 <td>
                     <select class="form-control" name="payment">
-                        <option value="0">Select payment Type</option>
+                        <option value="0">Items</option>
                         <option value="cash">Cash</option>
                         <option value="install">Install</option>
                     </select>

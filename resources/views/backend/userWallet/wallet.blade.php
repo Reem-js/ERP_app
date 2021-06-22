@@ -7,11 +7,11 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <a href="#"class="btn btn-primary btn-round"
-                style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                style="float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                 {{ __('translation.website.crud.Create initial wallet value') }}</a>
                 <div class="card">
                     <div class="card-header card-header-text card-header-primary">
-                      <div class="card-text" style="width:20%; text-align:center;">
+                      <div class="card-text w-20 text-center">
                         <h4 class="card-title">{{ __("translation.wallet.My Wallet") }}</h4>
                       </div>
                     </div>

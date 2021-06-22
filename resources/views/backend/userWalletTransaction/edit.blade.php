@@ -14,25 +14,25 @@ Transaction')])
                             </div>
                             <div class="card-body">
                                 <form>
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p style="color:black;" for="inputAddress">
+                                    <div class="form-group m-4" >
+                                        <p  for="inputAddress">
                                             {{ __('translation.walletTransaction.Reason') }}</p>
                                         <input type="text" name="reason" class="form-control" id="inputAddress" required
                                             placeholder="Please enter transaction reason">
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p style="color:black;" for="inputAddress">
+                                    <div class="form-group m-4" >
+                                        <p  for="inputAddress">
                                             {{ __('translation.walletTransaction.Date') }}</p>
                                         <input type="date" name="date" class="form-control" id="inputAddress" required
                                             placeholder="please choose transaction date">
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p style="color:black;" for="inputAddress">
+                                    <div class="form-group m-4" >
+                                        <p  for="inputAddress">
                                             {{ __('translation.walletTransaction.Transaction') }}</p>
                                         <br>
-                                        <select class="form-group form-control " style="width: 100%;">
+                                        <select class="form-group form-control w-100">
                                             <option value="0">Select transaction:</option>
                                             <option value="1">Audi</option>
                                             <option value="2">BMW</option>
@@ -44,10 +44,10 @@ Transaction')])
                                         </select>
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p style="color:black;" for="inputAddress">
+                                    <div class="form-group m-4" >
+                                        <p  for="inputAddress">
                                             {{ __('translation.walletTransaction.Transaction Type') }}</p>
-                                        <select class="form-group form-control" name="trans_type" style="width: 100%;"
+                                        <select class="form-group form-control  w-100" name="trans_type"
                                             required>
                                             <option value="0">Select transaction type:</option>
                                             <option value="1">Audi</option>
@@ -58,20 +58,20 @@ Transaction')])
                                         </select>
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p style="color:black;" for="inputAddress">
+                                    <div class="form-group m-4" >
+                                        <p  for="inputAddress">
                                             {{ __('translation.walletTransaction.Amount') }}</p>
                                         <input type="number" name="amount" class="form-control" id="inputAddress" required
                                             placeholder="please enter transaction amount ">
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <button type="submit" class="btn btn-info"
-                                            style="margin: 20px;">{{ __('translation.website.crud.update') }}</button>
-                                        <button type="submit" class="btn btn-info"
-                                            style="margin: 20px;">{{ __('translation.website.crud.Update & Return') }}</button>
-                                        <button type="submit" class="btn btn-danger"
-                                            style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{ __('translation.website.crud.Cancel') }}</button>
+                                    <div class="form-group m-4" >
+                                        <button type="submit" class="btn btn-info m-4"
+                                            >{{ __('translation.website.crud.update') }}</button>
+                                        <button type="submit" class="btn btn-info m-4"
+                                            >{{ __('translation.website.crud.Update & Return') }}</button>
+                                        <button type="submit" class="btn btn-danger m-4"
+                                            style="float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{ __('translation.website.crud.Cancel') }}</button>
                                     </div>
                                 </form>
                             </div>

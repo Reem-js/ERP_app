@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-text card-header-primary">
-                      <div class="card-text" style="width:20%; text-align:center;">
+                      <div class="card-text">
                         <h4 class="card-title">{{ __("translation.wallet.Client Wallet") }}</h4>
                       </div>
                     </div>
@@ -41,7 +41,7 @@
 
                             <td class="td-actions">
 
-                                <a class="btn btn-info"  rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}" style="color:white;"><i class="material-icons">visibility</i></a>
+                                <a class="btn btn-info"  rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}""><i class="material-icons">visibility</i></a>
                                 <a class="btn btn-primary"  rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('client-wallet-transactions.create') }}"
                                     style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 

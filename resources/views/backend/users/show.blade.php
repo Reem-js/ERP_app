@@ -33,8 +33,8 @@
                                         <td >&euro; 99,225</td>
                                         <td class="td-actions">
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit User') }}"  href="{{ route('users.edit', 5) }}"
-                                                style="color:white;"> <i class="material-icons">edit</i> </a>
-                                         
+                                                > <i class="material-icons">edit</i> </a>
+
                                         </td>
                                     </tr>
 
@@ -59,7 +59,7 @@
                                         <th class="text-center font-weight-bold " >{{ __('translation.adminhistory.Date') }}</th>
                                         <th class="text-center font-weight-bold " >{{ __('translation.adminhistory.User Name') }}</th>
                                         <th colspan="5" class="text-center font-weight-bold">{{ __('translation.adminhistory.Action') }}</th>
-                                       
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,16 +69,16 @@
                                         <td class="text-center font-weight-bold" rowspan="5"><a href="{{ route('users.edit',5) }}">madonna</a></td>
                                         <td colspan="5" class="text-center" > invouce number <a href="#" >145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> purchase number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> installment number <a href="#">145236</a> has been done</td>
 
-                                    </tr>   <tr>                                        
+                                    </tr>   <tr>
                                         <td colspan="5" class="text-center" > add product number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center" > edit in supplier</td>
                                     </tr>
 
@@ -89,16 +89,16 @@
 
                                         <td colspan="5" class="text-center" > invouce number <a href="#" >145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> purchase number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> installment number <a href="#" >145236</a> has been done</td>
 
-                                    </tr>   <tr>                                        
+                                    </tr>   <tr>
                                         <td colspan="5" class="text-center" > add product number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center" > edit in supplier</td>
                                     </tr>
 
@@ -109,16 +109,16 @@
 
                                         <td colspan="5" class="text-center" > invouce number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> purchase number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> installment number <a href="#">145236</a> has been done</td>
 
-                                    </tr>   <tr>                                        
+                                    </tr>   <tr>
                                         <td colspan="5" class="text-center" > add product number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center" > edit in supplier</td>
                                     </tr>
                                 </tbody>
@@ -127,7 +127,7 @@
 
                     </div>
                 </div>
- 
+
 
             </div>
         </div>

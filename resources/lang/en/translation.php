@@ -194,7 +194,7 @@ return [
         'Show Client' => 'Show Client',
         'Show Sales'=>'Show Sales',
         'Edit Sales'=>'Edit Sales',
-       
+
         'Delete Notification' => 'Delete Notification',
 
         '' => '',
@@ -471,11 +471,12 @@ return [
         'Item'=>'Item',
         'Supplier'=>'Supplier',
         'QTY'=>'QTY',
-        'Price/item'=>'Price/item',
+        'Price'=>'Price',
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
-        'add row'=>'add row,'
-    ], 
+        'add row'=>'add row',
+        'Items'=>'Items',
+    ],
     'notifications'=>[
         'ID'=>'ID',
         'Title'=>'Title',

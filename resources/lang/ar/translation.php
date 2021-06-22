@@ -115,7 +115,7 @@ return [
             'No' => 'لا',
             'EGP' => 'جنيه',
             'Product Count'=>'عدد الأصناف'
-            
+
             ,'see more'=>'اظهار المزيد',
         ],
     ],
@@ -475,10 +475,11 @@ return [
         'Item'=>'المنتج',
         'Supplier'=>'المورد',
         'QTY'=>'الكمية',
-        'Price/item'=>'السعر/منتج',
+        'Price'=>'السعر',
         'Amount'=>'القيمة',
         'Payment Type'=>'طريقة الدفع',
         'add row'=>'اضافة صف',
+        'Items'=>'المنتج',
     ],
     'notifications'=>[
         'ID'=>'الرقم',

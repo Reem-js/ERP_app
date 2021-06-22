@@ -1,13 +1,14 @@
-{{-- <div> --}}
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-    <table style="" class="table-responsive text-center table-bordered">
+{{-- <div class="table-responsive-sm"> --}}
+{{-- <div class="table-responsive"> --}}
+    <table  class="table text-center table-bordered" >
+        {{-- col-sm-12 col-md-12 col-lg-12 --}}
         <thead>
             <tr>
                 <th>#</th>
-                <th>{{ __('translation.sales.Items') }}</th>
-                <th>{{ __('translation.sales.Supplier') }}</th>
-                <th>{{ __('translation.sales.QTY') }}</th>
-                <th>{{ __('translation.sales.Price/item') }}</th>
+                <th class="w-25">{{ __('translation.sales.Items') }}</th>
+                <th class="w-25">{{ __('translation.sales.Supplier') }}</th>
+                <th >{{ __('translation.sales.QTY') }}</th>
+                <th>{{ __('translation.sales.Price') }}</th>
                 <th>{{ __('translation.sales.Amount') }}</th>
             </tr>
         </thead>
