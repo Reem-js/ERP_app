@@ -13,9 +13,14 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('client-wallet-transactions.create') }}" class="btn btn-info btn-round"
-                                style=" float: right;"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                {{ __('translation.website.crud.create') }}</a>
+
+
+
+
+ <div class="col-lg-12 text-right">
+    <a href="{{ route('client-wallet-transactions.create') }}" class="btn btn-info btn-round"
+    style=" float: right;"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+    {{ __('translation.website.crud.create') }}</a></div>
                             <table class="table">
                                 <thead>
                                     <tr>

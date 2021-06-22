@@ -21,43 +21,45 @@
                                 </div>
 
                                 <div class="form-group m-4">
-                                    <p class="font-weight-bold"   for="inputAddress">
+                                    <p class="font-weight-bold" for="inputAddress">
                                         {{ __('translation.clients.Nickname') }}</p>
                                     <input type="email" name="email" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group m-4">
-                                    <p class="font-weight-bold"   for="inputAddress">
+                                    <p class="font-weight-bold" for="inputAddress">
                                         {{ __('translation.clients.Email') }}</p>
                                     <input type="email" name="email" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group m-4">
-                                    <p class="font-weight-bold"   for="inputAddress">
+                                    <p class="font-weight-bold" for="inputAddress">
                                         {{ __('translation.clients.Phone') }}</p>
                                     <input type="text" name="phone" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
                                 <div class="form-group m-4">
-                                    <p class="font-weight-bold"   for="inputAddress">
+                                    <p class="font-weight-bold" for="inputAddress">
                                         {{ __('translation.clients.Address') }}</p>
                                     <input type="text" name="address" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
-                                <div class="form-group m-4">
-                                    <button type="submit" class="btn btn-info m-4"
-                                       >{{ __('translation.website.crud.update') }}</button>
-                                    <button type="submit" class="btn btn-info m-4"
-                                       >{{ __('translation.website.crud.Update & Return') }}</button>
-                                    <button type="submit" class="btn btn-danger m-4"
-                                        style="float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{ __('translation.website.crud.Cancel') }}</button>
+                                <div class="row mt-5">
+                                    <div class="col-lg-4">
+                                        <button type="submit"
+                                            class="btn btn-info m-4">{{ __('translation.website.crud.update') }}</button>
+                                        <button type="submit"
+                                            class="btn btn-info m-4">{{ __('translation.website.crud.Update & Return') }}</button>
+                                    </div>
+                                    <div class="col-lg-2 offset-6">
+                                        <button type="submit"
+                                            class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
+                                    </div>
                                 </div>
-
-
 
                             </form>
                         </div>

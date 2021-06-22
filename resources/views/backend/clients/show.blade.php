@@ -15,12 +15,12 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="font-weight: 900;">{{ __('translation.clients.ID') }}</th>
-                                        <th style="font-weight: 900;">{{ __('translation.clients.Name') }}</th>
-                                        <th style="font-weight: 900;" >{{ __('translation.clients.Nickname') }}</th>
-                                        <th style="font-weight: 900;">{{ __('translation.clients.Phone') }}</th>
-                                        <th style="font-weight: 900;">{{ __('translation.clients.Address') }}</th>
-                                        <th style="font-weight: 900;">{{ __('translation.clients.Actions') }}</th>
+                                        <th class="font-weight-bold">{{ __('translation.clients.ID') }}</th>
+                                        <th class="font-weight-bold">{{ __('translation.clients.Name') }}</th>
+                                        <th class="font-weight-bold" >{{ __('translation.clients.Nickname') }}</th>
+                                        <th class="font-weight-bold">{{ __('translation.clients.Phone') }}</th>
+                                        <th class="font-weight-bold">{{ __('translation.clients.Address') }}</th>
+                                        <th class="font-weight-bold">{{ __('translation.clients.Actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -32,7 +32,7 @@
                                         <td>&euro; 99,225</td>
                                         <td class="td-actions">
                                             <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Edit Client') }}"  href="{{ route('clients.edit', 5) }}"
-                                                style="color:white;"> <i class="material-icons">edit</i> </a>
+                                                > <i class="material-icons">edit</i> </a>
                                         </td>
                                     </tr>
 
@@ -56,13 +56,13 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="font-weight: 900;">{{__('translation.sales.ID')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Type')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Total')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Order Date')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Recieve Date')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Discount')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Status')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.ID')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Type')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Total')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Order Date')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Recieve Date')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Discount')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Status')}}</th>
 
                                     </tr>
                                 </thead>
@@ -95,13 +95,13 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="font-weight: 900;">{{__('translation.sales.ID')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Type')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Total')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Order Date')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Recieve Date')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Discount')}}</th>
-                                        <th style="font-weight: 900;">{{__('translation.sales.Status')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.ID')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Type')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Total')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Order Date')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Recieve Date')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Discount')}}</th>
+                                        <th class="font-weight-bold">{{__('translation.sales.Status')}}</th>
 
                                     </tr>
                                 </thead>
@@ -134,9 +134,9 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 text-right">
-                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}" style="color:white;"><i class="material-icons">visibility</i></a>
+                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}"><i class="material-icons">visibility</i></a>
                                     <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('client-wallet-transactions.create', 5) }}"
-                                        style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                               > <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card card-stats">

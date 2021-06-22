@@ -113,7 +113,7 @@
                                 </tbody>
                             </table>
                             <div >
-                                <img style="width:10%" src="{{ asset('images/pdf.png') }}" alt="">
+                                <img style="width:10%"  src="{{ asset('images/pdf.png') }}" alt="">
                                 <img style="width:10%" src="{{ asset('images/pdf.png') }}" alt="">
                                 <img style="width:10%" src="{{ asset('images/pdf.png') }}" alt="">
 
@@ -159,45 +159,6 @@
 
                     </div>
                 </div>
-
-                {{--  <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header card-header-text card-header-info">
-                            <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.Sales') }}</h4>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="font-weight-bold">{{__('translation.sales.ID')}}</th>
-                                        <th class="font-weight-bold">{{__('translation.sales.Type')}}</th>
-                                        <th class="font-weight-bold">{{__('translation.sales.Total')}}</th>
-                                        <th class="font-weight-bold">{{__('translation.sales.Order Date')}}</th>
-                                        <th class="font-weight-bold">{{__('translation.sales.Recieve Date')}}</th>
-                                        <th class="font-weight-bold">{{__('translation.sales.Discount')}}</th>
-                                        <th class="font-weight-bold">{{__('translation.sales.Status')}}</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td> كفة مرآة فيرنا يمين 2018</td>
-                                        <td>اكسسوارات</td>
-                                        <td>19 جنيه</td>
-                                        <td>19 جنيه</td>
-
-                                        <td>1-2-2020</td>
-                                        <td>25-5-2020</td>
-                                        <td>on</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>  --}}
 
                 <div class="col-md-12">
                     <div class="card">

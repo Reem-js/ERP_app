@@ -15,7 +15,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-12 text-right">
-                                        <a href="{{ route('clients.create') }}" class="btn btn-round btn-primary mb-3" style="color:white;"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
+                                        <a href="{{ route('clients.create') }}" class="btn btn-round btn-primary mb-3"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
                                     </div>
                                 </div>
                                 <table class="table">

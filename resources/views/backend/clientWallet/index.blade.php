@@ -43,7 +43,7 @@
 
                                 <a class="btn btn-info"  rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}""><i class="material-icons">visibility</i></a>
                                 <a class="btn btn-primary"  rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('client-wallet-transactions.create') }}"
-                                    style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                   > <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 
 
                             </td>

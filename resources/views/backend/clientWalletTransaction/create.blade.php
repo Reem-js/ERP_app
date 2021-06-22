@@ -40,18 +40,6 @@ __('translation.website.sidebar.Create Transaction')])
                                         </select>
                                     </div>
 
-                                    {{-- <div class= "form-group m-4"  >
-                                        <p class="font-weight-bold" style="color:black;"
-                                            for="inputAddress">{{ __('translation.clients.Client Name') }}</p>
-                                <select class="form-group form-control" name="trans_type" style="width: 100%;" required>
-                                    <option value="0">Select client name:</option>
-                                    <option value="1">Audi</option>
-                                    <option value="2">BMW</option>
-                                    <option value="3">Citroen</option>
-                                    <option value="4">Ford</option>
-                                    <option value="5">Honda</option>
-                                </select>
-                        </div> --}}
 
                                     <div class="form-group m-4">
                                         <p class="font-weight-bold" for="inputAddress">
@@ -109,14 +97,20 @@ __('translation.website.sidebar.Create Transaction')])
                                             placeholder="please enter transaction amount ">
                                     </div>
 
-                                    <div class="form-group m-4">
-                                        <button type="submit"
-                                            class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
-                                        <button type="submit"
-                                            class="btn btn-primary m-4">{{ __('translation.website.crud.Create & New') }}</button>
-                                        <button type="submit" class="btn btn-danger m-4"
-                                            style=" float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{ __('translation.website.crud.Cancel') }}</button>
-                                    </div>
+
+
+
+  <div class="row mt-5">
+    <div class="col-lg-4">
+        <button type="submit"
+        class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
+    <button type="submit"
+        class="btn btn-primary m-4">{{ __('translation.website.crud.Create & New') }}</button>
+    </div>
+    <div class="col-lg-2 offset-6">
+        <button type="submit" class="btn btn-danger m-4"
+ >{{ __('translation.website.crud.Cancel') }}</button>    </div>
+</div>
                                 </form>
                             </div>
                         </div>
@@ -153,6 +147,6 @@ __('translation.website.sidebar.Create Transaction')])
 
 
 
-<div class="col-lg-2 offset-6">
+{{-- <div class="col-lg-2 offset-6">
     <button type="submit" class="btn btn-danger">{{__('translation.website.crud.Cancel')}}</button>
-</div>
+</div> --}}

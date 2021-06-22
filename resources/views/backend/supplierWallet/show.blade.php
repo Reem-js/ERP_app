@@ -12,9 +12,13 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('supplier-wallet-transactions.create') }}" class="btn btn-info btn-round"
-                                style="float:{{ app()->getLocale() == 'ar' ? 'left' : 'right ' }};"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                {{ __('translation.website.crud.create') }}</a>
+
+
+
+                                <div class="col-lg-12 text-right">
+                                    <a href="{{ route('supplier-wallet-transactions.create') }}" class="btn btn-info btn-round"
+                                    ><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                    {{ __('translation.website.crud.create') }}</a>                                </div>
                             <table class="table">
                                 <thead>
                                     <tr>
