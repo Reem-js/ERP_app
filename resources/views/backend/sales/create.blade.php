@@ -286,34 +286,14 @@
     <script>
         $(document).ready(function() {
             // Initialize select2
-            $(".selClient").select2();
-        });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Initialize select2
             $(".selItem").select2();
         });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Initialize select2
-            $(".selSupplier").select2();
-        });
-    </script>
-    <script>
         $(document).ready(function() {
             $(".js-example-basic-single").select2();
         });
-    </script>
-    <script>
         $(document).ready(function() {
             $(".client_dropdown").select2();
         });
-    </script>
-    <script>
         $(document).ready(function() {
             $(".payment_dropdown").select2();
         });
@@ -323,6 +303,9 @@
         $(".tryselect").chosen();
     </script>
     <script>
+        $(document).ready(function() {
+            $(".item_dropdown").select2();
+        });
         $( "#payment_drop" ).change(function() {
             var check = $(this).val();
             if(check == 'install'){

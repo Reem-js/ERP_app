@@ -323,7 +323,7 @@
              {{-- Notfications --}}
                          {{-- Installlments --}}
             <li class="nav-item  {{ $activePage == 'allnotifications'  ? ' active' : '' }}">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('notifications.index') }}">
                     <i class="fa fa-bell text-primary {{ $activePage == 'allnotifications'  ? 'text-light' : 'text-dark' }}"
                         aria-hidden="true"></i>
                     {{ __('translation.website.sidebar.All Notifications') }}

@@ -23,4 +23,9 @@
             </tr>
         </tbody>
     </table>
+    <script>
+        $(document).ready(function() {
+            $(".item_dropdown").select2();
+        });
+    </script>
 {{-- </div> --}}

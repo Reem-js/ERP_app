@@ -46,11 +46,11 @@ class AllSales extends Component
                     <span style="cursor:pointer;" wire:click="removeTr('.$newId.')" class=" text-danger material-icons">delete</span>
                 </td>
                 <td>
-                    <select class="form-control" name="payment">
-                        <option value="0">Select payment Type</option>
-                        <option value="cash">Cash</option>
-                        <option value="install">Install</option>
-                    </select>
+                <select class="form-control item_dropdown" name="payment">
+                        <option value="0">Select item</option>
+                        <option value="1">item 1 </option>
+                        <option value="2">item 2</option>
+                </select>
                 </td>
                 <td>
                 <div class="form-group mb-0" style="margin: 20px;">
