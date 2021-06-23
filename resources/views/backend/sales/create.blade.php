@@ -181,11 +181,7 @@
                                     <div class="form-group col-4" style="margin: 20px;">
                                         <p class="font-weight-bold form-group" style="color:black;" for="inputAddress">
                                             {{ __('translation.sales.Payment Type') }}</p>
-                                        {{-- <select class="form-group form-control" name="payment">
-                                            <option value='0'>Select payment Type</option>
-                                            <option value="cash">Cash</option>
-                                            <option value="install">Install</option>
-                                        </select> --}}
+                                    
                                         <select onclick="payment()" style="width: 200px" id="payment_drop" class="payment_dropdown" name="payment">
                                             <option value='0'>Select payment Type</option>
                                             <option value="cash">Cash</option>

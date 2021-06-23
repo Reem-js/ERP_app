@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'allInstallments', 'titlePage' => __('translation.website.sidebar.all Installments')])
+@extends('layouts.app', ['activePage' => 'allInstallments', 'titlePage' => __('translation.website.sidebar.all
+Installments')])
 
 @section('content')
     @livewireStyles
@@ -7,11 +8,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        {{-- <div class="card-header card-header-text  card-header-outline-primary card-header-warning">
-                            <div class="card-text">
-                                <h4 class="card-title ">{{ __('translation.website.sidebar.all Installments') }}</h4>
-                            </div>
-                        </div> --}}
                         <br>
                         <div class="card-header card-header-tabs card-header-info" style="padding: 5px;">
                             <div class="nav-tabs-navigation">
@@ -68,12 +64,14 @@
 
 
                                                 <td class="td-actions">
-                                                    <div onclick="getShowBodyModal()" data-toggle="modal" data-target="#exampleModalLong"
-                                                        class="btn btn-info" rel="tooltip"
+                                                    <div onclick="getShowBodyModal()" data-toggle="modal"
+                                                        data-target="#exampleModalLong" class="btn btn-info" rel="tooltip"
                                                         title="{{ __('translation.installments.show trans') }}"
-                                                        style="color:white;"><i class="material-icons">visibility</i></div>&nbsp;&nbsp;
+                                                        style="color:white;"><i class="material-icons">visibility</i></div>
+                                                    &nbsp;&nbsp;
 
-                                                    <div  onclick="getCreatBodyModal()" data-toggle="modal" data-target="#exampleModalLong" rel="tooltip"
+                                                    <div onclick="getCreatBodyModal()" data-toggle="modal"
+                                                        data-target="#exampleModalLong" rel="tooltip"
                                                         title="{{ __('translation.installments.add trans') }}"
                                                         class="btn btn-primary" style="color:white;"><i
                                                             class="fa fa-plus-circle" aria-hidden="true"></i></div>
@@ -101,7 +99,7 @@
 
     {{-- show trans modal  body --}}
     <div class="container-fluid d-none" id="show-modal2-content" style="margin:0px; padding:0px;">
-        <div class="row" >
+        <div class="row">
             <div class="col-md-12">
                 <div class="col-md-12">
                     <div class="card">
@@ -112,44 +110,46 @@
                         </div>
                         <div class="card-body">
                             <br>
-                                <fieldset disabled>
-                                    <div class="container">
-                                        <br>
-                                        <div class="row ">
-                                            <div class="col">
-                                                <div class="form-group" >
-                                                    <label
-                                                        for="disabledTextInput">{{ __('translation.installments.Client name') }}</label>
-                                                    <input type="text" id="disabledTextInput" class="form-control"
-                                                        placeholder="Reem">
-                                                </div>
+                            <fieldset disabled>
+                                <div class="container">
+                                    <br>
+                                    <div class="row ">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label
+                                                    for="disabledTextInput">{{ __('translation.installments.Client name') }}</label>
+                                                <input type="text" id="disabledTextInput" class="form-control"
+                                                    placeholder="Reem">
                                             </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label
-                                                        for="disabledTextInput" >{{ __('translation.installments.Total number of installments') }}</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
-                                                        placeholder=" 6 installs ">
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label
-                                                        for="disabledTextInput" >{{ __('translation.installments.number of installments paid') }}</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
-                                                        placeholder="2 installs paid">
-                                                </div>
-                                            </div>
-
                                         </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label
+                                                    for="disabledTextInput">{{ __('translation.installments.Total number of installments') }}</label>
+                                                <input type="text" id="disabledTextInput" class="form-control"
+                                                    placeholder=" 6 installs ">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label
+                                                    for="disabledTextInput">{{ __('translation.installments.number of installments paid') }}</label>
+                                                <input type="text" id="disabledTextInput" class="form-control"
+                                                    placeholder="2 installs paid">
+                                            </div>
+                                        </div>
+
                                     </div>
-                                </fieldset>
-                                <br>
-                                <br>
+                                </div>
+                            </fieldset>
+                            <br>
+                            <br>
+                            <div class="table-responsive-sm">
                                 <table class="table table-bordered text-center">
                                     <thead>
                                         <tr>
-                                            <th style="width:15%">{{ __('translation.installments.installment Number') }}</th>
+                                            <th style="width:15%">{{ __('translation.installments.installment Number') }}
+                                            </th>
                                             <th>{{ __('translation.installments.installment date') }}</th>
                                             <th>{{ __('translation.installments.real payment date') }}</th>
                                         </tr>
@@ -168,7 +168,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
+                            </div>
                         </div>
 
                     </div>
@@ -177,13 +177,13 @@
         </div>
 
     </div>
-    {{-- show tran modal action  --}}
+    {{-- show tran modal action --}}
     <div class=" d-none" id="show-modal-action">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
     </div>
-     {{-- create trans modal  body --}}
-     <div class="container-fluid d-none" id="creat-modal2-content" style="margin:0px; padding:0px;">
-        <div class="row" >
+    {{-- create trans modal  body --}}
+    <div class="container-fluid d-none" id="creat-modal2-content" style="margin:0px; padding:0px;">
+        <div class="row">
             <div class="col-md-12">
                 <div class="col-md-12">
                     <div class="card">
@@ -199,7 +199,7 @@
                                         <br>
                                         <div class="row ">
                                             <div class="col">
-                                                <div class="form-group" >
+                                                <div class="form-group">
                                                     <label
                                                         for="disabledTextInput">{{ __('translation.installments.Client name') }}</label>
                                                     <input type="text" id="disabledTextInput" class="form-control"
@@ -207,7 +207,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="form-group" >
+                                                <div class="form-group">
                                                     <label
                                                         for="disabledTextInput">{{ __('translation.installments.period') }}</label>
                                                     <input type="text" id="disabledTextInput" class="form-control"
@@ -217,8 +217,8 @@
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label
-                                                        for="disabledTextInput" >{{ __('translation.installments.transcation Type') }}</label>
-                                                        <input type="text" id="disabledTextInput" class="form-control"
+                                                        for="disabledTextInput">{{ __('translation.installments.transcation Type') }}</label>
+                                                    <input type="text" id="disabledTextInput" class="form-control"
                                                         placeholder="{{ __('translation.installments.in installments') }}">
                                                 </div>
                                             </div>
@@ -254,8 +254,8 @@
         </div>
 
     </div>
-     {{-- create tran modal action  --}}
-     <div class=" d-none" id="create-modal-action">
+    {{-- create tran modal action --}}
+    <div class=" d-none" id="create-modal-action">
         <button class='btn btn-primary'>Save Changes</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
     </div>
@@ -414,30 +414,33 @@
             Livewire.emit('installLivewire')
         }
 
-function getShowBodyModal(){
-        var formShow2 = document.getElementById('show-modal2-content');
-        document.getElementById('modal-body').innerHTML = formShow2.innerHTML;
-        var showAction=document.getElementById('show-modal-action');
-        document.getElementById('modal-action').innerHTML = showAction.innerHTML;
-}
-function getCreatBodyModal(){
-        var formCreate2 = document.getElementById('creat-modal2-content');
-        document.getElementById('modal-body').innerHTML = formCreate2.innerHTML;
-        var createAction=document.getElementById('create-modal-action');
-        document.getElementById('modal-action').innerHTML = createAction.innerHTML;
-}
-function getShowBodyModalLivewire(){
-        var formShow = document.getElementById('show-modal-content');
-        document.getElementById('modal-body').innerHTML = formShow.innerHTML;
-        var showAction=document.getElementById('show-modal-action');
-        document.getElementById('modal-action').innerHTML = showAction.innerHTML;
-}
-function getCreatBodyModalLivewire(){
-        var formCreate = document.getElementById('creat-modal-content');
-        document.getElementById('modal-body').innerHTML = formCreate.innerHTML;
-        var createAction=document.getElementById('create-modal-action');
-        document.getElementById('modal-action').innerHTML = createAction.innerHTML;
-}
+        function getShowBodyModal() {
+            var formShow2 = document.getElementById('show-modal2-content');
+            document.getElementById('modal-body').innerHTML = formShow2.innerHTML;
+            var showAction = document.getElementById('show-modal-action');
+            document.getElementById('modal-action').innerHTML = showAction.innerHTML;
+        }
+
+        function getCreatBodyModal() {
+            var formCreate2 = document.getElementById('creat-modal2-content');
+            document.getElementById('modal-body').innerHTML = formCreate2.innerHTML;
+            var createAction = document.getElementById('create-modal-action');
+            document.getElementById('modal-action').innerHTML = createAction.innerHTML;
+        }
+
+        function getShowBodyModalLivewire() {
+            var formShow = document.getElementById('show-modal-content');
+            document.getElementById('modal-body').innerHTML = formShow.innerHTML;
+            var showAction = document.getElementById('show-modal-action');
+            document.getElementById('modal-action').innerHTML = showAction.innerHTML;
+        }
+
+        function getCreatBodyModalLivewire() {
+            var formCreate = document.getElementById('creat-modal-content');
+            document.getElementById('modal-body').innerHTML = formCreate.innerHTML;
+            var createAction = document.getElementById('create-modal-action');
+            document.getElementById('modal-action').innerHTML = createAction.innerHTML;
+        }
     </script>
 
 @endpush

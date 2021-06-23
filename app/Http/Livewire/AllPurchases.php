@@ -7,35 +7,37 @@ use Livewire\Component;
 class AllPurchases extends Component
 {
     // public $name;
+    public $message =[];
+    public $x = 1;
     public $tr = [
-        '<tr class="text-center">
-                <td  class="text-center"><span style="cursor:pointer;" wire:click="removeTr(0)"  class=" text-danger material-icons">
+        '<tr  class="text-center">
+                <td width="10%"  class="text-center"><span style="cursor:pointer;" wire:click="removeTr(0)"  class=" text-danger material-icons">
                     delete
                     </span></td>
-                <td class="text-center">
-                <div class="container">
+                <td width="50%" class="text-center">
+                <div  class="container">
                     <div class="row">
                       <div class=" col" style="padding:0px;" >
-                        <select  class="form-control supplier_dropdown" name="supplier-name">
+                        <select width="60%"  class="form-control supplier_dropdown" name="supplier-name">
                             <option value="0">select</option>
-                            <option value="1">supplier 1 1</option>
-                            <option value="2">supplier 2</option>
+                            <option value="1">product 1</option>
+                            <option value="2">product 2</option>
                         </select>
-                        <div onclick="getCreateSupBodyModal()" data-toggle="modal" style="display: inline; cursor:pointer;"
+                        <div onclick="getCreateProductBodyModal()" data-toggle="modal" style="display: inline; cursor:pointer;"
                             data-target="#exampleModalLong" class="text-primary " ><i
                                 class="fa fa-plus" aria-hidden="true" ></i>
-                               Add
+
                         </div>
                     </div>
                 </div>
                 </td>
-                <td class="text-center"><input class="form-control"  type="number" name=""
+                <td width="10%" class="text-center"><input class="form-control"  wire:model="message.qty0  type="number" name=""
                         required></td>
-                <td class="text-center"><input class="form-control"  type="number" name=""
+                <td  width="10%" class="text-center"><input class="form-control" wire:model="message.purchaseprice0"  type="number" name=""
                         required></td>
-                <td class="text-center"><input class="form-control"  type="number" name=""
+                <td  width="10%" class="text-center"><input class="form-control" wire:model="message.sellprice0" type="number" name=""
                         required></td>
-                <td class="text-center"><input class="form-control"  type="number" name=""
+                <td width="10%" class="text-center"><input class="form-control" wire:model="message.cost0"  type="number" name=""
                        required></td>
             </tr>',
     ];
@@ -52,26 +54,26 @@ class AllPurchases extends Component
             <div class="container">
                 <div class="row">
                   <div class=" col" style="padding:0px;" >
-                    <select  class="form-control supplier_dropdown" name="supplier-name">
+                    <select  width="60%"  class="form-control supplier_dropdown" name="supplier-name">
                         <option value="0">select</option>
-                        <option value="1">supplier 1 1</option>
-                        <option value="2">supplier 2</option>
+                        <option value="1">product 1</option>
+                        <option value="2">product 2</option>
                     </select>
                     <div onclick="getCreateSupBodyModal()" data-toggle="modal" style="display: inline; cursor:pointer;"
                         data-target="#exampleModalLong" class="text-primary " ><i
                             class="fa fa-plus" aria-hidden="true" ></i>
-                           Add
+
                     </div>
                 </div>
             </div>
             </td>
-        <td><input class="form-control"  type="text" name=""
+        <td><input class="form-control"  wire:model="message.qty'.$newId.'"  type="text" name=""
                 required></td>
-        <td><input class="form-control"  type="number" name=""
+        <td><input class="form-control" wire:model="message.purchaseprice'.$newId.'"  type="number" name=""
                 required></td>
-        <td><input class="form-control"  type="number" name=""
+        <td><input class="form-control" wire:model="message.sellprice'.$newId.'" type="number" name=""
                  required></td>
-        <td><input class="form-control"  type="number" name=""
+        <td><input class="form-control" wire:model="message.cost'.$newId.'" type="number" name=""
                  required></td>
     </tr>';
         array_push($this->tr, $newTr);
@@ -79,8 +81,13 @@ class AllPurchases extends Component
 
     public function removeTr($id)
     {
-
-        unset($this->tr[$id]);
+        if(count($this->tr) > 1){
+            unset($this->tr[$id]);
+        }
+        unset($this->message['qty'.$id]);
+        unset($this->message['purchaseprice'.$id]);
+        unset($this->message['sellprice'.$id]);
+        unset($this->message['cost'.$id]);
     }
 
     public function render()

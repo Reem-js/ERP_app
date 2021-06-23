@@ -2,6 +2,7 @@
     {{-- The best athlete wants his opponent at his best. --}}
 <br>
 <br>
+<div class="table-responsive-sm">
     <table class="table table-bordered text-center">
         <thead>
             <tr>
@@ -21,7 +22,7 @@
             {!! $table !!}
         </tbody>
     </table>
-
+</div> 
 </div>
 
 
