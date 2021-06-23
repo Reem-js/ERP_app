@@ -22,7 +22,7 @@ class AllSales extends Component
                 </td>
                 <td>
                 <div class="form-group mb-0" style="margin: 20px;">
-                    <a href="#" data-toggle="modal" data-target="#add_supplier" class="text-primary">Choose Supplier</a>
+                    <a href="#" data-toggle="modal" data-target="#add_supplier" class="text-primary supplier_id_selected">Choose Supplier</a>
                 </div>
                 </td>
                 <td>
@@ -86,6 +86,7 @@ class AllSales extends Component
 
     public function render()
     {
+        // $this->l_value = ModalShowSupplier::$l_radio_value;
         return view('livewire.all-sales');
     }
 }

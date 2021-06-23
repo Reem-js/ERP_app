@@ -4,7 +4,7 @@
         {{--  table-responsive   --}}
         <thead>
             <tr>
-                <th>#</th>
+                <th># {{-- session()->get('radio_value') --}}</th>
                 <th>{{ __('translation.sales.Item') }}</th>
                 <th>{{ __('translation.sales.Supplier') }}</th>
                 <th>{{ __('translation.sales.QTY') }}</th>

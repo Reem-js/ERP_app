@@ -245,5 +245,18 @@
                 $('#installment_form').modal('show');
             }
         });
+        $('.supplier_choosen_radio').click(function(){
+            var theCars = document.getElementsByName("customRadio");
+            var i = theCars.length;
+            while (i--) {
+                if(theCars[i].checked)
+                    alert(theCars[i].value);
+            }
+
+            // document.getElementsByTagName('select[class=supplier_id_selected]')
+            // $(this).attr('checked');
+            // alert($('.supplier_choosen_radio[checked]').val());
+            $('#add_supplier').modal('hide');
+        });
     </script>
 @endpush
