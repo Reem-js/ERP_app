@@ -272,14 +272,26 @@
                                         <input type="text" name="" class="border border-dark rounded ml-4 w-50">
                                     </div>
                                 </div>
-                            </form>
+
                         </div>
+                        <div class="row mt-5">
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-primary m-4" >{{__('translation.website.crud.create')}}</button>
+                                <button type="submit" class="btn btn-primary m-4" >{{__('translation.website.crud.Create & New')}}</button>
+                            </div>
+                            <div class="col-lg-2 offset-6">
+                                <button type="submit" class="btn btn-danger m-4">{{__('translation.website.crud.Cancel')}}</button>
+                            </div>
+                        </div>
+                    </form>
                     </div>
                 </div>
 
             </div>
         </div>
+
     </div>
+
     @livewireScripts
 @endsection
 @push('js')

@@ -61,49 +61,40 @@
                                 <br>
                                 <br>
                         <livewire:all-purchases />
-                        <div class="container" style="margin-top: 60px;">
-                            <div class=" row justify-content-between ">
-                                <div class="form-group col-4 " style="margin: 20px; ">
-                                    <p class="font-weight-bold form-group" style="color:black; padding-bottom:0px;"
-                                        for="inputAddress">
-                                        {{ __('translation.sales.Payment Type') }}</p>
-                                        <select  style="width: 200px" id="payment_drop" class="payment_dropdown" name="payment">
-                                            <option value="0">select payment type</option>
-                                            <option value="cash">Cash</option>
-                                            <option value="install" >Instsall</option>
-                                        </select>
-                                    <p class="form-group" style="color:black;" for="inputAddress">
-                                        {{ __('translation.sales.Note') }}</p>
-                                    <textarea name="note" rows="5" cols="28" style="border:#ccc solid 1px;"></textarea>
+                        <div class="usersale mt-5">
+                            {{-- d-flex justify-content-between col-sm-12 --}}
+                            <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4" >
+                                <p class="font-weight-bold form-group" for="inputAddress">
+                                    {{ __('translation.sales.Payment Type') }}</p>
+                                <select onclick="payment()"  id="payment_drop" class="payment_dropdown border border-dark rounded w-50" name="payment">
+                                    <option value='0'>Select payment Type</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="install">Install</option>
+                                </select>
+                                <p class="form-group" for="inputAddress">
+                                    {{ __('translation.sales.Note') }}</p>
+                                <textarea name="note" rows="5" cols="27" class=" border border-dark rounded w-50"></textarea>
+                            </div>
+                            <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4 text-right" >
+                                <div>
+                                    <p class="font-weight-bold d-inline" for="inputAddress">
+                                        {{ __('translation.sales.Discount') }} :</p>
+                                    <input type="text" class="border border-dark rounded text-right w-25" placeholder="  %  ">
+                                    - <input type="text" class="border border-dark rounded text-right w-25" placeholder="  LE  ">
                                 </div>
-                                <div class="form-group col-4">
-                                    <div>
-                                        <p class="font-weight-bold" style="display:inline;" for="inputAddress">
-                                            {{ __('translation.sales.Discount') }} :</p>
-                                        <input type="number"
-                                            style="width:90px; border-radius: 20px;text-align:right;border:#ccc solid 1px;"
-                                            placeholder="  %  "> - <input type="number"
-                                            style="width:90px; border-radius: 20px; text-align:right; border:#ccc solid 1px;"
-                                            placeholder="  LE  ">
-                                    </div>
-                                    <br>
-                                    <p class="font-weight-bold" style=" display:inline; " for="inputAddress">
-                                        {{ __('translation.sales.Total') }} :</p>
-                                    <input type="number" name=""
-                                        style="border:#ccc solid 1px; border-radius: 20px; text-align:right;">
-                                </div>
+                                <br>
+                                <p class="font-weight-bold d-inline" for="inputAddress">
+                                    {{ __('translation.sales.Total') }} :</p>
+                                <input type="text" name="" class="border border-dark rounded ml-4 w-50">
                             </div>
                         </div>
-                        <div class="row" >
-                            <div class="col-md-8">
-                                <button type="submit"
-                                    class="btn btn-primary">{{ __('translation.website.crud.create') }}</button>
-                                <button type="submit"
-                                    class="btn btn-primary">{{ __('translation.website.crud.Create & New') }}</button>
+                        <div class="row mt-5">
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-primary m-4" >{{__('translation.website.crud.create')}}</button>
+                                <button type="submit" class="btn btn-primary m-4" >{{__('translation.website.crud.Create & New')}}</button>
                             </div>
-                            <div class="col-6 col-md-4">
-                                <button type="submit"
-                                    class="btn btn-danger">{{ __('translation.website.crud.Cancel') }}</button>
+                            <div class="col-lg-2 offset-6">
+                                <button type="submit" class="btn btn-danger m-4">{{__('translation.website.crud.Cancel')}}</button>
                             </div>
                         </div>
                         </form>
