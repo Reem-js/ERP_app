@@ -1,5 +1,9 @@
-<form action="">
-    <table class="table table-striped">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1 col-md-12 col-lg-12">
+        <form action="">
+            {{-- <div class="table-responsive"> --}}
+<table class="table table-striped ">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -36,6 +40,12 @@
           </tr>
         </tbody>
     </table>
-    <button class="btn btn-success">{{__('translation.profile.Save')}}</button>
-    <button type="button" class="btn btn-danger" data-dismiss="modal">{{__('translation.website.crud.Cancel')}}</button>
+            {{-- </div> --}}
+
 </form>
+        </div>
+    </div>
+</div>
+
+
+

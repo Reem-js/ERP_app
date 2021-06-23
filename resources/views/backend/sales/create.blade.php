@@ -142,7 +142,7 @@
                     </div>
                     <div class="modal-body">
                         @livewire('modals.modal-add-client')
-                        <livewire:modals.modal-add-client />
+                        {{-- <livewire:modals.modal-add-client /> --}}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -166,10 +166,10 @@
                         {{-- @livewire('modals.modal-add-client') --}}
                         <livewire:modals.modal-show-supplier />
                     </div>
-                    {{-- <div class="modal-footer">
+                    <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,10 +188,10 @@
                         {{-- @livewire('modals.modal-add-client') --}}
                         <livewire:modals.modal-installment-details />
                     </div>
-                    {{-- <div class="modal-footer">
+                    <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
