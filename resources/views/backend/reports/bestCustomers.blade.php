@@ -17,7 +17,7 @@ __('translation.website.sidebar.bestCustomers')])
                             </div>
                         </div>
 
-                        <div class="card card-mode border mb-3 " style=" border: width 20px;">
+                        <div class="card card-mode  mb-3 " >
                             <div class="card-body ">
                                 @include('layouts.includes.filter',['every'=>true,'from'=>true,'status'=>true,'to'=>true])
                             </div>

@@ -230,7 +230,7 @@
                     <ul class="nav">
                         <li
                             class="nav-item ml-3 {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' ? ' active' : '' }}">
-                            <a class="nav-link nav-link-mode" href="#">
+                            <a class="nav-link nav-link-mode" href="{{ route('sales.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'addSale' || $activePage == 'allSales' || $activePage == 'editSale' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Sales') }}
@@ -262,7 +262,7 @@
                     <ul class="nav">
                         <li
                             class="nav-item ml-3 {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' ? ' active' : '' }}">
-                            <a class="nav-link nav-link-mode" href="#">
+                            <a class="nav-link nav-link-mode" href="{{ route('purchases.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Purchases') }}
@@ -319,6 +319,15 @@
                     <i class="fa fa-th-list  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? '' : '' }}"
                         aria-hidden="true"></i>
                     {{ __('translation.website.sidebar.All Installments') }}
+                </a>
+            </li>
+
+             {{-- Notfications --}}
+            <li class="nav-item  {{ $activePage == 'allnotifications'  ? ' active' : '' }}">
+                <a class="nav-link nav-link-mode" href="{{ route('notifications.index') }}">
+                    <i class="fa fa-bell {{ $activePage == 'allnotifications'  ? '' : '' }}"
+                        aria-hidden="true"></i>
+                    {{ __('translation.website.sidebar.All Notifications') }}
                 </a>
             </li>
 

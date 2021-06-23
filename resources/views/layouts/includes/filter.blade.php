@@ -1,6 +1,6 @@
 
  <form>
-    <div class="container">
+    <div class="container border rounded  p-5">
         <div class="row">
             @if($from)
             <div class="col-sm-6">

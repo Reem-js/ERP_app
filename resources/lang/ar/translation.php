@@ -1,7 +1,6 @@
 <?php
 return [
 
-
     'website' => [
         'sidebar' => [
             'ELRAYAN' => 'الريان',
@@ -95,7 +94,18 @@ return [
             'Create Partner'=>'أضافة شريك',
             'Edit Partner'=>'تعديل شريك',
             'Profits'=>'الارباح',
-            'Dividend Income Details'=>'تفاصيل توزيع الربح'
+            'Dividend Income Details'=>'تفاصيل توزيع الربح',
+            'Show Sale Details'=>'عرض تفاصيل الفاتورة',
+            'Client Information'=>'معلومات العميل',
+            'Products'=>'المنتجات',
+            'Add Sale'=>'اضافة فاتورة بيع',
+            'all Purchases'=>'كل المشتريات',
+            'add Purchase'=>'إضافة مشترى',
+            'unit cost'=>'سعر الوحدة',
+            'add new supplier'=>'إضافة مورد جديد',
+            'all Installments'=>'كل الأقساط',
+            'All Notifications'=>'كل الاشعارات',
+
 
         ],
         'crud' => [
@@ -117,7 +127,10 @@ return [
             'Confirm'=>'تأكيد',
             'Close'=>'اغلاق',
             'Search'=>'بحث',
+            'EGP' => 'جنيه',
+            'Product Count'=>'عدد الأصناف'
 
+            ,'see more'=>'اظهار المزيد',
         ],
     ],
     'brands' => [
@@ -169,6 +182,7 @@ return [
         'id' => 'الرقم المسلسل',
         'totalSaleStock' => 'سعر البيع الكلي',
         'totalPurchaseStock' => 'سعر الشراء الكلي',
+        'Add Product'=>'إضافة منتج',
 
     ],
     'title' => [
@@ -189,7 +203,11 @@ return [
         'add in price list' => 'زود في قائمة الاسعار',
         'show details' => 'اظهر التفاصيل',
         'History' => 'الماضي',
-        'Show Client' => 'اظهار العميل',
+        'Show Client' => 'عرض العميل',
+        'Show Sales'=>'عرض التافصيل',
+        'Edit Sales'=>'تعديل',
+        'Delete Notification'=>' مسح الاشعار',
+
     ],
     'wallet' => [
         'My Wallet' => 'محفظتي',
@@ -273,7 +291,6 @@ return [
         'Value' => 'القيمة ',
 
     ],
-
     'expenses types' => [
         'Actions' => 'العلميات',
         'Show' => 'عرض',
@@ -283,7 +300,6 @@ return [
         'id' => 'الرقم',
         'Expense Type Name' => 'اسم نوع المصروف',
     ],
-
     'pricelists' => [
         'select supplier' => 'اختار مورد',
         'Name' => 'الإسم',
@@ -298,7 +314,6 @@ return [
         'Supplier Name' => 'اسم المورد',
         'Show Price List' => 'عرض قائمة السعر',
     ],
-
     'website info' => [
         'AL-RAYAN' => 'الريان',
         'tel' => '011222222',
@@ -416,15 +431,25 @@ return [
         'Purchase Date' => 'تاريخ الشراء',
         'Recieve Date' => 'تاريخ الاستلام',
         'Status' => 'الحالة',
-    ],
-    'sales' => [
-        'ID' => 'الرقم',
-        'Type' => 'النوع',
-        'Total' => 'المجموع',
-        'Order Date' => 'تاريخ الشراء',
-        'Recieve Date' => 'تاريخ الاستلام',
-        'Discount' => 'الخصم',
-        'Status' => 'الحالة',
+        'cash'=>'كاش',
+        'Credit'=>'قسط',
+        'id'=>'الرقم',
+        'date'=>'التاريخ',
+        'supplier'=>'المورد',
+        'product'=>'المنتج',
+        'quantity'=>'الكمية',
+        'total cost'=>'التكلفة الإجمالية',
+        'Actions'=>'الإجراءات',
+        'type'=>'نوع الدفع',
+        'paid'=>'المبلغ المدفوع',
+        'residual'=>'المبلغ المتبقي',
+        'num'=>'الرقم',
+        'add row'=>'إضافة صف',
+        'add product'=>'إضافة منتج',
+        'new supplier'=>'اسم المورد',
+        'select supplier'=>'اختر مورد',
+        'Unit Purchase Price'=>'سعر الشراء ',
+        'Unit Selling Price'=>'سعر البيع ',
     ],
     'adminhistory' => [
         'Date' => 'تاريخ',
@@ -459,6 +484,87 @@ return [
         'Capital After Profit'=>'رأس المال بعد الربح',
         'Total Withdraw'=>'مجموع السحب',
         ''=>'',
+
+    ],
+    'sales'=>[
+        'ID'=>'الرقم',
+        'Order Date'=>'تاريخ المعاملة',
+        'Total'=>'السعر الكلي',
+        'Type'=>'النوع',
+        'Note'=>'معلومات',
+        'Discount'=>'الخصم',
+        'Create Status'=>'حالة الفاتورة',
+        'Recive Date'=>'تاريخ الوصل',
+        'Status'=>'نوع المعاملة',
+        'Actions'=>'العمليات',
+        'Sale Price'=>'سعر البيع',
+        'Sale After Price'=>'سعر البيع الفعلي',
+        'Invoice Number'=>'رقم الفاتورة',
+        'Item'=>'المنتج',
+        'Supplier'=>'المورد',
+        'QTY'=>'الكمية',
+        'Price'=>'السعر',
+        'Amount'=>'القيمة',
+        'Payment Type'=>'طريقة الدفع',
+        'add row'=>'اضافة صف',
+        'Items'=>'المنتج',
+    ],
+    'installments'=>[
+        'all Installments elly leya'=>'(الأقساط (الي ليا',
+        'all Installments elly 3laya'=>'الأقساط (الي عليا)',
+        'id'=>'الرقم',
+        'Client name'=>'اسم العميل',
+        'period'=>'المدة الكلية للأقساط',
+        'start date'=>'تاريخ البداية',
+        'Total invoice value'=>'القيمة الكلية للفاتورة',
+        'actions'=>'الإجراءات',
+        'show trans'=>'عرض المعاملات المالية',
+        'add trans'=>'إضافة معاملة مالية',
+        'Supplier name'=>'اسم المورد',
+        'transcation Type'=>'طريقة المعاملة المالية',
+        'in installments'=>'بالقسط',
+        'operation date'=>'تاريخ الدفع',
+        'transaction amount'=>'القيمة',
+        'show Transactions'=>'عرض المعاملات',
+        'Total number of installments'=>'عدد الأقساط الكلي',
+        'number of installments paid'=>'عدد الأقساط المدفوعة',
+        'Number of installments left'=>'عدد الأقساط المتبقية',
+        'installment Number'=>'رقم القسط',
+        'installment date'=>'تاريخ دفع القسط',
+        'real payment date'=>'تاريخ دفع القسط الفعلي',
+        'show Transactions'=>'عرض المعاملات',
+    ],
+    'notifications'=>[
+        'ID'=>'الرقم',
+        'Title'=>'العنوان',
+        'Content'=>'المحتوي',
+        'Date'=>'التاريخ',
+        'Read'=>'قرات',
+
+    ],
+    'dashboard' => [
+        'cash' => 'السيولة النقدية',
+        'See your wallet' => 'انظر محفظتك',
+        'debts' => 'ديون',
+        'See all installments' => 'انظر الأقساط',
+        'installments' => 'الأقساط',
+        'Sales' => 'المبيعات',
+        'pre-sales trans' => 'معاملات ما قبل البيع',
+        'invoices' => 'فاتورة',
+        'total sales price' => 'إجمالي سعر المبيعات',
+        'see all sales' => 'انظر جميع المبيعات',
+        'pre-purchases trans' => 'معاملات الشراء المسبق',
+        'total purchases price' => 'إجمالي سعر الشراء',
+        'see all purchases' => 'انظر جميع المشتريات',
+        'total number of products' => 'العدد الإجمالي للمنتجات',
+        'total price of products' => 'السعر الإجمالي للمنتجات',
+        'products' => 'منتج',
+        'see stock' => 'انظر المخزون',
+        'expenses' => 'النفقات',
+        'See all expenses' => 'انظر جميع النفقات',
+        'Partners' => 'عدد الشركاء',
+        'Partner' => 'شريك',
+        'See all partners' => 'انظر جميع الشركاع',
 
     ],
 

@@ -33,7 +33,7 @@
                                         <td >&euro; 99,225</td>
                                         <td class="td-actions">
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit User') }}"  href="{{ route('users.edit', 5) }}"
-                                                style="color:white;"> <i class="material-icons">edit</i> </a>
+                                                > <i class="material-icons">edit</i> </a>
 
                                         </td>
                                     </tr>

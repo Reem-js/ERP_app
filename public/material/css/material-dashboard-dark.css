@@ -93,7 +93,7 @@
 }
 
 .sidebar .nav li.active>[data-toggle="collapse"] i {
-    color: #fff;
+    color: white !important;
 }
 
 .sidebar .nav li.active>a,
@@ -102,3 +102,65 @@
     background-color:#2196f3 !important
 }
 
+.card .card-header .card-title {
+    margin-bottom: 3px;
+    color: white !important;
+}
+
+.title,
+.title a,
+.card-title,
+.card-title a,
+.info-title,
+.info-title a,
+.footer-brand,
+.footer-brand a,
+.footer-big h5,
+.footer-big h5 a,
+.footer-big h4,
+.footer-big h4 a,
+.media .media-heading,
+.media .media-heading a {
+    color: white !important;
+  text-decoration: none;
+}
+
+.card-stats .card-header .card-category:not([class*="text-"]) {
+    color: white !important;
+    font-size: 14px;
+}
+
+.card [class*="card-header-"] .author a, .card [class*="card-header-"] .stats, .card [class*="card-header-"] .card-category, .card [class*="card-header-"] .card-description, .card[class*="bg-"] .author a, .card[class*="bg-"] .stats, .card[class*="bg-"] .card-category, .card[class*="bg-"] .card-description {
+    color: white !important;
+
+}
+.card .card-category:not([class*="text-"]) {
+    color: white !important;
+
+}
+
+/* a:hover, a:focus {
+    color: #2196f3 !important;
+    text-decoration: none;
+}
+a:hover {
+    color: #2196f3 !important;
+    text-decoration: underline;
+}
+
+
+a {
+    color: #2196f3 !important;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+} */
+
+.card .card-body+.card-footer .stats, .card .card-footer .stats {
+    color: #2196f3;
+    font-size: 12px;
+    line-height: 22px;
+}
+.modal-content-mode {
+    background-color: #18191a !important;
+}

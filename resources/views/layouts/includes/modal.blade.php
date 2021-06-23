@@ -3,15 +3,10 @@
     Open Modal
 </button> --}}
  <!-- modal start -->
- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+ <div class="modal fade modal-dialog-scrollable " id="exampleModalLong"
+  tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog  {{$modalSize}}" role="document">
-      <div class="modal-content">
-        <div class="modal-header {{$modalTitleColor}}">
-          <h5 class="modal-title " id="exampleModalLongTitle">{!! $modalTitle !!}</h5>
-          <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+      <div class="modal-content modal-content-mode">
         <div class="modal-body" id="modal-body">
           {{-- {!! $modalBody !!} --}}
           {{-- @yield('body') --}}

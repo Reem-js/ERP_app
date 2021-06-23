@@ -14,18 +14,18 @@ __('translation.website.sidebar.Create Transaction')])
                             </div>
                             <div class="card-body">
                                 <form>
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p class="font-weight-bold"  for="inputAddress">
+                                    <div class="form-group m-4">
+                                        <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.walletTransaction.Reason') }}</label>
                                             <input type="text" name="reason" class="form-control" id="inputAddress" required
                                                 placeholder="Please enter transaction reason">
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p class="font-weight-bold"  for="inputAddress">
+                                    <div class="form-group m-4">
+                                        <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.suppliers.Supplier') }}</label>
                                             <br>
-                                            <select id='selSupplier' style='width:100%'>
+                                            <select id='selSupplier' class='w-100'>
                                                 <option value='0'>Select Transaction</option>
                                                 <option value='1'>Transaction 1</option>
                                                 <option value='2'>Sonarika Bhadoria</option>
@@ -42,18 +42,18 @@ __('translation.website.sidebar.Create Transaction')])
                                     </div>
 
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p class="font-weight-bold"  for="inputAddress">
+                                    <div class="form-group m-4">
+                                        <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.walletTransaction.Date') }}</label>
                                             <input type="date" name="date" class="form-control" id="inputAddress" required
                                                 placeholder="please choose transaction date">
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p class="font-weight-bold"  for="inputAddress">
+                                    <div class="form-group m-4">
+                                        <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.walletTransaction.Transaction') }}</label>
                                             <br>
-                                            <select id='selTrans' style='width:100%'>
+                                            <select id='selTrans' class='w-100'>
                                                 <option value='0'>Select Transaction</option>
                                                 <option value='1'>Transaction 1</option>
                                                 <option value='2'>Sonarika Bhadoria</option>
@@ -69,10 +69,10 @@ __('translation.website.sidebar.Create Transaction')])
                                             </select>
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p class="font-weight-bold"  for="inputAddress">
+                                    <div class="form-group m-4">
+                                        <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.walletTransaction.Transaction Type') }}</label>
-                                            <select id='selTransType' style='width:100%'>
+                                            <select id='selTransType' class='w-100'>
                                                 <option value='0'>Select Transaction Type</option>
                                                 <option value='1'>Transaction Type 1</option>
                                                 <option value='2'>Sonarika Bhadoria</option>
@@ -88,52 +88,55 @@ __('translation.website.sidebar.Create Transaction')])
                                             </select>
                                     </div>
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <p class="font-weight-bold"  for="inputAddress">
+                                    <div class="form-group m-4">
+                                        <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.walletTransaction.Amount') }}</label>
                                             <input type="number" name="amount" class="form-control" id="inputAddress"
                                                 required placeholder="please enter transaction amount ">
                                     </div>
 
 
-                                    <div class="form-group" style="margin: 20px;">
-                                        <button type="submit" class="btn btn-primary"
-                                            style="margin: 20px;">{{ __('translation.website.crud.create') }}</button>
-                                        <button type="submit" class="btn btn-primary"
-                                            style="margin: 20px;">{{ __('translation.website.crud.Create & New') }}</button>
+                                    <div class="row mt-5">
+                                        <div class="col-lg-4">
+                                            <button type="submit"
+                                                class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
+                                            <button type="submit"
+                                                class="btn btn-primary  m-4">{{ __('translation.website.crud.Create & New') }}</button>
+                                        </div>
+                                        <div class="col-lg-2 offset-6">
+                                            <button type="submit"
+                                                class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
+                                        </div>
+                                    </div>
                                 </form>
-                                <button type="submit" class="btn btn-danger"
-                                    style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{ __('translation.website.crud.Cancel') }}</button>
                             </div>
-                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
     </div>
     </div>
     </div>
 @endsection
 @push('js')
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             // Initialize select2
             $("#selSupplier").select2();
-          });
+        });
     </script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             // Initialize select2
             $("#selTrans").select2();
-          });
+        });
     </script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             // Initialize select2
             $("#selTransType").select2();
-          });
+        });
     </script>
 @endpush

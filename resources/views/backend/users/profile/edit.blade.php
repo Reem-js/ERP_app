@@ -9,7 +9,7 @@
             @csrf
             @method('put')
 
-            <div class="card ">
+            <div class="card  card-mode">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('translation.profile.Edit Profile') }}</h4>
                 <p class="card-category">{{ __('translation.profile.User information') }}</p>
@@ -28,7 +28,7 @@
                   </div>
                 @endif
                 <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('translation.profile.Name') }}</label>
+                  <p class="col-sm-2 col-form-label">{{ __('translation.profile.Name') }}</p>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                       <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('translation.profile.Name') }}" value="{{ old('name', auth()->user()->name) }}" required="true" aria-required="true"/>
@@ -39,7 +39,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('translation.profile.Email') }}</label>
+                  <p class="col-sm-2 col-form-label">{{ __('translation.profile.Email') }}</p>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                       <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="input-email" type="email" placeholder="{{ __('translation.profile.Email') }}" value="{{ old('email', auth()->user()->email) }}" required />
@@ -50,7 +50,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('translation.profile.Phone') }}</label>
+                  <p class="col-sm-2 col-form-label">{{ __('translation.profile.Phone') }}</p>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
                       <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" id="input-phone" type="phone" placeholder="{{ __('translation.profile.Phone') }}" value="{{ old('phone', auth()->user()->phone) }}" required />
@@ -74,7 +74,7 @@
             @csrf
             @method('put')
 
-            <div class="card ">
+            <div class="card  card-mode">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('translation.profile.Change password') }}</h4>
                 <p class="card-category">{{ __('translation.profile.Password') }}</p>
@@ -93,7 +93,7 @@
                   </div>
                 @endif
                 <div class="row">
-                  <label class="col-sm-2 col-form-label" for="input-current-password">{{ __('translation.profile.Current Password') }}</label>
+                  <p class="col-sm-2 col-form-label" for="input-current-password">{{ __('translation.profile.Current Password') }}</p>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                       <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('translation.profile.Current Password') }}" value="" required />
@@ -104,7 +104,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label" for="input-password">{{ __('translation.profile.New Password') }}</label>
+                  <p class="col-sm-2 col-form-label" for="input-password">{{ __('translation.profile.New Password') }}</p>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                       <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('translation.profile.New Password') }}" value="" required />
@@ -115,7 +115,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('translation.profile.Confirm New Password') }}</label>
+                  <p class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('translation.profile.Confirm New Password') }}</p>
                   <div class="col-sm-7">
                     <div class="form-group">
                       <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('translation.profile.Confirm New Password') }}" value="" required />

@@ -56,7 +56,6 @@ class UserController extends Controller
         //
         return view('backend.users.show');
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -116,8 +115,6 @@ class UserController extends Controller
 
         return back()->withStatus(__('Profile successfully updated.'));
     }
-
-
         /**
      * Change the password
      *

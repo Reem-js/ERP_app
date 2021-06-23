@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="card card-mode">
                     <div class="card-header card-header-text card-header-primary">
-                      <div class="card-text" style="width:20%; text-align:center;">
+                      <div class="card-text w-20"  text-align:center;">
                         <h4 class="card-title">{{ __("translation.wallet.Supplier Wallet") }}</h4>
                       </div>
                     </div>
@@ -41,9 +41,9 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" style="color:white;"><i class="material-icons">visibility</i></a>
+                                            <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" ><i class="material-icons">visibility</i></a>
                                             <a class="btn btn-primary" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('supplier-wallet-transactions.create', 5) }}"
-                                                style="color:white;"> <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                    > <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 
 
                                         </td>

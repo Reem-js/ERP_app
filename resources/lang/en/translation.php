@@ -97,7 +97,17 @@ return [
             'Create Partner'=>'Create Partner',
             'Edit Partner'=>'Edit Partner',
             'Profits'=>'Profits',
-            'Dividend Income Details'=>'Dividend Income Details'
+            'Dividend Income Details'=>'Dividend Income Details',
+            'Show Sale Details'=>'Show Sale Details',
+            'Client Information'=>'Client Information',
+            'Products'=>'Products',
+            'Add Sale'=>'Add Sale',
+            'all Purchases'=>'All Purchases',
+            'add Purchase'=>'Add Purchase',
+            'add new supplier'=>'Add New Supplier',
+            'all Installments'=>'All Installments',
+            'All Notifications'=>'All Notifications',
+
         ],
         'crud' => [
             'create' => 'Create',
@@ -118,7 +128,8 @@ return [
             'Confirm'=>'Confrim',
             'Close'=>'Close',
             'Search'=>'Search',
-
+            'Product Count'=>'Product Count'
+            ,'see more'=>'see more',
 
         ],
 
@@ -172,6 +183,8 @@ return [
         'id' => 'ID',
         'totalSaleStock' => 'Total Sale Price',
         'totalPurchaseStock' => 'Total Purchase Price',
+        'Add Product'=>'Add Product',
+
 
     ],
     'title' => [
@@ -193,6 +206,11 @@ return [
         'show details' => 'show details',
         'History' => 'History',
         'Show Client' => 'Show Client',
+        'Show Sales'=>'Show Sales',
+        'Edit Sales'=>'Edit Sales',
+
+        'Delete Notification' => 'Delete Notification',
+
         '' => '',
         '' => '',
         '' => '',
@@ -249,11 +267,10 @@ return [
         'Address' => 'Address',
         'Price Lists' => 'Price Lists',
         'Actions' => 'Actions',
+        'Add Supplier'=>'Add Supplier',
 
 
     ],
-
-
     'clients' => [
         'ID' => 'ID',
         'Name' => 'Name',
@@ -279,15 +296,32 @@ return [
         'Purchase Date' => 'Purchase Date',
         'Recieve Date' => 'Recieve Date',
         'Status' => 'Status',
-    ],
-    'sales' => [
-        'ID' => 'ID',
-        'Type' => 'Type',
-        'Total' => 'Total',
-        'Order Date' => 'Purchase Date',
-        'Recieve Date' => 'Recieve Date',
-        'Discount' => 'Discount',
-        'Status' => 'Status',
+        'cash'=>'Cash',
+        'Credit'=>'Credit',
+        'id'=>'Id',
+        'date'=>'Date',
+        'supplier'=>'Supplier',
+        'product'=>'Product',
+        'quantity'=>'Quantity',
+        'total cost'=>'Cost',
+        'Actions'=>'Actions',
+        'type'=>'Type',
+        'paid'=>'Paid',
+        'residual'=>'Residual',
+        'num'=>'Num',
+        'add row'=>'Add Row',
+        'Unit Purchase Price'=>'Purchase Price',
+        'Unit Selling Price'=>'Selling Price',
+        'add product'=>'Add Product',
+        'new supplier'=>'New Supplier',
+        'select supplier'=>'Select Supplier',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+        ''=>'',
+
+
+
     ],
     'adminhistory' => [
         'Date' => 'Date',
@@ -370,7 +404,6 @@ return [
         'New Password'=>'New Password',
         'Confirm New Password'=>'Confirm New Password',
     ],
-
     'reports' => [
         'Month' => 'Month',
         'Product Name' => 'Product Name',
@@ -431,7 +464,30 @@ return [
         'Total number of expenses' => 'Total Number of Expenses',
         'Total cost of expenses' => 'Total Cost of Expenses',
         'Total purchases amount' => 'Total Amount',
-
+    ]
+    ,
+    'sales'=>[
+        'ID'=>'ID',
+        'Order Date'=>'Order Date',
+        'Total'=>'Total',
+        'Type'=>'Type',
+        'Note'=>'Note',
+        'Discount'=>'Discount',
+        'Create Status'=>'Create Status',
+        'Recive Date'=>'Recive Date',
+        'Status'=>'Status',
+        'Actions'=>'Actions',
+        'Sale Price'=>'Sale Price',
+        'Sale After Price'=>'Sale After Price',
+        'Invoice Number'=>'Invoice Number',
+        'Invoice Date'=>'Invoice Date',
+        'Item'=>'Item',
+        'Supplier'=>'Supplier',
+        'QTY'=>'QTY',
+        'Price'=>'Price',
+        'Amount'=>'Amount',
+        'Payment Type'=>'Payment Type',
+        'add row'=>'add row,'
     ],
     'dividendIncome'=>[
         'Profit'=>"Profit",
@@ -452,5 +508,64 @@ return [
         'Capital After Profit'=>'Capital After Profit',
         'Total Withdraw'=>'Total Withdraw',
     ],
+    'installments'=>[
+        'all Installments elly leya'=>'  All Installments ( leya)',
+        'all Installments elly 3laya'=>' All Installments   (3laya)',
+        'id'=>'Id',
+        'Client name'=>'Client Name',
+        'period'=>'Period',
+        'start date'=>'Start Date',
+        'Total invoice value'=>'Total Invoice Value',
+        'actions'=>'Actions',
+        'show trans'=>'Show Trans',
+        'add trans'=>'Add Trans',
+        'Supplier name'=>'Supplier Name',
+        'transcation Type'=>'Transcation Type',
+        'in installments'=>'in installments',
+        'operation date'=>'Operation Date',
+        'transaction amount'=>'Transaction Amount',
+        'show Transactions'=>'Show Transactions',
+        'Total number of installments'=>'Total Installments',
+        'number of installments paid'=>'Installments Paid ',
+        'Number of installments left'=>'Installments Left',
+        'installment Number'=>'Installment Number',
+        'installment date'=>'Installment Date',
+        'real payment date'=>'Real Payment Date',
+        'show Transactions'=>'Show Transactions',
+        'add row'=>'add row',
+        'Items'=>'Items',
+    ],
+    'notifications'=>[
+        'ID'=>'ID',
+        'Title'=>'Title',
+        'Content'=>'Content',
+        'Date'=>'Date',
+        'Read'=>'Read',
 
+    ],
+    'dashboard' => [
+        'cash' => 'Cash',
+        'See your wallet' => 'See your wallet',
+        'debts' => 'Debts',
+        'See all installments' => 'See all installments',
+        'installments' => 'Installments',
+        'Sales' => 'Sales',
+        'pre-sales trans' => 'Pre-sales trans',
+        'invoices' => 'Invoices',
+        'total sales price' => 'Total sales price',
+        'see all sales' => 'See all sales',
+        'pre-purchases trans' => 'Pre-purchases trans',
+        'total purchases price' => 'Total purchases price',
+        'see all purchases' => 'See all purchases',
+        'total number of products' => 'Total number of products',
+        'total price of products' => 'Total price of products',
+        'products' => 'Products',
+        'see stock' => 'See stock',
+        'expenses' => 'Expenses',
+        'See all expenses' => 'See all expenses',
+        'Partners' => 'Partners',
+        'Partner' => 'Partner',
+        'See all partners' => 'See all partners',
+
+    ],
 ];

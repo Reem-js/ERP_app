@@ -13,9 +13,14 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('client-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}"  class="btn btn-primary btn-round"
-                                style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                {{ __('translation.website.crud.create') }}</a>
+
+
+
+                                <div class="col-lg-12 text-right">
+                                    <a href="{{ route('client-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}"  class="btn btn-primary btn-round"
+                                    ><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                      {{ __('translation.website.crud.create') }}</a>
+                                                 </div>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -43,17 +48,17 @@
 
                                         <td class="td-actions">
 
-                                            <a class="btn btn-info" href="#" style="color:white;"><i
+                                            <a class="btn btn-info" href="#"><i
                                                     class="material-icons">visibility</i></a>
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
                                                 href="{{ route('client-wallet-transactions.edit', 5) }}"
-                                                style="color:white;"> <i class="material-icons">edit</i> </a>
+                                                > <i class="material-icons">edit</i> </a>
                                             <a class="btn btn-danger" rel="tooltip"  title="{{ __('translation.title.Delete Transaction') }}"
                                                 onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
                                                 href="javascript:void(0)"><i class="material-icons">close</i></a>
-                                            <form method="post"
+                                            <form method="post" class="d-none"
                                                 action="{{ route('client-wallet-transactions.destroy', 5) }}"
-                                                style="display:none;" id="delete-1">
+                                                id="delete-1">
                                                 @csrf
                                                 @method('delete')
                                             </form>

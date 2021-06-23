@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\backend\roles\RoleController;
+use App\Http\Controllers\backend\sales\SaleController;
 use App\Http\Controllers\backend\users\UserController;
+use App\Http\Controllers\backend\notifications\NotificationController;
 use App\Http\Controllers\backend\index\IndexController;
 use App\Http\Controllers\backend\brands\BrandController;
 use App\Http\Controllers\backend\reports\ReportController;
@@ -26,6 +28,8 @@ use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
 use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
+use App\Http\Controllers\backend\purchases\PurchaseController;
+use App\Http\Controllers\backend\installments\installmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +60,7 @@ Route::group(
             /* New Routes */
             // users
             Route::resource('users', UserController::class);
-            Route::resource('users', UserController::class);
+            // Route::resource('users', UserController::class);
             Route::get('profile', [UserController::class, 'profileEdit'])->name('profile.edit');
             Route::put('profile', [UserController::class, 'profileUpdate'])->name('profile.update');
             Route::put('profile-password', [UserController::class, 'profilePassword'])->name('profile.password');
@@ -114,6 +118,24 @@ Route::group(
             Route::resource('partners',partnerController::class);
             //switch mode
             Route::post('switch-mode',[HomeController::class, 'switchMode'])->name('switch-mode');
+
+            //Sales
+            Route::resource('sales', SaleController::class);
+
+            //livewire sales
+            // Route::livewire('livewire/sales','sales');
+            // Route::get('livewire/sales' , App\Http\Livewire\Sales::class);
+
+           // Purchases
+           Route::resource('purchases', PurchaseController::class);
+           // installments
+           Route::get('installments', [installmentController::class, 'getInstallments'])->name('get.installments');
+
+           //notifications
+           Route::resource('notifications', NotificationController::class);
+
+
+
         });
     }
 );
