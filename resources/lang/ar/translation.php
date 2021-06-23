@@ -172,6 +172,7 @@ return [
         'id' => 'الرقم المسلسل',
         'totalSaleStock' => 'سعر البيع الكلي',
         'totalPurchaseStock' => 'سعر الشراء الكلي',
+        'Add Product'=>'إضافة منتج',
 
     ],
     'title' => [
@@ -440,8 +441,8 @@ return [
         'add product'=>'إضافة منتج',
         'new supplier'=>'اسم المورد',
         'select supplier'=>'اختر مورد',
-        'Unit Purchase Price'=>'سعر شراء الوحدة',
-        'Unit Selling Price'=>'سعر بيع الوحدة',
+        'Unit Purchase Price'=>'سعر الشراء ',
+        'Unit Selling Price'=>'سعر البيع ',
     ],
     'sales' => [
         'ID' => 'الرقم',

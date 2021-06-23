@@ -25,14 +25,14 @@ Purchases')])
                             </div>
                             <br>
                             <div class="">
-                                <ul class="nav nav-pills nav-pills-danger" role="tablist">
-                                    <li class="nav-item">
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li style="width:50%;" class="nav-item  text-center">
                                         <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist"
                                             aria-expanded="true">
                                             {{ __('translation.purchase.cash') }}
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li style="width:50%;"class="nav-item  text-center">
                                         <a class="nav-link" data-toggle="tab" href="#link2" role="tablist"
                                             aria-expanded="false">
                                             {{ __('translation.purchase.Credit') }}
@@ -68,15 +68,11 @@ Purchases')])
                                                         <td>Cash</td>
                                                         <td>550,99</td>
                                                         <td class="td-actions" style="padding: 5px">
-                                                            {{-- <a class="btn btn-info" rel="tooltip" href="#"
-                                                                title="{{ __('translation.pricelists.Show Price List') }}"
-                                                                style="color:white; "><i
-                                                                    class="material-icons">visibility</i></a> --}}
                                                             <a class="btn btn-info" rel="tooltip"
                                                                 title="{{ __('translation.pricelists.Edit') }}"
                                                                 href="{{ route('priceLists.edit', 5) }}"
                                                                 style="color:white; "> <i class="material-icons">edit</i>
-                                                            </a>
+                                                            </a> &nbsp;&nbsp;
                                                             <a class="btn btn-danger" rel="tooltip"
                                                                 title="{{ __('translation.pricelists.Delete') }}"
                                                                 onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
@@ -138,7 +134,7 @@ Purchases')])
                                                                 title="{{ __('translation.pricelists.Edit') }}"
                                                                 href="{{ route('priceLists.edit', 5) }}"
                                                                 style="color:white;"> <i class="material-icons">edit</i>
-                                                            </a>
+                                                            </a> &nbsp;&nbsp;
                                                             <a class="btn btn-danger" rel="tooltip"
                                                                 title="{{ __('translation.pricelists.Delete') }}"
                                                                 onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
@@ -163,15 +159,11 @@ Purchases')])
                                                         <td>550,99</td>
                                                         <td>550,99</td>
                                                         <td class="td-actions">
-                                                            {{-- <a class="btn btn-info" rel="tooltip" href="#"
-                                                                title="{{ __('translation.pricelists.Show Price List') }}"
-                                                                style="color:white; "><i
-                                                                    class="material-icons">visibility</i></a> --}}
                                                             <a class="btn btn-info" rel="tooltip"
                                                                 title="{{ __('translation.pricelists.Edit') }}"
                                                                 href="{{ route('priceLists.edit', 5) }}"
                                                                 style="color:white; "> <i class="material-icons">edit</i>
-                                                            </a>
+                                                            </a> &nbsp;&nbsp;
                                                             <a class="btn btn-danger" rel="tooltip"
                                                                 title="{{ __('translation.pricelists.Delete') }}"
                                                                 onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
