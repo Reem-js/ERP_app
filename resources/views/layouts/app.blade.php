@@ -20,10 +20,20 @@
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <!-- CSS Files -->
     <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    @if (Session()->has('mode'))
+        @if (Session()->get('mode') == 'Light')
+        <link href="{{ asset('material') }}/css/material-dashboard-light.css?" rel="stylesheet" />
+        @else
+        <link href="{{ asset('material') }}/css/material-dashboard-dark.css?" rel="stylesheet" />
+        @endif
+    @else
+    <link href="{{ asset('material') }}/css/material-dashboard-light.css?" rel="stylesheet" />
+    @endif
+    {{-- <link href="{{ asset('material') }}/css/material-dashboard-dark.css?" rel="stylesheet" /> --}}
+
     @if (app()->getLocale() == 'ar')
         <link href="{{ asset('material') }}/css/material-dashboard-rtl.css?v=1.1" rel="stylesheet" />
     @endif
-
     <!-- for selectbox with search -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     @stack('css')
@@ -212,6 +222,7 @@
         });
 
     </script>
+
     @stack('js')
 </body>
 

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Basic Information') }}</h4>
@@ -34,7 +34,7 @@
                                         <td class="td-actions">
                                             <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Edit User') }}"  href="{{ route('users.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>
-                                         
+
                                         </td>
                                     </tr>
 
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.User History') }}</h4>
@@ -59,7 +59,7 @@
                                         <th class="text-center font-weight-bold " >{{ __('translation.adminhistory.Date') }}</th>
                                         <th class="text-center font-weight-bold " >{{ __('translation.adminhistory.User Name') }}</th>
                                         <th colspan="5" class="text-center font-weight-bold">{{ __('translation.adminhistory.Action') }}</th>
-                                       
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,16 +69,16 @@
                                         <td class="text-center font-weight-bold" rowspan="5"><a href="{{ route('users.edit',5) }}">madonna</a></td>
                                         <td colspan="5" class="text-center" > invouce number <a href="#" >145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> purchase number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> installment number <a href="#">145236</a> has been done</td>
 
-                                    </tr>   <tr>                                        
+                                    </tr>   <tr>
                                         <td colspan="5" class="text-center" > add product number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center" > edit in supplier</td>
                                     </tr>
 
@@ -89,16 +89,16 @@
 
                                         <td colspan="5" class="text-center" > invouce number <a href="#" >145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> purchase number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> installment number <a href="#" >145236</a> has been done</td>
 
-                                    </tr>   <tr>                                        
+                                    </tr>   <tr>
                                         <td colspan="5" class="text-center" > add product number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center" > edit in supplier</td>
                                     </tr>
 
@@ -109,16 +109,16 @@
 
                                         <td colspan="5" class="text-center" > invouce number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> purchase number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center"> installment number <a href="#">145236</a> has been done</td>
 
-                                    </tr>   <tr>                                        
+                                    </tr>   <tr>
                                         <td colspan="5" class="text-center" > add product number <a href="#">145236</a> has been done</td>
                                     </tr>
-                                    <tr>                                        
+                                    <tr>
                                         <td colspan="5" class="text-center" > edit in supplier</td>
                                     </tr>
                                 </tbody>
@@ -127,7 +127,7 @@
 
                     </div>
                 </div>
- 
+
 
             </div>
         </div>

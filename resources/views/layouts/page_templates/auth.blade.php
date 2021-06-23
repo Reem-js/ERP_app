@@ -1,6 +1,6 @@
 <div class="wrapper ">
     @include('layouts.navbars.sidebar')
-    <div class="main-panel" style="
+    <div class="main-panel main-panel-mode" style="
 
     /* background-color: #923cb5;
     background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%); */

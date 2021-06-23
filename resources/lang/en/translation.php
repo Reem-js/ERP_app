@@ -92,7 +92,12 @@ return [
             'Edit Sale'=>'Edit Sale',
             'All Sale Orders'=>'All Sale Orders',
             'All Installments'=>'All Installments',
-
+            'Partners'=>'Partners',
+            'All Partners'=>'All Partners',
+            'Create Partner'=>'Create Partner',
+            'Edit Partner'=>'Edit Partner',
+            'Profits'=>'Profits',
+            'Dividend Income Details'=>'Dividend Income Details'
         ],
         'crud' => [
             'create' => 'Create',
@@ -109,7 +114,11 @@ return [
             'Yes' => 'Yes',
             'No' => 'No',
             'EGP' => 'EGP',
-            'Product Count'=>'Product Count'
+            'Product Count'=>'Product Count',
+            'Confirm'=>'Confrim',
+            'Close'=>'Close',
+            'Search'=>'Search',
+
 
         ],
 
@@ -423,8 +432,25 @@ return [
         'Total cost of expenses' => 'Total Cost of Expenses',
         'Total purchases amount' => 'Total Amount',
 
-
-
-    ]
+    ],
+    'dividendIncome'=>[
+        'Profit'=>"Profit",
+        'Capital'=>'Capital',
+        'Capital After Profit'=>'Capital After Profit',
+        'Status'=>'Status',
+        'FIxed Percentage'=>'FIxed Percentage',
+        'Customized Percentage'=>'Customized Percentage',
+        'Effort'=>'Effort',
+        'Money'=>'Money',
+        'Partners'=>'Partners',
+        'Capital'=>'Capital',
+        'Percentage In Money'=>'Percentage In Money',
+        'Percentage In Effort'=>'Percentage In Effort',
+        'Profit In Money'=>'Profit In Money',
+        'Profit In Effort'=>'Profit In Effort',
+        'Total Profit'=>'Total Profit',
+        'Capital After Profit'=>'Capital After Profit',
+        'Total Withdraw'=>'Total Withdraw',
+    ],
 
 ];

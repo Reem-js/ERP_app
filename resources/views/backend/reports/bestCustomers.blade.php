@@ -6,7 +6,7 @@ __('translation.website.sidebar.bestCustomers')])
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="row">
                             <div class="col-xl">
                                 <div class="card-header card-header-text card-header-info">
@@ -17,7 +17,7 @@ __('translation.website.sidebar.bestCustomers')])
                             </div>
                         </div>
 
-                        <div class="card border mb-3 " style=" border: width 20px;">
+                        <div class="card card-mode border mb-3 " style=" border: width 20px;">
                             <div class="card-body ">
                                 @include('layouts.includes.filter',['every'=>true,'from'=>true,'status'=>true,'to'=>true])
                             </div>

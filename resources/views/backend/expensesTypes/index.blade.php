@@ -6,7 +6,7 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
                                 <h4 class="card-title " >{{ __('translation.website.sidebar.All Expenses Types') }}</h4>
@@ -27,7 +27,7 @@
                                         <th></th>
                                         <th></th>
                                         <th>{{ __('translation.expenses types.Actions') }}</th>
-                               
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,14 +40,14 @@
                                         <td>Develop</td>
                                         <td></td>
                                         <td></td>
-                                        
+
 
                                         <td class="td-actions">
 
-                        
 
-                                          
-                                                    
+
+
+
                                             <a class="btn btn-info" rel="tooltip" title="{{__('translation.expenses.Edit')}}"
                                                 href="{{ route('expensesTypes.edit', 5) }}"
                                                 style="color:white;"> <i class="material-icons">edit</i> </a>

@@ -6,7 +6,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card card-mode">
                     <div class="card-header card-header-text card-header-primary">
                       <div class="card-text" style="width:20%; text-align:center;">
                         <h4 class="card-title">{{ __("translation.wallet.Client Wallet") }}</h4>

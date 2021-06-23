@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="row">
                             <div class="col-xl-2">
                                 <div class="card-header card-header-text card-header-info">
@@ -47,7 +47,7 @@
                         </div>
 
 
-                        <div class="card-body p-5">
+                        <div class="card-body p-5">~
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -92,3 +92,4 @@
         </div>
     </div>
 @endsection
+

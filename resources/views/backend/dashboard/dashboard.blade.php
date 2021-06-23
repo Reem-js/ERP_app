@@ -125,7 +125,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-12">
-          <div class="card">
+          <div class="card card-mode">
             <div class="card-header card-header-tabs card-header-primary">
               <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
@@ -370,7 +370,7 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="card">
+          <div class="card card-mode">
             <div class="card-header card-header-warning">
               <h4 class="card-title">Employees Stats</h4>
               <p class="card-category">New employees on 15th September, 2016</p>

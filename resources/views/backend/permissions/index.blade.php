@@ -6,7 +6,7 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
                                 <h4 class="card-title " style="font-weight: bold;">{{ __('translation.website.sidebar.All Permissions') }}</h4>

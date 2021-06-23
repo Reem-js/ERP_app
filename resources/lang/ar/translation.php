@@ -90,6 +90,12 @@ return [
             'Edit Sale'=>'تعديل مبيع',
             'All Sale Orders'=>'كل تحضيرات المبيعات',
             'All Installments'=>'كل الأقساط',
+            'Partners'=>'الشركاء',
+            'All Partners'=>'كل الشركاء',
+            'Create Partner'=>'أضافة شريك',
+            'Edit Partner'=>'تعديل شريك',
+            'Profits'=>'الارباح',
+            'Dividend Income Details'=>'تفاصيل توزيع الربح'
 
         ],
         'crud' => [
@@ -106,8 +112,11 @@ return [
             'Show' => 'عرض',
             'Yes' => 'نعم',
             'No' => 'لا',
-            'EGP' => 'جنبية',
-            'Product Count'=>'عدد الأصناف'
+            'EGP' => 'جنية',
+            'Product Count'=>'عدد الأصناف',
+            'Confirm'=>'تأكيد',
+            'Close'=>'اغلاق',
+            'Search'=>'بحث',
 
         ],
     ],
@@ -430,6 +439,27 @@ return [
     'roles' => [
         'ID' => 'الرقم',
         'Name' => 'أسم الوظيفة',
-    ]
+    ],
+    'dividendIncome'=>[
+        'Profit'=>"الربح الشهري",
+        'Capital'=>'رأس المال',
+        'Capital After Profit'=>'رأس المال بعد الربح',
+        'Status'=>'الحالة',
+        'FIxed Percentage'=>'نسبة ثابتة',
+        'Customized Percentage'=>'تخصيص نسبة',
+        'Effort'=>'المجهود',
+        'Money'=>'الفلوس',
+        'Partners'=>'الشركاء',
+        'Capital'=>'رأس المال',
+        'Percentage In Money'=>'نسبة الفلوس',
+        'Percentage In Effort'=>'نسبة المجهود',
+        'Profit In Money'=>'الربح في الفلوس',
+        'Profit In Effort'=>'الربح في المجهود',
+        'Total Profit'=>'الربح الكلي',
+        'Capital After Profit'=>'رأس المال بعد الربح',
+        'Total Withdraw'=>'مجموع السحب',
+        ''=>'',
+
+    ],
 
 ];

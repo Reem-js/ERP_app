@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div class="card">
+        <div class="card card-mode">
           <div class="card-header card-header-text card-header-info">
             <div class="card-text">
               <h4 class="card-title">{{ __('translation.website.sidebar.Edit Price List') }}</h4>
@@ -16,21 +16,21 @@
               <form>
 
                 <div class="form-group" style="margin: 20px;">
-                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.pricelists.Name') }}</p>
+                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Name') }}</p>
                   <input type="text" name="pricelistname" class="form-control" id="pricelistname" required>
                 </div>
 
                 <div class="form-group" style="margin: 20px;">
-                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.pricelists.Made in') }}</p>
+                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Made in') }}</p>
                   <input type="text" name="madein" class="form-control" id="madein" required>
                 </div>
                 <div class="form-group" style="margin: 20px;">
-                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.pricelists.Price') }}</p>
+                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Price') }}</p>
                   <input type="number" name="price" class="form-control" id="price" required>
                 </div>
 
                 <div class="form-group" style="margin: 20px;">
-                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.pricelists.Supplier') }}</label>
+                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Supplier') }}</label>
                     <br>
                     <select class="form-group form-control " style="width: 100%;">
                       <option value="0">{{ __('translation.pricelists.select supplier') }}</option>

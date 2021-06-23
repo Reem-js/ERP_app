@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div class="card">
+        <div class="card card-mode">
           <div class="card-header card-header-text card-header-info">
             <div class="card-text">
               <h4 class="card-title">{{ __('translation.website.sidebar.Edit Expense Type') }}</h4>
@@ -15,7 +15,7 @@
             <div class="m-5">
               <form>
                 <div class="form-group" style="margin: 20px;">
-                  <p class="font-weight-bold" style="color:black;" for="inputAddress">{{ __('translation.expenses types.Expense Type Name') }}</p>
+                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.expenses types.Expense Type Name') }}</p>
                   <input type="text" name="expensetypename" class="form-control" id="expensetypename" required>
                 </div>
 

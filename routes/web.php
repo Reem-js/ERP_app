@@ -7,23 +7,25 @@ use App\Http\Controllers\backend\roles\RoleController;
 use App\Http\Controllers\backend\users\UserController;
 use App\Http\Controllers\backend\index\IndexController;
 use App\Http\Controllers\backend\brands\BrandController;
+use App\Http\Controllers\backend\reports\ReportController;
 use App\Http\Controllers\backend\clientss\ClientController;
 use App\Http\Controllers\backend\website\WebsiteController;
 use App\Http\Controllers\backend\expenses\ExpenseController;
+use App\Http\Controllers\backend\partners\partnerController;
 use App\Http\Controllers\backend\products\ProductController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\backend\suppliers\SupplierController;
 use App\Http\Controllers\backend\categories\CategoryController;
-use App\Http\Controllers\backend\permissions\PermissionController;
 use App\Http\Controllers\backend\priceLists\priceListController;
 use App\Http\Controllers\backend\UserWallet\UserWalletController;
+use App\Http\Controllers\backend\permissions\PermissionController;
 use App\Http\Controllers\backend\ClientWallet\ClientWalletController;
 use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
+use App\Http\Controllers\backend\dividendIncome\dividendIncomeController;
 use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
 use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
-use App\Http\Controllers\backend\reports\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +107,13 @@ Route::group(
             Route::get('installments-and-sales', [ReportController::class, 'getInstallmentAndSales'])->name('Installments-and-sales');
             Route::get('installments-and-purchases', [ReportController::class, 'getInstallmentsAndPurchases'])->name('installments-and-purchases');
             Route::get('receivables-and-payments', [ReportController::class, 'getReceivablesAndPayments'])->name('receivables-and-payments');
+            // dividend income
+            Route::get('dividend-income',[dividendIncomeController::class,'dividendIncome'])->name('dividend-income');
+            Route::get('dividend-income-details-{id}',[dividendIncomeController::class,'dividendIncomeDetails'])->name('dividend-income-details');
+            //partners
+            Route::resource('partners',partnerController::class);
+            //switch mode
+            Route::post('switch-mode',[HomeController::class, 'switchMode'])->name('switch-mode');
         });
     }
 );

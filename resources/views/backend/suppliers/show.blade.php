@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Basic Information') }}</h4>
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Supplier Products') }}</h4>
@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Price List') }}</h4>
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Purchases') }}</h4>
@@ -161,7 +161,7 @@
                 </div>
 
                 {{--  <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Sales') }}</h4>
@@ -200,7 +200,7 @@
                 </div>  --}}
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Installment') }}</h4>
@@ -239,7 +239,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
 
                             <div class="card-text">

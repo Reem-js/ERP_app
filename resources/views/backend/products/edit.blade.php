@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">
                             <div class="card-text">
                                 <h4 class="card-title ">{{__('translation.products.Edit Product')}}</h4>

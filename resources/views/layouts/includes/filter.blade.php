@@ -5,9 +5,9 @@
             @if($from)
             <div class="col-sm-6">
                 <div class="form-group">
-                    <p class="font-weight-bold" style="color:black;" for="inputAddressx">
+                    <p class="font-weight-bold"  for="inputAddressx">
                         {{ __('translation.reports.From') }}</p>
-                    <input type="date" name="date" class="form-control" id="inputAddressx"
+                    <input type="date" name="date" class="form-control form-control-mode " id="inputAddressx"
                         required placeholder="please choose transaction date">
                 </div>
             </div>
@@ -15,9 +15,9 @@
             @if($to)
             <div class="col-sm-6">
                 <div class="form-group">
-                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                    <p class="font-weight-bold"  for="inputAddress">
                         {{ __('translation.reports.to') }}</p>
-                    <input type="date" name="date" class="form-control" id="inputAddress"
+                    <input type="date" name="date" class="form-control form-control-mode" id="inputAddress"
                         required placeholder="please choose transaction date">
                 </div>
             </div>
@@ -25,9 +25,9 @@
             @if($status)
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="font-weight-bold" style="color:black;"
-                        for="status">{{ __('translation.reports.Status') }}</label>
-                    <select class="form-control" id='status'>
+                    <p class="font-weight-bold"
+                        for="status">{{ __('translation.reports.Status') }}</p>
+                    <select class="form-control form-control-mode" id='status'>
                         <option value='0'>Select Transaction</option>
                         <option value='1'>Transaction 1</option>
                         <option value='2'>Sonarika Bhadoria</option>
@@ -47,9 +47,9 @@
             @if($every)
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label class="font-weight-bold" style="color:black;"
-                        for="every">{{ __('translation.reports.Every') }}</label>
-                    <select class="form-control" id='every'>
+                    <p class="font-weight-bold"
+                        for="every">{{ __('translation.reports.Every') }}</p>
+                    <select class="form-control form-control-mode" id='every'>
                         <option value='0'>Day</option>
                         <option value='1'>Week</option>
                         <option value='2'> Month</option>

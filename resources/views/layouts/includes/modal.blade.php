@@ -12,13 +12,11 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          {!! $modalBody !!}
+        <div class="modal-body" id="modal-body">
+          {{-- {!! $modalBody !!} --}}
+          {{-- @yield('body') --}}
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          {!! $modalActions !!}
-        </div>
+
       </div>
     </div>
 </div>
@@ -28,6 +26,4 @@
         ['modalSize'=>"modal-lg",
         'modalTitleColor'=>"",
         'modalTitle'=>"first modal",
-        'modalBody'=>"<h1>Your First Modal Body Is Here</h1>",
-        'modalActions'=>"<button class='btn btn-primary'>Save Changes</button>"
         ]) --}}

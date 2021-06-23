@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
+                    <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Create Permission') }}</h4>
@@ -15,7 +15,7 @@
                             <div class="m-5">
                                 <form>
                                     <div class="form-group">
-                                        <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                        <p class="font-weight-bold"  for="inputAddress">
                                             {{ __('translation.permissions.Name') }}</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1" name="name">
                                     </div>

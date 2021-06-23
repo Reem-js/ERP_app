@@ -9,7 +9,7 @@
                 <a href="#"class="btn btn-primary btn-round"
                 style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                 {{ __('translation.website.crud.Create initial wallet value') }}</a>
-                <div class="card">
+                <div class="card card-mode">
                     <div class="card-header card-header-text card-header-primary">
                       <div class="card-text" style="width:20%; text-align:center;">
                         <h4 class="card-title">{{ __("translation.wallet.My Wallet") }}</h4>

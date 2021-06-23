@@ -1222,3 +1222,16 @@ html[dir="rtl"] .sidebar .nav .caret {
 html[dir="rtl"] .text-right > a {
     float: left;
 }
+
+
+html[dir="rtl"] .fixed-plugin {
+    position: fixed;
+    top: 115px;
+    width: 64px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1031;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+    left: 0;
+    margin-right: auto;
+}
