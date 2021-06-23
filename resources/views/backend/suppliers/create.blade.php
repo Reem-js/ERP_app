@@ -13,30 +13,30 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                <div class="form-group m-4" >
+                                    <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Name') }}</p>
                                     <input type="text" name="name" class="form-control" id="inputAddress" required
                                         placeholder="1234 Main St">
                                 </div>
 
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                <div class="form-group m-4" >
+                                    <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Email') }}</p>
                                         <input type="email" name="email" class="form-control" id="inputAddress" required
                                             placeholder="1234 Main St">
                                 </div>
 
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                <div class="form-group m-4" >
+                                    <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Phone') }}</p>
                                         <input type="text" name="phone" class="form-control" id="inputAddress" required
                                             placeholder="1234 Main St">
                                 </div>
 
 
-                                <div class="form-group form-file-upload form-file-multiple" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                <div class="form-group form-file-upload form-file-multiple" >
+                                    <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Price Lists') }}</p>
                                     <input type="file" multiple="" class="inputFileHidden">
                                     <div class="input-group">
@@ -49,15 +49,18 @@
                                         </span>
                                     </div>
                                 </div>
-                   
 
 
 
 
-                                <div class="form-group" style="margin: 20px;">
-                                    <button type="submit" class="btn btn-primary" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>
-                                    <button type="submit" class="btn btn-primary" style="margin: 20px;">{{__('translation.website.crud.Create & New')}}</button>                            </form>
-                                    <button type="submit" class="btn btn-danger"  style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{__('translation.website.crud.Cancel')}}</button> 
+                                <div class="row mt-5">
+                                    <div class="col-lg-4">
+                                        <button type="submit" class="btn btn-primary m-4" >{{__('translation.website.crud.create')}}</button>
+                                        <button type="submit" class="btn btn-primary m-4" >{{__('translation.website.crud.Create & New')}}</button>
+                                    </div>
+                                    <div class="col-lg-2 offset-6">
+                                        <button type="submit" class="btn btn-danger m-4"  >{{__('translation.website.crud.Cancel')}}</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>

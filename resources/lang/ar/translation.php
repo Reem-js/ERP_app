@@ -484,10 +484,11 @@ return [
         'Item'=>'المنتج',
         'Supplier'=>'المورد',
         'QTY'=>'الكمية',
-        'Price/item'=>'السعر/منتج',
+        'Price'=>'السعر',
         'Amount'=>'القيمة',
         'Payment Type'=>'طريقة الدفع',
         'add row'=>'اضافة صف',
+        'Items'=>'المنتج',
     ],
     'installments'=>[
         'all Installments elly leya'=>'(الأقساط (الي ليا',

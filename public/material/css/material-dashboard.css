@@ -1005,6 +1005,9 @@ pre code {
   .container {
     max-width: 1140px;
   }
+  /* .selectbox{
+      width:100%;
+  } */
 }
 
 .container-fluid {
@@ -18855,8 +18858,8 @@ Copyright (c) 2015 Daniel Eden
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    }
 }
-
 
 /*# sourceMappingURL=dashboard-free.css.map */
 .text-right > a {
@@ -18865,4 +18868,11 @@ Copyright (c) 2015 Daniel Eden
 
 .topboxes {
     text-align: right;
+}
+
+@media (min-width: 768px) {
+    .usersale{
+        display: flex;
+        justify-content: space-between;
+    }
 }

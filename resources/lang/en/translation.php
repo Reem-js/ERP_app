@@ -485,7 +485,7 @@ return [
         'Item'=>'Item',
         'Supplier'=>'Supplier',
         'QTY'=>'QTY',
-        'Price/item'=>'Price/item',
+        'Price'=>'Price',
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
         'add row'=>'add row,'
@@ -515,10 +515,8 @@ return [
         'installment date'=>'Installment Date',
         'real payment date'=>'Real Payment Date',
         'show Transactions'=>'Show Transactions',
-
-
-
-
+        'add row'=>'add row',
+        'Items'=>'Items',
     ],
     'notifications'=>[
         'ID'=>'ID',
@@ -552,6 +550,6 @@ return [
         'Partners' => 'Partners',
         'Partner' => 'Partner',
         'See all partners' => 'See all partners',
-        
+
     ],
 ];

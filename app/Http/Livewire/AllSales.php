@@ -13,11 +13,11 @@ class AllSales extends Component
                 <td class="text-center">
                     <span style="cursor:pointer;" wire:click="removeTr(0)"  class=" text-danger material-icons">delete</span>
                 </td>
-                <td class="p-100">
-                    <select class="form-control item_dropdown" name="payment">
-                        <option value="0">Select item</option>
-                        <option value="1">item 1 </option>
-                        <option value="2">item 2</option>
+                <td>
+                    <select class="form-control" name="payment">
+                        <option value="0">Items</option>
+                        <option value="cash">Cash</option>
+                        <option value="install">Install</option>
                     </select>
                 </td>
                 <td>
