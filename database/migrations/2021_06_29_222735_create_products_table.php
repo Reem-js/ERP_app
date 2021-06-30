@@ -19,13 +19,11 @@ class CreateProductsTable extends Migration
             $table->string('slug', 1000);
             $table->string('code', 255);
             $table->string('desc', 1000);
-            $table->bigInteger('category_id')->unsigned();
-            $table->bigInteger('brand_id')->unsigned();
             $table->decimal('primary_purchase_price', 8, 2, false);
             $table->decimal('primary_sale_price', 8, 2, false);
 
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('brand_id')->constrained('brands')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

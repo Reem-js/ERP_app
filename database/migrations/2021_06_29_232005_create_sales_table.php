@@ -18,7 +18,7 @@ class CreateSalesTable extends Migration
             $table->string('name', 255);
             $table->string('slug', 1000);
             $table->string('type', 255);
-            $table->string('status', 255);
+            $table->boolean('status');
             $table->string('create_status', 255);
             $table->string('note', 1000);
             $table->decimal('discount', 8, 2, false);

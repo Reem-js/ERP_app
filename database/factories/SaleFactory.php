@@ -24,7 +24,7 @@ class SaleFactory extends Factory
         return [
             'name' => $this->faker->name('male'),
             'type' => $this->faker->name(),
-            'status' => $this->faker->name(),
+            'status' => $this->faker->boolean(),
             'create_status' => $this->faker->name(),
             'note' => $this->faker->sentence(),
             'discount' => $this->faker->randomFloat(2, 0, 10000),
