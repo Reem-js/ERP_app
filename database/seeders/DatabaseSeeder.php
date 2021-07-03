@@ -1,8 +1,12 @@
 <?php
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Database\Seeder;
+use Database\Seeders\SupplierSeeder;
+use Database\Seeders\UsersTableSeeder;
+use Database\Seeders\UserWalletSeeder;
+use Database\Seeders\UserWalletTransactionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +17,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([UsersTableSeeder::class]);
+        $this->call([
+            UsersTableSeeder::class,
+            UserWalletSeeder::class,
+            UserWalletTransactionSeeder::class,
+            ClientSeeder::class,
+            ClientWalletSeeder::class,
+            ClientWalletTransactionSeeder::class,
+            SupplierSeeder::class,
+            SupplierWalletSeeder::class,
+            SupplierWalletTransactionSeeder::class,
+
+        ]);
     }
 }

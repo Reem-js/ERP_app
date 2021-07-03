@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Client extends Model
 {
     use HasFactory, Notifiable;
 
@@ -19,10 +17,13 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'nickname',
         'phone',
-        'slug'
+        'address',
+        'slug',
+        'created_at',
+        'updated_at'
+
     ];
 
     /**
@@ -35,18 +36,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // relation 1:1 with client_wallet
+    //relation 1:1 with sales 
 
-    //1:1 with admin_wallet
-    // public function wallet()
-    // {
-    //     return $this->hasOne(admin_wallets::class);
-    // }
 }
