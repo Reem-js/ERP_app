@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class installmentController extends Controller
 {
     //
-    public function  getInstallments(){
+    public function  index(){
         return view('backend.installments.index');
     }
 }

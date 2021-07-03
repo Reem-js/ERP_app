@@ -129,7 +129,7 @@ Route::group(
            // Purchases
            Route::resource('purchases', PurchaseController::class);
            // installments
-           Route::get('installments', [installmentController::class, 'getInstallments'])->name('get.installments');
+           Route::get('installments', [installmentController::class, 'index'])->name('installments.index');
 
            //notifications
            Route::resource('notifications', NotificationController::class);
