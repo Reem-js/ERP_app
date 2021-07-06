@@ -27,10 +27,6 @@
                         <input type="text" name="email" class="form-control" id="inputAddress" required
                             placeholder="1234 Main St">
                 </div>
-                <div class="form-group" style="margin: 20px;">
-                    <button type="submit" class="btn btn-primary" style="margin: 20px;">{{__('translation.website.crud.create')}}</button>                          </form>
-                    <button type="submit" class="btn btn-danger"  style="margin: 20px; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}">{{__('translation.website.crud.Cancel')}}</button>
-                </div>
 
             </form>
         </div>

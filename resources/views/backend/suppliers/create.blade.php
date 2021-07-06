@@ -11,7 +11,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.create suppliers') }}</h4>
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body m-4">
                             <form>
                                 <div class="form-group m-4" >
                                     <p class="font-weight-bold"for="inputAddress">
@@ -31,13 +31,15 @@
                                         <input type="text" name="phone" class="form-control" id="inputAddress" required
                                             placeholder="1234 Main St">
                                 </div>
-                                <div class="form-group form-file-upload form-file-multiple" >
+                                <div class="form-group form-file-upload form-file-multiple m-4" >
                                     <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Price Lists') }}</p>
                                     <input type="file" multiple="" class="inputFileHidden">
+
                                     <div class="input-group">
                                         <input type="text" name="media" class="form-control inputFileVisible"
                                             placeholder="Multiple Files" multiple>
+
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-fab btn-round btn-primary">
                                                 <i class="material-icons">layers</i>

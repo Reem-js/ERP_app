@@ -43,7 +43,7 @@ Supplier')])
                                 </div>
 
 
-                                <div class="form-group form-file-upload form-file-multiple" >
+                                <div class="form-group form-file-upload form-file-multiple m-4" >
                                     <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Price Lists') }}</p>
                                     <input type="file" multiple="" class="inputFileHidden">
@@ -64,14 +64,13 @@ Supplier')])
 
                                 <div class="row mt-5">
                                     <div class="col-lg-4">
-                                        <button type="submit" class="btn btn-info m-4"
-                                        >{{ __('translation.website.crud.update') }}</button>
-                                    <button type="submit" class="btn btn-info m-4"
-                                        >{{ __('translation.website.crud.Update & Return') }}</button>
+                                        <button type="submit" class="btn btn-info m-4">{{ __('translation.website.crud.update') }}</button>
+                                    <button type="submit" class="btn btn-info m-4">{{ __('translation.website.crud.Update & Return') }}</button>
                                     </div>
                                     <div class="col-lg-2 offset-6">
                                         <button type="submit" class="btn btn-danger m-4"
-                                        >{{ __('translation.website.crud.Cancel') }}</button>                                    </div>
+                                        >{{ __('translation.website.crud.Cancel') }}</button>
+                                    </div>
                                 </div>
 
                             </form>

@@ -24,8 +24,8 @@ __('translation.website.sidebar.Create Transaction')])
                                     <div class="form-group m-4">
                                         <p class="font-weight-bold" name="client_name" for="selUser" f>
                                             {{ __('translation.clients.Client Name') }}</p>
-                                        <select id='selUser' class="w-100">
-                                            <option value='0'>Select User</option>
+                                        <select id='selUser' class="w-100 select" >
+                                            <option  value='0'>Select User</option>
                                             <option value='1'>Yogesh singh</option>
                                             <option value='2'>Sonarika Bhadoria</option>
                                             <option value='3'>Anil Singh</option>

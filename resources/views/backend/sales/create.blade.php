@@ -18,7 +18,7 @@
                         {{-- <livewire:modals.modal-add-client /> --}}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <livewire:modals.modal-show-supplier />
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         <livewire:modals.modal-installment-details />
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                                         <br>
                                         <p class="font-weight-bold d-inline" for="inputAddress">
                                             {{ __('translation.sales.Order Date') }} :</p>
-                                        <input class="d-inline pl-2 text-black pr-1 border border-dark rounded" type="date"
+                                        <input class="d-inline pl-2 text-black pr-1 border border-dark rounded backgroundcolor" type="date"
                                             name="" id="">
                                     </div>
                                 </div>
@@ -134,21 +134,21 @@
                                         <p class="form-group" for="inputAddress">
                                             {{ __('translation.sales.Note') }}</p>
                                         <textarea name="note" rows="5" cols="27"
-                                            class=" border border-dark rounded w-50"></textarea>
+                                            class=" border border-dark rounded w-50 backgroundcolor"></textarea>
                                     </div>
                                     <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4 text-right">
                                         <div>
                                             <p class="font-weight-bold d-inline" for="inputAddress">
                                                 {{ __('translation.sales.Discount') }} :</p>
-                                            <input type="text" class="border border-dark rounded text-right w-25"
+                                            <input type="text" class="border border-dark rounded text-right w-25 backgroundcolor"
                                                 placeholder="  %  ">
-                                            - <input type="text" class="border border-dark rounded text-right w-25"
+                                            - <input type="text" class="border border-dark rounded text-right w-25 backgroundcolor"
                                                 placeholder="  LE  ">
                                         </div>
                                         <br>
                                         <p class="font-weight-bold d-inline" for="inputAddress">
                                             {{ __('translation.sales.Total') }} :</p>
-                                        <input type="text" name="" class="border border-dark rounded ml-4 w-50">
+                                        <input type="text" name="" class="border border-dark rounded ml-4 w-50 backgroundcolor">
                                     </div>
                                 </div>
 

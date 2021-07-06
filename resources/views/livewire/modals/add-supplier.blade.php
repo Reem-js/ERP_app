@@ -34,7 +34,7 @@
                                     <div class="form-group">
                                         <label for="supplierEmail" class="font-weight-bold"
                                             style="color:black;">{{ __('translation.suppliers.Email') }}</label>
-                                        <input type="text" id="supplierEmail" class="form-control"
+                                        <input type="text" id="supplierEmail" class="form-control "
                                             placeholder="{{ __('translation.suppliers.Email') }}">
                                     </div>
                                 </div>

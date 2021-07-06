@@ -45,7 +45,7 @@ __('translation.website.sidebar.Create Transaction')])
                                     <div class="form-group m-4">
                                         <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.walletTransaction.Date') }}</label>
-                                            <input type="date" name="date" class="form-control" id="inputAddress" required
+                                            <input  type="date" name="date" class="form-control textcolor" id="inputAddress" required
                                                 placeholder="please choose transaction date">
                                     </div>
 
