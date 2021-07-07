@@ -27,7 +27,10 @@ class DatabaseSeeder extends Seeder
             SupplierSeeder::class,
             SupplierWalletSeeder::class,
             SupplierWalletTransactionSeeder::class,
-
+            CategorySeeder::class,
+            BrandSeeder::class,
+            ProductSeeder::class,
+            SaleSeeder::class,
         ]);
     }
 }
