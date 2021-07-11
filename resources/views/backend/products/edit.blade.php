@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="form-group">
                                         <p for="desc">{{__('translation.products.Write a description for this product')}}</p>
-                                        <textarea class="col-lg-12 col-s-2 textarea"  name="desc" id="desc" cols="127" rows="10" class=""></textarea>
+                                        <textarea class="col-lg-12 col-s-2 textarea"  name="desc" id="desc" cols="127" rows="5" class=""></textarea>
                                     </div>
                                     <div class="form-group form-file-upload form-file-multiple">
                                         <input type="file" multiple="photo" class="inputFileHidden">

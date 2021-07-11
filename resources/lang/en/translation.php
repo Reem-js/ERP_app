@@ -11,6 +11,8 @@ return [
             'all Clients' => 'All Clients',
             'create client' => 'Create Client',
             'Client Wallet' => 'Client Wallet',
+            'Client Wallets' => 'Client Wallets',
+
             'Client Wallet Trans' => 'Client Wallet Trans',
             'All Transactions' => 'All Transactions',
             'Create Transaction' => 'Create Transaction',
@@ -19,6 +21,8 @@ return [
             'all Suppliers' => 'All Suppliers',
             'create suppliers' => 'Create Suppliers',
             'Supplier Wallet' => 'Supplier Wallet',
+            'Supplier Wallets' => 'Supplier Wallets',
+
             'Supplier Wallet Trans' => 'Supplier Wallet Trans',
             'Users' => 'Users',
             'All Users' => 'All Users',
@@ -107,6 +111,7 @@ return [
             'add new supplier'=>'Add New Supplier',
             'all Installments'=>'All Installments',
             'All Notifications'=>'All Notifications',
+            'Sale Orders'=>'Sale Orders',
 
         ],
         'crud' => [
@@ -482,6 +487,7 @@ return [
         'Invoice Number'=>'Invoice Number',
         'Invoice Date'=>'Invoice Date',
         'Item'=>'Item',
+        'Items'=>'Items',
         'Supplier'=>'Supplier',
         'QTY'=>'QTY',
         'Price'=>'Price',

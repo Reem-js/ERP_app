@@ -13,13 +13,9 @@ Suppliers')])
                             </div>
                         </div>
                         <div class="card-body">
-
-
-
-
                                 <div class="col-lg-12 text-right">
                                     <a href="{{ route('suppliers.create') }}" rel="tooltip"
-                                    title="{{ __('translation.title.create Supplier') }}" class="btn btn-primary btn-round"
+                                    title="{{ __('translation.title.create Supplier') }}" class="btn btn-primary btn-round mb-3"
                                 ><i
                                         class="fa fa-plus-circle" aria-hidden="true"></i>
                                     {{ __('translation.website.crud.create') }}</a>                                </div>

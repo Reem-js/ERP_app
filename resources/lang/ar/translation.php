@@ -8,6 +8,8 @@ return [
             'all Clients' => 'كل العملاء',
             'create client' => 'اضافة عميل',
             'Client Wallet' => 'محفظة العميل',
+            'Client Wallets' => 'محفظة العملاء',
+
             'Client Wallet Trans' => 'عمليات محفظة العميل',
             'All Transactions' => 'كل العمليات',
             'Create Transaction' => 'أضافة عملية',
@@ -16,6 +18,8 @@ return [
             'all Suppliers' => 'كل الموردين',
             'create suppliers' => 'أضافة مورد',
             'Supplier Wallet' => 'محفظة الموردين',
+            'Supplier Wallets' => 'محفظة الموردين',
+
             'Supplier Wallet Trans' => 'عمليات محفظة المورد',
             'Users' => 'المستخدمين',
             'All Users' => 'كل المستخدمين',
@@ -105,6 +109,7 @@ return [
             'add new supplier'=>'إضافة مورد جديد',
             'all Installments'=>'كل الأقساط',
             'All Notifications'=>'كل الاشعارات',
+            'Sale Order'=>'أمر بيع',
 
 
         ],

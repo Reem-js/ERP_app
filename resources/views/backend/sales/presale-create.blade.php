@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'addSale', 'titlePage' => __('translation.website.sidebar.Add Sale')])
+@extends('layouts.app', ['activePage' => 'presale', 'titlePage' => __('translation.website.sidebar.Add Sale')])
 @section('content')
     @livewireStyles
     <div class="content">
@@ -74,7 +74,7 @@
                     <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.Add Sale') }}</h4>
+                                <h4 class="card-title">{{ __('translation.website.sidebar.Sale Orders') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
@@ -85,13 +85,13 @@
                                         <p class="font-weight-bold mb-0" for="inputAddress">
                                             {{ __('translation.clients.Name') }}</p>
                                         <select class="client_dropdown w-50" name="client_name">
-                                            <option value="0">{{ __('Select client') }}</option>
-                                            <option value="1">client 1</option>
-                                            <option value="2">client 2</option>
+                                            <option class="selectboxcolor" value="0">{{ __('Select client') }}</option>
+                                            <option class="selectboxcolor" value="1">client 1</option>
+                                            <option class="selectboxcolor" value="2">client 2</option>
                                         </select>
 
                                         <a href="#" data-toggle="modal" data-target="#exampleModalLong"
-                                            class="text-primary ml-3 link"><i class="fa fa-plus" aria-hidden="true"></i> Add
+                                            class="text-primary ml-3 modalLink"><i class="fa fa-plus" aria-hidden="true"></i> Add
                                             Client</a>
                                     </div>
                                     <div class="form-group col-sm-2 col-md-3 col-lg-3 w-50">
@@ -105,7 +105,7 @@
                                             name="" id="">
                                     </div>
                                 </div>
-                                <livewire:all-sales />
+                                <livewire:all-sales/>
                                 <div class="usersale mt-5">
                                     {{-- d-flex justify-content-between col-sm-12 --}}
                                     <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4">
@@ -172,6 +172,7 @@
         });
         $(document).ready(function() {
             $(".client_dropdown").select2();
+            // document.getElementsByClassName("selectboxcolor").style.color = "yellow";
         });
         $(document).ready(function() {
             $(".payment_dropdown").select2();
@@ -179,6 +180,7 @@
 
         $(document).ready(function() {
             $(".item_dropdown").select2();
+
         });
         $("#payment_drop").change(function() {
             var check = $(this).val();

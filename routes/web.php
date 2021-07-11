@@ -121,6 +121,7 @@ Route::group(
 
             //Sales
             Route::resource('sales', SaleController::class);
+            Route::get('get-pre-sale', [SaleController::class, 'PreSale'])->name('pre.sale');
 
             //livewire sales
             // Route::livewire('livewire/sales','sales');

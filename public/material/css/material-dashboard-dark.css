@@ -180,11 +180,11 @@ select option {
 .textcolor{
     color: #fff;
 }
-.backgroundcolor{
+/* .backgroundcolor{
     background-color:#242526;
     color: #fff;
     border: 1px solid white !important;
-}
+} */
 .table
 {
     border-top: 1px solid white;
@@ -192,4 +192,25 @@ select option {
 .modal-dialog{
     color: white;
 }
+.modalLink{
+    color:#2196f3;
+}
+/* select{
+    background-color: ;
+} */
+.btn.btn-primary {
+    background: linear-gradient(
+        60deg
+        , #1e3799 , #1B9CFC );
+}
+.inputbackgroundDark{
+    background-color: #fff;
+    border-radius: 5px ;
+    padding: 10px;
+    height: 30px;
+}
+.link{
+    color: #2196f3;
+}
+
 

@@ -14,20 +14,20 @@ __('translation.website.sidebar.Create Transaction')])
                             </div>
                             <div class="card-body">
                                 <form>
-                                    <div class="form-group m-4">
-                                        <p class="font-weight-bold" for="inputAddress">
-                                            {{ __('translation.walletTransaction.Reason') }}</label>
-                                            <input type="text" name="reason" class="form-control" id="inputAddress" required
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-group m-4 col-4">
+                                            <p class="font-weight-bold" for="inputAddress">
+                                                {{ __('translation.walletTransaction.Reason') }}</p>
+                                            <input type="text" name="reason" class="form-control inputbackgroundDark" id="inputAddress" required
                                                 placeholder="Please enter transaction reason">
-                                    </div>
-
-                                    <div class="form-group m-4">
-                                        <p class="font-weight-bold" for="inputAddress">
-                                            {{ __('translation.suppliers.Supplier') }}</label>
-                                            <br>
-                                            <select id='selSupplier' class='w-100'>
-                                                <option value='0'>Select Transaction</option>
-                                                <option value='1'>Transaction 1</option>
+                                        </div>
+    
+                                        <div class="form-group m-4 col-4">
+                                            <p class="font-weight-bold" name="client_name" for="selUser" f>
+                                                {{ __('translation.clients.Client Name') }}</p>
+                                            <select id='selSupplier' class="w-100 select" >
+                                                <option  value='0'>Select User</option>
+                                                <option value='1'>Yogesh singh</option>
                                                 <option value='2'>Sonarika Bhadoria</option>
                                                 <option value='3'>Anil Singh</option>
                                                 <option value='4'>Vishal Sahu</option>
@@ -39,21 +39,22 @@ __('translation.website.sidebar.Create Transaction')])
                                                 <option value='10'>Menna Glal</option>
                                                 <option value='11'>Reem</option>
                                             </select>
+                                        </div>
                                     </div>
-
-
-                                    <div class="form-group m-4">
-                                        <p class="font-weight-bold" for="inputAddress">
-                                            {{ __('translation.walletTransaction.Date') }}</label>
-                                            <input  type="date" name="date" class="form-control textcolor" id="inputAddress" required
+                                  
+                                    <div  class="d-flex justify-content-between">
+                                        <div class="form-group m-4 col-4">
+                                            <p class="font-weight-bold" for="inputAddress">
+                                                {{ __('translation.walletTransaction.Date') }}</p>
+                                            <input type="date" name="date" class="form-control inputbackgroundDark" id="inputAddress" required
                                                 placeholder="please choose transaction date">
-                                    </div>
-
-                                    <div class="form-group m-4">
-                                        <p class="font-weight-bold" for="inputAddress">
-                                            {{ __('translation.walletTransaction.Transaction') }}</label>
-                                            <br>
-                                            <select id='selTrans' class='w-100'>
+                                        </div>
+    
+                                        <div class="form-group m-4 col-4">
+                                            <p class="font-weight-bold" for="selTrans">
+                                                {{ __('translation.walletTransaction.Transaction') }}</p>
+                                            <select id='selTrans' class="w-100">
+                                                {{-- class="selectbox" --}}
                                                 <option value='0'>Select Transaction</option>
                                                 <option value='1'>Transaction 1</option>
                                                 <option value='2'>Sonarika Bhadoria</option>
@@ -67,12 +68,18 @@ __('translation.website.sidebar.Create Transaction')])
                                                 <option value='10'>Menna Glal</option>
                                                 <option value='11'>Reem</option>
                                             </select>
+                                            <br />
+                                            <div id='result'></div>
+                                        </div>
                                     </div>
 
-                                    <div class="form-group m-4">
-                                        <p class="font-weight-bold" for="inputAddress">
-                                            {{ __('translation.walletTransaction.Transaction Type') }}</label>
-                                            <select id='selTransType' class='w-100'>
+                                    
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-group m-4 col-4">
+                                            <p class="font-weight-bold" for="selTransType">
+                                                {{ __('translation.walletTransaction.Transaction Type') }}</p>
+                                            <select id='selTransType' class="w-100">
+                                                {{-- class="selectbox" --}}
                                                 <option value='0'>Select Transaction Type</option>
                                                 <option value='1'>Transaction Type 1</option>
                                                 <option value='2'>Sonarika Bhadoria</option>
@@ -86,15 +93,15 @@ __('translation.website.sidebar.Create Transaction')])
                                                 <option value='10'>Menna Glal</option>
                                                 <option value='11'>Reem</option>
                                             </select>
+                                        </div>
+    
+                                        <div class="form-group m-4 col-4">
+                                            <p class="font-weight-bold" for="inputAddress">
+                                                {{ __('translation.walletTransaction.Amount') }}</p>
+                                            <input type="number" name="amount" class="form-control inputbackgroundDark" id="inputAddress" required
+                                                placeholder="please enter transaction amount ">
+                                        </div>
                                     </div>
-
-                                    <div class="form-group m-4">
-                                        <p class="font-weight-bold" for="inputAddress">
-                                            {{ __('translation.walletTransaction.Amount') }}</label>
-                                            <input type="number" name="amount" class="form-control" id="inputAddress"
-                                                required placeholder="please enter transaction amount ">
-                                    </div>
-
 
                                     <div class="row mt-5">
                                         <div class="col-lg-4">

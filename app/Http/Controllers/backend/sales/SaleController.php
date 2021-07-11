@@ -85,4 +85,9 @@ class SaleController extends Controller
     {
         //
     }
+    public function PreSale()
+    {
+        # code...
+        return view('backend.sales.presale-create');
+    }
 }
