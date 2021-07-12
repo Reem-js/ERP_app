@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'addprePurchase', 'titlePage' => __('translation.website.sidebar.add pre Purchase')])
+@extends('layouts.app', ['activePage' => 'addpurchaseOrder', 'titlePage' => __('translation.website.sidebar.add pre Purchase')])
 
 @section('content')
     @livewireStyles
@@ -33,14 +33,21 @@
                                             <div class="form-group col-4">
                                                 <p class="font-weight-bold" style="display:inline;"
                                                     for="inputAddress">
-                                                    {{ __('translation.sales.Invoice Number') }} :</p>
+                                                    {{ __('translation.purchase.Invoice Number') }} :</p>
                                                 <p style="display:inline;">5</p>
                                                 <br>
                                                 <p class="font-weight-bold " style=" display:inline;"
                                                     for="inputAddress">
-                                                    {{ __('translation.sales.Order Date') }} :</p>
+                                                    {{ __('translation.purchase.current date') }} :</p>
                                                 <input
-                                                    style="display: inline;padding-left: 11px;color: #616161;padding-right: 7px;border-radius: 4px;border: #ccc solid 1px;"
+                                                    style="display: inline;border-radius: 4px; border: #ccc solid 1px;"
+                                                    type="date" name="" id="">
+                                                    <br>
+                                                    <p class="font-weight-bold  " style=" display:inline;"
+                                                    for="inputAddress">
+                                                    {{ __('translation.purchase.Order Date') }} :</p> &nbsp; &nbsp;
+                                                <input
+                                                    style="margin-top: 2px; display: inline ;border-radius: 4px;border: #ccc solid 1px;"
                                                     type="date" name="" id="">
                                             </div>
                                         </div>

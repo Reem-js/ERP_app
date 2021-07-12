@@ -13,14 +13,19 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12 text-right">
+                                    <a href="{{ route('client-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}"  class="btn btn-primary btn-round mb-3"
+                                    ><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                      {{ __('translation.website.crud.create') }}</a>                                </div>
+                            </div>
 
-
-
+{{-- 
                                 <div class="col-lg-12 text-right">
                                     <a href="{{ route('client-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}"  class="btn btn-primary btn-round"
                                     ><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                       {{ __('translation.website.crud.create') }}</a>
-                                                 </div>
+                                                 </div> --}}
                             <table class="table">
                                 <thead>
                                     <tr>

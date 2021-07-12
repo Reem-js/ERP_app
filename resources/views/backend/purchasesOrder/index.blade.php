@@ -28,7 +28,8 @@
                                     <thead>
                                         <tr>
                                             <th>{{ __('translation.purchase.id') }}</th>
-                                            <th>{{ __('translation.purchase.date') }}</th>
+                                            <th>{{ __('translation.purchase.Creation date') }}</th>
+                                            <th>{{ __('translation.purchase.Order date') }}</th>
                                             <th>{{ __('translation.purchase.supplier') }}</th>
                                             <th>{{ __('translation.purchase.product') }}</th>
                                             <th>{{ __('translation.purchase.quantity') }}</th>

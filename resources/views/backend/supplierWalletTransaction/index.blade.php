@@ -28,7 +28,7 @@
 
 
                                 <div class="col-lg-12 text-right">
-                                    <a href="{{ route('supplier-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}" class="btn btn-primary btn-round"
+                                    <a href="{{ route('supplier-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}" class="btn btn-primary btn-round mb-3"
                                    ><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                     {{ __('translation.website.crud.create') }}</a>
 

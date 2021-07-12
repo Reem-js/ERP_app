@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class AllSales extends Component
+class PreSale extends Component
 {
     public $message =[];
     public $x = 1;
@@ -86,7 +86,6 @@ class AllSales extends Component
 
     public function render()
     {
-        // $this->l_value = ModalShowSupplier::$l_radio_value;
-        return view('livewire.all-sales');
+        return view('livewire.pre-sale');
     }
 }

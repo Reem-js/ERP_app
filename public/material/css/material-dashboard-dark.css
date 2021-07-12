@@ -180,11 +180,11 @@ select option {
 .textcolor{
     color: #fff;
 }
-.backgroundcolor{
+/* .backgroundcolor{
     background-color:#242526;
     color: #fff;
     border: 1px solid white !important;
-}
+} */
 .table
 {
     border-top: 1px solid white;
@@ -192,20 +192,41 @@ select option {
 .modal-dialog{
     color: white;
 }
+.modalLink{
+    color:#2196f3;
+}
+/* select{
+    background-color: ;
+} */
+.btn.btn-primary {
+    background: linear-gradient(
+        60deg
+        , #1e3799 , #1B9CFC );
+}
+.inputbackgroundDark{
+    background-color: #fff;
+    border-radius: 5px ;
+    padding: 10px;
+    height: 30px;
+}
+.link{
+    color: #2196f3;
+}
+
 
 ز
 .usersale .payment_dropdown{
     background-color:#242526;
     color: white;
 }
-textarea{
+/* textarea{
     background-color:#242526;
     color: white;
 }
 input{
     background-color:#242526;
     color: white;
-}
+} */
 div{
     background-color:#242526;
     color: white;
@@ -226,4 +247,31 @@ label {
 .form-control .supplier_dropdown{
     background-color:#242526;
     color: #fff;
+}
+
+a {
+    background-color:#242526;
+    color: #fff;
+}
+
+.text-primary {
+    color: #fcfcfc !important;
+  }
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #c3dfec !important;
+}
+
+td{
+    background-color:#242526;
+    color: #fff;
+}
+th{
+    background-color:#242526;
+    color: #fff;
+}
+.font-weight-bold
+{
+     color: #ffffff !important;
 }

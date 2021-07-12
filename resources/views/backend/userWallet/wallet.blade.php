@@ -63,7 +63,7 @@
                                             <span class="material-icons">
                                                 account_balance_wallet
                                             </span>
-                                            <a href="#pablo">Get More Space...</a>
+                                            <a href="{{ route('user-wallet-transactions.index') }}">{{ __('translation.website.sidebar.Show All Transactions') }}</a>
                                         </div>
                                     </div>
                                 </div>

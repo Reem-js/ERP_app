@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'edituserwalletTransaction', 'titlePage' => __('translation.website.sidebar.Edit
+@extends('layouts.app', ['activePage' => 'edituserwalletTransaction', 'titlePage' =>
+__('translation.website.sidebar.Edit
 Transaction')])
 @section('content')
     <div class="content">
@@ -14,67 +15,73 @@ Transaction')])
                             </div>
                             <div class="card-body">
                                 <form>
-                                    <div class="form-group m-4" >
-                                        <p  for="inputAddress">
-                                            {{ __('translation.walletTransaction.Reason') }}</p>
-                                        <input type="text" name="reason" class="form-control" id="inputAddress" required
-                                            placeholder="Please enter transaction reason">
+                                    <div class="row">
+                                        <div class=" col form-group ">
+                                            <p for="inputAddress">
+                                                {{ __('translation.walletTransaction.Reason') }}</p>
+                                            <input type="text" name="reason" class="form-control" id="inputAddress" required
+                                                placeholder="Please enter transaction reason">
+                                        </div>
+
+                                        <div class="col form-group ">
+                                            <p for="inputAddress">
+                                                {{ __('translation.walletTransaction.Date') }}</p>
+                                            <input type="date" name="date" class="form-control" id="inputAddress" required
+                                                placeholder="please choose transaction date">
+                                        </div>
+                                        <div class="col form-group ">
+                                            <p for="inputAddress">
+                                                {{ __('translation.walletTransaction.Amount') }}</p>
+                                            <input type="number" name="amount" class="form-control" id="inputAddress"
+                                                required placeholder="please enter transaction amount ">
+                                        </div>
+
                                     </div>
+                                    <br>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <p class="font-weight-bold" for="seltrans">
+                                                {{ __('translation.walletTransaction.Transaction') }}</label>
+                                                <br>
+                                                <select id="seltrans" class="form-group form-control " style="width: 100%;">
+                                                    <option value="0">Select transaction:</option>
+                                                    <option value="1">Audi</option>
+                                                    <option value="2">BMW</option>
+                                                    <option value="3">Citroen</option>
+                                                    <option value="4">Ford</option>
+                                                    <option value="5">Honda</option>
+                                                    <option value="6">Jaguar</option>
 
-                                    <div class="form-group m-4" >
-                                        <p  for="inputAddress">
-                                            {{ __('translation.walletTransaction.Date') }}</p>
-                                        <input type="date" name="date" class="form-control" id="inputAddress" required
-                                            placeholder="please choose transaction date">
+                                                </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <p class="font-weight-bold" for="seltranstype">
+                                                {{ __('translation.walletTransaction.Transaction Type') }}</label>
+                                                <br>
+                                                <select id="seltranstype" class="form-group form-control "
+                                                    style="width: 100%;">
+                                                    <option value="0">Select transaction type:</option>
+                                                    <option value="1">Audi</option>
+                                                    <option value="2">BMW</option>
+                                                    <option value="3">Citroen</option>
+                                                    <option value="4">Ford</option>
+                                                    <option value="5">Honda</option>
+                                                    <option value="6">Jaguar</option>
+
+                                                </select>
+                                        </div>
                                     </div>
-
-                                    <div class="form-group m-4" >
-                                        <p  for="inputAddress">
-                                            {{ __('translation.walletTransaction.Transaction') }}</p>
-                                        <br>
-                                        <select class="form-group form-control w-100">
-                                            <option value="0">Select transaction:</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
-                                            <option value="6">Jaguar</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group m-4" >
-                                        <p  for="inputAddress">
-                                            {{ __('translation.walletTransaction.Transaction Type') }}</p>
-                                        <select class="form-group form-control  w-100" name="trans_type"
-                                            required>
-                                            <option value="0">Select transaction type:</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group m-4" >
-                                        <p  for="inputAddress">
-                                            {{ __('translation.walletTransaction.Amount') }}</p>
-                                        <input type="number" name="amount" class="form-control" id="inputAddress" required
-                                            placeholder="please enter transaction amount ">
-                                    </div>
-
-                                    <div class="row mt-5">
+                                    <div class="row ">
                                         <div class="col-lg-4 d-flex">
-                                            <button type="submit" class="btn btn-info m-4"
-                                            >{{ __('translation.website.crud.update') }}</button>
-                                        <button type="submit" class="btn btn-info m-4"
-                                            >{{ __('translation.website.crud.Update & Return') }}</button>
+                                            <button type="submit"
+                                                class="btn btn-info m-4">{{ __('translation.website.crud.update') }}</button>
+                                            <button type="submit"
+                                                class="btn btn-info m-4">{{ __('translation.website.crud.Update & Return') }}</button>
                                         </div>
                                         <div class="col-lg-2 offset-6">
-                                            <button type="submit" class="btn btn-danger m-4"
-                                            >{{ __('translation.website.crud.Cancel') }}</button>
+                                            <button type="submit"
+                                                class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
                                         </div>
                                     </div>
                                 </form>
@@ -89,3 +96,16 @@ Transaction')])
     </div>
     </div>
 @endsection
+@push('js')
+    <script>
+        $(document).ready(function() {
+            // Initialize select2
+            $("#seltrans").select2();
+        });
+        $(document).ready(function() {
+            // Initialize select2
+            $("#seltranstype").select2();
+        });
+    </script>
+
+@endpush
