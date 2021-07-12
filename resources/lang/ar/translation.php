@@ -105,6 +105,8 @@ return [
             'add new supplier'=>'إضافة مورد جديد',
             'all Installments'=>'كل الأقساط',
             'All Notifications'=>'كل الاشعارات',
+            'add pre Purchase'=>'تحضير مشترى جديد',
+            'all Purchases Order'=>'تحضيرات الشراء ',
 
 
         ],

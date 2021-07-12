@@ -60,7 +60,7 @@ class AllPurchases extends Component
                         <option value="2">product 2</option>
                     </select>
                     <div onclick="getCreateSupBodyModal()" data-toggle="modal" style="display: inline; cursor:pointer;"
-                        data-target="#exampleModalLong" class="text-primary " ><i
+                        data-target="#exampleModalLong"  ><i
                             class="fa fa-plus" aria-hidden="true" ></i>
 
                     </div>

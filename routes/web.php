@@ -30,6 +30,7 @@ use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactio
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
 use App\Http\Controllers\backend\purchases\PurchaseController;
 use App\Http\Controllers\backend\installments\installmentController;
+use App\Http\Controllers\backend\purchaseOrders\PurchaseOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -134,6 +135,8 @@ Route::group(
            //notifications
            Route::resource('notifications', NotificationController::class);
 
+           // PurchasesOrder
+           Route::resource('purchasesOrder', PurchaseOrderController::class);
 
 
         });

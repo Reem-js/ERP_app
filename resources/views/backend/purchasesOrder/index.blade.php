@@ -1,5 +1,4 @@
-@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all
-Purchases')])
+@extends('layouts.app', ['activePage' => 'allPurchasesOrder', 'titlePage' => __('translation.website.sidebar.all Purchases Order')])
 
 @section('content')
     <div class="content">
@@ -10,13 +9,13 @@ Purchases')])
                     <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title ">{{ __('translation.website.sidebar.all Purchases') }}</h4>
+                                <h4 class="card-title ">{{ __('translation.website.sidebar.all Purchases Order') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-12 text-right">
-                                    <a href="{{ route('purchases.create') }}" class="btn btn-round btn-primary mb-3"
+                                    <a href="{{ route('purchasesOrder.create') }}" class="btn btn-round btn-primary mb-3"
                                         style="color:white;">
                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                         {{ __('translation.website.crud.create') }}

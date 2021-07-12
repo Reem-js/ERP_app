@@ -193,3 +193,37 @@ select option {
     color: white;
 }
 
+ز
+.usersale .payment_dropdown{
+    background-color:#242526;
+    color: white;
+}
+textarea{
+    background-color:#242526;
+    color: white;
+}
+input{
+    background-color:#242526;
+    color: white;
+}
+div{
+    background-color:#242526;
+    color: white;
+}
+select {
+    background-color:#242526;
+    color: #fff;
+}
+ option {
+    background-color:#242526;
+    color: #fff;
+}
+label {
+    background-color:#242526;
+    color: #fff;
+}
+
+.form-control .supplier_dropdown{
+    background-color:#242526;
+    color: #fff;
+}

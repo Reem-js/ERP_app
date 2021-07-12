@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'addPurchase', 'titlePage' => __('translation.website.sidebar.add Purchase')])
+@extends('layouts.app', ['activePage' => 'addprePurchase', 'titlePage' => __('translation.website.sidebar.add pre Purchase')])
 
 @section('content')
     @livewireStyles
@@ -9,7 +9,7 @@
                     <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.add Purchase') }}</h4>
+                                <h4 class="card-title">{{ __('translation.website.sidebar.add pre Purchase') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">

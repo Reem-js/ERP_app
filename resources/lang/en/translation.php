@@ -107,6 +107,9 @@ return [
             'add new supplier'=>'Add New Supplier',
             'all Installments'=>'All Installments',
             'All Notifications'=>'All Notifications',
+            'add pre Purchase'=>'Add Purchase Order',
+            'all Purchases Order'=>'All Purchase Orders',
+
 
         ],
         'crud' => [
@@ -568,4 +571,11 @@ return [
         'See all partners' => 'See all partners',
 
     ],
+
+    'prePurchases'=>[
+
+
+
+
+    ]
 ];

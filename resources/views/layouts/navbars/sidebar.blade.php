@@ -250,14 +250,14 @@
             </li>
             {{-- Purchases --}}
             <li
-                class="nav-item {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' || $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? ' active' : '' }}">
                 <a class="nav-link nav-link-mode" data-toggle="collapse" href="#Purchases" aria-expanded="false">
                     <i><i class="fa fa-cart-plus  " aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Purchases') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' show' : '' }} "
+                <div class="collapse {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' || $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? ' show' : '' }} "
                     id="Purchases">
                     <ul class="nav">
                         <li
@@ -270,9 +270,9 @@
                         </li>
                         {{-- purchase Order --}}
 
-                        <li class="nav-item ml-3 {{ $activePage == 'purchaseOrder' ? ' active' : '' }}">
-                            <a class="nav-link nav-link-mode" href="#">
-                                <i class="fa fa-th-list {{ $activePage == 'purchaseOrder' ? '' : '' }}"
+                        <li class="nav-item ml-3 {{ $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? ' active' : '' }}">
+                            <a class="nav-link nav-link-mode" href="{{ route('purchasesOrder.index') }}">
+                                <i class="fa fa-th-list {{ $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Purchase Orders') }}
                             </a>
@@ -315,7 +315,7 @@
             {{-- Installlments --}}
             <li
                 class="nav-item  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? ' active' : '' }}">
-                <a class="nav-link nav-link-mode" href="#">
+                <a class="nav-link nav-link-mode" href="{{ route('get.website') }}">
                     <i class="fa fa-th-list  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? '' : '' }}"
                         aria-hidden="true"></i>
                     {{ __('translation.website.sidebar.All Installments') }}
