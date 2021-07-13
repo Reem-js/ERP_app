@@ -129,3 +129,9 @@ a.text-primary:focus {
     color: #212529;
     background-color: #0c4bd4;
     border-color: #0c4bd4;
+}
+
+option{
+    color: #000000 !important;
+
+}
