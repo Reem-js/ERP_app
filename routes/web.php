@@ -134,7 +134,7 @@ Route::group(
            //notifications
            Route::resource('notifications', NotificationController::class);
 
-
+            
 
         });
     }

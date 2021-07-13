@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Users\Database\Seeders;
 
 use App\Models\UserWallet;
 use Illuminate\Database\Seeder;
@@ -14,7 +14,6 @@ class UserWalletSeeder extends Seeder
      */
     public function run()
     {
-        //
-        UserWallet::factory(1)->create();
+        app(\Users\Database\Factories\UserWalletFactory::class)->count(10)->create();
     }
 }
