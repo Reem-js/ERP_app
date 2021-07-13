@@ -17,10 +17,11 @@
 
                             <div class="col-lg-12 text-right">
                                 <a href="{{ route('users.create') }}" rel="tooltip"
-                                    title="{{ __('translation.title.create User') }}" class="btn btn-primary btn-round"><i
+                                    title="{{ __('translation.title.create User') }}" class="btn btn-primary btn-round mb-3"><i
                                         class="fa fa-plus-circle" aria-hidden="true"></i>
                                     {{ __('translation.website.crud.create') }}</a>
                             </div>
+                          
                             <table class="table">
                                 <thead>
                                     <tr>

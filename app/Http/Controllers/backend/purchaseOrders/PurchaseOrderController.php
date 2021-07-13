@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\backend\sales;
+namespace App\Http\Controllers\backend\purchaseOrders;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class SaleController extends Controller
+class PurchaseOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class SaleController extends Controller
     public function index()
     {
         //
-        return view('backend.sales.index');
+        return view('backend.purchasesOrder.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class SaleController extends Controller
     public function create()
     {
         //
-        return view('backend.sales.create');
+        return view('backend.purchasesOrder.create');
     }
 
     /**
@@ -49,7 +49,6 @@ class SaleController extends Controller
     public function show($id)
     {
         //
-        return view('backend.sales.show');
     }
 
     /**
@@ -61,6 +60,7 @@ class SaleController extends Controller
     public function edit($id)
     {
         //
+        return view('backend.purchasesOrder.edit');
     }
 
     /**
@@ -84,10 +84,5 @@ class SaleController extends Controller
     public function destroy($id)
     {
         //
-    }
-    public function PreSale()
-    {
-        # code...
-        return view('backend.sales.presale-create');
     }
 }

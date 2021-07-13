@@ -86,18 +86,18 @@
                             <a class="nav-link nav-link-mode" href="{{ route('get.client.wallet') }}">
                                 <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-clients' ? '' : '' }} "
                                     aria-hidden="true"></i>
-                                {{ __('translation.website.sidebar.Client Wallet') }}
+                                {{ __('translation.website.sidebar.Client Wallets') }}
                             </a>
                         </li>
                         {{-- client Wallet Trans --}}
 
-                        <li class="nav-item ml-3{{ $activePage == 'walletclientTransaction' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3{{ $activePage == 'walletclientTransaction' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('client-wallet-transactions.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'walletclientTransaction' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Transactions') }}
                             </a>
-                        </li>
+                        </li> --}}
 
                     </ul>
 
@@ -143,13 +143,13 @@
                             </a>
                         </li>
                         {{-- supplier wallet trans --}}
-                        <li class="nav-item ml-3 {{ $activePage == 'walletsupplierTransaction' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3 {{ $activePage == 'walletsupplierTransaction' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('supplier-wallet-transactions.index') }}">
                                 <i class="fa fa-th-list  {{ $activePage == 'walletsupplierTransaction' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Transactions') }}
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
 
                 </div>
@@ -204,14 +204,14 @@
                         </li>
                         {{-- user wallet Trans --}}
 
-                        <li class="nav-item ml-3 {{ $activePage == 'allUserTransactions' ? ' active' : '' }}">
+                        {{-- <li class="nav-item ml-3 {{ $activePage == 'allUserTransactions' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('user-wallet-transactions.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'allUserTransactions' ? '' : '' }}"
                                     aria-hidden="true"></i>
 
                                 {{ __('translation.website.sidebar.All Transactions') }}
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
 
                 </div>
@@ -239,10 +239,10 @@
                         {{-- Sale Order --}}
 
                         <li class="nav-item ml-3 {{ $activePage == 'SaleOrder' ? ' active' : '' }}">
-                            <a class="nav-link nav-link-mode" href="#">
+                            <a class="nav-link nav-link-mode" href="{{ route('pre.sale') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'SaleOrder' ? '' : '' }}"
                                     aria-hidden="true"></i>
-                                {{ __('translation.website.sidebar.All Sale Orders') }}
+                                {{ __('translation.website.sidebar.Sale Orders') }}
                             </a>
                         </li>
                     </ul>
@@ -250,14 +250,14 @@
             </li>
             {{-- Purchases --}}
             <li
-                class="nav-item {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' active' : '' }}">
+                class="nav-item {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' || $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? ' active' : '' }}">
                 <a class="nav-link nav-link-mode" data-toggle="collapse" href="#Purchases" aria-expanded="false">
                     <i><i class="fa fa-cart-plus  " aria-hidden="true"></i></i>
                     <p>{{ __('translation.website.sidebar.Purchases') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' ? ' show' : '' }} "
+                <div class="collapse {{ $activePage == 'addPurchase' || $activePage == 'allPurchases' || $activePage == 'editPurchase' || $activePage == 'purchaseOrder' || $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? ' show' : '' }} "
                     id="Purchases">
                     <ul class="nav">
                         <li
@@ -270,9 +270,9 @@
                         </li>
                         {{-- purchase Order --}}
 
-                        <li class="nav-item ml-3 {{ $activePage == 'purchaseOrder' ? ' active' : '' }}">
-                            <a class="nav-link nav-link-mode" href="#">
-                                <i class="fa fa-th-list {{ $activePage == 'purchaseOrder' ? '' : '' }}"
+                        <li class="nav-item ml-3 {{ $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? ' active' : '' }}">
+                            <a class="nav-link nav-link-mode" href="{{ route('purchasesOrder.index') }}">
+                                <i class="fa fa-th-list {{ $activePage == 'addpurchaseOrder'|| $activePage == 'allPurchasesOrder' || $activePage == 'editPurchaseOrder' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.All Purchase Orders') }}
                             </a>
@@ -315,7 +315,7 @@
             {{-- Installlments --}}
             <li
                 class="nav-item  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? ' active' : '' }}">
-                <a class="nav-link nav-link-mode" href="#">
+                <a class="nav-link nav-link-mode" href="{{ route('get.installments') }}">
                     <i class="fa fa-th-list  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? '' : '' }}"
                         aria-hidden="true"></i>
                     {{ __('translation.website.sidebar.All Installments') }}

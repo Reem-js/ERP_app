@@ -11,6 +11,8 @@ return [
             'all Clients' => 'All Clients',
             'create client' => 'Create Client',
             'Client Wallet' => 'Client Wallet',
+            'Client Wallets' => 'Client Wallets',
+
             'Client Wallet Trans' => 'Client Wallet Trans',
             'All Transactions' => 'All Transactions',
             'Create Transaction' => 'Create Transaction',
@@ -19,6 +21,8 @@ return [
             'all Suppliers' => 'All Suppliers',
             'create suppliers' => 'Create Suppliers',
             'Supplier Wallet' => 'Supplier Wallet',
+            'Supplier Wallets' => 'Supplier Wallets',
+
             'Supplier Wallet Trans' => 'Supplier Wallet Trans',
             'Users' => 'Users',
             'All Users' => 'All Users',
@@ -107,6 +111,10 @@ return [
             'add new supplier'=>'Add New Supplier',
             'all Installments'=>'All Installments',
             'All Notifications'=>'All Notifications',
+            'Sale Orders'=>'Sale Orders',
+            'Show All Transactions'=>'Show All Transactions',
+            'add pre Purchase'=>'Add Purchase Order',
+            'all Purchases Order'=>'All Purchase Orders',
 
         ],
         'crud' => [
@@ -315,10 +323,11 @@ return [
         'add product'=>'Add Product',
         'new supplier'=>'New Supplier',
         'select supplier'=>'Select Supplier',
-        ''=>'',
-        ''=>'',
-        ''=>'',
-        ''=>'',
+        'Invoice Number'=>'Invoice Number',
+        'current date'=>'Current Date',
+        'Order Date'=>'Order Date',
+        'Creation date'=>'Creation Date',
+        'Order date'=>'Order Date',
 
 
 
@@ -482,12 +491,14 @@ return [
         'Invoice Number'=>'Invoice Number',
         'Invoice Date'=>'Invoice Date',
         'Item'=>'Item',
+        'Items'=>'Items',
         'Supplier'=>'Supplier',
         'QTY'=>'QTY',
         'Price'=>'Price',
         'Amount'=>'Amount',
         'Payment Type'=>'Payment Type',
-        'add row'=>'add row,'
+        'add row'=>'add row',
+        'current date'=>'Current Date',
     ],
     'dividendIncome'=>[
         'Profit'=>"Profit",
@@ -568,4 +579,11 @@ return [
         'See all partners' => 'See all partners',
 
     ],
+
+    'prePurchases'=>[
+
+
+
+
+    ]
 ];

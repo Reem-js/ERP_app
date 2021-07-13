@@ -26,16 +26,20 @@
                     <div class="form-group m-4 w-50" >
                         <p class="font-weight-bold"
                             for="inputAddress">{{ __("translation.clients.Email") }}</label>
-                        <input type="email" name="password" class="form-control" id="inputAddress" required
-                            placeholder="1234 Main St">
+                        <input type="text" name="password" class="form-control" style="" id="inputAddress" required
+                            placeholder="1234 Mainsssssss St">
+                            {{-- <input type="phone" name="phone" class="form-control" id="inputAddress" required
+                            placeholder="1234 Main St"> --}}
+
                     </div>
 
                 </div>
+
                 <div class="form-group m-4" >
                     <p class="font-weight-bold"
                         for="inputAddress">{{ __("translation.clients.Address") }}</label>
-                    <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
-                        required placeholder="1234 Main St">
+                    <input type="phone" name="phone" class="form-control" id="inputAddress" required
+                        placeholder="1234 Main St">
                 </div>
             </form>
         </div>

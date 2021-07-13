@@ -17,7 +17,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="supplierName" class="font-weight-bold"
-                                            style="color:black;">{{ __('translation.suppliers.Supplier Name') }}</label>
+                                            >{{ __('translation.suppliers.Supplier Name') }}</label>
                                         <input type="text" id="supplierName" class="form-control" required
                                             placeholder="{{ __('translation.suppliers.Supplier Name') }}">
                                     </div>
@@ -25,7 +25,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="supplierPhone" class="font-weight-bold"
-                                            style="color:black;">{{ __('translation.suppliers.Supplier Phone') }}</label>
+                                            >{{ __('translation.suppliers.Supplier Phone') }}</label>
                                         <input type="text" id="supplierPhone" class="form-control" required
                                             placeholder="{{ __('translation.suppliers.Supplier Phone') }}">
                                     </div>
@@ -33,8 +33,8 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="supplierEmail" class="font-weight-bold"
-                                            style="color:black;">{{ __('translation.suppliers.Email') }}</label>
-                                        <input type="text" id="supplierEmail" class="form-control"
+                                           >{{ __('translation.suppliers.Email') }}</label>
+                                        <input type="text" id="supplierEmail" class="form-control "
                                             placeholder="{{ __('translation.suppliers.Email') }}">
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                         <br>
 
                         <div class="form-group form-file-upload form-file-multiple" style="margin: 20px;">
-                            <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                            <p class="font-weight-bold"  for="inputAddress">
                                 {{ __('translation.suppliers.Price Lists') }}</p>
                             <input type="file" multiple="" class="inputFileHidden">
                             <div class="input-group">

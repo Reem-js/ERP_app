@@ -30,6 +30,7 @@ use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactio
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
 use App\Http\Controllers\backend\purchases\PurchaseController;
 use App\Http\Controllers\backend\installments\installmentController;
+use App\Http\Controllers\backend\purchaseOrders\PurchaseOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,6 +122,7 @@ Route::group(
 
             //Sales
             Route::resource('sales', SaleController::class);
+            Route::get('get-pre-sale', [SaleController::class, 'PreSale'])->name('pre.sale');
 
             //livewire sales
             // Route::livewire('livewire/sales','sales');
@@ -134,7 +136,9 @@ Route::group(
            //notifications
            Route::resource('notifications', NotificationController::class);
 
-            
+           // PurchasesOrder
+           Route::resource('purchasesOrder', PurchaseOrderController::class);
+
 
         });
     }

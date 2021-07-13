@@ -1,33 +1,33 @@
 
  <form>
-    <div class="container border rounded  p-5">
+    <div class="container border rounded ">
         <div class="row">
             @if($from)
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <p class="font-weight-bold"  for="inputAddressx">
+
+                <div class="col form-group">
+                    <p style="margin: 0px;"  class="font-weight-bold"  for="inputAddressx">
                         {{ __('translation.reports.From') }}</p>
                     <input type="date" name="date" class="form-control form-control-mode " id="inputAddressx"
                         required placeholder="please choose transaction date">
                 </div>
-            </div>
+
             @endif
             @if($to)
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <p class="font-weight-bold"  for="inputAddress">
+
+                <div class="col form-group">
+                    <p style="margin: 0px;" class="font-weight-bold"  for="inputAddress">
                         {{ __('translation.reports.to') }}</p>
                     <input type="date" name="date" class="form-control form-control-mode" id="inputAddress"
                         required placeholder="please choose transaction date">
                 </div>
-            </div>
+
             @endif
             @if($status)
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <p class="font-weight-bold"
+
+                <div class="col form-group">
+                    <p style="margin: 0px;" class="font-weight-bold"
                         for="status">{{ __('translation.reports.Status') }}</p>
-                    <select class="form-control form-control-mode" id='status'>
+                    <select style="margin: 0px;" class="form-control form-control-mode" id='status'>
                         <option value='0'>Select Transaction</option>
                         <option value='1'>Transaction 1</option>
                         <option value='2'>Sonarika Bhadoria</option>
@@ -42,14 +42,14 @@
                         <option value='11'>Reem</option>
                     </select>
                 </div>
-            </div>
+
             @endif
             @if($every)
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <p class="font-weight-bold"
+
+                <div class="col form-group">
+                    <p style="margin: 0px;" class="font-weight-bold"
                         for="every">{{ __('translation.reports.Every') }}</p>
-                    <select class="form-control form-control-mode" id='every'>
+                    <select style="margin: 0px;" class="form-control form-control-mode" id='every'>
                         <option value='0'>Day</option>
                         <option value='1'>Week</option>
                         <option value='2'> Month</option>
@@ -57,7 +57,7 @@
                         <option value='4'>Quarter</option>
                     </select>
                 </div>
-            </div>
+
             @endif
 
         </div>
