@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\backend\suppliers;
+namespace Suppliers\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class SupplierController extends Controller
     public function index()
     {
         //
-        return view('backend.suppliers.index');
+        return view('Suppliers::backend.suppliers.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class SupplierController extends Controller
     public function create()
     {
         //
-        return view('backend.suppliers.create');
+        return view('Suppliers::backend.suppliers.create');
     }
 
     /**
@@ -49,7 +49,7 @@ class SupplierController extends Controller
     public function show($id)
     {
         // show details
-        return view('backend.suppliers.show');
+        return view('Suppliers::backend.suppliers.show');
     }
 
     /**
@@ -61,7 +61,7 @@ class SupplierController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.suppliers.edit');
+        return view('Suppliers::backend.suppliers.edit');
     }
 
     /**

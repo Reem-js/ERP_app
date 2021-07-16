@@ -17,7 +17,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="supplierName" class="font-weight-bold"
-                                            style="color:black;">{{ __('translation.products.Product Name') }}</label>
+                                            >{{ __('translation.products.Product Name') }}</label>
                                         <input type="text" id="supplierName" class="form-control" required
                                             placeholder="{{ __('translation.products.Product Name') }}">
                                     </div>
@@ -25,7 +25,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="supplierPhone" class="font-weight-bold"
-                                            style="color:black;">{{ __('translation.products.Brand') }}</label>
+                                            >{{ __('translation.products.Brand') }}</label>
                                         <input type="text" id="supplierPhone" class="form-control" required
                                             placeholder="{{ __('translation.products.Brand') }}">
                                     </div>
@@ -33,7 +33,7 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="supplierEmail" class="font-weight-bold"
-                                            style="color:black;">{{ __('translation.products.Category') }}</label>
+                                            >{{ __('translation.products.Category') }}</label>
                                         <input type="text" id="supplierEmail" class="form-control"
                                             placeholder="{{ __('translation.products.Category') }}">
                                     </div>

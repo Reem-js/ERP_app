@@ -13,7 +13,7 @@
                             </div>
                             <div class="card-body">
 
-                                <a href="{{ route('sales.create') }}" rel="tooltip" title="{{ __('translation.title.create client') }}" class="btn btn-primary btn-round"  style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"> <i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
+                                <a href="{{ route('sales.create') }}" rel="tooltip" title="{{ __('translation.title.create client') }}" class="btn btn-primary btn-round mb-3"  style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}"> <i class="fa fa-plus-circle" aria-hidden="true"></i> {{__('translation.website.crud.create')}}</a>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -39,7 +39,7 @@
                                             <td>Develop</td>
                                             <td>Develop</td>
                                             <td>Develop</td>
-
+                                            <td>2013</td>
                                             <td>2013</td>
                                             <td >&euro; 99,225</td>
                                             <td class="td-actions">

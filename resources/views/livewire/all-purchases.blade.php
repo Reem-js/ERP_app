@@ -1,6 +1,6 @@
 {{-- <div> --}}
 {{-- Close your eyes. Count to one. That is how long forever feels. --}}
-<div class="table-responsive">
+{{-- <div class="table-responsive"> --}}
     <table class=" table text-center table-bordered ">
         <thead>
 
@@ -19,12 +19,12 @@
             @endforeach
             <tr>
                 <td width="5%" colspane=4>
-                    <div width="20px" wire:click="addTr({{ count($tr) }})" class="btn btn-outline-warning">
+                    <div width="20px" wire:click="addTr({{ count($tr) }})" class="btn btn-outline-info">
                         {{ __('translation.purchase.add row') }}</div>
                 </td>
             </tr>
 
         </tbody>
     </table>
-</div>
+{{-- </div> --}}
 {{-- </div> --}}

@@ -8,6 +8,8 @@ return [
             'all Clients' => 'كل العملاء',
             'create client' => 'اضافة عميل',
             'Client Wallet' => 'محفظة العميل',
+            'Client Wallets' => 'محفظة العملاء',
+
             'Client Wallet Trans' => 'عمليات محفظة العميل',
             'All Transactions' => 'كل العمليات',
             'Create Transaction' => 'أضافة عملية',
@@ -16,6 +18,8 @@ return [
             'all Suppliers' => 'كل الموردين',
             'create suppliers' => 'أضافة مورد',
             'Supplier Wallet' => 'محفظة الموردين',
+            'Supplier Wallets' => 'محفظة الموردين',
+
             'Supplier Wallet Trans' => 'عمليات محفظة المورد',
             'Users' => 'المستخدمين',
             'All Users' => 'كل المستخدمين',
@@ -105,8 +109,12 @@ return [
             'add new supplier'=>'إضافة مورد جديد',
             'all Installments'=>'كل الأقساط',
             'All Notifications'=>'كل الاشعارات',
-
-
+            'add pre Purchase'=>'تحضير مشترى جديد',
+            'all Purchases Order'=>'تحضيرات الشراء ',
+            'Sale Order'=>'أمر بيع',
+            'Show All Transactions'=>'عرض كل المعاملات المالية',
+            'add pre Purchase'=>'إضافة تحضير مشترى',
+            'all Purchases Order'=>'كل تحضيرات الشراء',
         ],
         'crud' => [
             'create' => 'أضافة',
@@ -326,23 +334,23 @@ return [
 
 
     ],
-        'profile'=>[
-            'User Profile'=>'صفحة المستخدم',
-            'Profile'=>'الصفحة الشخصية',
-            'Settings'=>'الاعدادات',
-            'Log out'=>'الخروج',
-            'Edit Profile'=>'تعديل الصفحة الرئيسية',
-            'User information'=>'بيانات المستخدم',
-            'Name'=>'الاسم',
-            'Email'=>'البريد الالكتروني',
-            'Phone'=>'التليفون',
-            'Save'=>'حفظ',
-            'Change password'=>'تغير كلمة السر',
-            'Password'=>'كلمة السر',
-            'Current Password'=>'كلمة السر الحالية',
-            'New Password'=>'كلمة السر الجديدة',
-            'Confirm New Password'=>'تاكيد كلمة السر الجديدة',
-        ],
+    'profile'=>[
+        'User Profile'=>'صفحة المستخدم',
+        'Profile'=>'الصفحة الشخصية',
+        'Settings'=>'الاعدادات',
+        'Log out'=>'الخروج',
+        'Edit Profile'=>'تعديل الصفحة الرئيسية',
+        'User information'=>'بيانات المستخدم',
+        'Name'=>'الاسم',
+        'Email'=>'البريد الالكتروني',
+        'Phone'=>'التليفون',
+        'Save'=>'حفظ',
+        'Change password'=>'تغير كلمة السر',
+        'Password'=>'كلمة السر',
+        'Current Password'=>'كلمة السر الحالية',
+        'New Password'=>'كلمة السر الجديدة',
+        'Confirm New Password'=>'تاكيد كلمة السر الجديدة',
+    ],
 
     'reports' => [
         'Month' => 'الشهر',
@@ -450,6 +458,11 @@ return [
         'select supplier'=>'اختر مورد',
         'Unit Purchase Price'=>'سعر الشراء ',
         'Unit Selling Price'=>'سعر البيع ',
+        'Invoice Number'=>'رقم الفاتورة',
+        'current date'=>'التاريخ الحالي',
+        'Order Date'=>'تاريخ الطلب',
+        'Creation date'=>'تاريخ الانشاء',
+        'Order date'=>'تاريخ الطلب',
     ],
     'adminhistory' => [
         'Date' => 'تاريخ',
@@ -508,6 +521,7 @@ return [
         'Payment Type'=>'طريقة الدفع',
         'add row'=>'اضافة صف',
         'Items'=>'المنتج',
+        'current date'=>'التاريخ الحالي',
     ],
     'installments'=>[
         'all Installments elly leya'=>'(الأقساط (الي ليا',

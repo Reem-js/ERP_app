@@ -13,7 +13,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="{{route('roles.create')}}" class="btn btn-primary btn-round"
+                            <a href="{{route('roles.create')}}" class="btn btn-primary btn-round mb-3"
                                 style="color:white; float:{{ app()->getLocale() == 'ar' ? 'left' : 'right' }}; font-weight: bold;"><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 {{ __('translation.website.crud.create') }}</a>
                             <table class="table">

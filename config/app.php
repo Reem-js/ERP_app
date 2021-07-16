@@ -178,6 +178,11 @@ return [
         Stocks\Providers\StocksServiceProvider::class,
 
 
+
+        /*hmvc modules */
+        Suppliers\Providers\SuppliersServiceProvider::class,
+
+
     ],
 
     /*

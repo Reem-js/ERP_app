@@ -2,5 +2,6 @@
 
 return [
     'stocks'=>'stocks',
+    'Suppliers'=>'Suppliers',
 ];
 

@@ -21,9 +21,9 @@
                                     </div>
                                     <div class="row form-group">
                                         <div class="fileinput fileinput-new" data-provides="fileinput">
-                                            <div class="fileinput-new thumbnail img-raised">
-                                                <img class="w-100" src="{{ asset('images/defaults/default_image.png') }}" rel="nofollow" alt="...">
-                                            </div>
+                                            {{-- <div class="fileinput-new thumbnail img-raised"> --}}
+                                                <img class="w-50" src="{{ asset('images/defaults/default_image.png') }}" rel="nofollow" alt="...">
+                                            {{-- </div> --}}
                                             <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                             <div class="col-lg-4 align-self-center p-5">
                                                 <span class="btn btn-raised btn-round btn-default btn-file">

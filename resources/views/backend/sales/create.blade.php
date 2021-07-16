@@ -18,7 +18,7 @@
                         {{-- <livewire:modals.modal-add-client /> --}}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <livewire:modals.modal-show-supplier />
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         <livewire:modals.modal-installment-details />
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
@@ -78,94 +78,88 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form>
-                                <div class="usersale mb-5">
-                                    {{-- d-flex justify-content-between --}}
-                                    <div class="form-group col-sm-2 col-md-5 col-ld-5 m-4 ">
-                                        <p class="font-weight-bold mb-0" for="inputAddress">
-                                            {{ __('translation.clients.Name') }}</p>
-                                        {{-- <div>
-                                                <em>Single Select</em>
-                                                <select data-placeholder="Your Favorite Type of Bear" class="chosen-select" tabindex="7">
-                                                  <option value=""></option>
-                                                  <option>American Black Bear</option>
-                                                  <option>Asiatic Black Bear</option>
-                                                  <option>Brown Bear</option>
-                                                  <option>Giant Panda</option>
-                                                  <option selected>Sloth Bear</option>
-                                                  <option disabled>Sun Bear</option>
-                                                  <option>Polar Bear</option>
-                                                  <option disabled>Spectacled Bear</option>
-                                                </select>
-                                            </div> --}}
-                                        <select class="client_dropdown w-50" name="client_name">
-                                            <option value="0">{{ __('Select client') }}</option>
-                                            <option value="1">client 1</option>
-                                            <option value="2">client 2</option>
-                                        </select>
+                            <div class="m-5">
+                                <form>
+                                    <div class="usersale mb-5">
+                                        {{-- d-flex justify-content-between --}}
+                                        <div class="form-group col-sm-2 col-md-5 col-ld-5 m-4 ">
+                                            <p class="font-weight-bold mb-0" for="inputAddress">
+                                                {{ __('translation.clients.Name') }}</p>
+                                            <select class="client_dropdown w-50" name="client_name">
+                                                <option value="0">{{ __('Select client') }}</option>
+                                                <option value="1">client 1</option>
+                                                <option value="2">client 2</option>
+                                            </select>
 
-                                        <a href="#" data-toggle="modal" data-target="#exampleModalLong"
-                                            class="text-primary ml-3"><i class="fa fa-plus" aria-hidden="true"></i> Add
-                                            Client</a>
-                                    </div>
-                                    <div class="form-group col-sm-2 col-md-3 col-lg-3 w-50">
-                                        <p class="font-weight-bold d-inline" for="inputAddress">
-                                            {{ __('translation.sales.Invoice Number') }} :</p>
-                                        <p class="d-inline">5</p>
-                                        <br>
-                                        <p class="font-weight-bold d-inline" for="inputAddress">
-                                            {{ __('translation.sales.Order Date') }} :</p>
-                                        <input class="d-inline pl-2 text-black pr-1 border border-dark rounded" type="date"
-                                            name="" id="">
-                                    </div>
-                                </div>
-                                <livewire:all-sales />
-                                <div class="usersale mt-5">
-                                    {{-- d-flex justify-content-between col-sm-12 --}}
-                                    <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4">
-                                        <p class="font-weight-bold form-group" for="inputAddress">
-                                            {{ __('translation.sales.Payment Type') }}</p>
-                                        <select onclick="payment()" id="payment_drop"
-                                            class="payment_dropdown border border-dark rounded w-50" name="payment">
-                                            <option value='0'>Select payment Type</option>
-                                            <option value="cash">Cash</option>
-                                            <option value="install">Install</option>
-                                        </select>
-                                        <p class="form-group" for="inputAddress">
-                                            {{ __('translation.sales.Note') }}</p>
-                                        <textarea name="note" rows="5" cols="27"
-                                            class=" border border-dark rounded w-50"></textarea>
-                                    </div>
-                                    <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4 text-right">
-                                        <div>
-                                            <p class="font-weight-bold d-inline" for="inputAddress">
-                                                {{ __('translation.sales.Discount') }} :</p>
-                                            <input type="text" class="border border-dark rounded text-right w-25"
-                                                placeholder="  %  ">
-                                            - <input type="text" class="border border-dark rounded text-right w-25"
-                                                placeholder="  LE  ">
+                                            <a href="#" data-toggle="modal" data-target="#exampleModalLong"
+                                                class="text-primary ml-3 link"><i class="fa fa-plus" aria-hidden="true"></i>
+                                                Add
+                                                Client</a>
                                         </div>
-                                        <br>
-                                        <p class="font-weight-bold d-inline" for="inputAddress">
-                                            {{ __('translation.sales.Total') }} :</p>
-                                        <input type="text" name="" class="border border-dark rounded ml-4 w-50">
+                                        <div class="form-group col-sm-2 col-md-3 col-lg-3 w-50">
+                                            <p class="font-weight-bold d-inline" for="inputAddress">
+                                                {{ __('translation.sales.Invoice Number') }} :</p>
+                                            <p class="d-inline">5</p>
+                                            <br>
+                                            <p class="font-weight-bold d-inline" for="inputAddress">
+                                                {{ __('translation.sales.Order Date') }} :</p>
+                                            <input
+                                                class="d-inline pl-2 text-black pr-1 border border-dark rounded backgroundcolor"
+                                                type="date" name="" id="">
+                                        </div>
                                     </div>
-                                </div>
+                                    <livewire:all-sales />
+                                    <div class="usersale mt-5">
+                                        {{-- d-flex justify-content-between col-sm-12 --}}
+                                        <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4">
+                                            <p class="font-weight-bold form-group" for="inputAddress">
+                                                {{ __('translation.sales.Payment Type') }}</p>
+                                            <select onclick="payment()" id="payment_drop"
+                                                class="payment_dropdown border border-dark rounded w-50" name="payment">
+                                                <option value='0'>Select payment Type</option>
+                                                <option value="cash">Cash</option>
+                                                <option value="install">Install</option>
+                                            </select>
+                                            <p class="form-group" for="inputAddress">
+                                                {{ __('translation.sales.Note') }}</p>
+                                            <textarea name="note" rows="5" cols="27"
+                                                class=" border border-dark rounded w-50 backgroundcolor"></textarea>
+                                        </div>
+                                        <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4 text-right">
+                                            <div>
+                                                <p class="font-weight-bold d-inline" for="inputAddress">
+                                                    {{ __('translation.sales.Discount') }} :</p>
+                                                <input type="text"
+                                                    class="border border-dark rounded text-right w-25 backgroundcolor"
+                                                    placeholder="  %  ">
+                                                - <input type="text"
+                                                    class="border border-dark rounded text-right w-25 backgroundcolor"
+                                                    placeholder="  LE  ">
+                                            </div>
+                                            <br>
+                                            <p class="font-weight-bold d-inline" for="inputAddress">
+                                                {{ __('translation.sales.Total') }} :</p>
+                                            <input type="text" name=""
+                                                class="border border-dark rounded ml-4 w-50 backgroundcolor">
+                                        </div>
+                                    </div>
 
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col-lg-4">
-                                <button type="submit"
-                                    class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
-                                <button type="submit"
-                                    class="btn btn-primary m-4">{{ __('translation.website.crud.Create & New') }}</button>
+
+                                    <div class="row ">
+                                        <div class="col-lg-4">
+                                            <button type="submit"
+                                                class="btn btn-primary ">{{ __('translation.website.crud.create') }}</button>
+                                            <button type="submit"
+                                                class="btn btn-primary ">{{ __('translation.website.crud.Create & New') }}</button>
+                                        </div>
+                                        <div class="col-lg-2 offset-6">
+                                            <button type="submit"
+                                                class="btn btn-danger ">{{ __('translation.website.crud.Cancel') }}</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="col-lg-2 offset-6">
-                                <button type="submit"
-                                    class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
-                            </div>
                         </div>
-                        </form>
                     </div>
                 </div>
 
