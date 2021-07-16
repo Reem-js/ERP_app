@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\backend\SupplierWalletTransactions;
+namespace Suppliers\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class SupplierWalletTransactionController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class SupplierWalletTransactionController extends Controller
     public function index()
     {
         //
-        return view('backend.supplierWalletTransaction.index');
+        return view('Suppliers::backend.suppliers.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class SupplierWalletTransactionController extends Controller
     public function create()
     {
         //
-        return view('backend.supplierWalletTransaction.create');
+        return view('Suppliers::backend.suppliers.create');
     }
 
     /**
@@ -48,7 +48,8 @@ class SupplierWalletTransactionController extends Controller
      */
     public function show($id)
     {
-        //
+        // show details
+        return view('Suppliers::backend.suppliers.show');
     }
 
     /**
@@ -60,7 +61,7 @@ class SupplierWalletTransactionController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.supplierWalletTransaction.edit');
+        return view('Suppliers::backend.suppliers.edit');
     }
 
     /**
@@ -84,6 +85,6 @@ class SupplierWalletTransactionController extends Controller
     public function destroy($id)
     {
         //
-        return "supplier transaction destroy";
+        return "supplier delete";
     }
 }

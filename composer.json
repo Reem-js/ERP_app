@@ -29,8 +29,14 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
+            "Database\\Seeders\\": "database/seeders/",
+            "Suppliers\\":"app/Modules/Suppliers",
+            "Suppliers\\Factories\\": "app/modules/Suppliers/database/factories/",
+            "Suppliers\\Seeders\\": "app/modules/Suppliers/database/seeders/"
+        },
+        "files":[
+               "app/helpers/general.php"
+            ]
     },
     "autoload-dev": {
         "psr-4": {

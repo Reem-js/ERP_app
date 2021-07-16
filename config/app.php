@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        /*hmvc modules */
+        Suppliers\Providers\SuppliersServiceProvider::class,
+
+
     ],
 
     /*

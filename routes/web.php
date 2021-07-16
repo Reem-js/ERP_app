@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use Suppliers\Http\Controllers\testController;
 use App\Http\Controllers\backend\roles\RoleController;
 use App\Http\Controllers\backend\sales\SaleController;
 use App\Http\Controllers\backend\users\UserController;
-use App\Http\Controllers\backend\notifications\NotificationController;
 use App\Http\Controllers\backend\index\IndexController;
 use App\Http\Controllers\backend\brands\BrandController;
 use App\Http\Controllers\backend\reports\ReportController;
@@ -16,20 +16,21 @@ use App\Http\Controllers\backend\expenses\ExpenseController;
 use App\Http\Controllers\backend\partners\partnerController;
 use App\Http\Controllers\backend\products\ProductController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use App\Http\Controllers\backend\purchases\PurchaseController;
 use App\Http\Controllers\backend\suppliers\SupplierController;
 use App\Http\Controllers\backend\categories\CategoryController;
 use App\Http\Controllers\backend\priceLists\priceListController;
 use App\Http\Controllers\backend\UserWallet\UserWalletController;
 use App\Http\Controllers\backend\permissions\PermissionController;
+use App\Http\Controllers\backend\installments\installmentController;
 use App\Http\Controllers\backend\ClientWallet\ClientWalletController;
 use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
+use App\Http\Controllers\backend\notifications\NotificationController;
 use App\Http\Controllers\backend\dividendIncome\dividendIncomeController;
 use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
 use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
-use App\Http\Controllers\backend\purchases\PurchaseController;
-use App\Http\Controllers\backend\installments\installmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,10 +86,10 @@ Route::group(
             Route::get('user-wallet', [UserWalletController::class, 'getWallet'])->name('get.user.wallet');
             Route::resource('user-wallet-transactions', UserWalletTransactionController::class);
             // supplier wallet
-            Route::resource('suppliers', SupplierController::class);
-            Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
-            Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
-            Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
+            // Route::resource('suppliers', SupplierController::class);
+            // Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
+            // Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
+            // Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
             // client wallet
             Route::resource('clients', ClientController::class);
             Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
@@ -135,6 +136,8 @@ Route::group(
            //notifications
            Route::resource('notifications', NotificationController::class);
 
+            // //test hmvc
+            // Route::get('test',[testController::class,'test']);
 
 
         });

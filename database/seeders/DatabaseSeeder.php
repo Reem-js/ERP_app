@@ -3,7 +3,7 @@ namespace Database\Seeders;
 
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\SupplierSeeder;
+use Suppliers\Database\Seeders\SupplierSeeder;
 use Database\Seeders\UsersTableSeeder;
 use Database\Seeders\UserWalletSeeder;
 use Database\Seeders\UserWalletTransactionSeeder;
