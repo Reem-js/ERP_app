@@ -27,7 +27,7 @@ class SuppliersServiceProvider extends ServiceProvider
     {
         //
         // Supplier::create(['test']);
-        // dd(Supplier::all());
+        // dd('ok');
         $ds = DIRECTORY_SEPARATOR;
         $moduleName ='Suppliers';
         // $moduleName = config('module.Suppliers');

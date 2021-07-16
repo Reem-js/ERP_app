@@ -1,13 +1,8 @@
 <?php
+
 namespace Database\Seeders;
 
-
 use Illuminate\Database\Seeder;
-use Suppliers\Database\Seeders\SupplierSeeder;
-use Database\Seeders\UsersTableSeeder;
-use Database\Seeders\UserWalletSeeder;
-use Stocks\Database\Seeders\TestSeeder;
-use Database\Seeders\UserWalletTransactionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
+        // \App\Models\User::factory(10)->create();
+        $this->call(
+            [
             UsersTableSeeder::class,
             UserWalletSeeder::class,
             UserWalletTransactionSeeder::class,
@@ -32,7 +29,15 @@ class DatabaseSeeder extends Seeder
             BrandSeeder::class,
             ProductSeeder::class,
             SaleSeeder::class,
-            TestSeeder::class,
-        ]);
+            AppCapitalSeeder::class,
+            ExpenseTypeSeeder::class,
+            ExpenseSeeder::class,
+            InstallementSeeder::class,
+            NotificationSeeder::class,
+            PartnerSeeder::class,
+            PriceListSeeder::class,
+            WebsiteSeeder::class
+            ]
+        );
     }
 }

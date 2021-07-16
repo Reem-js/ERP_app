@@ -176,9 +176,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         /* Modules Providers */
         Stocks\Providers\StocksServiceProvider::class,
-
-
-
         /*hmvc modules */
         Suppliers\Providers\SuppliersServiceProvider::class,
 
