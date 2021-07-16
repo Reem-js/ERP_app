@@ -25,7 +25,7 @@ class SupplierFactory extends Factory
             //
             'name' => $this->faker->name(),
             'nickname' => $this->faker->name(),
-            'address' =>$this->faker->paragraph(),
+            'address' =>$this->faker->name(),
             'pdf' =>strtotime(date("Y-m-d H:i:s")).'.pdf',
             'phone'=>$this->faker->unique()->phoneNumber(),
             'slug' => $this->faker->slug(),

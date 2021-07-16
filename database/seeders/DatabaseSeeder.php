@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\SupplierSeeder;
 use Database\Seeders\UsersTableSeeder;
 use Database\Seeders\UserWalletSeeder;
+use Stocks\Database\Seeders\TestSeeder;
 use Database\Seeders\UserWalletTransactionSeeder;
 
 class DatabaseSeeder extends Seeder
@@ -31,6 +32,7 @@ class DatabaseSeeder extends Seeder
             BrandSeeder::class,
             ProductSeeder::class,
             SaleSeeder::class,
+            TestSeeder::class,
         ]);
     }
 }
