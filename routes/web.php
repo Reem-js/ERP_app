@@ -62,7 +62,6 @@ Route::group(
             /* New Routes */
             // users
             Route::resource('users', UserController::class);
-            // Route::resource('users', UserController::class);
             Route::get('profile', [UserController::class, 'profileEdit'])->name('profile.edit');
             Route::put('profile', [UserController::class, 'profileUpdate'])->name('profile.update');
             Route::put('profile-password', [UserController::class, 'profilePassword'])->name('profile.password');
@@ -86,11 +85,7 @@ Route::group(
             // user wallet
             Route::get('user-wallet', [UserWalletController::class, 'getWallet'])->name('get.user.wallet');
             Route::resource('user-wallet-transactions', UserWalletTransactionController::class);
-            // supplier wallet
-            // Route::resource('suppliers', SupplierController::class);
-            // Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
-            // Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
-            // Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
+
             // client wallet
             Route::resource('clients', ClientController::class);
             Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');

@@ -34,8 +34,8 @@
             "Stocks\\Database\\Seeders\\":"app/Modules/Stocks/database/seeders/",
             "Stocks\\Database\\Factories\\":"app/Modules/Stocks/database/factories/",
             "Suppliers\\":"app/Modules/Suppliers",
-            "Suppliers\\Factories\\": "app/modules/Suppliers/database/factories/",
-            "Suppliers\\Seeders\\": "app/modules/Suppliers/database/seeders/"
+            "Suppliers\\Database\\Factories\\": "app/modules/Suppliers/database/factories/",
+            "Suppliers\\Database\\Seeders\\": "app/modules/Suppliers/database/seeders/"
         },
         "files":[
                "app/helpers/general.php"
