@@ -21,17 +21,17 @@ client')])
                                         <input type="text" name="name" class="form-control" id="inputAddress" required
                                             placeholder="1234 Main St">
                                     </div>
-    
+
                                     <div class="form-group m-4 col-4 ">
                                         <p class="font-weight-bold text-black" for="inputAddress">
                                             {{ __('translation.clients.Nickname') }}</label>
                                             <input type="email" name="email" class="form-control" id="inputAddress" required
                                                 placeholder="1234 Main St">
                                     </div>
-    
-                                   
+
+
                                 </div>
-                               
+
                                 <div class="d-flex justify-content-between">
                                     <div class="form-group m-4 col-4">
                                         <p class="font-weight-bold text-black" for="inputAddress">
@@ -45,27 +45,27 @@ client')])
                                             <input type="password" name="password" class="form-control" id="inputAddress"
                                                 required placeholder="1234 Main St">
                                     </div>
-    
-                                   
-                                </div>  
+
+
+                                </div>
                                 <div class="form-group m-4 col-4">
                                     <p class="font-weight-bold text-black" for="inputAddress">
                                         {{ __('translation.clients.Address') }}</label>
                                         <input type="password" name="confirmpassword" class="form-control" id="inputAddress"
                                             required placeholder="1234 Main St">
-                                </div>  
-                           
+                                </div>
+
 
                                 <div class="row mt-5">
                                     <div class="col-lg-4">
                                         <button type="submit"
-                                            class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
+                                            class="btn btn-primary ">{{ __('translation.website.crud.create') }}</button>
                                         <button type="submit"
-                                            class="btn btn-primary m-4">{{ __('translation.website.crud.Create & New') }}</button>
+                                            class="btn btn-primary ">{{ __('translation.website.crud.Create & New') }}</button>
                                     </div>
                                     <div class="col-lg-2 offset-6">
                                         <button type="submit"
-                                            class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
+                                            class="btn btn-danger ">{{ __('translation.website.crud.Cancel') }}</button>
                                     </div>
                                 </div>
 

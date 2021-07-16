@@ -99,10 +99,15 @@
                                             {{ __('translation.sales.Invoice Number') }} :</p>
                                         <p class="d-inline">5</p>
                                         <br>
+
                                         <p class="font-weight-bold d-inline" for="inputAddress">
-                                            {{ __('translation.sales.Order Date') }} :</p>
-                                        <input class="d-inline pl-2 text-black pr-1 border border-dark rounded backgroundcolor" type="date"
-                                            name="" id="">
+                                            {{ __('translation.sales.current date') }} :</p>
+                                        <input class="d-inline  text-black  border border-dark rounded backgroundcolor" type="date"
+                                            name="" id=""><br>
+                                            <p class="font-weight-bold d-inline" for="inputAddress">
+                                                {{ __('translation.sales.Order Date') }} :</p>
+                                            <input class="d-inline  text-black  border border-dark rounded backgroundcolor" type="date"
+                                                name="" id="">
                                     </div>
                                 </div>
                                 <livewire:all-sales/>
@@ -139,18 +144,21 @@
                                 </div>
 
                         </div>
-                        <div class="row mt-5">
+                        <div class="row ">
                             <div class="col-lg-4">
+                                &nbsp; &nbsp;
                                 <button type="submit"
-                                    class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
+                                    class="btn btn-primary ">{{ __('translation.website.crud.create') }}</button>
                                 <button type="submit"
-                                    class="btn btn-primary m-4">{{ __('translation.website.crud.Create & New') }}</button>
+                                    class="btn btn-primary ">{{ __('translation.website.crud.Create & New') }}</button>
                             </div>
                             <div class="col-lg-2 offset-6">
                                 <button type="submit"
-                                    class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
+                                    class="btn btn-danger ">{{ __('translation.website.crud.Cancel') }}</button>
                             </div>
                         </div>
+                        <br>
+                        <br>
                         </form>
                     </div>
                 </div>

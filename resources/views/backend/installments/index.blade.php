@@ -116,7 +116,7 @@ Installments')])
                                     <div class="row ">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label
+                                                <label class="text-center"
                                                     for="disabledTextInput">{{ __('translation.installments.Client name') }}</label>
                                                 <input type="text" id="disabledTextInput" class="form-control"
                                                     placeholder="Reem">
@@ -180,6 +180,7 @@ Installments')])
     {{-- show tran modal action --}}
     <div class=" d-none" id="show-modal-action">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <br>
     </div>
     {{-- create trans modal  body --}}
     <div class="container-fluid d-none" id="creat-modal2-content" style="margin:0px; padding:0px;">
@@ -226,131 +227,45 @@ Installments')])
                                         </div>
                                     </div>
                                 </fieldset>
-
-
-                                {{-- <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.walletTransaction.Reason') }}</label>
-                                        <input type="text" name="reason" class="form-control" id="inputAddress" required
-                                            placeholder="Please enter transaction reason">
-                                </div> --}}
                                 <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                    <p class="font-weight-bold"  for="inputAddress">
                                         {{ __('translation.installments.operation date') }}</label>
                                         <input type="date" name="date" class="form-control" id="inputAddress" required
                                             placeholder="please choose transaction date">
                                 </div>
                                 <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
+                                    <p class="font-weight-bold"  for="inputAddress">
                                         {{ __('translation.installments.transaction amount') }}</label>
                                         <input type="number" name="amount" class="form-control" id="inputAddress" required
                                             placeholder="please enter transaction amount ">
                                 </div>
+
+                            </form>
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>
+
         </div>
-
-    </div>
-    {{-- create tran modal action --}}
-    <div class=" d-none" id="create-modal-action">
-        <button class='btn btn-primary'>Save Changes</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-    </div>
-    {{-- show trans modal livewire  body --}}
-    <div class="container-fluid d-none" id="show-modal-content" style="margin:0px; padding:0px;">
-        <div class="row">
-            <div class="col-md-12">
+        {{-- create tran modal action --}}
+        <div class=" d-none" id="create-modal-action">
+            <button class='btn btn-primary'>Save Changes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <br>
+        </div>
+        {{-- show trans modal livewire  body --}}
+        <div class="container-fluid d-none" id="show-modal-content" style="margin:0px; padding:0px;">
+            <div class="row">
                 <div class="col-md-12">
-                    <div class="card card-mode">
-                        <div class="card-header card-header-text card-header-primary">
-                            <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.installments.show Transactions') }}</h4>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <br>
-                            <fieldset disabled>
-                                <div class="container">
-                                    <br>
-                                    <div class="row ">
-                                        <div class="col">
-                                            <div class="form-group">
-                                                <label
-                                                    for="disabledTextInput">{{ __('translation.installments.Supplier name') }}</label>
-                                                <input type="text" id="disabledTextInput" class="form-control"
-                                                    placeholder="Reem">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group">
-                                                <label
-                                                    for="disabledTextInput">{{ __('translation.installments.Total number of installments') }}</label>
-                                                <input type="text" id="disabledTextInput" class="form-control"
-                                                    placeholder=" 6 installs ">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group">
-                                                <label
-                                                    for="disabledTextInput">{{ __('translation.installments.number of installments paid') }}</label>
-                                                <input type="text" id="disabledTextInput" class="form-control"
-                                                    placeholder="2 installs paid">
-                                            </div>
-                                        </div>
-
-                                    </div>
+                    <div class="col-md-12">
+                        <div class="card card-mode">
+                            <div class="card-header card-header-text card-header-primary">
+                                <div class="card-text">
+                                    <h4 class="card-title">{{ __('translation.installments.show Transactions') }}</h4>
                                 </div>
-                            </fieldset>
-                            <br>
-                            <br>
-                            <table class="table table-bordered text-center">
-                                <thead>
-                                    <tr>
-                                        <th style="width:15%">{{ __('translation.installments.installment Number') }}
-                                        </th>
-                                        <th>{{ __('translation.installments.installment date') }}</th>
-                                        <th>{{ __('translation.installments.real payment date') }}</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr>
-                                        <td>1</td>
-                                        <td>11 May 2021</td>
-                                        <td>11 May 2021</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>11 June 2021</td>
-                                        <td>13 June 2021</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    {{-- create trans modal livewire body --}}
-    <div class="container-fluid d-none" id="creat-modal-content" style="margin:0px; padding:0px;">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-12">
-                    <div class="card card-mode">
-                        <div class="card-header card-header-text card-header-primary">
-                            <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.Create Transaction') }}</h4>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <form>
+                            <div class="card-body">
+                                <br>
                                 <fieldset disabled>
                                     <div class="container">
                                         <br>
@@ -366,81 +281,161 @@ Installments')])
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label
-                                                        for="disabledTextInput">{{ __('translation.installments.period') }}</label>
+                                                        for="disabledTextInput">{{ __('translation.installments.Total number of installments') }}</label>
                                                     <input type="text" id="disabledTextInput" class="form-control"
-                                                        placeholder="in 6 months">
+                                                        placeholder=" 6 installs ">
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label
-                                                        for="disabledTextInput">{{ __('translation.installments.transcation Type') }}</label>
+                                                        for="disabledTextInput">{{ __('translation.installments.number of installments paid') }}</label>
                                                     <input type="text" id="disabledTextInput" class="form-control"
-                                                        placeholder="{{ __('translation.installments.in installments') }}">
+                                                        placeholder="2 installs paid">
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
                                 </fieldset>
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.installments.operation date') }}</label>
-                                        <input type="date" name="date" class="form-control" id="inputAddress" required
-                                            placeholder="please choose transaction date">
-                                </div>
-                                <div class="form-group" style="margin: 20px;">
-                                    <p class="font-weight-bold" style="color:black;" for="inputAddress">
-                                        {{ __('translation.installments.transaction amount') }}</label>
-                                        <input type="number" name="amount" class="form-control" id="inputAddress" required
-                                            placeholder="please enter transaction amount ">
-                                </div>
+                                <br>
+                                <br>
+                                <table class="table table-bordered text-center">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:15%">{{ __('translation.installments.installment Number') }}
+                                            </th>
+                                            <th>{{ __('translation.installments.installment date') }}</th>
+                                            <th>{{ __('translation.installments.real payment date') }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>11 May 2021</td>
+                                            <td>11 May 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>11 June 2021</td>
+                                            <td>13 June 2021</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
                         </div>
-                        </form>
                     </div>
                 </div>
             </div>
+
+        </div>
+        {{-- create trans modal livewire body --}}
+        <div class="container-fluid d-none" id="creat-modal-content" style="margin:0px; padding:0px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="card card-mode">
+                            <div class="card-header card-header-text card-header-primary">
+                                <div class="card-text">
+                                    <h4 class="card-title">{{ __('translation.website.sidebar.Create Transaction') }}
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <fieldset disabled>
+                                        <div class="container">
+                                            <br>
+                                            <div class="row ">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label
+                                                            for="disabledTextInput">{{ __('translation.installments.Supplier name') }}</label>
+                                                        <input type="text" id="disabledTextInput" class="form-control"
+                                                            placeholder="Reem">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label
+                                                            for="disabledTextInput">{{ __('translation.installments.period') }}</label>
+                                                        <input type="text" id="disabledTextInput" class="form-control"
+                                                            placeholder="in 6 months">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label
+                                                            for="disabledTextInput">{{ __('translation.installments.transcation Type') }}</label>
+                                                        <input type="text" id="disabledTextInput" class="form-control"
+                                                            placeholder="{{ __('translation.installments.in installments') }}">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-group" style="margin: 20px;">
+                                        <p class="font-weight-bold"  for="inputAddress">
+                                            {{ __('translation.installments.operation date') }}</label>
+                                            <input type="date" name="date" class="form-control" id="inputAddress" required
+                                                placeholder="please choose transaction date">
+                                    </div>
+                                    <div class="form-group" style="margin: 20px;">
+                                        <p class="font-weight-bold"  for="inputAddress">
+                                            {{ __('translation.installments.transaction amount') }}</label>
+                                            <input type="number" name="amount" class="form-control" id="inputAddress"
+                                                required placeholder="please enter transaction amount ">
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-
-@endsection
+    @endsection
 
 
 
-@push('js')
-    <script>
-        function getLivewire() {
-            Livewire.emit('installLivewire')
-        }
+    @push('js')
+        <script>
+            function getLivewire() {
+                Livewire.emit('installLivewire')
+            }
 
-        function getShowBodyModal() {
-            var formShow2 = document.getElementById('show-modal2-content');
-            document.getElementById('modal-body').innerHTML = formShow2.innerHTML;
-            var showAction = document.getElementById('show-modal-action');
-            document.getElementById('modal-action').innerHTML = showAction.innerHTML;
-        }
+            function getShowBodyModal() {
+                var formShow2 = document.getElementById('show-modal2-content');
+                document.getElementById('modal-body').innerHTML = formShow2.innerHTML;
+                var showAction = document.getElementById('show-modal-action');
+                document.getElementById('modal-action').innerHTML = showAction.innerHTML;
+            }
 
-        function getCreatBodyModal() {
-            var formCreate2 = document.getElementById('creat-modal2-content');
-            document.getElementById('modal-body').innerHTML = formCreate2.innerHTML;
-            var createAction = document.getElementById('create-modal-action');
-            document.getElementById('modal-action').innerHTML = createAction.innerHTML;
-        }
+            function getCreatBodyModal() {
+                var formCreate2 = document.getElementById('creat-modal2-content');
+                document.getElementById('modal-body').innerHTML = formCreate2.innerHTML;
+                var createAction = document.getElementById('create-modal-action');
+                document.getElementById('modal-action').innerHTML = createAction.innerHTML;
+            }
 
-        function getShowBodyModalLivewire() {
-            var formShow = document.getElementById('show-modal-content');
-            document.getElementById('modal-body').innerHTML = formShow.innerHTML;
-            var showAction = document.getElementById('show-modal-action');
-            document.getElementById('modal-action').innerHTML = showAction.innerHTML;
-        }
+            function getShowBodyModalLivewire() {
+                var formShow = document.getElementById('show-modal-content');
+                document.getElementById('modal-body').innerHTML = formShow.innerHTML;
+                var showAction = document.getElementById('show-modal-action');
+                document.getElementById('modal-action').innerHTML = showAction.innerHTML;
+            }
 
-        function getCreatBodyModalLivewire() {
-            var formCreate = document.getElementById('creat-modal-content');
-            document.getElementById('modal-body').innerHTML = formCreate.innerHTML;
-            var createAction = document.getElementById('create-modal-action');
-            document.getElementById('modal-action').innerHTML = createAction.innerHTML;
-        }
-    </script>
+            function getCreatBodyModalLivewire() {
+                var formCreate = document.getElementById('creat-modal-content');
+                document.getElementById('modal-body').innerHTML = formCreate.innerHTML;
+                var createAction = document.getElementById('create-modal-action');
+                document.getElementById('modal-action').innerHTML = createAction.innerHTML;
+            }
+        </script>
 
-@endpush
+    @endpush

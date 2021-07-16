@@ -21,7 +21,7 @@ __('translation.website.sidebar.Create Transaction')])
                                             <input type="text" name="reason" class="form-control inputbackgroundDark" id="inputAddress" required
                                                 placeholder="Please enter transaction reason">
                                         </div>
-    
+
                                         <div class="form-group m-4 col-4">
                                             <p class="font-weight-bold" name="client_name" for="selUser" f>
                                                 {{ __('translation.clients.Client Name') }}</p>
@@ -41,7 +41,7 @@ __('translation.website.sidebar.Create Transaction')])
                                             </select>
                                         </div>
                                     </div>
-                                  
+
                                     <div  class="d-flex justify-content-between">
                                         <div class="form-group m-4 col-4">
                                             <p class="font-weight-bold" for="inputAddress">
@@ -49,7 +49,7 @@ __('translation.website.sidebar.Create Transaction')])
                                             <input type="date" name="date" class="form-control inputbackgroundDark" id="inputAddress" required
                                                 placeholder="please choose transaction date">
                                         </div>
-    
+
                                         <div class="form-group m-4 col-4">
                                             <p class="font-weight-bold" for="selTrans">
                                                 {{ __('translation.walletTransaction.Transaction') }}</p>
@@ -73,7 +73,7 @@ __('translation.website.sidebar.Create Transaction')])
                                         </div>
                                     </div>
 
-                                    
+
                                     <div class="d-flex justify-content-between">
                                         <div class="form-group m-4 col-4">
                                             <p class="font-weight-bold" for="selTransType">
@@ -94,7 +94,7 @@ __('translation.website.sidebar.Create Transaction')])
                                                 <option value='11'>Reem</option>
                                             </select>
                                         </div>
-    
+
                                         <div class="form-group m-4 col-4">
                                             <p class="font-weight-bold" for="inputAddress">
                                                 {{ __('translation.walletTransaction.Amount') }}</p>
@@ -102,17 +102,17 @@ __('translation.website.sidebar.Create Transaction')])
                                                 placeholder="please enter transaction amount ">
                                         </div>
                                     </div>
-                                 
+
                                     <div class="row mt-5">
                                         <div class="col-lg-4">
                                             <button type="submit"
-                                                class="btn btn-primary m-4">{{ __('translation.website.crud.create') }}</button>
+                                                class="btn btn-primary ">{{ __('translation.website.crud.create') }}</button>
                                             <button type="submit"
-                                                class="btn btn-primary m-4">{{ __('translation.website.crud.Create & New') }}</button>
+                                                class="btn btn-primary ">{{ __('translation.website.crud.Create & New') }}</button>
                                         </div>
                                         <div class="col-lg-2 offset-6">
                                             <button type="submit"
-                                                class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
+                                                class="btn btn-danger">{{ __('translation.website.crud.Cancel') }}</button>
                                         </div>
                                     </div>
                                 </form>

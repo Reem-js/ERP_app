@@ -31,6 +31,7 @@ use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
 use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
+use App\Http\Controllers\backend\purchaseOrders\PurchaseOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -138,6 +139,8 @@ Route::group(
 
             // //test hmvc
             // Route::get('test',[testController::class,'test']);
+           // PurchasesOrder
+           Route::resource('purchasesOrder', PurchaseOrderController::class);
 
 
         });

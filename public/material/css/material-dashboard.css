@@ -8672,14 +8672,14 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
-.text-primary {
+/* .text-primary {
   color: #2196f3 !important;
-}
+} */
 
-a.text-primary:hover,
+/* a.text-primary:hover,
 a.text-primary:focus {
   color: #0c7cd5 !important;
-}
+} */
 
 .text-secondary {
   color: #6c757d !important;

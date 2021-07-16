@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'addPurchase', 'titlePage' => __('translation.website.sidebar.add Purchase')])
+@extends('layouts.app', ['activePage' => 'addpurchaseOrder', 'titlePage' => __('translation.website.sidebar.add pre Purchase')])
 
 @section('content')
     @livewireStyles
@@ -9,7 +9,7 @@
                     <div class="card card-mode">
                         <div class="card-header card-header-text card-header-primary">
                             <div class="card-text">
-                                <h4 class="card-title">{{ __('translation.website.sidebar.add Purchase') }}</h4>
+                                <h4 class="card-title">{{ __('translation.website.sidebar.add pre Purchase') }}</h4>
                             </div>
                         </div>
                         <div class="card-body">
@@ -38,9 +38,16 @@
                                                 <br>
                                                 <p class="font-weight-bold " style=" display:inline;"
                                                     for="inputAddress">
-                                                    {{ __('translation.purchase.Order Date') }}  :</p>
+                                                    {{ __('translation.purchase.current date') }} :</p>
                                                 <input
-                                                    style="display: inline;padding-left: 11px;color: #616161;padding-right: 7px;border-radius: 4px;border: #ccc solid 1px;"
+                                                    style="display: inline;border-radius: 4px; border: #ccc solid 1px;"
+                                                    type="date" name="" id="">
+                                                    <br>
+                                                    <p class="font-weight-bold  " style=" display:inline;"
+                                                    for="inputAddress">
+                                                    {{ __('translation.purchase.Order Date') }} :</p> &nbsp; &nbsp;
+                                                <input
+                                                    style="margin-top: 2px; display: inline ;border-radius: 4px;border: #ccc solid 1px;"
                                                     type="date" name="" id="">
                                             </div>
                                         </div>
@@ -53,7 +60,7 @@
                                         <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4">
                                             <p class="font-weight-bold form-group" for="inputAddress">
                                                 {{ __('translation.sales.Payment Type') }}</p>
-                                            <select onchange="payment()" id="payment_drop"
+                                            <select onclick="payment()" id="payment_drop"
                                                 class="payment_dropdown border border-dark rounded w-50" name="payment">
                                                 <option value='0'>Select payment Type</option>
                                                 <option value="cash">Cash</option>
@@ -117,11 +124,6 @@
     <div class="container-fluid d-none" id="create-product-content" style="margin:0px; padding:0px;">
         <livewire:modals.addproduct />
     </div>
-
-      {{-- payment modal  body --}}
-      <div class="container-fluid d-none" id="payment-content" style="margin:0px; padding:0px;">
-        <livewire:modals.modal-installment-details />
-    </div>
     {{-- create tran modal action --}}
     <div class=" d-none" id="create-modal-action">
         <button class='btn btn-primary'>Save Changes</button>
@@ -152,17 +154,6 @@
             document.getElementById('modal-body').innerHTML = form_p.innerHTML;
             var showAction = document.getElementById('create-modal-action');
             document.getElementById('modal-action').innerHTML = showAction.innerHTML;
-        }
-
-        function payment() {
-            // var x = document.getElementById("payment_drop").value;
-            if(document.getElementById("payment_drop").value =="install"){
-            var form_pay = document.getElementById('payment-content');
-            document.getElementById('modal-body').innerHTML = form_pay.innerHTML;
-            var showAction = document.getElementById('create-modal-action');
-            document.getElementById('modal-action').innerHTML = showAction.innerHTML;
-            }
-            else{}
         }
     </script>
 @endpush
