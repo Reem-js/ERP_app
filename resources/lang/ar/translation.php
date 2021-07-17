@@ -581,5 +581,7 @@ return [
         'See all partners' => 'انظر جميع الشركاع',
 
     ],
-
+    'empty'=> [
+        'suppliers'=>'لايوجد موردين'
+    ]
 ];

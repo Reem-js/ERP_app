@@ -19,19 +19,19 @@ Supplier')])
                                         <p class="font-weight-bold"for="inputAddress">
                                             {{ __('translation.suppliers.Name') }}</p>
                                         <input type="text" name="name" class="form-control " id="inputAddress" required
-                                            placeholder="1234 Main St">
+                                            placeholder="1234 Main St" value="{{$supplier->name}}">
                                     </div>
                                     <div class="col form-group m-4" >
                                         <p class="font-weight-bold"for="inputAddress">
                                             {{ __('translation.suppliers.Nickname') }}</p>
-                                        <input type="text" name="name" class="form-control " id="inputAddress" required
-                                            placeholder="1234 Main St">
+                                        <input type="text" name="nickname" class="form-control " id="inputAddress" required
+                                            placeholder="1234 Main St" value="{{$supplier->nickname}}">
                                     </div>
                                     <div class="col form-group m-4 " >
                                         <p class="font-weight-bold"for="inputAddress">
-                                            {{ __('translation.suppliers.Email') }}</p>
-                                            <input type="email" name="email" class="form-control" id="inputAddress" required
-                                                placeholder="1234 Main St">
+                                            {{ __('translation.suppliers.Phone') }}</p>
+                                            <input type="text" name="phone" class="form-control" id="inputAddress" required
+                                                placeholder="1234 Main St" value="{{$supplier->phone}}">
                                     </div>
 
                                 </div>
@@ -40,17 +40,17 @@ Supplier')])
 
 
 
-                                <div class="row">
+                                <div class="row ml-2">
 
-                                    <div class="col-4 form-group m-4" >
+                                    <div class="col-6 form-group " >
                                         <p class="font-weight-bold"for="inputAddress">
-                                            {{ __('translation.suppliers.Phone') }}</p>
-                                            <input type="text" name="phone" class="form-control" id="inputAddress" required
-                                                placeholder="1234 Main St">
+                                            {{ __('translation.suppliers.Address') }}</p>
+                                            <input type="text" name="address" class="form-control" id="inputAddress" required
+                                                placeholder="1234 Main St" value="{{$supplier->address}}">
                                     </div>
 
 
-                                <div class=" col-6 form-group form-file-upload form-file-multiple m-4" >
+                                <div class=" col-6 form-group form-file-upload form-file-multiple " >
                                     <p class="font-weight-bold"for="inputAddress">
                                         {{ __('translation.suppliers.Price Lists') }}</p>
                                     <input type="file" multiple="" class="inputFileHidden">

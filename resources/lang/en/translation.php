@@ -581,9 +581,8 @@ return [
     ],
 
     'prePurchases'=>[
-
-
-
-
+    ],
+    'empty'=> [
+        'suppliers'=>'No Suppliers Yet'
     ]
 ];

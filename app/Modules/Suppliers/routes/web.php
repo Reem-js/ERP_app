@@ -14,14 +14,12 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','web']
     ],
     function () { //...
-
-            //test hmvc
-            Route::get('try',[testController::class,'test'])->middleware('SupplierTestMiddleware');
-
-               // supplier wallet
-               Route::resource('suppliers', SupplierController::class);
-               Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
-               Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
-               Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
+            // supplier wallet
+            Route::resource('suppliers', SupplierController::class)->parameters([
+                'suppliers' => 'supplier:slug'
+            ]);;
+            Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
+            Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
+            Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
     });
 

@@ -30,21 +30,22 @@ Suppliers')])
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($suppliers as $supplier)
                                     <tr>
-                                        <td class="text-center">2</td>
-                                        <td>Andrew Mike</td>
-                                        <td>Develop</td>
-                                        <td>2013</td>
-                                        <td>&euro; 99,225</td>
+                                        <td class="text-center">{{$supplier->id}}</td>
+                                        <td>{{$supplier->name}}</td>
+                                        <td>{{$supplier->nickname}}</td>
+                                        <td>{{$supplier->phone}}</td>
+                                        <td>{{$supplier->address}}</td>
                                         <td class="td-actions">
                                             <a class="btn btn-info" rel="tooltip"
                                                 title="{{ __('translation.title.Edit Supplier') }}"
-                                                href="{{ route('suppliers.edit', 5) }}""> <i
+                                                href="{{ route('suppliers.edit', $supplier->slug) }}"> <i
                                                     class="material-icons">edit</i> </a>
 
                                             <a class="btn btn-info" rel="tooltip"
                                                 title="{{ __('translation.title.show details') }}"
-                                                href="{{ route('suppliers.show', 5) }}""><i
+                                                href="{{ route('suppliers.show', $supplier->slug) }}"><i
                                                     class="material-icons">visibility</i></a>
                                             <a href="{{ route('priceLists.create') }}" rel="tooltip"
                                                 title="{{ __('translation.title.add in price list') }}"
@@ -55,7 +56,7 @@ Suppliers')])
                                                 title="{{ __('translation.title.Delete Supplier') }}"
                                                 onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
                                                 href="javascript:void(0)"><i class="material-icons">close</i></a>
-                                            <form method="post" class="d-none" action="{{ route('suppliers.destroy', 5) }}"
+                                            <form method="post" class="d-none" action="{{ route('suppliers.destroy', $supplier->slug) }}"
                                                  id="delete-1">
                                                 @csrf
                                                 @method('delete')
@@ -63,6 +64,10 @@ Suppliers')])
                                         </td>
                                     </tr>
 
+                                    @empty
+                                       {{ __('translation.empty.suppliers') }}
+                                    @endforelse
+                                    
 
                                 </tbody>
                             </table>

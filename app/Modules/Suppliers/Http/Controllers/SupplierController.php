@@ -4,7 +4,7 @@ namespace Suppliers\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Suppliers\Models\Supplier;
 class SupplierController extends Controller
 {
     /**
@@ -14,8 +14,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        //
-        return view('Suppliers::backend.suppliers.index');
+        $suppliers = Supplier::all();
+        return view('Suppliers::backend.suppliers.index',compact('suppliers'));
     }
 
     /**
@@ -46,10 +46,9 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Supplier $supplier)
     {
-        // show details
-        return view('Suppliers::backend.suppliers.show');
+        return view('Suppliers::backend.suppliers.show',compact('supplier'));
     }
 
     /**
@@ -58,10 +57,9 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Supplier $supplier)
     {
-        //
-        return view('Suppliers::backend.suppliers.edit');
+        return view('Suppliers::backend.suppliers.edit',compact('supplier'));
     }
 
     /**
