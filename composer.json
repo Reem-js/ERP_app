@@ -35,12 +35,15 @@
             "Stocks\\Database\\Seeders\\":"app/Modules/Stocks/database/seeders/",
             "Stocks\\Database\\Factories\\":"app/Modules/Stocks/database/factories/",
             "Suppliers\\":"app/Modules/Suppliers",
-            "Suppliers\\Database\\Factories\\": "app/modules/Suppliers/database/factories/",
-            "Suppliers\\Database\\Seeders\\": "app/modules/Suppliers/database/seeders/"
+            "Suppliers\\Database\\Factories\\": "app/Modules/Suppliers/database/factories/",
+            "Suppliers\\Database\\Seeders\\": "app/Modules/Suppliers/database/seeders/",
+            "Users\\": "app/Modules/Users",
+            "Users\\Database\\Seeders\\":"app/Modules/Users/database/seeders/",
+            "Users\\Database\\Factories\\":"app/Modules/Users/database/factories/"
         },
         "files":[
-               "app/helpers/general.php"
-                ]
+            "app/helpers/general.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

@@ -1,7 +1,7 @@
 <?php
-namespace Database\Seeders;
+namespace Users\Database\Seeders;
 
-use App\Models\User;
+use Users\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Str;
 use Illuminate\Database\Seeder;
@@ -21,6 +21,6 @@ class UsersTableSeeder extends Seeder
             'password'=>Hash::make('secret'),
             'phone'=>'111111111'
         ]);
-        User::factory(10)->create();
+        app(\Users\Database\Factories\UserFactory::class)->count(10)->create();
     }
 }

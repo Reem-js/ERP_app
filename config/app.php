@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -174,9 +175,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        /* Modules Providers */
+        /* Users Module */
+        Users\Providers\UsersServiceProvider::class,
+        /* Stocks Module */
         Stocks\Providers\StocksServiceProvider::class,
-        /*hmvc modules */
+        /* Suppliers Module */
         Suppliers\Providers\SuppliersServiceProvider::class,
 
 

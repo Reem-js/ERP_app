@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Users\Http\Requests;
 
 use App\Rules\CurrentPasswordCheckRule;
 use Illuminate\Foundation\Http\FormRequest;

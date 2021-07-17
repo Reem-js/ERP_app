@@ -11,7 +11,7 @@ use Suppliers\Http\Controllers\SupplierWalletTransactionController;
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale().'/'.config('module.Suppliers'),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','web']
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','web','auth']
     ],
     function () { //...
             // supplier wallet

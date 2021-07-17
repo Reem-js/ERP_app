@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Users\Database\Seeders;
 
-use App\Models\UserWalletTransaction;
+use Users\Models\UserWalletTransaction;
 use Illuminate\Database\Seeder;
 
 class UserWalletTransactionSeeder extends Seeder
@@ -14,8 +14,6 @@ class UserWalletTransactionSeeder extends Seeder
      */
     public function run()
     {
-        //
-        UserWalletTransaction::factory(10)->create();
-
+        app(\Users\Database\Factories\UserWalletTransactionFactory::class)->count(10)->create();
     }
 }
