@@ -15,7 +15,7 @@ class UserRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return auth()->check();
     }
 
     /**
@@ -27,14 +27,14 @@ class UserRequest extends FormRequest
     {
         return [
             'name' => [
-                'required'
+                'required', 'min:3'
             ],
-            // 'email' => [
-            //     'required', 'email', Rule::unique((new User)->getTable())->ignore($this->route()->user->id ?? null)
-            // ],
-            // 'password' => [
-            //     $this->route()->user ? 'nullable' : 'required', 'confirmed', 'min:6'
-            // ]
+            'email' => [
+                'required', 'email', Rule::unique((new User)->getTable())->ignore($this->route()->user->id ?? null)
+            ],
+            'password' => [
+                $this->route()->user ? 'nullable' : 'required', 'confirmed', 'min:6'
+            ]
         ];
     }
 }

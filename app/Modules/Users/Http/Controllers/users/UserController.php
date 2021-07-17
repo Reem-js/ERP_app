@@ -1,11 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\backend\UserWalletTransactions;
+namespace Users\Http\Controllers\users;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserWalletTransactionController extends Controller
+use App\Http\Requests\ProfileRequest;
+use App\Http\Requests\PasswordRequest;
+use Illuminate\Support\Facades\Hash;
+
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +19,7 @@ class UserWalletTransactionController extends Controller
      */
     public function index()
     {
-        //
-        return view('backend.userWalletTransaction.index');
+        return view('users::users.index');
     }
 
     /**
@@ -26,7 +30,8 @@ class UserWalletTransactionController extends Controller
     public function create()
     {
         //
-        return view('backend.userWalletTransaction.create');
+        return view('users::users.create');
+
     }
 
     /**
@@ -49,8 +54,8 @@ class UserWalletTransactionController extends Controller
     public function show($id)
     {
         //
+        return view('users::users.show');
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -60,7 +65,7 @@ class UserWalletTransactionController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.userWalletTransaction.edit');
+        return view('users::users.edit');
     }
 
     /**
@@ -84,6 +89,42 @@ class UserWalletTransactionController extends Controller
     public function destroy($id)
     {
         //
-        RETURN "WALLET tRANSACTION DESTROY";
+        return "delete";
+    }
+
+       /**
+     * Show the form for editing the profile.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function profileEdit()
+    {
+        
+            return view('users::users.profile.edit');
+    }
+
+
+    /* Update the profile
+    *
+    * @param  \App\Http\Requests\ProfileRequest  $request
+    * @return \Illuminate\Http\RedirectResponse
+    */
+    public function profileUpdate(ProfileRequest $request)
+    {
+        auth()->user()->update($request->all());
+
+        return back()->withStatus(__('Profile successfully updated.'));
+    }
+        /**
+     * Change the password
+     *
+     * @param  \App\Http\Requests\PasswordRequest  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function profilePassword(PasswordRequest $request)
+    {
+        auth()->user()->update(['password' => Hash::make($request->get('password'))]);
+
+        return back()->withStatusPassword(__('Password successfully updated.'));
     }
 }

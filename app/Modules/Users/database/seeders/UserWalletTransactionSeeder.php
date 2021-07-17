@@ -2,7 +2,7 @@
 
 namespace Users\Database\Seeders;
 
-use App\Models\UserWalletTransaction;
+use Users\Models\UserWalletTransaction;
 use Illuminate\Database\Seeder;
 
 class UserWalletTransactionSeeder extends Seeder

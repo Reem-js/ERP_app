@@ -58,13 +58,7 @@ Route::group(
         Route::get('/', [IndexController::class, 'index'])->middleware('guest');
         // authentication routes
         Route::group(['middleware' => 'auth'], function () {
-            /* New Routes */
-            // users
-            Route::resource('users', UserController::class);
-            // Route::resource('users', UserController::class);
-            Route::get('profile', [UserController::class, 'profileEdit'])->name('profile.edit');
-            Route::put('profile', [UserController::class, 'profileUpdate'])->name('profile.update');
-            Route::put('profile-password', [UserController::class, 'profilePassword'])->name('profile.password');
+            
 
             // expenses
             Route::resource('expenses', ExpenseController::class);
@@ -82,9 +76,7 @@ Route::group(
             Route::resource('products', ProductController::class);
             Route::get('products/history/{id}', [ProductController::class, 'history'])->name('products.history');
 
-            // user wallet
-            Route::get('user-wallet', [UserWalletController::class, 'getWallet'])->name('get.user.wallet');
-            Route::resource('user-wallet-transactions', UserWalletTransactionController::class);
+            
             // supplier wallet
             Route::resource('suppliers', SupplierController::class);
             Route::get('supplier-wallet', [SupplierWalletController::class, 'getSupplierWallet'])->name('get.supplier.wallet');
