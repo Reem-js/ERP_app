@@ -10,7 +10,7 @@ use Users\Http\Controllers\UserWalletTransactions\UserWalletTransactionControlle
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale().'/'.config('module.Users'),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','web']
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','web','auth']
     ],
     function () {
         // Route::get('ttest', [UserController::class, 'testing'])->middleware('UserMiddleware');
