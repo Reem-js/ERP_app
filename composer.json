@@ -30,10 +30,19 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
+            "Stocks\\":"app/Modules/Stocks",
+            "Stocks\\Database\\Seeders\\":"app/Modules/Stocks/database/seeders/",
+            "Stocks\\Database\\Factories\\":"app/Modules/Stocks/database/factories/",
+            "Suppliers\\":"app/Modules/Suppliers",
+            "Suppliers\\Database\\Factories\\": "app/modules/Suppliers/database/factories/",
+            "Suppliers\\Database\\Seeders\\": "app/modules/Suppliers/database/seeders/",
             "Users\\": "app/Modules/Users",
             "Users\\Database\\Seeders\\":"app/modules/Users/database/seeders/",
             "Users\\Database\\Factories\\":"app/modules/Users/database/factories/"
-        }
+        },
+        "files":[
+            "app/helpers/general.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

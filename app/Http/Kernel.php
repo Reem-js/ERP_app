@@ -5,6 +5,7 @@ namespace App\Http;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use Users\Http\Middleware\UserMiddleware;
 
+
 class Kernel extends HttpKernel
 {
     /**

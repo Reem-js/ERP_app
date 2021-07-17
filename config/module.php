@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'Users'=>'users'
+    'Users'=>'users',
+    'stocks'=>'stocks',
+    'Suppliers'=>'suppliers',
 ];
+

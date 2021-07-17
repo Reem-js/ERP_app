@@ -26,6 +26,15 @@
                                         <input type="text" name="name" class="form-control " id="inputAddress" required
                                             placeholder="1234 Main St">
                                     </div>
+
+                                </div>
+
+
+
+
+
+                                <div class="d-flex justify-content-between">
+                                    <div class="form-group m-4 col-4" >
                                     <div class="col form-group m-4 " >
                                         <p class="font-weight-bold"for="inputAddress">
                                             {{ __('translation.suppliers.Email') }}</p>
@@ -48,6 +57,7 @@
                                                 placeholder="1234 Main St">
                                     </div>
 
+                                </div>
 
                                 <div class=" col-6 form-group form-file-upload form-file-multiple m-4" >
                                     <p class="font-weight-bold"for="inputAddress">
@@ -66,9 +76,8 @@
                                     </div>
                                 </div>
 
-                            </div>
 
-                                <div class="row ">
+                                <div class="row mt-5">
                                     <div class="col-lg-4">
                                         <button type="submit" class="btn btn-primary " >{{__('translation.website.crud.create')}}</button>
                                         <button type="submit" class="btn btn-primary " >{{__('translation.website.crud.Create & New')}}</button>

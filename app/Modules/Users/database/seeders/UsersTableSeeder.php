@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -16,6 +15,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name'=>'admin',
+            'email'=>'admin@material.com',
+            'password'=>Hash::make('secret'),
+            'phone'=>'111111111'
+        ]);
         app(\Users\Database\Factories\UserFactory::class)->count(10)->create();
     }
 }

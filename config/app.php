@@ -175,7 +175,14 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Users\Providers\UsersServiceProvider::class
+        /* Users Module */
+        Users\Providers\UsersServiceProvider::class,
+        /* Stocks Module */
+        Stocks\Providers\StocksServiceProvider::class,
+        /* Suppliers Module */
+        Suppliers\Providers\SuppliersServiceProvider::class,
+
+
     ],
 
     /*
