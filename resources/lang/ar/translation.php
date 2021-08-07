@@ -267,6 +267,8 @@ return [
         'Price Lists' => 'قوائم الاسعار',
 
         'Actions' => 'العمليات',
+        'Price List'=>'قوائم الاسعار',
+        'No Price List'=>'لا يوجد قوائم اسعار '
     ],
     'clients' => [
         'ID' => 'الرقم',

@@ -1,5 +1,4 @@
-@extends('layouts.app', ['activePage' => 'allpricelists', 'titlePage' => __('translation.website.sidebar.All Price
-Lists')])
+@extends('layouts.app', ['activePage' => 'allpricelists', 'titlePage' => __('translation.website.sidebar.All PriceLists')])
 
 @section('content')
     <div class="content">

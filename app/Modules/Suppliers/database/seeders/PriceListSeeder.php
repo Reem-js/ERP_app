@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Suppliers\Database\Seeders;
 
-use App\Models\PriceList;
+use Suppliers\Models\PriceList;
 use Illuminate\Database\Seeder;
 
 class PriceListSeeder extends Seeder

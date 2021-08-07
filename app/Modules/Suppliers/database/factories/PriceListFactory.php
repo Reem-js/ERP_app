@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace Suppliers\Database\Factories;
 
 use App\Models\PriceList;
 use Illuminate\Database\Eloquent\Factories\Factory;

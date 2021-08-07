@@ -2,9 +2,17 @@
 
 namespace Suppliers\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Suppliers\Models\Supplier;
+use App\Http\services\mediaService;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
+use Suppliers\Http\Requests\storeSupplier;
+use Suppliers\Http\Requests\updateSupplier;
+use Yajra\Datatables\Datatables;
+use Form;
+use Supplier\Http\services\pricelistService;
+
 class SupplierController extends Controller
 {
     /**
@@ -12,10 +20,28 @@ class SupplierController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $suppliers = Supplier::all();
-        return view('Suppliers::backend.suppliers.index',compact('suppliers'));
+        return view('Suppliers::suppliers.index');
+    }
+
+    public function suppllierData()
+    {
+            $data = Supplier::all();
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row) {
+                        $btn = "<a class='btn btn-info btn-sm' rel='tooltip' title='".__('translation.title.Edit Supplier')."'
+                        href='".route('suppliers.edit', $row->slug)."'> <i class='material-icons'>edit</i> </a>";
+                        $btn .= "<a class='btn btn-info btn-sm' rel='tooltip' title='". __('translation.title.show details')."'
+                        href='".route('suppliers.show', $row->slug)."'><i class='material-icons'>visibility</i></a>";
+                        $btn .= "<a class='btn btn-primary btn-sm' rel='tooltip' title='".__('translation.title.add in price list') ."'
+                        href='".route('priceLists.create')."'><i class='fa fa-plus-circle' aria-hidden='true'></i></a>";
+                        $btn .="<a class='delete-button btn btn-danger btn-sm'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
+                        return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
     }
 
     /**
@@ -26,7 +52,7 @@ class SupplierController extends Controller
     public function create()
     {
         //
-        return view('Suppliers::backend.suppliers.create');
+        return view('Suppliers::suppliers.create');
     }
 
     /**
@@ -35,9 +61,15 @@ class SupplierController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(storeSupplier $request)
     {
-        //
+        $data = requestAbstractionWithMedia($request);
+        $supplier = Supplier::create($data);
+        // call method to create a new supplier wallet
+        if($request->hasFile('media')){
+            $supplier->insertMulitMedia($request->file('media'),'pricelists');
+        }
+        return redirectAccordingToRequest($request);
     }
 
     /**
@@ -48,7 +80,7 @@ class SupplierController extends Controller
      */
     public function show(Supplier $supplier)
     {
-        return view('Suppliers::backend.suppliers.show',compact('supplier'));
+        return view('Suppliers::suppliers.show',compact('supplier'));
     }
 
     /**
@@ -59,7 +91,7 @@ class SupplierController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        return view('Suppliers::backend.suppliers.edit',compact('supplier'));
+        return view('Suppliers::suppliers.edit',compact('supplier'));
     }
 
     /**
@@ -69,9 +101,14 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Supplier $supplier,updateSupplier $request)
     {
-        //
+        $data = requestAbstractionWithMedia($request);
+        $supplier->update($data);
+        if($request->hasFile('media')){
+            $supplier->insertMulitMedia($request->file('media'),'pricelists');
+        }
+        return redirectAccordingToRequest($request);
     }
 
     /**
@@ -80,9 +117,11 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Supplier $supplier,Request $request)
     {
-        //
-        return "supplier delete";
+        $supplier->deleteMultiMedia('pricelists')->delete();
+        return redirectAccordingToRequest($request);
     }
+
+
 }

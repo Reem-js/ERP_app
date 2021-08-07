@@ -3,10 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use Suppliers\Http\Controllers\testController;
 use App\Http\Controllers\backend\roles\RoleController;
 use App\Http\Controllers\backend\sales\SaleController;
-use App\Http\Controllers\backend\users\UserController;
 use App\Http\Controllers\backend\index\IndexController;
 use App\Http\Controllers\backend\brands\BrandController;
 use App\Http\Controllers\backend\reports\ReportController;
@@ -17,20 +15,14 @@ use App\Http\Controllers\backend\partners\partnerController;
 use App\Http\Controllers\backend\products\ProductController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\backend\purchases\PurchaseController;
-use App\Http\Controllers\backend\suppliers\SupplierController;
 use App\Http\Controllers\backend\categories\CategoryController;
-use App\Http\Controllers\backend\priceLists\priceListController;
-use App\Http\Controllers\backend\UserWallet\UserWalletController;
 use App\Http\Controllers\backend\permissions\PermissionController;
 use App\Http\Controllers\backend\installments\installmentController;
 use App\Http\Controllers\backend\ClientWallet\ClientWalletController;
 use App\Http\Controllers\backend\expensesTypes\ExpenseTypeController;
 use App\Http\Controllers\backend\notifications\NotificationController;
 use App\Http\Controllers\backend\dividendIncome\dividendIncomeController;
-use App\Http\Controllers\backend\SupplierWallet\SupplierWalletController;
-use App\Http\Controllers\backend\UserWalletTransactions\UserWalletTransactionController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
-use App\Http\Controllers\backend\SupplierWalletTransactions\SupplierWalletTransactionController;
 use App\Http\Controllers\backend\purchaseOrders\PurchaseOrderController;
 
 /*
@@ -63,8 +55,7 @@ Route::group(
             Route::resource('expenses', ExpenseController::class);
             // expenses types
             Route::resource('expensesTypes', ExpenseTypeController::class);
-            // priceList
-            Route::resource('priceLists', priceListController::class);
+
             // setting
             Route::get('settings', [WebsiteController::class, 'getWebsite'])->name('get.website');
             // brands

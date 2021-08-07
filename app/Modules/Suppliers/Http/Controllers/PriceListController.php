@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\backend\priceLists;
+namespace Suppliers\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class PriceListController extends Controller
     public function index()
     {
         //
-        return view('backend.priceLists.index');
+        return view('Suppliers::priceLists.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class PriceListController extends Controller
     public function create()
     {
         //
-        return view('backend.priceLists.create');
+        return view('Suppliers::priceLists.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class PriceListController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.priceLists.edit');
+        return view('Suppliers::priceLists.edit');
     }
 
     /**
