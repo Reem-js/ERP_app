@@ -2,7 +2,7 @@
 
 namespace Suppliers\Database\Factories;
 
-use App\Models\PriceList;
+use Suppliers\Models\PriceList;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PriceListFactory extends Factory
