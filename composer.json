@@ -29,13 +29,21 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
+            "Database\\Seeders\\": "database/seeders/",
+            "Clients\\":"app/Modules/Clients",
+            "Clients\\Database\\Seeders\\":"app/modules/Clients/database/seeders/",
+            "Clients\\Database\\Factories\\":"app/modules/Clients/database/factories/"
+        },
+        "files":[
+            "app/helpers/general.php"
+         ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
+
+
     },
     "scripts": {
         "post-autoload-dump": [

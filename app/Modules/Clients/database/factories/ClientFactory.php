@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Factories;
+namespace clients\Database\Factories;
 
-use App\Models\Client;
+use clients\Models\Client;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ClientFactory extends Factory

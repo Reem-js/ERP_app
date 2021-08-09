@@ -195,6 +195,7 @@ return [
 
 
     ],
+        // خدت دا في موديول ال كلاينت
     'title' => [
         'create client' => 'create client',
         'Edit Client' => 'Edit Client',
@@ -224,6 +225,7 @@ return [
         '' => '',
         '' => '',
     ],
+
     'wallet' => [
         'My Wallet' => 'My Wallet',
         'Client Wallet' => 'Client Wallet',
@@ -250,6 +252,7 @@ return [
         'Installment' => 'Installment',
         'Actions' => 'Actions',
     ],
+/////////////////////////////////////////////////////
     'users' => [
         'Name' => 'Name',
         'Phone' => 'Phone',
@@ -279,6 +282,7 @@ return [
 
 
     ],
+    // خدت دا في موديول ال كلاينت
     'clients' => [
         'ID' => 'ID',
         'Name' => 'Name',
@@ -296,6 +300,7 @@ return [
         'Edit Client-Transaction' => 'Edit Client-Transaction',
         'All clients' => 'All Clients',
     ],
+    ////////////////////////////////////////////////////////////////////
 
     'purchase' => [
         'ID' => 'ID',

@@ -1,9 +1,9 @@
 <?php
 
-namespace Database\Seeders;
+namespace clients\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\ClientWalletTransaction;
+use clients\Models\ClientWalletTransaction;
 
 class ClientWalletTransactionSeeder extends Seeder
 {
@@ -16,5 +16,6 @@ class ClientWalletTransactionSeeder extends Seeder
     {
         //
         ClientWalletTransaction::factory(10)->create();
+        app(\Stocks\Database\Factories\ClientWalletTransactionFactory::class)->count(10)->create();
     }
 }

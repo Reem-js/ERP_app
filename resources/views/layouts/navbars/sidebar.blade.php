@@ -76,6 +76,7 @@
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-clients' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('clients.index') }}">
+                         
                                 <i class="fa fa-th-list {{ $activePage == 'all-clients' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.all Clients') }}
@@ -84,6 +85,7 @@
                         {{-- client Wallet --}}
                         <li class="nav-item ml-3 {{ $activePage == 'wallet-clients' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('get.client.wallet') }}">
+
                                 <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-clients' ? '' : '' }} "
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.Client Wallets') }}

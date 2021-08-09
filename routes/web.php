@@ -32,6 +32,7 @@ use App\Http\Controllers\backend\purchases\PurchaseController;
 use App\Http\Controllers\backend\installments\installmentController;
 use App\Http\Controllers\backend\purchaseOrders\PurchaseOrderController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -91,10 +92,10 @@ Route::group(
             Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
             Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
             // client wallet
-            Route::resource('clients', ClientController::class);
-            Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
-            Route::get('client-wallet-trans/{client}', [ClientWalletController::class, 'getClientWalletTrans'])->name('get.client.wallet.trans');
-            Route::resource('client-wallet-transactions', ClientWalletTransactionController::class);
+           // Route::resource('clients', ClientController::class);
+            // Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
+            // Route::get('client-wallet-trans/{client}', [ClientWalletController::class, 'getClientWalletTrans'])->name('get.client.wallet.trans');
+            // Route::resource('client-wallet-transactions', ClientWalletTransactionController::class);
 
             // roles
             Route::resource('roles', RoleController::class);
