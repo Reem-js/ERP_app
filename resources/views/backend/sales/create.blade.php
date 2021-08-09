@@ -79,6 +79,7 @@
                         </div>
                         <div class="card-body">
                             <div class="m-5">
+                                {{-- <div id="supplier_id_show">ekfmewmewmpogm</div> --}}
                                 <form>
                                     <div class="usersale mb-5">
                                         {{-- d-flex justify-content-between --}}
@@ -108,7 +109,12 @@
                                                 type="date" name="" id="">
                                         </div>
                                     </div>
-                                    <livewire:all-sales />
+                                    {{-- <livewire:all-sales /> --}}
+                                    <div id="supplier_id_show">hhhhhhhhh</div>
+                                    @php
+                                        $temp_supplier = '3';
+                                    @endphp
+                                    @livewire('all-sales', ['chosen_supplier_id' => $temp_supplier])
                                     <div class="usersale mt-5">
                                         {{-- d-flex justify-content-between col-sm-12 --}}
                                         <div class="form-group col-sm-2 col-md-5 col-lg-5 m-4">
@@ -173,39 +179,37 @@
     <script>
         $(document).ready(function() {
             // Initialize select2
+            var choosen_supplier_id = 0;
             $(".selItem").select2();
-        });
-        $(document).ready(function() {
             $(".js-example-basic-single").select2();
-        });
-        $(document).ready(function() {
             $(".client_dropdown").select2();
-        });
-        $(document).ready(function() {
             $(".payment_dropdown").select2();
-        });
-
-        $(document).ready(function() {
             $(".item_dropdown").select2();
-        });
-        $("#payment_drop").change(function() {
-            var check = $(this).val();
-            if (check == 'install') {
-                $('#installment_form').modal('show');
-            }
-        });
-        $('.supplier_choosen_radio').click(function() {
-            var theCars = document.getElementsByName("customRadio");
-            var i = theCars.length;
-            while (i--) {
-                if (theCars[i].checked)
-                    alert(theCars[i].value);
-            }
 
-            // document.getElementsByTagName('select[class=supplier_id_selected]')
-            // $(this).attr('checked');
-            // alert($('.supplier_choosen_radio[checked]').val());
-            $('#add_supplier').modal('hide');
+            $("#payment_drop").change(function() {
+                var check = $(this).val();
+                if (check == 'install') {
+                    $('#installment_form').modal('show');
+                }
+            });
+
+            $('.supplier_choosen_radio').click(function() {
+                var choosen_supplier_id = 0;
+                var theCars = document.getElementsByName("customRadio");
+                var i = theCars.length;
+                while (i--) {
+                    if (theCars[i].checked){
+                        $('#add_supplier').modal('hide');
+                        choosen_supplier_id = theCars[i].value;
+                        alert(choosen_supplier_id); 
+                    }
+                        
+                }
+                document.getElementById('supplier_id_show').innerHTML = choosen_supplier_id;
+                console.log(choosen_supplier_id);
+            });
         });
+        
+        
     </script>
 @endpush

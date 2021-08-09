@@ -24,6 +24,7 @@ class ClientsServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
         $ds = DIRECTORY_SEPARATOR;
         $moduleName = config('module.clients');
         config(['module'=>File::getRequire(base_path($ds.'config'.$ds.'module.php'))]);
@@ -32,5 +33,6 @@ class ClientsServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.$ds.'..'.$ds.'resources'.$ds.'lang',$moduleName);
         $this->loadMigrationsFrom(__DIR__.$ds.'..'.$ds.'database'.$ds.'migrations');
         $this->loadMigrationsFrom(__DIR__.$ds.'..'.$ds.'database'.$ds.'migrations');
+       
     }
 }

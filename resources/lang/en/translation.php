@@ -12,7 +12,6 @@ return [
             'create client' => 'Create Client',
             'Client Wallet' => 'Client Wallet',
             'Client Wallets' => 'Client Wallets',
-
             'Client Wallet Trans' => 'Client Wallet Trans',
             'All Transactions' => 'All Transactions',
             'Create Transaction' => 'Create Transaction',
@@ -22,7 +21,6 @@ return [
             'create suppliers' => 'Create Suppliers',
             'Supplier Wallet' => 'Supplier Wallet',
             'Supplier Wallets' => 'Supplier Wallets',
-
             'Supplier Wallet Trans' => 'Supplier Wallet Trans',
             'Users' => 'Users',
             'All Users' => 'All Users',
@@ -279,7 +277,8 @@ return [
         'Price Lists' => 'Price Lists',
         'Actions' => 'Actions',
         'Add Supplier'=>'Add Supplier',
-
+        'Price List'=>'Price List',
+        'No Price List'=>'No Price List'
 
     ],
     // خدت دا في موديول ال كلاينت
@@ -586,9 +585,8 @@ return [
     ],
 
     'prePurchases'=>[
-
-
-
-
+    ],
+    'empty'=> [
+        'suppliers'=>'No Suppliers Yet'
     ]
 ];

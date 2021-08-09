@@ -317,7 +317,7 @@
             {{-- Installlments --}}
             <li
                 class="nav-item  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? ' active' : '' }}">
-                <a class="nav-link nav-link-mode" href="{{ route('get.installments') }}">
+                <a class="nav-link nav-link-mode" href="{{ route('installments.index') }}">
                     <i class="fa fa-th-list  {{ $activePage == 'addInstallment' || $activePage == 'allInstallments' || $activePage == 'editInstallment' ? '' : '' }}"
                         aria-hidden="true"></i>
                     {{ __('translation.website.sidebar.All Installments') }}

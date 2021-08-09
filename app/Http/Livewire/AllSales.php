@@ -8,13 +8,14 @@ class AllSales extends Component
 {
     public $message =[];
     public $x = 1;
+    // public $chosen_supplier_id = 0;
     public $tr = [
         ' <tr>
                 <td class="text-center">
                     <span style="cursor:pointer;" wire:click="removeTr(0)"  class=" text-danger material-icons">delete</span>
                 </td>
                 <td>
-                    <select class="form-control" name="payment">
+                    <select class="form-control item_dropdown" name="payment">
                         <option value="0">Items</option>
                         <option value="cash">Cash</option>
                         <option value="install">Install</option>
@@ -23,6 +24,7 @@ class AllSales extends Component
                 <td>
                 <div class="form-group mb-0" style="margin: 20px;">
                     <a href="#" data-toggle="modal" data-target="#add_supplier" class="text-primary supplier_id_selected link">Choose Supplier</a>
+                    <p id=""supplier_id_show>hhhhhhh</p>
                 </div>
                 </td>
                 <td>
@@ -55,6 +57,7 @@ class AllSales extends Component
                 <td>
                 <div class="form-group mb-0" style="margin: 20px;">
                     <a href="#" data-toggle="modal" data-target="#add_supplier" class="text-primary link">Choose Supplier</a>
+                    <p id="supplier_id_show">hhhhhhh</p>
                 </div>
                 </td>
             </td>
@@ -89,4 +92,11 @@ class AllSales extends Component
         // $this->l_value = ModalShowSupplier::$l_radio_value;
         return view('livewire.all-sales');
     }
+
+    // public function mount($chosen_supplier_id)
+    // {
+        
+    //     $this->chosen_supplier_id = $chosen_supplier_id;
+    //     // return $chosen_supplier_id;
+    // }
 }

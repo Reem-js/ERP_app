@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "cviebrock/eloquent-sluggable": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -15,9 +16,12 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "livewire/livewire": "^2.4",
-        "mcamara/laravel-localization": "^1.6"
+        "mcamara/laravel-localization": "^1.6",
+        "yajra/laravel-datatables": "1.5",
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
@@ -32,11 +36,20 @@
             "Database\\Seeders\\": "database/seeders/",
             "Clients\\":"app/Modules/Clients",
             "Clients\\Database\\Seeders\\":"app/modules/Clients/database/seeders/",
-            "Clients\\Database\\Factories\\":"app/modules/Clients/database/factories/"
+            "Clients\\Database\\Factories\\":"app/modules/Clients/database/factories/",
+            "Stocks\\":"app/Modules/Stocks",
+            "Stocks\\Database\\Seeders\\":"app/Modules/Stocks/database/seeders/",
+            "Stocks\\Database\\Factories\\":"app/Modules/Stocks/database/factories/",
+            "Suppliers\\":"app/Modules/Suppliers",
+            "Suppliers\\Database\\Factories\\": "app/Modules/Suppliers/database/factories/",
+            "Suppliers\\Database\\Seeders\\": "app/Modules/Suppliers/database/seeders/",
+            "Users\\": "app/Modules/Users",
+            "Users\\Database\\Seeders\\":"app/Modules/Users/database/seeders/",
+            "Users\\Database\\Factories\\":"app/Modules/Users/database/factories/"
         },
         "files":[
             "app/helpers/general.php"
-         ]
+        ]
     },
     "autoload-dev": {
         "psr-4": {

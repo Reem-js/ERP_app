@@ -227,7 +227,7 @@ input{
     background-color:#242526;
     color: white;
 } */
-div{
+/* div{
     background-color:#242526;
     color: white;
 }
@@ -242,7 +242,7 @@ select {
 label {
     background-color:#242526;
     color: #fff;
-}
+} */
 
 .form-control .supplier_dropdown{
     background-color:#242526;
@@ -250,7 +250,7 @@ label {
 }
 
 a {
-    background-color:#242526;
+    /* background-color:#242526; */
     color: #fff;
 }
 
@@ -274,4 +274,7 @@ th{
 .font-weight-bold
 {
      color: #ffffff !important;
+}
+input{
+    color: white !important;
 }

@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -165,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Yajra\DataTables\DataTablesServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -174,9 +175,16 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        /* Users Module */
+        Users\Providers\UsersServiceProvider::class,
+        /* Stocks Module */
+        Stocks\Providers\StocksServiceProvider::class,
+        /* Suppliers Module */
+        Suppliers\Providers\SuppliersServiceProvider::class,
+
 
         /** modules providers */
-Clients\Providers\ClientsServiceProvider::class,
+        Clients\Providers\ClientsServiceProvider::class,
     ],
 
     /*

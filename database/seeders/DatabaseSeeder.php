@@ -1,12 +1,15 @@
 <?php
+
 namespace Database\Seeders;
 
-
 use Illuminate\Database\Seeder;
-use Database\Seeders\SupplierSeeder;
-use Database\Seeders\UsersTableSeeder;
-use Database\Seeders\UserWalletSeeder;
-use Database\Seeders\UserWalletTransactionSeeder;
+use Users\Database\Seeders\UsersTableSeeder;
+use Users\Database\Seeders\UserWalletSeeder;
+use Suppliers\Database\Seeders\SupplierSeeder;
+use Suppliers\Database\Seeders\PriceListSeeder;
+use Suppliers\Database\Seeders\SupplierWalletSeeder;
+use Users\Database\Seeders\UserWalletTransactionSeeder;
+use Suppliers\Database\Seeders\SupplierWalletTransactionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,20 +20,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            UsersTableSeeder::class,
-            UserWalletSeeder::class,
-            UserWalletTransactionSeeder::class,
-            ClientSeeder::class,
-            ClientWalletSeeder::class,
-            ClientWalletTransactionSeeder::class,
-            SupplierSeeder::class,
-            SupplierWalletSeeder::class,
-            SupplierWalletTransactionSeeder::class,
-            CategorySeeder::class,
-            BrandSeeder::class,
-            ProductSeeder::class,
-            SaleSeeder::class,
-        ]);
+
+        $this->call(
+            [
+                UsersTableSeeder::class,
+                UserWalletSeeder::class,
+                UserWalletTransactionSeeder::class,
+                ClientSeeder::class,
+                ClientWalletSeeder::class,
+                ClientWalletTransactionSeeder::class,
+                SupplierSeeder::class,
+                SupplierWalletSeeder::class,
+                SupplierWalletTransactionSeeder::class,
+                CategorySeeder::class,
+                BrandSeeder::class,
+                ProductSeeder::class,
+                SaleSeeder::class,
+                AppCapitalSeeder::class,
+                ExpenseTypeSeeder::class,
+                ExpenseSeeder::class,
+                InstallementSeeder::class,
+                NotificationSeeder::class,
+                PartnerSeeder::class,
+                PriceListSeeder::class,
+                WebsiteSeeder::class
+            ]
+        );
     }
 }

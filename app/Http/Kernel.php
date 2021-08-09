@@ -4,6 +4,8 @@ namespace App\Http;
 
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Users\Http\Middleware\UserMiddleware;
+
 
 class Kernel extends HttpKernel
 {
@@ -69,6 +71,6 @@ class Kernel extends HttpKernel
         'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
         'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
         'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
-        'ClientMiddleware'=>\Clients\Http\Middleware\ClientMiddleware ::class ,
+        'ClientMiddleware'=>\Clients\Http\Middleware\ClientMiddleware ::class 
     ];
 }
