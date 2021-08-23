@@ -138,6 +138,11 @@ return [
             ,'see more'=>'see more',
 
         ],
+        'datatable'=>[
+            'Options'=>'Options',
+            'Columns'=>'Columns',
+            'All'=>'All'
+        ]
 
     ],
     'brands' => [

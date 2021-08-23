@@ -8,11 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class UserWalletTransaction extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'user_id','admin_wallet_id','reason','date','user_wallet_transactionable_type','user_wallet_transactionable_id',
-        'transaction_date','transaction_status',
-        'amount','slug','created_at','updated_at'
+    public $fillable = [
+        'user_wallet_id',
+        'reason',
+        'user_wallet_transactionable_type',
+        'user_wallet_transactionable_id',
+        'transaction_status',
+        'amount'
     ];
+
 
     protected $hidden = [
     ];

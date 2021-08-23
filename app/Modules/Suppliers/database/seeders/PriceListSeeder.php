@@ -14,6 +14,7 @@ class PriceListSeeder extends Seeder
      */
     public function run()
     {
-        PriceList::factory(10)->create();
+        app(\Suppliers\Database\Factories\PriceListFactory::class)->count(10)->create();
+
     }
 }

@@ -15,16 +15,13 @@ class CreateUserWalletTransactionsTable extends Migration
     {
         Schema::create('user_wallet_transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->foreignId('admin_wallet_id');
+            $table->foreignId('user_wallet_id');
             $table->string('reason');
-            $table->date('date');
             $table->string('user_wallet_transactionable_type');
             $table->bigInteger('user_wallet_transactionable_id');
-            $table->date('transaction_date');
             $table->boolean('transaction_status');
             $table->double('amount');
-            $table->string('slug');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

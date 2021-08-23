@@ -224,7 +224,7 @@
                                                 </i>
                                             </div>
                                             <p class="card-category">{{__('translation.wallet.Total Balance')}}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{$supplier->wallet->total_value}}
                                                 <small>EGP</small>
                                             </h3>
                                         </div>
@@ -246,7 +246,7 @@
                                                 <i class="material-icons">store</i>
                                             </div>
                                             <p class="card-category">{{ __('translation.wallet.Number Of Transactions') }}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{$supplier->wallet->number_of_transaction}}
 
                                             </h3>
                                         </div>
@@ -269,7 +269,7 @@
                                                 <i class="material-icons">paid</i>
                                             </div>
                                             <p class="card-category">{{__('translation.wallet.Total Paied')}}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{$supplier->wallet->total_paid}}
                                                 <small>EGP</small>
                                             </h3>
                                         </div>
@@ -292,7 +292,7 @@
                                                 <i class="material-icons">info_outline</i>
                                             </div>
                                             <p class="card-category">{{ __('translation.wallet.Pending')}}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{$supplier->wallet->total_pending}}
                                                 <small>EGP</small>
                                             </h3>
                                         </div>

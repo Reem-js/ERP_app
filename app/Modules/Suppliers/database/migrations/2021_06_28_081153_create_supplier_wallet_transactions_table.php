@@ -15,16 +15,13 @@ class CreateSupplierWalletTransactionsTable extends Migration
     {
         Schema::create('supplier_wallet_transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('supplier_id');
             $table->foreignId('supplier_wallet_id');
-            $table->string('reason');
-            $table->date('date');
+            $table->tinyInteger('reason')->comment('1=>deposite,2=>withdraw,3=>depit,4=>payPremium');
             $table->string('supplier_wallet_transactionable_type');
             $table->bigInteger('supplier_wallet_transactionable_id');
-            $table->date('transaction_date');
             $table->boolean('transaction_status');
-            $table->double('amount');
-            $table->string('slug');
+            $table->decimal('amount',10,2);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

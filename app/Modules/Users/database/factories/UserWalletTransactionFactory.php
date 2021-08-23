@@ -24,16 +24,12 @@ class UserWalletTransactionFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::all()->random()->id,
-            'admin_wallet_id'=>UserWallet::all()->random()->id,
+            'user_wallet_id'=>UserWallet::all()->random()->id,
             'reason'=>$this->faker->sentence(10),
-            'date'=>$this->faker->date('Y-m-d','now'),
             'user_wallet_transactionable_type'=>$this->faker->sentence(10),
             'user_wallet_transactionable_id' => $this->faker->randomNumber(5, false),
-            'transaction_date'=>$this->faker->date( 'Y-m-d','now'),
             'transaction_status'=>$this->faker->boolean(),
             'amount'=>$this->faker->randomNumber(5, false),
-            'slug' => $this->faker->slug(),
         ];
     }
 }

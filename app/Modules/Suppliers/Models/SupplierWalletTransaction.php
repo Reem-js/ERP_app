@@ -9,10 +9,13 @@ class SupplierWalletTransaction extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'supplier_id','supplier_wallet_id','reason','date','supplier_wallet_transactionable_type','supplier_wallet_transactionable_id',
-        'transaction_date','transaction_status',
-        'amount','slug','created_at','updated_at'
+    public $fillable = [
+        'supplier_wallet_id',
+        'reason',
+        'supplier_wallet_transactionable_type',
+        'supplier_wallet_transactionable_id',
+        'transaction_status',
+        'amount'
     ];
 
 

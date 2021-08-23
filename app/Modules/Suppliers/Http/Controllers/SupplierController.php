@@ -2,16 +2,21 @@
 
 namespace Suppliers\Http\Controllers;
 
+use Form;
 use Illuminate\Http\Request;
+use Users\Models\UserWallet;
 use Suppliers\Models\Supplier;
+use Yajra\Datatables\Datatables;
 use App\Http\services\mediaService;
 use App\Http\Controllers\Controller;
+use App\Http\services\walletService;
+use Suppliers\Models\SupplierWallet;
 use Illuminate\Support\Facades\Route;
+use Users\Models\UserWalletTransaction;
 use Suppliers\Http\Requests\storeSupplier;
 use Suppliers\Http\Requests\updateSupplier;
-use Yajra\Datatables\Datatables;
-use Form;
 use Supplier\Http\services\pricelistService;
+use Suppliers\Models\SupplierWalletTransaction;
 
 class SupplierController extends Controller
 {
@@ -27,21 +32,21 @@ class SupplierController extends Controller
 
     public function suppllierData()
     {
-            $data = Supplier::all();
-            return Datatables::of($data)
-                    ->addIndexColumn()
-                    ->addColumn('action', function($row) {
-                        $btn = "<a class='btn btn-info btn-sm' rel='tooltip' title='".__('translation.title.Edit Supplier')."'
-                        href='".route('suppliers.edit', $row->slug)."'> <i class='material-icons'>edit</i> </a>";
-                        $btn .= "<a class='btn btn-info btn-sm' rel='tooltip' title='". __('translation.title.show details')."'
-                        href='".route('suppliers.show', $row->slug)."'><i class='material-icons'>visibility</i></a>";
-                        $btn .= "<a class='btn btn-primary btn-sm' rel='tooltip' title='".__('translation.title.add in price list') ."'
-                        href='".route('priceLists.create')."'><i class='fa fa-plus-circle' aria-hidden='true'></i></a>";
-                        $btn .="<a class='delete-button btn btn-danger btn-sm'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
-                        return $btn;
-                    })
-                    ->rawColumns(['action'])
-                    ->make(true);
+        $data = Supplier::all();
+        return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function ($row) {
+                $btn = "<a class='btn btn-info btn-sm' rel='tooltip' title='" . __('translation.title.Edit Supplier') . "'
+                        href='" . route('suppliers.edit', $row->slug) . "'> <i class='material-icons'>edit</i> </a>";
+                $btn .= "<a class='btn btn-info btn-sm' rel='tooltip' title='" . __('translation.title.show details') . "'
+                        href='" . route('suppliers.show', $row->slug) . "'><i class='material-icons'>visibility</i></a>";
+                $btn .= "<a class='btn btn-primary btn-sm' rel='tooltip' title='" . __('translation.title.add in price list') . "'
+                        href='" . route('priceLists.create') . "'><i class='fa fa-plus-circle' aria-hidden='true'></i></a>";
+                $btn .= "<a class='delete-button btn btn-danger btn-sm'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
     }
 
     /**
@@ -61,14 +66,16 @@ class SupplierController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(storeSupplier $request)
+    public function store(storeSupplier $request, walletService $walletService)
     {
         $data = requestAbstractionWithMedia($request);
         $supplier = Supplier::create($data);
         // call method to create a new supplier wallet
-        if($request->hasFile('media')){
-            $supplier->insertMulitMedia($request->file('media'),'pricelists');
+        if ($request->hasFile('media')) {
+            $supplier->insertMulitMedia($request->file('media'), 'pricelists');
         }
+        // create wallet for supplier
+        $wallet = $walletService->createWallet(new SupplierWallet, $supplier->id);
         return redirectAccordingToRequest($request);
     }
 
@@ -80,7 +87,7 @@ class SupplierController extends Controller
      */
     public function show(Supplier $supplier)
     {
-        return view('Suppliers::suppliers.show',compact('supplier'));
+        return view('Suppliers::suppliers.show', compact('supplier'));
     }
 
     /**
@@ -91,7 +98,7 @@ class SupplierController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        return view('Suppliers::suppliers.edit',compact('supplier'));
+        return view('Suppliers::suppliers.edit', compact('supplier'));
     }
 
     /**
@@ -101,12 +108,12 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Supplier $supplier,updateSupplier $request)
+    public function update(Supplier $supplier, updateSupplier $request)
     {
         $data = requestAbstractionWithMedia($request);
         $supplier->update($data);
-        if($request->hasFile('media')){
-            $supplier->insertMulitMedia($request->file('media'),'pricelists');
+        if ($request->hasFile('media')) {
+            $supplier->insertMulitMedia($request->file('media'), 'pricelists');
         }
         return redirectAccordingToRequest($request);
     }
@@ -117,11 +124,59 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Supplier $supplier,Request $request)
+    public function destroy(Supplier $supplier, Request $request)
     {
         $supplier->deleteMultiMedia('pricelists')->delete();
         return redirectAccordingToRequest($request);
     }
 
+    public function walletTest()
+    {
+        $balance = UserWallet::findOrFail(10)->total_value;
+        $transactions = UserWalletTransaction::where('user_wallet_id', 11)->get();
+        return view('Suppliers::wallet-test', compact('balance', 'transactions'));
+    }
 
+    public function deposite(Request $request, walletService $walletService)
+    {
+        $transactionData = [
+            'model_type' => 'Models\Sale',
+            'model_id' => 6,
+            'amount' => $request->amount
+        ];
+        $message = $walletService->deposite(new UserWallet, 10, $transactionData)->responeHandle();
+        return redirect()->back()->with('message', $message);
+    }
+
+    public function withDraw(Request $request, walletService $walletService)
+    {
+        $transactionData = [
+            'model_type' => 'Models\Sale',
+            'model_id' => 6,
+            'amount' => $request->amount
+        ];
+        $message = $walletService->withdraw(new UserWallet, 10, $transactionData)->responeHandle();
+        return redirect()->back()->with('message', $message);
+    }
+
+    public function debit(Request $request, walletService $walletService)
+    {
+        $transactionData = [
+            'model_type' => 'Models\Sale',
+            'model_id' => 6,
+            'amount' => $request->amount
+        ];
+        $message = $walletService->debit(new SupplierWallet, 11, $transactionData)->responeHandle();
+        return redirect()->back()->with('message', $message);
+    }
+    public function payPremium(Request $request, walletService $walletService)
+    {
+        $transactionData = [
+            'model_type' => 'Models\Sale',
+            'model_id' => 6,
+            'amount' => $request->amount
+        ];
+        $message = $walletService->payPremium(new UserWallet, 10, $transactionData,new SupplierWallet,11)->responeHandle();
+        return redirect()->back()->with('message', $message);
+    }
 }

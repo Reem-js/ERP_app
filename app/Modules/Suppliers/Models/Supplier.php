@@ -3,10 +3,12 @@
 namespace Suppliers\Models;
 
 use App\Http\traits\mediaTrait;
+use Suppliers\Models\SupplierWallet;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 class Supplier extends Model
 {
     use HasFactory;
@@ -17,8 +19,7 @@ class Supplier extends Model
         'name',
         'nickname',
         'address',
-        'phone',
-        'slug'
+        'phone'
     ];
 
     /**
@@ -33,6 +34,11 @@ class Supplier extends Model
                 'source' => ['name','id']
             ]
         ];
+    }
+
+    public function wallet()
+    {
+        return $this->hasOne(SupplierWallet::class);
     }
 
 
