@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace clients\Database\Seeders;
 
-use App\Models\ClientWallet;
+use clients\Models\ClientWallet;
 use Illuminate\Database\Seeder;
 
 class ClientWalletSeeder extends Seeder
@@ -16,6 +16,8 @@ class ClientWalletSeeder extends Seeder
     {
         //
         ClientWallet::factory(10)->create();
+        app(\Stocks\Database\Factories\ClientWalletFactory::class)->count(10)->create();
+
 
     }
 }

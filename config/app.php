@@ -183,6 +183,8 @@ return [
         Suppliers\Providers\SuppliersServiceProvider::class,
 
 
+        /** modules providers */
+        Clients\Providers\ClientsServiceProvider::class,
     ],
 
     /*

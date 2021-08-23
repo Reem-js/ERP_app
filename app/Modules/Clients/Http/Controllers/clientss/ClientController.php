@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\backend\clientss;
+namespace Clients\Http\Controllers\clientss;
 
 use App\Http\Controllers\Controller;
+use Clients\Http\Requests\clients;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -12,10 +13,10 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(clients $request)
     {
         //
-        return view('backend.clients.index');
+        return view('clients::clients.index');
     }
 
     /**
@@ -23,10 +24,10 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(clients $request)
     {
         //
-        return view('backend.clients.create');
+        return view('clients::clients.create');
     }
 
     /**
@@ -49,7 +50,7 @@ class ClientController extends Controller
     public function show($id)
     {
         //
-        return view('backend.clients.show');
+        return view('clients::clients.show');
     }
 
     /**
@@ -61,7 +62,7 @@ class ClientController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.clients.edit');
+        return view('clients::clients.edit');
     }
 
     /**

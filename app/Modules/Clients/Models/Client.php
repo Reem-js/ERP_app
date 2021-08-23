@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace clients\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
@@ -37,6 +37,6 @@ class Client extends Model
     ];
 
     // relation 1:1 with client_wallet
-    //relation 1:1 with sales 
+    //relation 1:1 with sales
 
 }

@@ -34,6 +34,9 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
+            "Clients\\":"app/Modules/Clients",
+            "Clients\\Database\\Seeders\\":"app/modules/Clients/database/seeders/",
+            "Clients\\Database\\Factories\\":"app/modules/Clients/database/factories/",
             "Stocks\\":"app/Modules/Stocks",
             "Stocks\\Database\\Seeders\\":"app/Modules/Stocks/database/seeders/",
             "Stocks\\Database\\Factories\\":"app/Modules/Stocks/database/factories/",
@@ -52,6 +55,8 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
+
+
     },
     "scripts": {
         "post-autoload-dump": [

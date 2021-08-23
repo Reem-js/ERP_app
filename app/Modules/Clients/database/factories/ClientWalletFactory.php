@@ -1,9 +1,9 @@
 <?php
 
-namespace Database\Factories;
+namespace clients\Database\Factories;
 
-use App\Models\Client;
-use App\Models\ClientWallet;
+use clients\Models\Client;
+use clients\Models\ClientWallet;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ClientWalletFactory extends Factory

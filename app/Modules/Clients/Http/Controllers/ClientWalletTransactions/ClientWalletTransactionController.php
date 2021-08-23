@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\backend\ClientWalletTransactions;
+namespace Clients\Http\Controllers\ClientWalletTransactions;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class ClientWalletTransactionController extends Controller
     public function index()
     {
         //
-        return view('backend.clientWalletTransaction.index');
+        return view('clients::clientWalletTransaction.index');
     }
 
     /**
@@ -26,7 +26,7 @@ class ClientWalletTransactionController extends Controller
     public function create()
     {
         //
-        return view('backend.clientWalletTransaction.create');
+        return view('clients::clientWalletTransaction.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class ClientWalletTransactionController extends Controller
     public function edit($id)
     {
         //
-        return view('backend.clientWalletTransaction.edit');
+        return view('clients::clientWalletTransaction.edit');
     }
 
     /**

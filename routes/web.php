@@ -25,6 +25,7 @@ use App\Http\Controllers\backend\dividendIncome\dividendIncomeController;
 use App\Http\Controllers\backend\ClientWalletTransactions\ClientWalletTransactionController;
 use App\Http\Controllers\backend\purchaseOrders\PurchaseOrderController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,12 +66,6 @@ Route::group(
             // products || stock
             Route::resource('products', ProductController::class);
             Route::get('products/history/{id}', [ProductController::class, 'history'])->name('products.history');
-
-            // client wallet
-            Route::resource('clients', ClientController::class);
-            Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
-            Route::get('client-wallet-trans/{client}', [ClientWalletController::class, 'getClientWalletTrans'])->name('get.client.wallet.trans');
-            Route::resource('client-wallet-transactions', ClientWalletTransactionController::class);
 
             // roles
             Route::resource('roles', RoleController::class);

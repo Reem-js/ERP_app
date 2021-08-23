@@ -2,7 +2,7 @@
 
 namespace Suppliers\Database\Seeders;
 
-use Suppliers\Models\PriceList;
+// use Suppliers\Models\PriceList;
 use Illuminate\Database\Seeder;
 
 class PriceListSeeder extends Seeder
@@ -15,6 +15,7 @@ class PriceListSeeder extends Seeder
     public function run()
     {
         app(\Suppliers\Database\Factories\PriceListFactory::class)->count(10)->create();
+
 
     }
 }
