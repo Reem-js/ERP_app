@@ -15,16 +15,13 @@ class CreateClientWalletTransactionsTable extends Migration
     {
         Schema::create('client_wallet_transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('client_id');
             $table->foreignId('client_wallet_id');
             $table->string('reason');
-            $table->date('date');
             $table->string('client_wallet_transactionable_type');
             $table->bigInteger('client_wallet_transactionable_id');
-            $table->date('transaction_date');
             $table->boolean('transaction_status');
             $table->double('amount');
-            $table->string('slug');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

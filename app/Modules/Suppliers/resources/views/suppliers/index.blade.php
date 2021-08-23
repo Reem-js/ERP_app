@@ -80,6 +80,9 @@
                     url: '{{ url('material/js/datatable/' . app()->getLocale() . '-datatable.json') }}',
                 },
                 ajax: '{!! route('suppllier.data') !!}',
+                lengthChange: true,
+                // pageLength: 10,
+                // lengthMenu: [ 5, 10, 25, 50, 75, 100 ],
                 columns: [{
                         data: 'id',
                         name: 'id',
@@ -188,6 +191,7 @@
                             }
                         ]
                     },
+
                     {
                         extend: 'colvis', // Manage column visibity
                         className: '', // class name
@@ -229,7 +233,10 @@
                         }
 
                     });
-                }
+                },
+                "createdRow": function(row, data, dataIndex) {
+                //    $(row).children(":first").html(dataIndex+1);
+                },
             });
         });
     </script>

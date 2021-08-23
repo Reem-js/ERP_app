@@ -1,9 +1,12 @@
 <?php
 
-namespace clients\Database\Seeders;
+namespace Clients\Database\Seeders;
 
-use clients\Models\Client;
+use Clients\Models\Client;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Str;
+use Illuminate\Support\Facades\Hash;
 
 class ClientSeeder extends Seeder
 {
@@ -16,7 +19,7 @@ class ClientSeeder extends Seeder
     {
         //
         // Client::factory(10)->create();
-        app(\Stocks\Database\Factories\ClientFactory::class)->count(10)->create();
+        app(\Clients\Database\Factories\ClientFactory::class)->count(10)->create();
 
     }
 }

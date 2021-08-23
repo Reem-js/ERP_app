@@ -1,14 +1,21 @@
 <?php
 
-namespace clients\Models;
+namespace Clients\Models;
+
+
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Cviebrock\EloquentSluggable\Sluggable;
+
 
 class Client extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Sluggable;
+    use SoftDeletes;
+
 
     /**
      * The attributes that are mass assignable.
@@ -31,12 +38,25 @@ class Client extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
     // relation 1:1 with client_wallet
     //relation 1:1 with sales
+
+
+
+/**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => ['name','id']
+            ]
+        ];
+    }
+
+
 
 }

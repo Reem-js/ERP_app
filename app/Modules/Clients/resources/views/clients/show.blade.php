@@ -12,37 +12,34 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table">
+                            <table class="table text-center">
                                 <thead>
-                                    <tr>
-                                        <th class="font-weight-bold">{{ __('translation.clients.ID') }}</th>
-                                        <th class="font-weight-bold">{{ __('translation.clients.Name') }}</th>
-                                        <th class="font-weight-bold" >{{ __('translation.clients.Nickname') }}</th>
-                                        <th class="font-weight-bold">{{ __('translation.clients.Phone') }}</th>
-                                        <th class="font-weight-bold">{{ __('translation.clients.Address') }}</th>
-                                        <th class="font-weight-bold">{{ __('translation.clients.Actions') }}</th>
+                                    <tr text-center>
+                                        <th class="font-weight-bold text-center">{{ __('translation.clients.ID') }}</th>
+                                        <th class="font-weight-bold text-center">{{ __('translation.clients.Name') }}</th>
+                                        <th class="font-weight-bold text-center" >{{ __('translation.clients.Nickname') }}</th>
+                                        <th class="font-weight-bold text-center">{{ __('translation.clients.Phone') }}</th>
+                                        <th class="font-weight-bold text-center">{{ __('translation.clients.Address') }}</th>
+                                        <th class="font-weight-bold text-center">{{ __('translation.clients.Actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Andrew Mike</td>
-                                        <td>Develop</td>
-                                        <td>2013</td>
-                                        <td>&euro; 99,225</td>
-                                        <td class="td-actions">
-                                            <a class="btn btn-info" rel="tooltip" title="{{ __('translation.title.Edit Client') }}"  href="{{ route('clients.edit', 5) }}"
-                                                > <i class="material-icons">edit</i> </a>
-                                        </td>
+                                    <tr >
+                                        <td> {{$client->id}}</td>
+                                        <td>{{$client->name}}</td>
+                                        <td>{{$client->nickname}}</td>
+                                        <td>{{$client->phone}}</td>
+                                        <td>{{$client->address}}</td>
+                                        <td><a class='btn btn-info btn-sm' rel='tooltip' title="{{__('translation.title.Edit Client')}}"
+                                            href="{{route('clients.edit', $client->slug)}}"><i class='material-icons'>edit</i></a></td>
                                     </tr>
-
-
                                 </tbody>
                             </table>
                         </div>
 
                     </div>
                 </div>
+
 
 
                 <div class="col-md-12">
@@ -92,7 +89,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table">
+                            <table class="table" id="data-table-basic">
                                 <thead>
                                     <tr>
                                         <th class="font-weight-bold">{{__('translation.sales.ID')}}</th>
@@ -107,7 +104,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td> كفة مرآة فيرنا يمين 2018</td>
+                                        <td> dddd</td>
                                         <td>اكسسوارات</td>
                                         <td>19 جنيه</td>
                                         <td>19 جنيه</td>
@@ -176,7 +173,6 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="stats">
-                                                {{-- <i class="material-icons text-danger">warning</i> --}}
                                                 <span class="material-icons">
                                                     account_balance_wallet
                                                 </span>
@@ -199,7 +195,6 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="stats">
-                                                {{-- <i class="material-icons text-danger">warning</i> --}}
                                                 <span class="material-icons">
                                                     account_balance_wallet
                                                 </span>
@@ -222,7 +217,6 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="stats">
-                                                {{-- <i class="material-icons text-danger">warning</i> --}}
                                                 <span class="material-icons">
                                                     account_balance_wallet
                                                 </span>
@@ -243,3 +237,4 @@
     </div>
     </div>
 @endsection
+

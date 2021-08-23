@@ -90,6 +90,10 @@ class SupplierController extends Controller
         return view('Suppliers::suppliers.show', compact('supplier'));
     }
 
+// function to get basic information
+
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -130,5 +134,5 @@ class SupplierController extends Controller
         return redirectAccordingToRequest($request);
     }
 
-   
+
 }
