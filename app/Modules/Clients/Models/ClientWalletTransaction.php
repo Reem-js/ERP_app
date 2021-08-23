@@ -9,7 +9,7 @@ class ClientWalletTransaction extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    public $fillable = [
         'client_id','client_wallet_id','reason','date','client_wallet_transactionable_type','client_wallet_transactionable_id',
         'transaction_date','transaction_status',
         'amount','slug','created_at','updated_at'

@@ -19,11 +19,12 @@ Route::group(
             Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
             Route::get('datatables',[SupplierController::class,'suppllierData'])->name('suppllier.data');
             Route::resource('priceLists', priceListController::class);
-            Route::get('wallet-test', [SupplierController::class,'walletTest']);
-            route::post('deposite',[SupplierController::class,'deposite'])->name('deposite');
-            route::post('debit',[SupplierController::class,'debit'])->name('debit');
-            route::post('withdraw',[SupplierController::class,'withdraw'])->name('withdraw');
-            route::post('payPremium',[SupplierController::class,'payPremium'])->name('payPremium');
+            /* test wallet */
+            Route::get('wallet-test', [testWalletController::class,'walletTest']);
+            route::post('deposite',[testWalletController::class,'deposite'])->name('deposite');
+            route::post('debit',[testWalletController::class,'debit'])->name('debit');
+            route::post('withdraw',[testWalletController::class,'withdraw'])->name('withdraw');
+            route::post('payPremium',[testWalletController::class,'payPremium'])->name('payPremium');
     });
 
 
