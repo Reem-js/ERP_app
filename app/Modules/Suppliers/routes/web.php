@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Suppliers\Http\Controllers\SupplierController;
+use Suppliers\Http\Controllers\PriceListController;
+use Suppliers\Http\Controllers\testWalletController;
 use Suppliers\Http\Controllers\SupplierWalletController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Suppliers\Http\Controllers\SupplierWalletTransactionController;
-use Suppliers\Http\Controllers\PriceListController;
 
 Route::group(
     [
