@@ -1,6 +1,6 @@
 <?php
 
-namespace clients\Models;
+namespace Clients\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,9 +10,8 @@ class ClientWalletTransaction extends Model
     use HasFactory;
 
     protected $fillable = [
-        'client_id','client_wallet_id','reason','date','client_wallet_transactionable_type','client_wallet_transactionable_id',
-        'transaction_date','transaction_status',
-        'amount','slug','created_at','updated_at'
+        'client_wallet_id','reason','client_wallet_transactionable_type','client_wallet_transactionable_id',
+        'transaction_status','amount'
     ];
 
     protected $hidden = [

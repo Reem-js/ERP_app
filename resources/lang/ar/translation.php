@@ -140,6 +140,11 @@ return [
 
             ,'see more'=>'اظهار المزيد',
         ],
+        'datatable'=>[
+            'Options'=>'الخيارات',
+            'Columns'=>'الاعمدة',
+            'All'=>'الكل'
+        ]
     ],
     'brands' => [
         'Brand Name' => 'اسم الماركة',

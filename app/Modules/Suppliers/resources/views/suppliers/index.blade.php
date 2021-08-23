@@ -71,6 +71,9 @@
                 processing: true,
                 serverSide: true,
                 ajax: '{!! route('suppllier.data') !!}',
+                lengthChange: true,
+                // pageLength: 10,
+                // lengthMenu: [ 5, 10, 25, 50, 75, 100 ],
                 columns: [{
                         data: 'id',
                         name: 'id',
@@ -109,7 +112,8 @@
 
                 ],
                 dom: 'Bfrtip',
-                buttons: [{
+                buttons: [
+                    {
                         extend: 'collection',
                         text: 'Options', // Label
                         className: '', // class name
@@ -143,11 +147,13 @@
                             }
                         ]
                     },
+
                     {
                         extend: 'colvis', // Manage column visibity
                         className: '', // class name
                         text: 'Columns' // Label
-                    }
+                    },
+
                 ],
                 "initComplete": function(settings, json) {
                     $('.delete-button').on('click',function(){
@@ -172,7 +178,10 @@
                         }
 
                     });
-                }
+                },
+                "createdRow": function(row, data, dataIndex) {
+                //    $(row).children(":first").html(dataIndex+1);
+                },
             });
         });
     </script>

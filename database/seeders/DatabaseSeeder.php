@@ -3,12 +3,15 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Clients\Database\Seeders\ClientSeeder;
 use Users\Database\Seeders\UsersTableSeeder;
 use Users\Database\Seeders\UserWalletSeeder;
 use Suppliers\Database\Seeders\SupplierSeeder;
 use Suppliers\Database\Seeders\PriceListSeeder;
+use Clients\Database\Seeders\ClientWalletSeeder;
 use Suppliers\Database\Seeders\SupplierWalletSeeder;
 use Users\Database\Seeders\UserWalletTransactionSeeder;
+use Clients\Database\Seeders\ClientWalletTransactionSeeder;
 use Suppliers\Database\Seeders\SupplierWalletTransactionSeeder;
 
 class DatabaseSeeder extends Seeder

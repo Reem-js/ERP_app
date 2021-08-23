@@ -2,9 +2,14 @@
 
 namespace Clients\Http\Controllers\clientss;
 
-use App\Http\Controllers\Controller;
-use Clients\Http\Requests\clients;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
+use Clients\Models\Client;
+use Yajra\Datatables\Datatables;
+use Clients\Http\Requests\storeClient;
+use Clients\Http\Requests\updateClient;
+use Form;
 
 class ClientController extends Controller
 {
@@ -13,10 +18,27 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(clients $request)
+    public function index(Request $request)
     {
         //
         return view('clients::clients.index');
+    }
+    public function clientData()
+    {
+            $data = Client::latest();
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row) {
+                        $btn = "<a class='btn btn-info btn-sm' rel='tooltip' title='".__('translation.title.Show Client') ."'
+                        href='".route('clients.show', $row->slug)."'> <i class='material-icons'>visibility</i> </a>";
+                        $btn .= "<a class='btn btn-info btn-sm' rel='tooltip' title='".__('translation.title.Edit Client')."'
+                        href='".route('clients.edit', $row->slug)."'><i class='material-icons'>edit</i></a>";
+
+                        $btn .="<a class='delete-button btn btn-danger btn-sm'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
+                        return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
     }
 
     /**
@@ -24,22 +46,26 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(clients $request)
+    public function create()
     {
-        //
         return view('clients::clients.create');
     }
 
-    /**
+   /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(storeClient $request)
     {
-        //
+        $data = requestAbstraction($request);
+       Client::create($data);
+        // call method to create a new client wallet
+        return redirectAccordingToRequest($request);
     }
+
+
 
     /**
      * Display the specified resource.
@@ -47,11 +73,12 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Client $client)
     {
-        //
-        return view('clients::clients.show');
+        return view('clients::clients.show',compact('client'));
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -59,10 +86,9 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Client $client)
     {
-        //
-        return view('clients::clients.edit');
+        return view('clients::clients.edit',compact('client'));
     }
 
     /**
@@ -72,9 +98,11 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Client $client ,updateClient $request)
     {
-        //
+        $data = requestAbstraction($request);
+        $client->update($data);
+        return redirectAccordingToRequest($request);
     }
 
     /**
@@ -83,9 +111,13 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Client $client ,Request $request)
     {
-        //
-        return "destroy client ";
+        $client->delete();
+        return redirectAccordingToRequest($request);
     }
+
+
+
+
 }

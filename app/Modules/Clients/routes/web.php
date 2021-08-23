@@ -10,18 +10,18 @@ use Clients\Http\Controllers\testController;
 
 Route::group(
     [
-        'prefix' => LaravelLocalization::setLocale().'/'.config('module.clients'),
+        'prefix' => LaravelLocalization::setLocale().'/'.config('module.Clients'),
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','web','auth']
 
     ],
     function () {
 
-Route::resource('clients', ClientController::class);
-Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
-Route::get('client-wallet-trans/{client}', [ClientWalletController::class, 'getClientWalletTrans'])->name('get.client.wallet.trans');
-Route::resource('client-wallet-transactions', ClientWalletTransactionController::class);
+        Route::resource('clients',   ClientController::class)->parameters(['clients' => 'client:slug']);
+        Route::get('client-wallet', [ClientWalletController::class, 'getClientWallet'])->name('get.client.wallet');
+        Route::get('client-wallet-trans/{client}', [ClientWalletController::class, 'getClientWalletTrans'])->name('get.client.wallet.trans');
+        Route::resource('client-wallet-transactions', ClientWalletTransactionController::class);
+        Route::get('datatables',[ClientController::class,'clientData'])->name('client.data');
 
-Route::get('test',[testController::class,'test']);
 
 
 

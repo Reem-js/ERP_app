@@ -3,8 +3,9 @@
 namespace Clients\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use phpDocumentor\Reflection\Types\This;
 
-class clients extends FormRequest
+class updateClient extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +25,12 @@ class clients extends FormRequest
     public function rules()
     {
         return [
-            //
-            // 'name'=>'required'
+
+            'name'=>['required','string'],
+            'phone'=>['nullable','digits:11','unique:clients,phone,'.$this->route('client')->slug.',slug'],
+
+            'nickname'=>['nullable','string'],
+            'address'=>['nullable','string'],
         ];
     }
 }

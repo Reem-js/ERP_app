@@ -27,7 +27,7 @@ class SupplierController extends Controller
 
     public function suppllierData()
     {
-            $data = Supplier::all();
+            $data = Supplier::latest();
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function($row) {
@@ -82,6 +82,10 @@ class SupplierController extends Controller
     {
         return view('Suppliers::suppliers.show',compact('supplier'));
     }
+
+// function to get basic information
+
+
 
     /**
      * Show the form for editing the specified resource.
