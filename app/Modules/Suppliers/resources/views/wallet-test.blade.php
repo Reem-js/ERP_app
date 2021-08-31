@@ -18,10 +18,17 @@
             <div class="col-12 text-center text-dark h1"> Wallet Transactions </div>
             <div class="col-12 text-center text-dark h3"> Current Balance: {{$balance}} </div>
             <div class="col-12 text-center text-dark h5">
-                @if (session()->has('message')) {!! session()->get('message') !!} @endif 
+                @if (session()->has('message'))
+                    @isset(Session()->get('message')['success'])
+                   <div class="alert alert-success">{!! session()->get('message')['success'] !!}</div>
+                    @endisset
+                    @isset(Session()->get('message')['error'])
+                    <div class="alert alert-danger">{!! session()->get('message')['error'] !!}</div>
+                    @endisset
+                @endif
             </div>
 
-            <div class="col-3">
+            <div class="col-4">
                 <h1>deposite</h1>
                 <form action="{{ route('deposite') }}" method="post">
                     @csrf
@@ -29,7 +36,7 @@
                     <button class="btn btn-dark btn-small"> deposite </button>
                 </form>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <h1>withdraw</h1>
                 <form action="{{ route('withdraw') }}" method="post">
                     <input type="text" name="amount" id="" class="form-control" placeholder="Amount">
@@ -37,7 +44,7 @@
                     <button class="btn btn-dark btn-small"> withdraw </button>
                 </form>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                 <h1>debit</h1>
                 <form action="{{ route('debit') }}" method="post">
                     @csrf
@@ -45,12 +52,20 @@
                     <button class="btn btn-dark btn-small"> debit </button>
                 </form>
             </div>
-            <div class="col-3">
-                <h1>payPremium</h1>
-                <form action="{{ route('payPremium') }}" method="post">
+            <div class="col-6">
+                <h1>paymentOut</h1>
+                <form action="{{ route('paymentOut') }}" method="post">
                     @csrf
                     <input type="text" name="amount" id="" class="form-control" placeholder="Amount">
-                    <button class="btn btn-dark btn-small"> payPremium </button>
+                    <button class="btn btn-dark btn-small"> paymentOut </button>
+                </form>
+            </div>
+            <div class="col-6">
+                <h1>paymentIn</h1>
+                <form action="{{ route('paymentIn') }}" method="post">
+                    @csrf
+                    <input type="text" name="amount" id="" class="form-control" placeholder="Amount">
+                    <button class="btn btn-dark btn-small"> paymentIn </button>
                 </form>
             </div>
             <div class="col-12">

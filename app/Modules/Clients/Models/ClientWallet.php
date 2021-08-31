@@ -18,7 +18,7 @@ class ClientWallet extends Model
 
     ];
 
-    // private $transactionTable = 'clients\Models\ClientWalletTransaction';
+    private $transactionTable = 'Clients\Models\ClientWalletTransaction';
 
     //1:1 with client
     public function client()

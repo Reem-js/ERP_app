@@ -15,7 +15,8 @@ class SupplierWalletTransaction extends Model
         'supplier_wallet_transactionable_type',
         'supplier_wallet_transactionable_id',
         'transaction_status',
-        'amount'
+        'amount',
+        
     ];
 
 

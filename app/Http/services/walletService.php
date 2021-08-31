@@ -1,15 +1,34 @@
 <?php
-// status = 0 if there is any errors
+// if i want to make double transaction
+// payment in , payment out
+// if one of those is failed , the other transaction is rolled back
 namespace App\Http\services;
 
+use Clients\Models\ClientWallet;
 use Illuminate\Support\Facades\DB;
+use Suppliers\Models\SupplierWallet;
+use Users\Models\UserWallet;
 
 class walletService
 {
-    const deposite = 1; //
-    const  payPremium = 4; // if wallet balance < 0
-    const debit = 2; //
-    const withdraw = 3; // if wallet balance > 0
+    /**
+     * @var constants for transaction reasons
+     */
+    private const deposite = 1; //
+    private const debit = 2; //
+    private const withdraw = 3; // if wallet balance > 0
+    private const paymentOut = 4; // if wallet balance < 0
+    private const paymentIn = 5;
+
+    /**
+     * @var constants for Error handling
+     */
+    private const DBERROR = 0;
+    private const transactionCompeleted = 1;
+    private const noInstallments = 2;
+    private CONST paidMoreDue = 3;
+    private CONST noMoney = 4;
+
     private $errorCode;
 
     /**
@@ -27,120 +46,167 @@ class walletService
      * @param int wallet id
      * @return float wallet balance
      * / */
-    public function getBalance(object $model, int $walletId): float
+    public function getBalance(object $model): float
     {
-        return $model->findOrFail($walletId)->total_value;
+        return $model->total_value;
     }
     /**
      * @param object model
-     * @param int wallet id
      * @param array transaction data
+     * @param const reason
      * @return self
      * / */
-    public function deposite(object $model, int $walletId, array $transactionData): self
+    public function deposite(object $model, array $transactionData,$reason = self::deposite): self
     {
-        $this->errorCode =  $this->makeTransaction($model, $walletId, $transactionData, self::deposite);
+        $this->errorCode =  $this->makeTransaction($model, $transactionData, $reason);
         return $this;
     }
+        /**
+     * @param object model
+     * @param array transaction data
+     * @param const reason
+     * @return self
+     * / */
+     public function withdraw(object $model, array $transactionData,$reason = self::withdraw): self
+     {
+        $this->withdrawValidation($model,$transactionData);
+         if(empty($this->errorCode) || $this->errorCode == 1){
+            $transactionData['amount'] *= -1;
+            $this->errorCode =  $this->makeTransaction($model,$transactionData, $reason);
+
+         }
+         return $this;
+     }
     /**
      * @param object model
-     * @param int wallet id
      * @param array transaction data
      * @return self
      * / */
-    public function debit(object $model, int $walletId, array $transactionData): self
+    public function debit(object $model, array $transactionData): self
     {
-        $this->deposite($model,$walletId,$transactionData);
+        $this->deposite($model,$transactionData,self::debit);
         return $this;
     }
     /**
-     * @param object source model
+     * @param object user source model
      * @param int source wallet id
      * @param array transaction data
-     * @param object destination model
+     * @param object supplier destination model
      * @param int destination wallet id
      * @return self
      * / */
-    public function payPremium(object $sourceModel, int $sourceWalletId, array $transactionData,object $destinationModel,int $destinationWalletId): self
+    public function paymentOut(UserWallet $userModel, array $transactionData,SupplierWallet $supplierModel)
     {
 
-        $sourceBalance = $this->getBalance($sourceModel, $sourceWalletId);
-        $destinationBalance = $this->getBalance($destinationModel, $destinationWalletId);
-        if ($sourceBalance <= 0 || $transactionData['amount'] > $sourceBalance) {
-            $this->errorCode =  4;
+        $userModelBalance = $this->getBalance($userModel);
+        $supplierModelBalance = $this->getBalance($supplierModel);
+        if ($userModelBalance <= 0 || $transactionData['amount'] > $userModelBalance) {
+            $this->errorCode =  self::noMoney;
         }
-        if( $destinationBalance <= 0){
-            $this->errorCode =  2;
+        if( $supplierModelBalance <= 0){
+            $this->errorCode =  self::noInstallments;
         }
-        if( $transactionData['amount'] > $destinationBalance){
-            $this->errorCode =  3;
+        if( $transactionData['amount'] > $supplierModelBalance){
+            $this->errorCode =  self::paidMoreDue;
         }
         if(empty($this->errorCode)){
-            $this->withdraw($sourceModel,$sourceWalletId,$transactionData)->withdraw($destinationModel,$destinationWalletId,$transactionData);
+            DB::beginTransaction();
+            $this->withdraw($userModel,$transactionData,self::paymentOut);
+            if($this->errorCode == 1){
+                $this->withdraw($supplierModel,$transactionData,self::paymentOut);
+                if($this->errorCode == 1){
+                    DB::commit();
+                }else{
+                    DB::rollBack();
+                }
+            }else{
+                DB::rollBack();
+            }
+        }
+        return $this;
+    }
+    public function paymentIn(UserWallet $userModel, array $transactionData,ClientWallet $clientModel): self
+    {
+
+        $clientModelBalance = $this->getBalance($clientModel);
+        if ($clientModelBalance <= 0 ) {
+            $this->errorCode =  self::noInstallments;
+        }
+        if ($transactionData['amount'] > $clientModelBalance) {
+            $this->errorCode =  self::paidMoreDue;
+        }
+
+        if(empty($this->errorCode)){
+            DB::beginTransaction();
+            $this->withdraw($clientModel,$transactionData,self::paymentIn);
+            if($this->errorCode == 1){
+                $this->deposite($userModel,$transactionData,self::paymentIn);
+                if($this->errorCode == 1){
+                    DB::commit();
+                }else{
+                    DB::rollBack();
+                }
+            }else{
+                DB::rollBack();
+            }
+
         }
         return $this;
     }
 
+
     /**
      * @param object model
-     * @param int wallet id
      * @param array transaction data
      * @return self
      * / */
-    public function withdraw(object $model, int $walletId, array $transactionData): self
-    {
-        $balance = $this->getBalance($model, $walletId);
-        if ($balance > 0 || $balance >= $transactionData['amount']) {
-            $transactionData['amount'] *= -1;
-            $this->errorCode =  $this->makeTransaction($model, $walletId, $transactionData, self::withdraw);
-        } else {
-            $this->errorCode =  4;
-        }
-        return $this;
-    }
-    /**
-     * @param object model
-     * @param int wallet id
-     * @param array transaction data
-     * @return self
-     * / */
-    public function makeTransaction(object $model, int $walletId, array $transactionData, int $reason): int
+    public function makeTransaction(object $model, array $transactionData, int $reason): int
     {
 
-        return DB::transaction(function () use ($model, $walletId, $transactionData, $reason) {
+        return DB::transaction(function () use ($model,  $transactionData, $reason) {
             try {
-                $wallet = $model->findOrFail($walletId);
+                $wallet = $model->findOrFail($model->id);
                 $model->createWalletTransaction([
-                    'wallet_id' => $walletId,
+                    'wallet_id' => $model->id,
                     'reason' => $reason,
                     'model_type' => $transactionData['model_type'],
                     'model_id' => $transactionData['model_id'],
                     'transaction_status' => 1,
                     'amount' => $transactionData['amount']
                 ]);
-                $model->where('id', $walletId)->update(['total_value' => $wallet->total_value + $transactionData['amount'], 'number_of_transaction' => $wallet->number_of_transaction + 1]);
-                return 1;
+                $model->where('id', $model->id)->update(['total_value' => $wallet->total_value + $transactionData['amount'], 'number_of_transaction' => $wallet->number_of_transaction + 1]);
+                return self::transactionCompeleted;
             } catch (\Exception $e) {
-                return 0;
+                return self::DBERROR;
+                // dd($e->getMessage());
             }
         });
     }
+
 
     public function responeHandle()
     {
         switch ($this->errorCode) {
             case 0:
-                return "<div class='alert alert-danger'>Something Went Wrong</div>";
+                return ["error"=>"Something Went Wrong"];
             case 1:
-                return "<div class='alert alert-success'>Transaction Successfully Completed</div>";
+                return ["success"=>"Transaction Successfully Completed"];
             case 2:
-                return "<div class='alert alert-danger'>You Don't Have any installments to pay</div>";
+                return ["error"=>"You Don't Have any installments to pay"];
             case 3:
-                return "<div class='alert alert-danger'>The amount paid is more than the amount due</div>";
+                return ["error"=>"The amount paid is more than the amount due"];
             case 4:
-                return "<div class='alert alert-danger'>You Don't Have Enough Money</div>";
+                return ["error"=>"You Don't Have Enough Money"];
             default:
                 return $this->errorCode;
+        }
+    }
+
+    public function withdrawValidation(object $model,$transactionData)
+    {
+        $balance = $this->getBalance($model);
+        if ($balance <= 0 || $balance < $transactionData['amount']) {
+           $this->errorCode =  self::noMoney;
         }
     }
 }

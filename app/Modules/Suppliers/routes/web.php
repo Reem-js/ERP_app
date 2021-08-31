@@ -25,7 +25,9 @@ Route::group(
             route::post('deposite',[testWalletController::class,'deposite'])->name('deposite');
             route::post('debit',[testWalletController::class,'debit'])->name('debit');
             route::post('withdraw',[testWalletController::class,'withdraw'])->name('withdraw');
-            route::post('payPremium',[testWalletController::class,'payPremium'])->name('payPremium');
+            route::post('paymentOut',[testWalletController::class,'paymentOut'])->name('paymentOut');
+            route::post('paymentIn',[testWalletController::class,'paymentIn'])->name('paymentIn');
+
     });
 
 

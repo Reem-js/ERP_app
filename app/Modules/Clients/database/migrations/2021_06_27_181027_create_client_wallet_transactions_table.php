@@ -16,7 +16,7 @@ class CreateClientWalletTransactionsTable extends Migration
         Schema::create('client_wallet_transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_wallet_id');
-            $table->string('reason');
+            $table->string('reason')->comment('1=>deposite,2=>withdraw,3=>depit,4=>paymentOut,5=>paymentIn');
             $table->string('client_wallet_transactionable_type');
             $table->bigInteger('client_wallet_transactionable_id');
             $table->boolean('transaction_status');
