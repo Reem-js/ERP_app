@@ -41,7 +41,7 @@ class SupplierController extends Controller
                 $btn .= "<a class='btn btn-info btn-sm' rel='tooltip' title='" . __('translation.title.show details') . "'
                         href='" . route('suppliers.show', $row->slug) . "'><i class='material-icons'>visibility</i></a>";
                 $btn .= "<a class='btn btn-primary btn-sm' rel='tooltip' title='" . __('translation.title.add in price list') . "'
-                        href='" . route('priceLists.create') . "'><i class='fa fa-plus-circle' aria-hidden='true'></i></a>";
+                        href='" . route('pricelists.create') . "'><i class='fa fa-plus-circle' aria-hidden='true'></i></a>";
                 $btn .= "<a class='delete-button btn btn-danger btn-sm'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
                 return $btn;
             })
@@ -87,6 +87,7 @@ class SupplierController extends Controller
      */
     public function show(Supplier $supplier)
     {
+        // dd(url('suppliers/suppliers/'.$supplier->slug.'/pricelists/1/edit'));
         return view('Suppliers::suppliers.show', compact('supplier'));
     }
 

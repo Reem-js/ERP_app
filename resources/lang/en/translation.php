@@ -223,8 +223,8 @@ return [
 
         'Delete Notification' => 'Delete Notification',
 
-        '' => '',
-        '' => '',
+        'Edit Price List' => 'Edit Product',
+        'Delete Price List' => 'Delete Product',
         '' => '',
         '' => '',
     ],
@@ -384,6 +384,7 @@ return [
         'Delete' => 'Delete',
         'Supplier Name' => 'Supplier Name',
         'Show Price List' => 'Show Price List',
+        'Notes'=>'Notes'
     ],
 
     'website info' => [

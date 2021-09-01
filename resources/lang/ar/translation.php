@@ -220,6 +220,8 @@ return [
         'Show Sales'=>'عرض التافصيل',
         'Edit Sales'=>'تعديل',
         'Delete Notification'=>' مسح الاشعار',
+        'Edit Price List' => 'تعديل على المنتج',
+        'Delete Price List' => 'مسح المنتج',
 
     ],
     // خدت من اول هنا في موديول الكلاينت
@@ -333,6 +335,7 @@ return [
         'Delete' => 'حذف',
         'Supplier Name' => 'اسم المورد',
         'Show Price List' => 'عرض قائمة السعر',
+        'Notes'=>'ملاحظات'
     ],
     'website info' => [
         'AL-RAYAN' => 'الريان',

@@ -18,6 +18,9 @@ class CreatePriceListsTable extends Migration
             $table->string('name')->nullable();
             $table->decimal('price', $precision = 10, $scale = 2)->nullable();
             $table->string('made_in')->nullable();
+            $table->text('notes')->nullable();
+            $table->longText('slug')->nullable();
+            $table->foreignId('supplier_id')->constrained('suppliers')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

@@ -2,8 +2,12 @@
 
 namespace Suppliers\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Suppliers\Models\Supplier;
+use Suppliers\Models\PriceList;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class PriceListController extends Controller
 {
@@ -17,16 +21,35 @@ class PriceListController extends Controller
         //
         return view('Suppliers::priceLists.index');
     }
+    public function priceListData($supplier_id)
+    {
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+        $supplier_slug = Supplier::find($supplier_id)->slug;
+            $data = PriceList::where('supplier_id',$supplier_id)->get();
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row) use ($supplier_slug) {
+                        $btn = "<a class='btn btn-info btn-sm' rel='tooltip' title='".__('translation.title.Edit Price List')."'
+                        href='".route('suppliers.pricelists.edit',['pricelist'=>$row->slug,'supplier'=>$supplier_slug])."'> <i class='material-icons'>edit</i> </a>";
+                        $btn .="<a class='delete-button btn btn-danger btn-sm' rel='tooltip' title='".__('translation.title.Delete Price List')."'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
+                        return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+    }
+
     public function create()
     {
         //
-        return view('Suppliers::priceLists.create');
+        $suppliers=Supplier::get();
+        return view('Suppliers::priceLists.create',compact('suppliers'));
+    }
+
+    public function store(Request $request)
+    {
+        $data = requestAbstractionWithMedia($request);
+        $pricelist = PriceList::create($data);
+        return redirectAccordingToRequest($request);
     }
 
     /**
@@ -35,10 +58,7 @@ class PriceListController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
@@ -57,10 +77,9 @@ class PriceListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Supplier $supplier,PriceList $pricelist)
     {
-        //
-        return view('Suppliers::priceLists.edit');
+        return view('Suppliers::priceLists.edit',compact('supplier','pricelist'));
     }
 
     /**
@@ -70,9 +89,14 @@ class PriceListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Supplier $supplier,PriceList $pricelist,Request $request)
     {
-        //
+        $data = requestAbstraction($request);
+        $pricelist->update($data);
+        if($request->input('redirect') == 'table')
+            return redirect()->route('suppliers.show',$pricelist->supplier->slug)->with('Success','Operation Successfully Compelete');
+        elseif($request->input('redirect') == 'back')
+            return redirect()->back()->with('Success','Operation Successfully Compelete');
     }
 
     /**
@@ -81,9 +105,10 @@ class PriceListController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Supplier $supplier,PriceList $pricelist,Request $request)
     {
-        //
-        return "clients destory price list";
+
+        $pricelist->delete();
+        return redirectAccordingToRequest($request);
     }
 }

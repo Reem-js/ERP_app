@@ -19,7 +19,9 @@ Route::group(
             Route::get('supplier-wallet-trans/{suppplier}', [SupplierWalletController::class, 'getSupplierWalletTrans'])->name('get.supplier.wallet.trans');
             Route::resource('supplier-wallet-transactions', SupplierWalletTransactionController::class);
             Route::get('datatables',[SupplierController::class,'suppllierData'])->name('suppllier.data');
-            Route::resource('priceLists', priceListController::class);
+            Route::resource('suppliers.pricelists', priceListController::class)->parameters(['suppliers' => 'supplier:slug','pricelists' => 'pricelist:slug']);
+            Route::get('pricelist-datatables/{supplier_id}',[priceListController::class,'priceListData'])->name('priceList.data');
+
             /* test wallet */
             Route::get('wallet-test', [testWalletController::class,'walletTest']);
             route::post('deposite',[testWalletController::class,'deposite'])->name('deposite');

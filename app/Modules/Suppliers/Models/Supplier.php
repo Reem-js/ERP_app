@@ -3,6 +3,7 @@
 namespace Suppliers\Models;
 
 use App\Http\traits\mediaTrait;
+use Suppliers\Models\PriceList;
 use Suppliers\Models\SupplierWallet;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
@@ -42,6 +43,10 @@ class Supplier extends Model
     }
 
 
+    public function pricelists()
+    {
+       return $this->hasMany(PriceList::class);
+    }
 
 
 

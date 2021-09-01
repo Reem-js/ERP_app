@@ -28,26 +28,12 @@
                   <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Price') }}</p>
                   <input type="number" name="price" class="form-control" id="price" required>
                 </div>
+                <div class=" col form-group">
+                    <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Notes') }}</p>
+                    <textarea name="notes" id="" cols="30" rows="1" class="form-control"></textarea>
+                  </div>
+
             </div>
-            <br>
-                <div class="form-group" >
-                  <p class="font-weight-bold"  for="selSupplier">{{ __('translation.pricelists.Supplier') }}</label>
-                    <br>
-                    <select id="selSupplier" class="form-group form-control " style="width: 100%;">
-                      <option value="0">{{ __('translation.pricelists.select supplier') }}</option>
-                      <option value="1">Audi</option>
-                      <option value="2">BMW</option>
-                      <option value="3">Citroen</option>
-                      <option value="4">Ford</option>
-                      <option value="5">Honda</option>
-                      <option value="6">Jaguar</option>
-
-                    </select>
-                </div>
-
-
-                <br>
-
                 <div class="row">
                   <div class="col-lg-4">
                     <button type="submit" class="btn btn-primary">{{__('translation.website.crud.create')}}</button>

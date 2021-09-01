@@ -76,7 +76,7 @@
                     <ul class="nav">
                         <li class="nav-item ml-3 {{ $activePage == 'all-clients' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('clients.index') }}">
-                         
+
                                 <i class="fa fa-th-list {{ $activePage == 'all-clients' ? '' : '' }}"
                                     aria-hidden="true"></i>
                                 {{ __('translation.website.sidebar.all Clients') }}
@@ -126,15 +126,7 @@
                             </a>
                         </li>
 
-                        {{-- price list --}}
-                        <li
-                            class="nav-item ml-3 {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' active' : '' }}">
-                            <a class="nav-link nav-link-mode" href="{{ route('priceLists.index') }}">
-                                <i class="fa fa-th-list {{ $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? '' : '' }}"
-                                    aria-hidden="true"></i>
-                                {{ __('translation.website.sidebar.All Price Lists') }}
-                            </a>
-                        </li>
+
                         {{-- supplier Wallet --}}
                         <li class="nav-item ml-3{{ $activePage == 'wallet-suppliers' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('get.supplier.wallet') }}">

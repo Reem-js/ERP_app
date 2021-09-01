@@ -2,6 +2,7 @@
 
 namespace Suppliers\Database\Factories;
 
+use Suppliers\Models\Supplier;
 use Suppliers\Models\PriceList;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,7 +25,11 @@ class PriceListFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'price' => $this->faker->randomFloat(2, 1000, 2000),
-            'made_in' => $this->faker->name()
+            'made_in' => $this->faker->name(),
+            'notes'=>$this->faker->sentence(),
+            'supplier_id' => Supplier::all()->random()->id,
+            'slug' => $this->faker->slug(),
+
         ];
     }
 }
