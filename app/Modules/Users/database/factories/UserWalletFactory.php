@@ -25,13 +25,13 @@ class UserWalletFactory extends Factory
     {
         return [
             //
-            'user_id' => User::all()->random()->id,
-            'total_paid' => $this->faker->randomNumber(5,true),
-            'total_pending'=>$this->faker->randomNumber(5,false),
+            'user_id' => 1,
+            'total_paid' => 0,
+            'total_pending'=>0,
             'status'=>$this->faker->boolean(),
-            'number_of_transaction'=>'5',
-            'total_value'=>$this->faker->randomNumber(5,false),
-            'slug' => $this->faker->slug(),
+            'number_of_transaction'=>0,
+            'total_value'=>0,
+            'slug' => User::find(1)->slug,
         ];
     }
 }

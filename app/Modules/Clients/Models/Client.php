@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Clients\Models\ClientWallet;
 
 
 class Client extends Model
@@ -27,9 +28,7 @@ class Client extends Model
         'nickname',
         'phone',
         'address',
-        'slug',
-        'created_at',
-        'updated_at'
+   
 
     ];
 
@@ -57,6 +56,10 @@ class Client extends Model
         ];
     }
 
+    public function wallet()
+    {
+        return $this->hasOne(ClientWallet::class);
+    }
 
 
 }

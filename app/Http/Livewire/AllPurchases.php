@@ -31,13 +31,13 @@ class AllPurchases extends Component
                     </div>
                 </div>
                 </td>
-                <td width="10%" class="text-center"><input class="form-control"  wire:model="message.qty0  type="number" name=""
+                <td width="10%" class="text-center"><input class="form-control"  wire:model.defer="message.qty0  type="number" name=""
                         required></td>
-                <td  width="10%" class="text-center"><input class="form-control" wire:model="message.purchaseprice0"  type="number" name=""
+                <td  width="10%" class="text-center"><input class="form-control" wire:model.defer="message.purchaseprice0"  type="number" name=""
                         required></td>
-                <td  width="10%" class="text-center"><input class="form-control" wire:model="message.sellprice0" type="number" name=""
+                <td  width="10%" class="text-center"><input class="form-control" wire:model.defer="message.sellprice0" type="number" name=""
                         required></td>
-                <td width="10%" class="text-center"><input class="form-control" wire:model="message.cost0"  type="number" name=""
+                <td width="10%" class="text-center"><input class="form-control" wire:model.defer="message.cost0"  type="number" name=""
                        required></td>
             </tr>',
     ];
@@ -67,13 +67,13 @@ class AllPurchases extends Component
                 </div>
             </div>
             </td>
-        <td><input class="form-control"  wire:model="message.qty'.$newId.'"  type="text" name=""
+        <td><input class="form-control"  wire:model.defer="message.qty'.$newId.'"  type="text" name=""
                 required></td>
-        <td><input class="form-control" wire:model="message.purchaseprice'.$newId.'"  type="number" name=""
+        <td><input class="form-control" wire:model.defer="message.purchaseprice'.$newId.'"  type="number" name=""
                 required></td>
-        <td><input class="form-control" wire:model="message.sellprice'.$newId.'" type="number" name=""
+        <td><input class="form-control" wire:model.defer="message.sellprice'.$newId.'" type="number" name=""
                  required></td>
-        <td><input class="form-control" wire:model="message.cost'.$newId.'" type="number" name=""
+        <td><input class="form-control" wire:model.defer="message.cost'.$newId.'" type="number" name=""
                  required></td>
     </tr>';
         array_push($this->tr, $newTr);

@@ -1,65 +1,75 @@
 @extends('layouts.app', ['activePage' => 'createpricelist', 'titlePage' => __('translation.website.sidebar.Create New Price List')])
 
 @section('content')
-<div class="content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card card-mode">
-          <div class="card-header card-header-text card-header-primary">
-            <div class="card-text">
-              <h4 class="card-title">{{ __('translation.website.sidebar.Create New Price List') }}</h4>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="m-5">
-              <form>
+    @livewireStyles
+    <div class="content">
+        <div class="container-fluid">
             <div class="row">
-                <div class=" col form-group" >
-                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Name') }}</p>
-                  <input type="text" name="pricelistname" class="form-control" id="pricelistname" required>
-                </div>
+                <div class="col-md-12">
+                    <div class="card card-mode">
+                        <div class="card-header card-header-text card-header-primary">
+                            <div class="card-text">
+                                <h4 class="card-title">{{ __('translation.website.sidebar.Create New Price List') }}
+                                </h4>
+                            </div>
+                            <div class="card-text">
+                                <h4 class="card-title">{{ $supplier->name }}
+                                </h4>
+                            </div>
+                        </div>
+                        @if (session()->has('Success'))
+                        <div class="alert alert-success">{{ session()->get('Success') }}</div>
+                    @endif
+                        <div class="card-body">
+                            <div class="m-5">
+                                <form method="POST" action="{{ route('suppliers.pricelists.store',$supplier->slug) }}" enctype="multipart/form-data">
+                                    @csrf
+                                    {{-- <livewire:create-pricelist :supplier="$supplier" />  --}}
+                                    @livewire('create-pricelist', ['supplier_id' => $supplier->id])
+                            
+                                    {{-- <input  type="hidden" name="supplier_id" value="{{$supplier->id}}"> --}}
 
-                <div class=" col form-group" >
-                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Made in') }}</p>
-                  <input type="text" name="madein" class="form-control" id="madein" required>
-                </div>
-                <div class=" col form-group">
-                  <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Price') }}</p>
-                  <input type="number" name="price" class="form-control" id="price" required>
-                </div>
-                <div class=" col form-group">
-                    <p class="font-weight-bold"  for="inputAddress">{{ __('translation.pricelists.Notes') }}</p>
-                    <textarea name="notes" id="" cols="30" rows="1" class="form-control"></textarea>
-                  </div>
+                                    <div class=" col-12 form-group form-file-upload form-file-multiple ">
+                                        <p class="font-weight-bold" for="inputAddress">
+                                            {{ __('translation.suppliers.Price Lists') }}</p>
+                                        <input type="file" multiple="multiple" name="media[]" class="inputFileHidden">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control inputFileVisible"
+                                                placeholder="Multiple Files" multiple>
 
-            </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <button type="submit" class="btn btn-primary">{{__('translation.website.crud.create')}}</button>
-                    <button type="submit" class="btn btn-primary">{{__('translation.website.crud.Create & New')}}</button>
-                  </div>
-                  <div class="col-lg-2 offset-6">
-                    <button type="submit" class="btn btn-danger">{{__('translation.website.crud.Cancel')}}</button>
-                  </div>
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-fab btn-round btn-primary">
+                                                    <i class="material-icons">layers</i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        @error('media')
+                                        <div class="alert alert-danger"> {{ $message }} </div>
+                                        @enderror
+                                        @error('media.*')
+                                            <div class="alert alert-danger"> {{ $message }} </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <button type="submit"
+                                                class="btn btn-primary" name="redirect" value="table" >{{ __('translation.website.crud.create') }}</button>
+                                            <button type="submit"
+                                                class="btn btn-primary" name="redirect" value="back">{{ __('translation.website.crud.Create & New') }}</button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </form>
             </div>
-          </div>
         </div>
-
-      </div>
     </div>
-  </div>
-</div>
-</div>
-@endsection
-@push('js')
-    <script>
-        $(document).ready(function() {
-            // Initialize select2
-            $("#selSupplier").select2();
-        });
-    </script>
 
-@endpush
+    @livewireScripts
+@endsection
+

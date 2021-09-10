@@ -131,8 +131,8 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 text-right">
-                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.client.wallet.trans',5) }}"><i class="material-icons">visibility</i></a>
-                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('client-wallet-transactions.create', 5) }}"
+                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('show.client.wallet.trans',$client->wallet->slug) }}"><i class="material-icons">visibility</i></a>
+                                    <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('create.wallet.trans',$client->wallet->slug ) }}"
                                > <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -145,21 +145,12 @@
                                                 </i>
                                             </div>
                                             <p class="card-category">{{__('translation.wallet.Total Balance')}}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{ $client->wallet->total_value}}
                                                 <small>EGP</small>
                                             </h3>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card card-stats">
                                         <div class="card-header card-header-warning card-header-icon">
@@ -167,21 +158,12 @@
                                                 <i class="material-icons">store</i>
                                             </div>
                                             <p class="card-category">{{ __('translation.wallet.Number Of Transactions') }}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{ $client->wallet->number_of_transaction}}
 
                                             </h3>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card card-stats">
                                         <div class="card-header card-header-warning card-header-icon">
@@ -189,17 +171,9 @@
                                                 <i class="material-icons">paid</i>
                                             </div>
                                             <p class="card-category">{{__('translation.wallet.Total Paied')}}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{ $client->wallet->total_paid}}
                                                 <small>EGP</small>
                                             </h3>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -211,17 +185,9 @@
                                                 <i class="material-icons">info_outline</i>
                                             </div>
                                             <p class="card-category">{{ __('translation.wallet.Pending')}}</p>
-                                            <h3 class="card-title">49/50
+                                            <h3 class="card-title">{{ $client->wallet->total_pending}}
                                                 <small>EGP</small>
                                             </h3>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

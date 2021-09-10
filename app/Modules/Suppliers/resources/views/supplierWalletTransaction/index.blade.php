@@ -36,7 +36,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>{{ __('translation.walletTransaction.ID') }}</th>
+                                        <th>{{ __('translation.walletTransaction.ID') }}ahhhh</th>
                                         <th>{{ __('translation.suppliers.Supplier Name') }}</th>
                                         <th>{{ __('translation.walletTransaction.Reason') }}</th>
                                         <th>{{ __('translation.walletTransaction.Date') }}</th>

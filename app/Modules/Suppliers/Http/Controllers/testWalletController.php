@@ -25,6 +25,7 @@ class testWalletController extends Controller {
         $transactionData = [
             'model_type' => 'Models\Sale',
             'model_id' => 6,
+            'date'=>$request->date,
             'amount' => $request->amount
         ];
         $message = $walletService->deposite($userWallet, $transactionData)->responeHandle();
@@ -37,6 +38,7 @@ class testWalletController extends Controller {
         $transactionData = [
             'model_type' => 'Models\Sale',
             'model_id' => 6,
+            'date'=>$request->date,
             'amount' => $request->amount
         ];
         $message = $walletService->withdraw($userWallet, $transactionData)->responeHandle();
@@ -50,6 +52,7 @@ class testWalletController extends Controller {
         $transactionData = [
             'model_type' => 'Models\Sale',
             'model_id' => 6,
+            'date'=>$request->date,
             'amount' => $request->amount
         ];
         $message = $walletService->debit($supplierWallet, $transactionData)->responeHandle();
@@ -62,6 +65,7 @@ class testWalletController extends Controller {
         $transactionData = [
             'model_type' => 'Models\Sale',
             'model_id' => 6,
+            'date'=>$request->date,
             'amount' => $request->amount
         ];
         $message = $walletService->paymentOut($userWallet, $transactionData,$supplierWallet)->responeHandle();
@@ -75,6 +79,7 @@ class testWalletController extends Controller {
         $transactionData = [
             'model_type' => 'Models\Sale',
             'model_id' => 6,
+            'date'=>$request->date,
             'amount' => $request->amount
         ];
         $message = $walletService->paymentIn($userWallet, $transactionData,$clientWallet)->responeHandle();

@@ -248,6 +248,12 @@ return [
         'Amount' => 'القيمة',
         'Installment' => 'الاقساط',
         'Actions' => 'العمليات',
+        'deposite'=>'ايداع',
+        'withdraw'=>'سحب',
+        'depit'=>'قسط',
+        'paymentOut'=>'دفع قسط',
+        'paymentIn'=>'تحصيل قسط',
+        'unknown reason'=>' سبب غير معروف',
     ],
     ///////////////////////////////////////////
     'users' => [

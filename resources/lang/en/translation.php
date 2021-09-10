@@ -254,6 +254,12 @@ return [
         'Amount' => 'Amount',
         'Installment' => 'Installment',
         'Actions' => 'Actions',
+        'deposite'=>'deposite',
+        'withdraw'=>'withdraw',
+        'depit'=>'depit',
+        'paymentOut'=>'paymentOut',
+        'paymentIn'=>'paymentIn',
+        'unknown reason'=>'unknown reason',
     ],
 /////////////////////////////////////////////////////
     'users' => [

@@ -15,14 +15,15 @@ class CreateClientWalletsTable extends Migration
     {
         Schema::create('client_wallets', function (Blueprint $table) {
             $table->id();
-            $table->decimal('total_paid',8,2);
-            $table->decimal('total_pending',8,2);
+            $table->decimal('total_paid',10,2);
+            $table->decimal('total_pending',10,2);
             $table->tinyInteger('status');
             $table->bigInteger('number_of_transaction');
-            $table->decimal('total_value',8,2);
-            $table->date('reminder_day');
+            $table->decimal('total_value',10,2);
+            // $table->date('reminder_day');
             $table->string('slug');
             $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

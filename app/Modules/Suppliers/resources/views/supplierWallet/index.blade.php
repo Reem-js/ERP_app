@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'wallet-clients', 'titlePage' => __('translation.wallet.Client Wallet')])
+@extends('layouts.app', ['activePage' => 'wallet-suppliers', 'titlePage' => __('translation.wallet.Supplier Wallet')])
 
 @push('css')
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
@@ -6,38 +6,41 @@
 
 @endpush
 
+
 @section('content')
     <div class="content">
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="card card-mode">
                     <div class="card-header card-header-text card-header-primary">
-                        <div class="card-text">
-                            <h4 class="card-title">{{ __('translation.wallet.Client Wallet') }}</h4>
+                        <div class="card-text w-20" text-align:center;">
+                            <h4 class="card-title">{{ __('translation.wallet.Supplier Wallet') }}</h4>
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table" id="data-table">
-                            <thead>
-                                <tr>
-                                    <th>{{ __('translation.walletTransaction.ID') }}</th>
-                                    <th>{{ __('translation.clients.Client Name') }}</th>
-                                    <th>{{ __('translation.wallet.Total Balance') }}</th>
-                                    <th>{{ __('translation.wallet.Number Of +') }}</th>
-                                    <th>{{ __('translation.wallet.Total Paied') }}</th>
-                                    <th>{{ __('translation.wallet.Pending') }}</th>
-                                    <th>{{ __('translation.walletTransaction.Actions') }}</th>
-                                </tr>
-                            </thead>
-                        </table>
+                            <table class="table" id="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>{{ __('translation.walletTransaction.ID') }}</th>
+                                        <th>{{ __('translation.suppliers.Supplier Name') }}</th>
+                                        <th>{{ __('translation.wallet.Total Balance') }}</th>
+                                        <th>{{ __('translation.wallet.Number Of +') }}</th>
+                                        <th>{{ __('translation.wallet.Total Paied') }}</th>
+                                        <th>{{ __('translation.wallet.Pending') }}</th>
+                                        <th>{{ __('translation.walletTransaction.Actions') }}</th>
+                                    </tr>
+                                </thead>
+                                {{-- <a class="btn btn-info" rel="tooltip"  title="{{ __('translation.title.show Transactions') }}"  href="{{ route('get.supplier.wallet.trans',5) }}" ><i class="material-icons">visibility</i></a>
+                                            <a class="btn btn-primary" rel="tooltip"  title="{{ __('translation.title.Add Transaction') }}" href="{{ route('supplier-wallet-transactions.create', 5) }}"
+                                    > <i class="fa fa-plus-circle" aria-hidden="true"></i></a> --}}
+                            </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
-    </div>
+
 @endsection
 @push('js')
     <!-- jQuery -->
@@ -71,7 +74,7 @@
                 language: {
                     url:'{{ url('material/js/datatable/'.app()->getLocale().'-datatable.json') }}',
                 },
-                ajax: '{!! route('clientWallet.data') !!}',
+                ajax: '{!! route('supplierwallet.data') !!}',
 
                 columns: [
                     {
@@ -81,8 +84,8 @@
                         searchable: true
                     },
                     {
-                        data: 'client_name',
-                        name: 'client_name',
+                        data: 'supplier_name',
+                        name: 'supplier_name',
                         orderable: true,
                         searchable: true
                     },
@@ -179,13 +182,8 @@
                         } else {
                             return false;
                         }
-
                     });
                 },
-                // "createdRow": function(row, data, dataIndex) {
-                // //    $(row).children(":first").html(dataIndex+1);
-                // },
-
             });
         });
     </script>

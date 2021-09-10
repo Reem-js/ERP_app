@@ -69,6 +69,7 @@ class walletService
      * / */
      public function withdraw(object $model, array $transactionData,$reason = self::withdraw): self
      {
+
         $this->withdrawValidation($model,$transactionData);
          if(empty($this->errorCode) || $this->errorCode == 1){
             $transactionData['amount'] *= -1;
@@ -169,6 +170,7 @@ class walletService
                 $model->createWalletTransaction([
                     'wallet_id' => $model->id,
                     'reason' => $reason,
+                    'transaction_date'=>$transactionData['date'],
                     'model_type' => $transactionData['model_type'],
                     'model_id' => $transactionData['model_id'],
                     'transaction_status' => 1,
@@ -177,8 +179,8 @@ class walletService
                 $model->where('id', $model->id)->update(['total_value' => $wallet->total_value + $transactionData['amount'], 'number_of_transaction' => $wallet->number_of_transaction + 1]);
                 return self::transactionCompeleted;
             } catch (\Exception $e) {
-                return self::DBERROR;
-                // dd($e->getMessage());
+                // return self::DBERROR;
+                dd($e->getMessage());
             }
         });
     }

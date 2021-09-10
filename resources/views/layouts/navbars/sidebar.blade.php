@@ -71,10 +71,10 @@
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse{{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' || $activePage == 'show-clients' || $activePage == 'createclientWalletTransaction' || $activePage == 'walletclientTransaction' || $activePage == 'editclientwalletTransaction' || $activePage == 'showwalletclientTransaction' || $activePage == 'wallet-clients' ? ' show' : '' }} "
+                <div class="collapse{{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' || $activePage == 'show-clients' || $activePage == 'createclientWalletTransaction' || $activePage == 'walletclientTransaction' || $activePage == 'showwalletclientTransaction' || $activePage == 'showwalletclientTransaction' || $activePage == 'wallet-clients' ? ' show' : '' }} "
                     id="clients">
                     <ul class="nav">
-                        <li class="nav-item ml-3 {{ $activePage == 'all-clients' ? ' active' : '' }}">
+                        <li class="nav-item ml-3 {{ $activePage == 'all-clients' || $activePage == 'createclient' || $activePage == 'edit-clients' || $activePage == 'show-clients'  ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('clients.index') }}">
 
                                 <i class="fa fa-th-list {{ $activePage == 'all-clients' ? '' : '' }}"
@@ -83,7 +83,7 @@
                             </a>
                         </li>
                         {{-- client Wallet --}}
-                        <li class="nav-item ml-3 {{ $activePage == 'wallet-clients' ? ' active' : '' }}">
+                        <li class="nav-item ml-3 {{ $activePage == 'wallet-clients' || $activePage == 'createclientWalletTransaction' || $activePage == 'showwalletclientTransaction' || $activePage == 'editclientwalletTransaction' || $activePage == 'showwalletclientTransaction' || $activePage == 'wallet-clients' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('get.client.wallet') }}">
 
                                 <i class="fa fa-credit-card-alt {{ $activePage == 'wallet-clients' ? '' : '' }} "
@@ -118,7 +118,7 @@
                 <div class="collapse{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' || $activePage == 'wallet-suppliers' || $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' || $activePage == 'showwalletsupplierTransaction' || $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' show' : '' }} "
                     id="suppliers">
                     <ul class="nav">
-                        <li class="nav-item ml-3{{ $activePage == 'all-suppliers' ? ' active' : '' }}">
+                        <li class="nav-item ml-3{{ $activePage == 'all-suppliers' || $activePage == 'createsupplier' || $activePage == 'edit-suppliers' || $activePage == 'show-suppliers' || $activePage == 'createpricelist' || $activePage == 'allpricelists' || $activePage == 'editpricelist' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('suppliers.index') }}">
                                 <i class="fa fa-th-list {{ $activePage == 'all-suppliers' ? '' : '' }}"
                                     aria-hidden="true"></i>
@@ -128,7 +128,7 @@
 
 
                         {{-- supplier Wallet --}}
-                        <li class="nav-item ml-3{{ $activePage == 'wallet-suppliers' ? ' active' : '' }}">
+                        <li class="nav-item ml-3{{ $activePage == 'wallet-suppliers'  || $activePage == 'createSupplierWalletTransaction' || $activePage == 'walletsupplierTransaction' || $activePage == 'editwalletTransaction' || $activePage == 'showwalletsupplierTransaction' ? ' active' : '' }}">
                             <a class="nav-link nav-link-mode" href="{{ route('get.supplier.wallet') }}">
                                 <i class="fa fa-credit-card-alt  {{ $activePage == 'wallet-suppliers' ? '' : '' }}"
                                     aria-hidden="true"></i>

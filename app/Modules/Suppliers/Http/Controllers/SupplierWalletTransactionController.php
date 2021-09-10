@@ -2,88 +2,62 @@
 
 namespace Suppliers\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Users\Models\UserWallet;
+use Yajra\Datatables\Datatables;
+use App\Http\Controllers\Controller;
+use App\Http\services\walletService;
+use Illuminate\Support\Facades\Auth;
+use Suppliers\Models\SupplierWallet;
+use Suppliers\Models\SupplierWalletTransaction;
 
 class SupplierWalletTransactionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function show(SupplierWallet $SupplierWallet)
     {
-        //
-        return view('Suppliers::supplierWalletTransaction.index');
+        return view('Suppliers::supplierWalletTransaction.show',compact('SupplierWallet'));
+    }
+    public function supplierWalletTransData(SupplierWallet $SupplierWallet)
+    {
+            $data = $SupplierWallet->supplierwalletTransactions;
+
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row) {
+                        $btn ="<a class='delete-button btn btn-danger btn-sm' rel='tooltip' title='".__('translation.title.Delete Transaction')."'  href='javascript:void(0)' data='$row->id'><i class='material-icons'>close</i></a>";
+                        return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(SupplierWallet $SupplierWallet)
     {
-        //
-        return view('Suppliers::supplierWalletTransaction.create');
+
+        return view('Suppliers::supplierWalletTransaction.create',compact('SupplierWallet'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(Request $request, SupplierWallet $SupplierWallet, walletService $walletService)
     {
-        //
+        $userWallet = UserWallet::where('user_id', Auth::id())->first();
+        $transactionData = [
+                    'model_type' => 'Models\purchase',
+                    'model_id' => $SupplierWallet->id,
+                    'date'=>$request->date,
+                    'amount' =>$request->input('amount')
+                ];
+                $message = $walletService->paymentOut($userWallet,$transactionData,$SupplierWallet)->responeHandle();
+
+                if($request->input('redirect') == 'table')
+                return redirect()->route('show.supplier.wallet.trans',$SupplierWallet->slug)->with('message',$message);
+            elseif($request->input('redirect') == 'back')
+                return redirect()->back()->with('message',$message);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function destroy( SupplierWalletTransaction $SupplierWalletTransaction ,Request $request)
     {
-        //
+        $SupplierWalletTransaction->delete();
+        return redirectAccordingToRequest($request);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-        return view('Suppliers::supplierWalletTransaction.edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-        return "supplier transaction destroy";
-    }
 }

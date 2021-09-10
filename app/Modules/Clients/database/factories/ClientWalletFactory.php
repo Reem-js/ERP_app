@@ -30,7 +30,7 @@ class ClientWalletFactory extends Factory
             'status'=>$this->faker->boolean(),
             'number_of_transaction'=>'5',
             'total_value'=>$this->faker->randomNumber(5,false),
-            'reminder_day'=>$this->faker->date('Y-m-d','now'),
+            // 'reminder_day'=>$this->faker->date('Y-m-d','now'),
             'slug' => $this->faker->slug(),
         ];
     }

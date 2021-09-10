@@ -22,3 +22,9 @@ function requestAbstractionWithMedia($request)
 {
     return $request->except('_token','_method','redirect','media');
 }
+
+function returnMessage ()
+{
+
+
+}

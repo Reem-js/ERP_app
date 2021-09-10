@@ -26,6 +26,7 @@ class ClientWalletTransactionFactory extends Factory
         return [
             'client_wallet_id'=>ClientWallet::all()->random()->id,
             'reason'=>$this->faker->sentence(10),
+            'transaction_date'=>$this->faker->date('y-m-d','now'),
             'client_wallet_transactionable_type'=>$this->faker->sentence(10),
             'client_wallet_transactionable_id' =>$this->faker->randomNumber(5, false),
             'transaction_status'=>$this->faker->boolean(),

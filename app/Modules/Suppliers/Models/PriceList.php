@@ -9,13 +9,17 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class PriceList extends Model
 {
     use HasFactory,Sluggable;
+
+// protected $table="price_lists";
+
     protected $fillable = [
+
         'name',
-        'price',
         'made_in',
-        'supplier_id',
+        'price',
         'notes',
-        'slug'
+        'supplier_id',
+        'slug',
     ];
 
     public function supplier()

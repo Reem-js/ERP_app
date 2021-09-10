@@ -11,6 +11,7 @@ class UserWalletTransaction extends Model
     public $fillable = [
         'user_wallet_id',
         'reason',
+        'transaction_date',
         'user_wallet_transactionable_type',
         'user_wallet_transactionable_id',
         'transaction_status',

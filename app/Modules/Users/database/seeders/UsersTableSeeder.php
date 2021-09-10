@@ -19,7 +19,8 @@ class UsersTableSeeder extends Seeder
             'name'=>'admin',
             'email'=>'admin@material.com',
             'password'=>Hash::make('secret'),
-            'phone'=>'111111111'
+            'phone'=>'111111111',
+            'slug'=>'super-admin'
         ]);
         app(\Users\Database\Factories\UserFactory::class)->count(10)->create();
     }

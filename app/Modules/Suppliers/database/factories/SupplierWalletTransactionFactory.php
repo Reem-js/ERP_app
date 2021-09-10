@@ -26,6 +26,7 @@ class SupplierWalletTransactionFactory extends Factory
             //
             'supplier_wallet_id'=>SupplierWallet::all()->random()->id,
             'reason'=>$this->faker->randomNumber(1),
+            'transaction_date'=>$this->faker->date('y-m-d','now'),
             'supplier_wallet_transactionable_type'=>$this->faker->sentence(10),
             'supplier_wallet_transactionable_id' =>$this->faker->randomNumber(5, false),
             'transaction_status'=>$this->faker->boolean(),

@@ -2,14 +2,16 @@
 
 namespace Clients\Http\Controllers\clientss;
 
+use Form;
+use Clients\Models\Client;
 use Illuminate\Http\Request;
+use Clients\Models\ClientWallet;
+use Yajra\Datatables\Datatables;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use Clients\Models\Client;
-use Yajra\Datatables\Datatables;
 use Clients\Http\Requests\storeClient;
 use Clients\Http\Requests\updateClient;
-use Form;
+use App\Http\services\walletService;
 
 class ClientController extends Controller
 {
@@ -57,12 +59,14 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(storeClient $request)
+    public function store(storeClient $request, walletService $walletService)
     {
         $data = requestAbstraction($request);
-       Client::create($data);
-        // call method to create a new client wallet
-        return redirectAccordingToRequest($request);
+        $Client=Client::create($data);
+        
+         // create wallet for client
+         $wallet = $walletService->createWallet(new ClientWallet, $Client->id);
+         return redirectAccordingToRequest($request);
     }
 
 
@@ -102,6 +106,17 @@ class ClientController extends Controller
     {
         $data = requestAbstraction($request);
         $client->update($data);
+
+
+        if($request->input('redirect') == 'table')
+        return redirect()->route('clients.show',$client->slug)->with('Success','Operation Successfully Compelete');
+    elseif($request->input('redirect') == 'back')
+        return redirect()->back()->with('Success','Operation Successfully Compelete');
+
+
+
+
+
         return redirectAccordingToRequest($request);
     }
 
@@ -113,6 +128,7 @@ class ClientController extends Controller
      */
     public function destroy(Client $client ,Request $request)
     {
+
         $client->delete();
         return redirectAccordingToRequest($request);
     }

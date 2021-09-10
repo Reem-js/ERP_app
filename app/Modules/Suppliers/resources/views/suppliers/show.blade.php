@@ -29,15 +29,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Andrew Mike</td>
-                                        <td>Develop</td>
-                                        <td>2013</td>
-                                        <td>&euro; 99,225</td>
-                                        <td class="td-actions">
-                                            <a class="btn btn-info" rel="tooltip"title="{{ __('translation.title.Edit Supplier') }}"href="{{ route('suppliers.edit', 5) }}"> <i lass="material-icons">edit</i> </a>
-                                        </td>
+                                    <tr >
+                                        <td> {{$supplier->id}}</td>
+                                        <td>{{$supplier->name}}</td>
+                                        <td>{{$supplier->nickname}}</td>
+                                        <td>{{$supplier->phone}}</td>
+                                        <td>{{$supplier->address}}</td>
+                                        <td><a class='btn btn-info btn-sm' rel='tooltip' title="{{__('translation.title.Edit Supplier')}}"
+                                            href="{{route('suppliers.edit', $supplier->slug)}}"><i class='material-icons'>edit</i></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -200,11 +199,11 @@
                                 <div class="col-12 text-right">
                                     <a class="btn btn-info" rel="tooltip"
                                         title="{{ __('translation.title.show Transactions') }}"
-                                        href="{{ route('get.supplier.wallet.trans', 5) }}"><i
+                                        href="{{ route('show.supplier.wallet.trans',$supplier->wallet->slug)}}"><i
                                             class="material-icons">visibility</i></a>
                                     <a class="btn btn-info" rel="tooltip"
                                         title="{{ __('translation.title.Add Transaction') }}"
-                                        href="{{ route('supplier-wallet-transactions.create', 5) }}"> <i
+                                        href="{{route('create.supplier.wallet.trans',$supplier->wallet->slug) }}"> <i
                                             class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -220,15 +219,7 @@
                                             <h3 class="card-title">{{ $supplier->wallet->total_value }}
                                                 <small>EGP</small>
                                             </h3>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
-                                        </div>
+                                        </div>>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -243,15 +234,6 @@
 
                                             </h3>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                {{-- <i class="material-icons text-danger">warning</i> --}}
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -265,15 +247,6 @@
                                                 <small>EGP</small>
                                             </h3>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                {{-- <i class="material-icons text-danger">warning</i> --}}
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -286,15 +259,6 @@
                                             <h3 class="card-title">{{ $supplier->wallet->total_pending }}
                                                 <small>EGP</small>
                                             </h3>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="stats">
-                                                {{-- <i class="material-icons text-danger">warning</i> --}}
-                                                <span class="material-icons">
-                                                    account_balance_wallet
-                                                </span>
-                                                <a href="#pablo">Get More Space...</a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -17,6 +17,7 @@ class CreateUserWalletTransactionsTable extends Migration
             $table->id();
             $table->foreignId('user_wallet_id');
             $table->string('reason')->comment('1=>deposite,2=>withdraw,3=>depit,4=>paymentOut,5=>paymentIn');
+            $table->date('transaction_date');
             $table->string('user_wallet_transactionable_type');
             $table->bigInteger('user_wallet_transactionable_id');
             $table->boolean('transaction_status');

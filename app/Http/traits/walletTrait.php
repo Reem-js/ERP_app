@@ -14,8 +14,12 @@ trait walletTrait
     }
 
 
-    public function openAccount($supplier_id)
+    public function openAccount($model_id)
     {
-       return $this->create(['total_paid'=>0,'total_pending'=>0,'status'=>1,'number_of_transaction'=>0,'total_value'=>0,'supplier_id'=>$supplier_id]);
+       return $this->create(['total_paid'=>0,'total_pending'=>0,
+       'status'=>1,'number_of_transaction'=>0,'total_value'=>0,'client_id'=>$model_id,
+       'supplier_id'=>$model_id]);
     }
+
+
 }

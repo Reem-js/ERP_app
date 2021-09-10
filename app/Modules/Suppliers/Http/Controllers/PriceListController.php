@@ -38,28 +38,40 @@ class PriceListController extends Controller
                     ->make(true);
     }
 
-    public function create()
+    public function create(Supplier $supplier)
     {
-        //
-        $suppliers=Supplier::get();
-        return view('Suppliers::priceLists.create',compact('suppliers'));
+        return view('Suppliers::priceLists.create',compact('supplier'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request,Supplier $supplier)
     {
+        // dd($request->all());
         $data = requestAbstractionWithMedia($request);
-        $pricelist = PriceList::create($data);
-        return redirectAccordingToRequest($request);
-    }
 
+    //    $data=[
+    //         [ "name" => "phone", "made_in" => "egy","price" => "8787","notes" => "dafdfsdfdsf","supplier_id" => "2",],
+    //         ];
+
+        // DB::table('price_lists')->insert($data);
+        // dd($data['pricelist']);
+        // Pricelist::insert($data['pricelist']);
+        Pricelist::upsert($data['pricelist'],["name","made_in","price","notes","supplier_id"]);
+        dd( $data);
+        if ($request->hasFile('media')) {
+            $supplier->insertMulitMedia($request->file('media'), 'pricelists');
+        }
+    if($request->input('redirect') == 'table')
+        return redirect()->route('suppliers.show',$supplier->slug)->with('Success','Operation Successfully Compelete');
+    elseif($request->input('redirect') == 'back')
+        return redirect()->back()->with('Success','Operation Successfully Compelete');
+
+    }
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
-
     /**
      * Display the specified resource.
      *

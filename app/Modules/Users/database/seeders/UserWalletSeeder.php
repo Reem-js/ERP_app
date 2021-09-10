@@ -14,6 +14,6 @@ class UserWalletSeeder extends Seeder
      */
     public function run()
     {
-        app(\Users\Database\Factories\UserWalletFactory::class)->count(10)->create();
+        app(\Users\Database\Factories\UserWalletFactory::class)->count(1)->create();
     }
 }
