@@ -94,17 +94,14 @@ class CategoryController extends Controller
      */
     public function update(storeCategory $request,Category $category)
     {
-
         $data = requestAbstractionWithMedia($request);
         $category ->update($data);
         if ($request->hasFile('media')) {
-
         $media =$category->medias->first();
         if($media){
             $category->deleteSingleMedia('categories',$media->id);
         }
             $category->insertSingleMedia($request->file('media'), 'categories');}
-
         return redirectAccordingToRequest($request);
     }
 
