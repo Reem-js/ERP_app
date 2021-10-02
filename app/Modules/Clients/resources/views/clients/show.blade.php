@@ -11,6 +11,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Basic Information') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body">
                             <table class="table text-center">
                                 <thead>

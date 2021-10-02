@@ -46,6 +46,7 @@
             "Users\\": "app/Modules/Users",
             "Users\\Database\\Seeders\\":"app/Modules/Users/database/seeders/",
             "Users\\Database\\Factories\\":"app/Modules/Users/database/factories/"
+            
         },
         "files":[
             "app/helpers/general.php"

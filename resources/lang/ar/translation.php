@@ -161,6 +161,7 @@ return [
         'Change' => 'تغيير',
         'Remove' => 'مسح',
         'Edit Category' => 'تعديل فئة',
+        'No image'=>'لا يوجد صورة',
     ],
     'products' => [
         'Product Name' => 'اسم المنتج',

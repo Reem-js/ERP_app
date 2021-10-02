@@ -5,6 +5,7 @@ use App\Models\Media;
 trait mediaTrait {
 
     public function insertMulitMedia($data,$collection_name){ //
+
         $model_type =  __CLASS__;
         $model_id = $this->id;
         $media_ids = [];
@@ -17,12 +18,26 @@ trait mediaTrait {
                     'collection_name'=>$collection_name
                 ])->id;
         }
+        // dd( $model_type);
         return mediaService::uploadMultiMedia($data,$collection_name,$media_ids);
     }
 
-    public function insertSingleMedia()
+    public function insertSingleMedia($data,$collection_name)
     {
-        # code...
+
+        $model_type =  __CLASS__;
+        $model_id = $this->id;
+        $media_id = [];
+        $media_id[] = Media::Create([
+                    'model_type'=>$model_type,
+                    'model_id'=>$model_id,
+                    'file_name'=> $data->getClientOriginalName(),
+                    'mime_type'=> $data->getMimeType(),
+                    'collection_name'=>$collection_name
+                ])->id;
+
+        // dd( $model_type);
+        return mediaService::uploadSigleMedia($data,$collection_name,$media_id);
     }
 
     public function medias()

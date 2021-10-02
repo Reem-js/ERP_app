@@ -11,40 +11,49 @@
                                 <h4 class="card-title ">{{__('translation.categories.Edit Category')}}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body">
                             <div class="m-5">
-                                <form method="POST" action="{{route('categories.update',1)}}" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('categories.update',$category->slug) }}" enctype="multipart/form-data">
                                     @csrf
-                                    <div class="form-group">
-                                      <p for="name">{{__('translation.categories.Category Name')}}</p>
-                                      <input type="text" class="form-control" id="name">
-                                    </div>
-                                    <div class="row form-group">
-                                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                                            {{-- <div class="fileinput-new thumbnail img-raised"> --}}
-                                                <img class="w-50" src="{{ asset('images/defaults/default_image.png') }}" rel="nofollow" alt="...">
-                                            {{-- </div> --}}
-                                            <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-                                            <div class="col-lg-4 align-self-center p-5">
-                                                <span class="btn btn-raised btn-round btn-default btn-file">
-                                                    <span class="fileinput-new">{{__('translation.brands.Select Image')}}</span>
-                                                    <span class="fileinput-exists">&nbsp/{{__('translation.brands.Change')}}</span>
-                                                    <input type="file" name="photo"/>
+                                    @method('PUT')
+                                    <div class=" row">
+                                        <div class="col-6 form-group">
+                                            <p class="font-weight-bold text-black" for="inputAddress">
+                                                {{ __('translation.categories.Category Name') }}</p>
+                                            <input type="text" name="name" class="form-control" id="inputAddress"
+                                                placeholder="" value="{{ $category->name }}">
+                                            @error('name')
+                                                <div class="alert alert-danger"> {{ $message }} </div>
+                                            @enderror
+                                        </div>
+
+                                        <div class=" col-6 form-group form-file-upload form-file-multiple">
+                                            <p class="font-weight-bold" for="inputAddress">
+                                                {{ __('translation.categories.Category Image') }}</p>
+                                            <input type="file"  name="media" class="inputFileHidden">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control inputFileVisible"
+                                                    placeholder="select image" >
+
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-fab btn-round btn-primary">
+                                                        <i class="material-icons">photo_camera</i>
+                                                    </button>
                                                 </span>
-                                                <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> {{__('translation.brands.Remove')}}</a>
                                             </div>
+                                            @error('media')
+                                                <div class="alert alert-danger"> {{ $message }} </div>
+                                            @enderror
                                         </div>
+
                                     </div>
-                                    <div class="row mt-5">
-                                        <div class="col-lg-4">
-                                            <button type="submit" class="btn btn-info">{{__('translation.website.crud.update')}}</button>
-                                        <button type="submit" class="btn btn-info">{{__('translation.website.crud.Update & Return')}}</button>
-                                        </div>
-                                        <div class="col-lg-2 offset-6">
-                                            <button type="submit" class="btn btn-danger">{{__('translation.website.crud.Cancel')}}</button>
-                                        </div>
+                                    <div class="row ml-3 my-3">
+
+                                        @livewire('media.delete-category-media',['model_id'=>$category->id ])
                                     </div>
-                                  </form>
+                                    @include('crudButtons.update-buttons')
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -16,6 +16,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.all Clients') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-12 text-right">

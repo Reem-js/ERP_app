@@ -97,19 +97,7 @@ Transaction')])
                                                 id="inputAddress" required placeholder="please enter transaction amount ">
                                         </div>
                                     </div>
-
-                                    <div class="row ">
-                                        <div class="col-lg-4 d-flex">
-                                            <button type="submit"
-                                                class="btn btn-info m-4">{{ __('translation.website.crud.update') }}</button>
-                                            <button type="submit"
-                                                class="btn btn-info m-4">{{ __('translation.website.crud.Update & Return') }}</button>
-                                        </div>
-                                        <div class="col-lg-2 offset-6">
-                                            <button type="submit"
-                                                class="btn btn-danger m-4">{{ __('translation.website.crud.Cancel') }}</button>
-                                        </div>
-                                    </div>
+                                    @include('crudButtons.update-buttons')
                                 </form>
                             </div>
                         </div>

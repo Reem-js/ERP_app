@@ -160,6 +160,7 @@ return [
         'Change' => 'Change',
         'Remove' => 'Remove',
         'Edit Category' => 'Edit Category',
+        'No image'=>'No image',
     ],
     'products' => [
         'Product Name' => 'Product Name',

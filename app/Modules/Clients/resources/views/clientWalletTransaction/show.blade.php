@@ -23,6 +23,7 @@ __('translation.website.sidebar.All Transactions')])
                                 <h4 class="card-title">{{$clientwallet->client->name }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-message')
                         <div class="card-body">
                             <div class="col-lg-12 text-right">
                                 <a href="{{ route('create.wallet.trans',$clientwallet->slug ) }}" class="btn btn-info btn-round"

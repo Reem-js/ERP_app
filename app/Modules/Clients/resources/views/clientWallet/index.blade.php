@@ -16,6 +16,7 @@
                             <h4 class="card-title">{{ __('translation.wallet.Client Wallet') }}</h4>
                         </div>
                     </div>
+                    @include('messages.print-crud-message')
                     <div class="card-body">
                         <table class="table" id="data-table">
                             <thead>

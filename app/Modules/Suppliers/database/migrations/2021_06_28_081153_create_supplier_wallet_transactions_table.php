@@ -15,7 +15,7 @@ class CreateSupplierWalletTransactionsTable extends Migration
     {
         Schema::create('supplier_wallet_transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('supplier_wallet_id');
+            $table->foreignId('supplier_wallet_id')->constrained('supplier_wallets')->cascadeOnDelete()->cascadeOnUpdate();
             $table->tinyInteger('reason')->comment('1=>deposite,2=>withdraw,3=>depit,4=>paymentOut,5=>paymentIn');
             $table->date('transaction_date');
             $table->string('supplier_wallet_transactionable_type');

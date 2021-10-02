@@ -4,82 +4,89 @@ namespace App\Http\Controllers\backend\brands;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Brand;
+use App\Http\services\mediaService;
+use Illuminate\Support\Facades\Route;
+use Yajra\Datatables\Datatables;
+use App\Http\Requests\storeBrand;
 
 class BrandController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function index()
     {
         return view('backend.brands.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function brandData()
+    {
+        // $data = $clientwallet->ClientWalletTransactions;
+
+        $data = Brand::all();
+        return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function($row) {
+                    $btn = "<a class='btn btn-info btn-sm' rel='tooltip' title='".__('translation.website.crud.update') ."'
+                    href='".route('brands.edit', $row->slug)."'> <i class='material-icons'>edit</i> </a>";
+                    $btn .="<a class='delete-button btn btn-danger btn-sm'  href='javascript:void(0)' data='$row->slug'><i class='material-icons'>close</i></a>";
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+    }
+
+
     public function create()
     {
         return view('backend.brands.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function store(storeBrand $request)
     {
-        //
+        $data = requestAbstractionWithMedia($request);
+        $brand = Brand::create($data);
+        if ($request->hasFile('media')) {
+            $brand->insertSingleMedia($request->file('media'), 'brands');
+        }
+        return redirectAccordingToRequest($request);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(Brand $brand)
     {
-        return view('backend.brands.edit');
+        return view('backend.brands.edit',compact('brand'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(storeBrand $request,Brand $brand)
     {
-        //
+        $data = requestAbstractionWithMedia($request);
+        // dd($data);
+        $brand ->update($data);
+        if ($request->hasFile('media')) {
+
+
+            $media =$brand->medias->first();
+            // dd($media);
+            if($media){
+                $brand->deleteSingleMedia('brands',$media->id);
+            }
+
+            $brand->insertSingleMedia($request->file('media'), 'brands');
+        }
+        return redirectAccordingToRequest($request);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+
+    public function destroy(Brand $brand ,Request $request)
     {
-        //
+        $brand->deleteMultiMedia('brands')->delete();
+        return redirectAccordingToRequest($request);
     }
 }

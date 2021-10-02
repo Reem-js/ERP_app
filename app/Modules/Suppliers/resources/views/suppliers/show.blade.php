@@ -16,6 +16,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Basic Information') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body">
                             <table class="table">
                                 <thead>
@@ -113,7 +114,7 @@
                                 @method('DELETE')
                             </form>
                             <div>
-                                @livewire('delete-media',['supplier_id'=>$supplier->id])
+                                @livewire('media.delete-supplier-media',['model_id'=>$supplier->id])
                             </div>
                         </div>
                     </div>

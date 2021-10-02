@@ -53,10 +53,15 @@ class PriceListController extends Controller
     //         ];
 
         // DB::table('price_lists')->insert($data);
-        // dd($data['pricelist']);
+
+    //    $pricelist= Pricelist ::created($data);
+    //     dd($data);
         // Pricelist::insert($data['pricelist']);
+
+        // collect($data['pricelist'])->each(function ($data) { Pricelist::upsert($data['pricelist'],["name","made_in","price","notes","supplier_id"]); });
+
         Pricelist::upsert($data['pricelist'],["name","made_in","price","notes","supplier_id"]);
-        dd( $data);
+        // dd( $data);
         if ($request->hasFile('media')) {
             $supplier->insertMulitMedia($request->file('media'), 'pricelists');
         }

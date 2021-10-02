@@ -14,6 +14,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.all Suppliers') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body">
                             <div class="col-lg-12 text-right">
                                 <a href="{{ route('suppliers.create') }}" rel="tooltip"

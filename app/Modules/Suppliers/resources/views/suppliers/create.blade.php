@@ -11,6 +11,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.create suppliers') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body m-4">
                             <form method="POST" action="{{ route('suppliers.store') }}" enctype="multipart/form-data">
                                 @csrf
@@ -45,7 +46,7 @@
                                     </div>
 
                                 </div>
-                                <div class="row ml-2">
+                                <div class="row ml-2 mb-5">
                                     <div class="col-6 form-group">
                                         <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.suppliers.Address') }}</p>
@@ -78,19 +79,7 @@
                                     </div>
 
                                 </div>
-
-
-                                <div class="row mt-5">
-                                    <div class="col-lg-4">
-                                        <button type="submit"
-                                            class="btn btn-primary" name="redirect" value="table">{{ __('translation.website.crud.create') }}</button>
-                                        <button type="submit"
-                                            class="btn btn-primary " name="redirect"  value="back">{{ __('translation.website.crud.Create & New') }}</button>
-                                    </div>
-                                    <div class="col-lg-2 offset-6">
-                                        <input type="reset" class="btn btn-danger" value="{{ __('translation.website.crud.Cancel') }}">
-                                    </div>
-                                </div>
+                                @include('crudButtons.create-buttons')
                             </form>
                         </div>
                     </div>

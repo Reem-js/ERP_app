@@ -63,7 +63,7 @@ class ClientController extends Controller
     {
         $data = requestAbstraction($request);
         $Client=Client::create($data);
-        
+
          // create wallet for client
          $wallet = $walletService->createWallet(new ClientWallet, $Client->id);
          return redirectAccordingToRequest($request);

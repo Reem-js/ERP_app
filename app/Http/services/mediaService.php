@@ -13,14 +13,30 @@ class mediaService
      */
     public static function uploadMultiMedia($data, $collection_name, $directories)
     {
+
         $iterator = 0;
         foreach ($data as $media) {
             $fileName = $media->getClientOriginalName();
+            // dd($fileName);
             $media->move(public_path('media\\' . $collection_name . '\\' . $directories[$iterator]), $fileName);
             $iterator++;
+            // dd($directories);
         }
         return true;
     }
+
+
+    public static function uploadSigleMedia($data, $collection_name, $directory)
+    {
+        $iterator = 0;
+
+            $fileName = $data->getClientOriginalName();
+            $data->move(public_path('media\\' . $collection_name . '\\' . $directory[$iterator]), $fileName);
+
+        return true;
+    }
+
+
 
     /**
      * remove media
@@ -44,6 +60,7 @@ class mediaService
             $directoryPath = public_path('media\\' . $collection_name . '\\' . $directory);
             // check if the directory path exits
             if (file_exists($directoryPath)) {
+
                 // open directory path and get all files
                 foreach (scandir($directoryPath) as $file) {
                     // ignore . , .. static files
@@ -56,6 +73,7 @@ class mediaService
                 // remove folder
                 rmdir($directoryPath);
             }
+            
             return true;
     }
 }

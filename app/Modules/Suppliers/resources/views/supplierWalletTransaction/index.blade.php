@@ -23,15 +23,12 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Supplier Wallet Trans') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-message')
                         <div class="card-body">
-
-
-
                                 <div class="col-lg-12 text-right">
                                     <a href="{{ route('supplier-wallet-transactions.create') }}" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}" class="btn btn-primary btn-round mb-3"
                                    ><i class="fa fa-plus-circle" aria-hidden="true"></i>
                                     {{ __('translation.website.crud.create') }}</a>
-
                                 </div>
                             <table class="table">
                                 <thead>
@@ -47,7 +44,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     <tr>
                                         <td class="text-center">3</td>
                                         <td><a href="{{ route('suppliers.edit',5) }}">ay klam</a></td>
@@ -56,9 +52,7 @@
                                         <td>2013</td>
                                         <td>&euro; 99,225</td>
                                         <td>&euro; 99,225</td>
-
                                         <td class="td-actions">
-
                                             <br>
                                             <a  class="btn btn-info"href="#"rel="tooltip"  title="5ara" ><i class="material-icons">visibility</i></a>
                                             <a class="btn btn-info" href="{{ route('supplier-wallet-transactions.edit', 5) }}" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"
@@ -74,9 +68,6 @@
                                             </form>
                                         </td>
                                     </tr>
-
-
-
                                 </tbody>
                             </table>
                         </div>

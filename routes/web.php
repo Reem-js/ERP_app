@@ -52,21 +52,16 @@ Route::group(
         Route::get('/', [IndexController::class, 'index'])->middleware('guest');
         // authentication routes
         Route::group(['middleware' => 'auth'], function () {
-            // expenses
-            Route::resource('expenses', ExpenseController::class);
-            // expenses types
-            Route::resource('expensesTypes', ExpenseTypeController::class);
-
+          
             // setting
             Route::get('settings', [WebsiteController::class, 'getWebsite'])->name('get.website');
             // brands
-            Route::resource('brands', BrandController::class);
+            Route::resource('brands', BrandController::class)->parameters(['brands' => 'brand:slug']);
+            Route::get('brandtables',[BrandController::class,'brandData'])->name('brand.data');
             // categories
-            Route::resource('categories', CategoryController::class);
-            // products || stock
-            Route::resource('products', ProductController::class);
-            Route::get('products/history/{id}', [ProductController::class, 'history'])->name('products.history');
-
+            Route::resource('categories', CategoryController::class)->parameters(['categories' => 'category:slug']);
+            Route::get('categorytables',[CategoryController::class,'categoryData'])->name('category.data');
+           
             // roles
             Route::resource('roles', RoleController::class);
             // permissions
@@ -91,27 +86,14 @@ Route::group(
             //switch mode
             Route::post('switch-mode',[HomeController::class, 'switchMode'])->name('switch-mode');
 
-            //Sales
-            Route::resource('sales', SaleController::class);
-            Route::get('get-pre-sale', [SaleController::class, 'PreSale'])->name('pre.sale');
-
-            //livewire sales
-            // Route::livewire('livewire/sales','sales');
-            // Route::get('livewire/sales' , App\Http\Livewire\Sales::class);
-
-           // Purchases
-           Route::resource('purchases', PurchaseController::class);
-           // installments
-           Route::get('installments', [installmentController::class, 'index'])->name('installments.index');
+          
 
            //notifications
            Route::resource('notifications', NotificationController::class);
 
             // //test hmvc
             // Route::get('test',[testController::class,'test']);
-           // PurchasesOrder
-           Route::resource('purchasesOrder', PurchaseOrderController::class);
-
+           
         });
     }
 );

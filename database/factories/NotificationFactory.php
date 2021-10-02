@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Installement;
+use Stocks\Models\Installement;
 use App\Models\Notification;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

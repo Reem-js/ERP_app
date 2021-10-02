@@ -68,8 +68,10 @@ class SupplierController extends Controller
      */
     public function store(storeSupplier $request, walletService $walletService)
     {
+        // dd($request->file('media'));
         $data = requestAbstractionWithMedia($request);
         $supplier = Supplier::create($data);
+
         if ($request->hasFile('media')) {
             $supplier->insertMulitMedia($request->file('media'), 'pricelists');
         }
@@ -121,7 +123,7 @@ class SupplierController extends Controller
         }
         if($request->input('redirect') == 'table')
         return redirect()->route('suppliers.show',$supplier->slug)->with('Success','Operation Successfully Compelete');
-    elseif($request->input('redirect') == 'back')
+        elseif($request->input('redirect') == 'back')
         return redirect()->back()->with('Success','Operation Successfully Compelete');
 
     }

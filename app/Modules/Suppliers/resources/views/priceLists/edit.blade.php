@@ -30,7 +30,7 @@
                                                 {{ __('translation.pricelists.Made in') }}</p>
                                             <input type="text" name="made_in" class="form-control" id="madein" required value="{{ $pricelist->made_in }}">
                                         </div>
-                                        <div class="col form-group">
+                                        <div class="col form-group mb-5">
                                             <p class="font-weight-bold" for="inputAddress">
                                                 {{ __('translation.pricelists.Price') }}</p>
                                             <input type="number" min="1" max="100000000" step="0.1"  name="price" class="form-control" id="price" required value="{{ $pricelist->price }}">
@@ -38,17 +38,7 @@
                                     </div>
                                     <br>
                                     <br>
-                                    <div class="row mt-5">
-                                        <div class="col-lg-4">
-                                            <button type="submit" class="btn btn-info" name="redirect"
-                                                value="table">{{ __('translation.website.crud.update') }}</button>
-                                            <button type="submit" class="btn btn-info" name="redirect"
-                                                value="back">{{ __('translation.website.crud.Update & Return') }}</button>
-                                        </div>
-                                        <div class="col-lg-2 offset-6">
-                                            <input type="reset" class="btn btn-danger" value="{{ __('translation.website.crud.Cancel') }}">
-                                        </div>
-                                    </div>
+                                    @include('crudButtons.update-buttons')
                                 </form>
                             </div>
                         </div>

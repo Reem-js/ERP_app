@@ -12,9 +12,11 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.create client') }}</h4>
                             </div>
                         </div>
-                        <div class="card-body  m-4">
-                            <form method="POST" action="{{ route('clients.store') }}" enctype="multipart/form-data">
-                                @csrf
+                        @include('messages.print-crud-message')
+                       <div class="card-body">
+                            <div class="m-5">
+                                <form method="POST" action="{{ route('clients.store') }}" enctype="multipart/form-data">
+                                    @csrf
                                 <div class="row ml-2 justify-content-around">
                                     <div class="col-6 form-group">
                                         <p class="font-weight-bold text-black" for="inputAddress">
@@ -25,7 +27,6 @@
                                             <div class="alert alert-danger"> {{ $message }} </div>
                                         @enderror
                                     </div>
-
                                     <div class="col-6 form-group ">
                                         <p class="font-weight-bold text-black" for="inputAddress">
                                             {{ __('translation.clients.Nickname') }}</p>
@@ -33,10 +34,9 @@
                                                 placeholder="" value="{{ old('nickname') }}">
                                                 @error('nickname')
                                                 <div class="alert alert-danger"> {{ $message }} </div>
-                                            @enderror
+                                               @enderror
                                     </div>
                                 </div>
-
                                 <div class="row ml-2 justify-content-around">
 
                                     <div class="col-6 form-group">
@@ -49,7 +49,7 @@
                                             @enderror
                                     </div>
 
-                                    <div class="col-6 form-group">
+                                    <div class="col-6 form-group mb-5">
                                         <p class="font-weight-bold text-black" for="inputAddress">
                                             {{ __('translation.clients.Address') }}</p>
                                             <input type="text" name="address" class="form-control"id="inputAddress"
@@ -59,20 +59,7 @@
                                             @enderror
                                     </div>
                                 </div>
-
-                                <div class="row mt-5 ">
-                                    <div class="col-lg-4">
-                                        <button type="submit"
-                                            class="btn btn-primary " name="redirect" value="table">{{ __('translation.website.crud.create') }}</button>
-                                        <button type="submit"
-                                            class="btn btn-primary " name="redirect" value="back">{{ __('translation.website.crud.Create & New') }}</button>
-                                    </div>
-                                    <div class="col-lg-2 offset-6">
-                                        <button type="reset"
-                                            class="btn btn-danger ">{{ __('translation.website.crud.Cancel') }}</button>
-                                    </div>
-                                </div>
-
+                                    @include('crudButtons.create-buttons')    
                             </form>
                         </div>
                     </div>

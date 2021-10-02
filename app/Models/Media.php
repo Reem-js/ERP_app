@@ -13,8 +13,11 @@ class Media extends Model
 
     public function mediable()
     {
-        return $this->morphTo('media');
+        return $this->morphTo('media','model_type','model_id');
     }
+
+
+
     public function getMediaUrl()
     {
         return url('/' . "media/$this->collection_name/$this->id/$this->file_name");
@@ -27,6 +30,8 @@ class Media extends Model
                 return "word.png";
             case "application/pdf":
                 return "pdf.png";
+            case "image/jpeg":
+                    return "jpg.png";
             case "text/plain":
                 return "text.png";
             case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":

@@ -1,30 +1,35 @@
 <?php
 
-function redirectAccordingToRequest($request)
+function redirectAccordingToRequest($request, $status = 'Success')
 {
 
-    $parentRouet = explode(".",$request->route()->getName())[0]; // to get parent route name to make automatic redirection
-    if($request->input('redirect') == 'table')
-        return redirect()->route($parentRouet.'.index')->with('Success','Operation Successfully Compelete');
-    elseif($request->input('redirect') == 'back')
-        return redirect()->back()->with('Success','Operation Successfully Compelete');
+    $message = 'Operation Successfully Compelete';
+
+    if ($status == 'Error') {
+        $status = 'Error';
+        $message = 'Operation Failed';
+    }
+    $parentRouet = explode(".", $request->route()->getName())[0]; // to get parent route name to make automatic redirection
+    if ($request->input('redirect') == 'table')
+        return redirect()->route($parentRouet . '.index')->with($status, $message);
+    elseif ($request->input('redirect') == 'back')
+        return redirect()->back()->with($status, $message);
     else
-        return redirect()->back()->with('Success','Operation Successfully Compelete');
+        return redirect()->back()->with($status, $message);
 }
+
 
 
 function requestAbstraction($request)
 {
-    return $request->except('_token','_method','redirect');
+    return $request->except('_token', '_method', 'redirect');
 }
 
 function requestAbstractionWithMedia($request)
 {
-    return $request->except('_token','_method','redirect','media');
+    return $request->except('_token', '_method', 'redirect', 'media');
 }
 
-function returnMessage ()
+function returnMessage()
 {
-
-
 }

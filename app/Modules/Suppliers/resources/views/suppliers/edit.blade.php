@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'edit-suppliers', 'titlePage' => __('translation.website.sidebar.Edit Supplier')])
+@extends('layouts.app', ['activePage' => 'edit-suppliers', 'titlePage' => __('translation.website.sidebar.Edit
+Supplier')])
 
 @section('content')
     @livewireStyles
@@ -12,6 +13,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Edit Supplier') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body">
                             <form method="POST" action="{{ route('suppliers.update', $supplier->slug) }}"
                                 enctype="multipart/form-data">
@@ -82,16 +84,11 @@
                                 </div>
                                 <div class="row ml-3 my-3">
                                     <div class="col-12 h4 ">{{ __('translation.suppliers.Price List') }}</div>
-                                    @livewire('delete-media',['supplier_id'=>$supplier->id])
+
+                                    @livewire('media.delete-supplier-media',['model_id'=>$supplier->id ])
+
                                 </div>
-                                <div class="row mt-5">
-                                    <div class="col-lg-4">
-                                        <button type="submit" class="btn btn-info" name="redirect"
-                                            value="table">{{ __('translation.website.crud.update') }}</button>
-                                        <button type="submit" class="btn btn-info" name="redirect"
-                                            value="back">{{ __('translation.website.crud.Update & Return') }}</button>
-                                    </div>
-                                </div>
+                               @include('crudButtons.update-buttons')
                             </form>
                         </div>
                     </div>

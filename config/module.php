@@ -2,7 +2,7 @@
 
 return [
     'Users'=>'users',
-    'stocks'=>'stocks',
+    'Stocks'=>'stocks',
     'Suppliers'=>'suppliers',
     'Clients'=>'clients',
 ];

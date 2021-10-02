@@ -25,13 +25,11 @@ class ClientWalletTransactionController extends Controller
     public function clientWalletTransData(ClientWallet $clientwallet)
     {
             $data = $clientwallet->ClientWalletTransactions;
-
             return Datatables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function($row) {
 
                         $btn ="<a class='delete-button btn btn-danger btn-sm' rel='tooltip' title='".__('translation.title.Delete Transaction')."'  href='javascript:void(0)' data='$row->id'><i class='material-icons'>close</i></a>";
-
                         return $btn;
                     })
                     ->rawColumns(['action'])
@@ -40,7 +38,6 @@ class ClientWalletTransactionController extends Controller
 
     public function create(ClientWallet $clientwallet)
     {
-
         return view('clients::clientWalletTransaction.create',compact('clientwallet'));
     }
 

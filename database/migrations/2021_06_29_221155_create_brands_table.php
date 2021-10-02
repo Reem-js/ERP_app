@@ -16,7 +16,8 @@ class CreateBrandsTable extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
-            $table->string('slug', 1000);
+            $table->string('slug');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

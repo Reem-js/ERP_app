@@ -19,7 +19,6 @@ class PriceList extends Model
         'price',
         'notes',
         'supplier_id',
-        'slug',
     ];
 
     public function supplier()

@@ -29,7 +29,7 @@
                             
                                     {{-- <input  type="hidden" name="supplier_id" value="{{$supplier->id}}"> --}}
 
-                                    <div class=" col-12 form-group form-file-upload form-file-multiple ">
+                                    <div class=" col-12 form-group form-file-upload form-file-multiple  mb-5">
                                         <p class="font-weight-bold" for="inputAddress">
                                             {{ __('translation.suppliers.Price Lists') }}</p>
                                         <input type="file" multiple="multiple" name="media[]" class="inputFileHidden">
@@ -50,16 +50,7 @@
                                             <div class="alert alert-danger"> {{ $message }} </div>
                                         @enderror
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <button type="submit"
-                                                class="btn btn-primary" name="redirect" value="table" >{{ __('translation.website.crud.create') }}</button>
-                                            <button type="submit"
-                                                class="btn btn-primary" name="redirect" value="back">{{ __('translation.website.crud.Create & New') }}</button>
-                                        </div>
-
-                                    </div>
+                                    @include('crudButtons.create-buttons')
                                 </form>
                             </div>
                         </div>

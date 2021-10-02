@@ -26,7 +26,7 @@ class StocksServiceProvider extends ServiceProvider
     public function boot()
     {
         $ds = DIRECTORY_SEPARATOR;
-        $moduleName = config('module.stocks');
+        $moduleName = config('module.Stocks');
         config(['module'=>File::getRequire(base_path($ds.'config'.$ds.'module.php'))]);
         $this->loadRoutesFrom(__DIR__.$ds.'..'.$ds.'routes'.$ds.'web.php');
         $this->loadViewsFrom(__DIR__.$ds.'..'.$ds.'resources'.$ds.'views',$moduleName);

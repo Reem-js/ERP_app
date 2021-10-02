@@ -11,6 +11,7 @@
                                 <h4 class="card-title">{{ __('translation.website.sidebar.Edit Client') }}</h4>
                             </div>
                         </div>
+                        @include('messages.print-crud-message')
                         <div class="card-body m-4">
                             <form method="POST" action="{{ route('clients.update', $client->slug) }}"
                                 enctype="multipart/form-data">
