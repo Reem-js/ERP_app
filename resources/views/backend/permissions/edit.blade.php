@@ -19,19 +19,7 @@
                                             {{ __('translation.permissions.Name') }}</label>
                                             <input type="text" class="form-control" id="exampleInputEmail1" name="name">
                                     </div>
-
-                                    <div class="row mt-5">
-                                        <div class="col-lg-4">
-                                            <button type="submit"
-                                                class="btn btn-info">{{ __('translation.website.crud.update') }}</button>
-                                            <button type="submit"
-                                                class="btn btn-info">{{ __('translation.website.crud.Update & Return') }}</button>
-                                        </div>
-                                        <div class="col-lg-2 offset-6">
-                                            <button type="submit"
-                                                class="btn btn-danger">{{ __('translation.website.crud.Cancel') }}</button>
-                                        </div>
-                                    </div>
+                                    @include('crudButtons.update-buttons')
                                 </form>
                             </div>
                         </div>
@@ -40,7 +28,5 @@
 
             </div>
         </div>
-    </div>
-    </div>
     </div>
 @endsection

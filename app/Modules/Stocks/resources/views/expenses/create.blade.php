@@ -26,7 +26,6 @@
                                             <div class="alert alert-danger"> {{ $message }} </div>
                                             @enderror
                                         </div>
-
                                         <div class="col-6 form-group">
                                             <p class="font-weight-bold" for="inputAddress">
                                                 {{ __('translation.expenses.Date') }}</label>
@@ -45,7 +44,6 @@
                                                 @foreach($expenseTypes as $expensesType)
                                                 <option value={{$expensesType->id}}>{{$expensesType->type}}</option>
                                                 @endforeach
-
                                             </select>
                                             @error('expensesType')
                                             <div class="alert alert-danger"> {{ $message }} </div>

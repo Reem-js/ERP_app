@@ -105,6 +105,7 @@
     ])
 
     {{-- dynamic Modals --}}
+    
     {{-- add supplier modal  body --}}
     <div class="container-fluid d-none" id="create-supplier-content" style="margin:0px; padding:0px;">
         <livewire:modals.add-supplier />

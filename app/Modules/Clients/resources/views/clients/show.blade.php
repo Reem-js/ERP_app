@@ -40,9 +40,6 @@
 
                     </div>
                 </div>
-
-
-
                 <div class="col-md-12">
                     <div class="card card-mode">
                         <div class="card-header card-header-text card-header-info">

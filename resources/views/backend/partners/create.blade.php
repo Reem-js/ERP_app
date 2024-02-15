@@ -24,24 +24,11 @@
                   <p class="font-weight-bold"  for="inputAddress">{{ __('translation.dividendIncome.Capital') }}</p>
                   <input type="text" name="madein" class="form-control" id="madein" required>
                 </div>
-
-
-
-
-                <div class="row">
-                  <div class="col-lg-4">
-                    <button type="submit" class="btn btn-primary">{{__('translation.website.crud.create')}}</button>
-                    <button type="submit" class="btn btn-primary">{{__('translation.website.crud.Create & New')}}</button>
-                  </div>
-                  <div class="col-lg-2 offset-6">
-                    <button type="submit" class="btn btn-danger">{{__('translation.website.crud.Cancel')}}</button>
-                  </div>
-                </div>
+                @include('crudButtons.create-buttons')
               </form>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>

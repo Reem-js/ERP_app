@@ -52,7 +52,6 @@ __('translation.website.sidebar.Create Transaction')])
                                                     <option value="4">Ford</option>
                                                     <option value="5">Honda</option>
                                                     <option value="6">Jaguar</option>
-
                                                 </select>
                                         </div>
                                         <div class="col form-group">
@@ -68,24 +67,10 @@ __('translation.website.sidebar.Create Transaction')])
                                                     <option value="4">Ford</option>
                                                     <option value="5">Honda</option>
                                                     <option value="6">Jaguar</option>
-
                                                 </select>
                                         </div>
                                     </div>
-
-
-
-                            <div class="row mt-5">
-                                <div class="col-lg-4 d-flex">
-                                    <button type="submit" class="btn btn-primary m-4"
-                                    >{{ __('translation.website.crud.create') }}</button>
-                                 <button type="submit" class="btn btn-primary m-4"
-                                    >{{ __('translation.website.crud.Create & New') }}</button>
-                                </div>
-                                <div class="col-lg-2 offset-6">
-                                    <button type="submit" class="btn btn-danger m-4"
-                                    >{{ __('translation.website.crud.Cancel') }}</button>                                </div>
-                            </div>
+                                    @include('crudButtons.create-buttons')
                             </form>
                         </div>
                     </div>
@@ -93,9 +78,6 @@ __('translation.website.sidebar.Create Transaction')])
             </div>
 
         </div>
-    </div>
-    </div>
-    </div>
     </div>
 @endsection
 @push('js')

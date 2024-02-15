@@ -63,19 +63,7 @@
 
 
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <button type="submit"
-                                            class="btn btn-info">{{ __('translation.website.crud.update') }}</button>
-                                        <button type="submit"
-                                            class="btn btn-info ">{{ __('translation.website.crud.Update & Return') }}</button>
-                                    </div>
-                                    <div class="col-lg-2 offset-6">
-                                        <button type="submit"
-                                            class="btn btn-danger ">{{ __('translation.website.crud.Cancel') }}</button>
-                                    </div>
-                                </div>
+                                @include('crudButtons.update-buttons')
                             </form>
                         </div>
                     </div>

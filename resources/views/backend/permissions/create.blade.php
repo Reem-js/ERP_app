@@ -28,27 +28,12 @@
                                         </div>
                                     </div>
                             </div>
-                            <div class="row mt-5">
-                                <div class="col-lg-4">
-                                    <button type="submit"
-                                        class="btn btn-primary">{{ __('translation.website.crud.create') }}</button>
-                                    <button type="submit"
-                                        class="btn btn-primary">{{ __('translation.website.crud.Create & New') }}</button>
-                                </div>
-                                <div class="col-lg-2 offset-6">
-                                    <button type="submit"
-                                        class="btn btn-danger">{{ __('translation.website.crud.Cancel') }}</button>
-                                </div>
-                            </div>
+                            @include('crudButtons.create-buttons')
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    </div>
-    </div>
     </div>
 @endsection

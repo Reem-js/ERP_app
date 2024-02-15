@@ -33,7 +33,6 @@
                                             <th>{{ __('translation.expenses.Value') }}</th>
                                             <th>{{ __('translation.expenses.Expense Type') }}</th>
                                             <th>{{ __('translation.expenses.Actions') }}</th>
-
                                         </tr>
                                     </thead>
                                 </table>

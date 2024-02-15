@@ -14,8 +14,6 @@
                                 </div>
                             </div>
                             <div class="card-body">
-
-
                         <div class="col-lg-12 text-right">
                             <a href="{{ route('user-wallet-transactions.create') }}" class="btn btn-primary btn-round mb-3" rel="tooltip"  title="{{ __('translation.title.Create Transaction') }}"
                             ><i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -41,7 +39,6 @@
                                 <td>&euro; 99,225</td>
                                 <td>&euro; 99,225</td>
                                 <td class="td-actions">
-
                                     <a class="btn btn-info" href="#" ><i
                                             class="material-icons">visibility</i></a>
                                         <a class="btn btn-info" href="{{ route('user-wallet-transactions.edit', 5) }}" rel="tooltip"  title="{{ __('translation.title.Edit Transaction') }}"

@@ -1,4 +1,5 @@
-@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all Purchases')])
+@extends('layouts.app', ['activePage' => 'allPurchases', 'titlePage' => __('translation.website.sidebar.all
+Purchases')])
 
 @section('content')
     <div class="content">
@@ -24,62 +25,52 @@
                             </div>
                             <br>
                             <div class=""><br>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>{{ __('translation.purchase.id') }}</th>
-                                            <th>{{ __('translation.purchase.date') }}</th>
-                                            <th>{{ __('translation.purchase.supplier') }}</th>
-                                            <th>{{ __('translation.purchase.product') }}</th>
-                                            <th>{{ __('translation.purchase.quantity') }}</th>
-                                            <th>{{ __('translation.purchase.type') }}</th>
-                                            <th>{{ __('translation.purchase.total cost') }}</th>
-                                            <th>{{ __('translation.purchase.Actions') }}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>May</td>
-                                            <td>reem</td>
-                                            <td>car</td>
-                                            <td>55</td>
-                                            <td>Cash</td>
-                                            <td>550,99</td>
-                                            <td class="td-actions" style="padding: 5px">
-                                                <a class="btn btn-info" rel="tooltip"
-                                                    title="{{ __('translation.pricelists.Edit') }}"
-                                                    href="{{ route('priceLists.edit', 5) }}" style="color:white; ">
-                                                    <i class="material-icons">edit</i>
-                                                </a>
-                                                <a class="btn btn-danger" rel="tooltip"
-                                                    title="{{ __('translation.pricelists.Delete') }}"
-                                                    onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
-                                                    href="javascript:void(0)"><i class="material-icons">close</i></a>
-                                                <form method="post" action="{{ route('priceLists.destroy', 5) }}"
-                                                    style="display:none; " id="delete-1">
-                                                    @csrf
-                                                    @method('delete')
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                <table class=" table">
+                                <thead>
+                                    <tr>
+                                        <th>{{ __('translation.purchase.id') }}</th>
+                                        <th>{{ __('translation.purchase.date') }}</th>
+                                        <th>{{ __('translation.purchase.supplier') }}</th>
+                                        <th>{{ __('translation.purchase.product') }}</th>
+                                        <th>{{ __('translation.purchase.quantity') }}</th>
+                                        <th>{{ __('translation.purchase.type') }}</th>
+                                        <th>{{ __('translation.purchase.total cost') }}</th>
+                                        <th>{{ __('translation.purchase.Actions') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>May</td>
+                                        <td>reem</td>
+                                        <td>car</td>
+                                        <td>55</td>
+                                        <td>Cash</td>
+                                        <td>550,99</td>
+                                        <td class="td-actions" style="padding: 5px">
+                                            <a class="btn btn-info" rel="tooltip"
+                                                title="{{ __('translation.pricelists.Edit') }}"
+                                                href="{{ route('priceLists.edit', 5) }}" style="color:white; ">
+                                                <i class="material-icons">edit</i>
+                                            </a>
+                                            <a class="btn btn-danger" rel="tooltip"
+                                                title="{{ __('translation.pricelists.Delete') }}"
+                                                onclick="if(confirm('Are You Sure?')) {document.getElementById('delete-1').submit();} else {return false;}"
+                                                href="javascript:void(0)"><i class="material-icons">close</i></a>
+                                            <form method="post" action="{{ route('priceLists.destroy', 5) }}"
+                                                style="display:none; " id="delete-1">
+                                                @csrf
+                                                @method('delete')
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
-    </div>
-    </div>
-
-
-
-    </div>
-    </div>
     </div>
 @endsection

@@ -1,9 +1,9 @@
 @extends('layouts.app', ['activePage' => 'all-clients', 'titlePage' => __('translation.website.sidebar.all Clients')])
-@push('css')
+{{-- @push('css')
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
-
-@endpush
+@endpush --}}
+@include('datatable.datatable-css')
 @section('content')
     <div class="content">
         <div class="container-fluid">
@@ -42,10 +42,8 @@
                                 @method('DELETE')
                             </form>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

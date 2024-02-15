@@ -47,9 +47,6 @@
                                     style="color:white;"> <i class="material-icons">visibility</i></a>
                             </td>
                         </tr>
-
-
-
                     </tbody>
                 </table>
             </div>

@@ -38,4 +38,9 @@ class Brand extends Model
     public function products(){
         return $this->hasMany('Stocks\Models\Product','brand_id');
     }
+
+    public function medias()
+    {
+        return $this->morphMany(Media::class, 'mediable','model_type','model_id');
+    }
 }
